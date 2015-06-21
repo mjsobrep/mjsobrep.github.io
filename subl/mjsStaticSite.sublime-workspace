@@ -1,0 +1,416 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"filte",
+				"filtered"
+			],
+			[
+				"rou",
+				"roundUp"
+			],
+			[
+				"freq",
+				"FREQINFO"
+			],
+			[
+				"stat",
+				"STATEINFO"
+			],
+			[
+				"Stat",
+				"STATEINFO"
+			],
+			[
+				"set",
+				"setPixelColor"
+			],
+			[
+				"but",
+				"buttonPressed"
+			],
+			[
+				"Slee",
+				"SLEEP"
+			],
+			[
+				"Mode",
+				"MODEBUTTON"
+			],
+			[
+				"De",
+				"DEFAULTB"
+			],
+			[
+				"DE",
+				"DEFAULTB"
+			],
+			[
+				"Def",
+				"DEFAULTV"
+			],
+			[
+				"Defa",
+				"DEFAULTS"
+			],
+			[
+				"def",
+				"DEFAULTLFH"
+			],
+			[
+				"HSV",
+				"HSVtoColor"
+			],
+			[
+				"DEF",
+				"DEFAULTV"
+			],
+			[
+				"defau",
+				"DEFAULTLFH"
+			],
+			[
+				"DEFA",
+				"DEFAULTHFH"
+			],
+			[
+				"HS",
+				"HSVtoColor"
+			],
+			[
+				"Ne",
+				"NEOLEN"
+			],
+			[
+				"FFT",
+				"FFTbasedLights"
+			],
+			[
+				"PDOW",
+				"PDOWNCOM"
+			],
+			[
+				"lat",
+				"latchpdown"
+			],
+			[
+				"lath",
+				"latchpup"
+			],
+			[
+				"beliefs",
+				"getBeliefDistribution"
+			],
+			[
+				"living",
+				"livingGhostPositionDistributions"
+			],
+			[
+				"all",
+				"allPossible"
+			],
+			[
+				"newPo",
+				"newPosDist"
+			],
+			[
+				"legal",
+				"legalPositions"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 439.0,
+		"last_filter": "jeky",
+		"selected_items":
+		[
+			[
+				"jeky",
+				"Jekyll: New post"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"ind",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"i",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"INDEN",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"PACKAG",
+				"Preferences: Browse Packages"
+			]
+		],
+		"width": 768.0
+	},
+	"console":
+	{
+		"height": 227.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)  "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/GIT/mjsStaticSite"
+	],
+	"file_history":
+	[
+		"/C/Users/Michael/OneDrive/Documents/Guides/Code/powershell tricks",
+		"/C/Users/Michael/OneDrive/Documents/Guides/Code/Jekyll",
+		"/C/Users/Michael/OneDrive/Documents/learningNode/newline.js",
+		"/C/Users/Michael/OneDrive/Documents/apt/iuinternet",
+		"/C/Users/Michael/OneDrive/Documents/Guides/Code/Javascript Cheat Sheet",
+		"/C/Users/Michael/OneDrive/Documents/Guides/Code/Node Cheat Sheet",
+		"/C/Users/Michael/OneDrive/Documents/Guides/Code/gitCheatSheet",
+		"/C/GIT/mjsStaticSite/index.html",
+		"/C/GIT/mjsStaticSite/projects/bob.mkdn",
+		"/C/GIT/mjsStaticSite/_posts/postSub/2015-06-19-subtest.markdown",
+		"/C/GIT/mjsStaticSite/_config.yml",
+		"/C/Users/Michael/OneDrive/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1",
+		"/C/GIT/mjsStaticSite/_site/projects/index.mkdn",
+		"/C/GIT/mjsStaticSite/_posts/2015-06-19-welcome-to-jekyll.markdown",
+		"/C/GIT/mjsStaticSite/_site/projects/index.html",
+		"/C/GIT/mjsStaticSite/_site/projects/bob.html",
+		"/C/GIT/mjsStaticSite/_food/index.html",
+		"/C/GIT/mjsStaticSite/projects/index.html",
+		"/C/Users/Michael/OneDrive/Documents/learningNode/rounding-numbers.js",
+		"/C/Users/Michael/OneDrive/Documents/learningNode/number-to-string.js",
+		"/C/Users/Michael/OneDrive/Documents/learningNode/if-statement.js",
+		"/C/Users/Michael/OneDrive/Documents/learningNode/array-filtering.js",
+		"/C/Users/Michael/OneDrive/Documents/learningNode/node1.js",
+		"/C/Users/Michael/OneDrive/Documents/learningNode/arguments.js",
+		"/C/Users/Michael/OneDrive/Documents/learningNode/number.js",
+		"/C/Users/Michael/OneDrive/Documents/Guides/Circuit Design/CircuitDesign",
+		"/C/Users/Michael/OneDrive/Documents/Guides/Code/raspberrypi",
+		"/C/Users/Michael/OneDrive/Documents/learningNode/variables.js",
+		"/C/Users/Michael/OneDrive/Documents/learningNode/string.js",
+		"/C/Users/Michael/OneDrive/Documents/learningNode/string-length.js",
+		"/C/Users/Michael/OneDrive/Documents/learningNode/revising-strings.js",
+		"/C/Users/Michael/OneDrive/Documents/learningNode/introduction.js",
+		"/C/Users/Michael/OneDrive/Documents/GT/Shop/endingNotes.txt",
+		"/C/Users/Michael/OneDrive/Documents/SoundVisualizationsGuitar/sudoCode",
+		"/C/Users/Michael/OneDrive/Documents/Arduino/soundReactGuitar/teensyHardware/teensyHardware.ino",
+		"/C/Users/Michael/OneDrive/Documents/Arduino/libraries/Adafruit-GFX-Library/Adafruit_GFX.h",
+		"/C/Users/Michael/OneDrive/Documents/Arduino/libraries/Adafruit-ST7735-Library/Adafruit_ST7735.h",
+		"/C/Users/Michael/OneDrive/Documents/JoseGuitar/sudoCode",
+		"/C/Users/Michael/OneDrive/Documents/GT/Shop/Ordering/notes",
+		"/C/Users/Michael/OneDrive/Documents/GT/Shop/Ordering/SpeedAndFeeds",
+		"/C/SharePoint/BMED 4602 - Senior Design - Documen/Prototypes/setup",
+		"/C/GrabCAD/Intussassist/enema tip designs/enema tip_v6/CAM/ET-06-05/008.cam",
+		"/C/GIT/CS3600/Project 4/Project 4b/NeuralNet.py",
+		"/C/GIT/CS3630/Project 5/Scribbler2.py",
+		"/C/Users/Michael/OneDrive/Documents/Arduino/intussasist_handheld/testingSerial/testingSerial.ino",
+		"/C/Users/Michael/OneDrive/Documents/Arduino/intussasist_handheld/intussasist_handheld.ino",
+		"/C/GIT/CS3600/Project 4/Project 4b/MJSTesting.py",
+		"/C/GIT/CS3630/Project 6/controller.py",
+		"/C/GIT/Intussasist/gui.py",
+		"/C/GIT/Intussasist/generateCommands",
+		"/C/GIT/CS3600/Project 3/tracking/bustersAgents.py",
+		"/C/GIT/CS3600/Project 3/tracking/ghostAgents.py",
+		"/C/GIT/CS3630/Project 6/keyboardLog.py",
+		"/C/Users/Michael/OneDrive/Downloads/pypy-2.5.1-win32/pypy-2.5.1-win32/README.rst",
+		"/C/GIT/Intussasist/serialCom.py",
+		"/C/GIT/CS3630/Project 4/code/matlab/vehiclePath.m",
+		"/C/GIT/CS3630/Project 5/logDataP5clean.py",
+		"/C/GIT/CS3630/Project 5/vs/Project5.2/x64/Debug/bwBook/log10.txt",
+		"/C/GIT/CS3630/Project 5/vs/Project5.2/x64/Debug/bwBook/log9.txt",
+		"/C/GIT/CS3630/Project 5/vs/Project5.2/x64/Debug/bwBook/log8.txt",
+		"/C/GIT/CS3630/Project 5/vs/Project5.2/x64/Debug/bwBook/log7.txt",
+		"/C/GIT/CS3630/Project 5/vs/Project5.2/x64/Debug/bwBook/log5.txt",
+		"/C/GIT/CS3630/Project 5/vs/Project5.2/x64/Debug/bwBook/log4.txt",
+		"/C/GIT/CS3630/Project 5/vs/Project5.2/x64/Debug/bwBook/log3.txt",
+		"/C/GIT/CS3630/Project 5/vs/Project5.2/x64/Debug/bwBook/log2.txt",
+		"/C/GIT/CS3630/Project 5/logData.py",
+		"/C/GIT/CS3630/Project 5/vs/Project5.2/x64/Debug/visOdomMap2.m",
+		"/C/GIT/CS3630/Project 5/vs/Project5.2/x64/Debug/consoleOutput",
+		"/C/GIT/CS3630/Project 5/vs/Project5.2/x64/Debug/bwBook/log6.txt",
+		"/C/GIT/CS3630/Project 5/vs/Project5.2/x64/Debug/bwBook/log.txt",
+		"/C/GIT/CS3630/Project 5/VisualOdometry/VisualOdometry/VisualOdometry/Source.cpp",
+		"/C/Users/Michael/OneDrive/Documents/Guides/Code/python tricks",
+		"/C/OpenCV/opencv/sources/samples/python/edge.py",
+		"/C/GIT/CS3630/Project 5/logDataP5.py",
+		"/C/GIT/CS3600/Project 3/tracking/test_cases/q5/CONFIG",
+		"/C/GIT/CS3600/Project 3/tracking/test_cases/q5/6-ParticleElapse.test",
+		"/C/GIT/CS3600/Project 3/tracking/test_cases/q5/5-ParticleElapse.test",
+		"/C/GIT/CS3600/Project 3/tracking/test_cases/q5/5-ParticleElapse.solution",
+		"/C/GIT/CS3600/Project 3/tracking/test_cases/q5/4-ParticleElapse.test",
+		"/C/GIT/CS3600/Project 3/tracking/inference.py",
+		"/C/Users/Michael/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/GIT/CS3600/Project 2/BinaryCSP.py",
+		"/C/GIT/CS3600/Project 3/tracking/busters.py",
+		"/C/GIT/CS3600/Project 3/tracking/util.py",
+		"/C/Users/Michael/OneDrive/Documents/software list"
+	],
+	"find":
+	{
+		"height": 50.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"serial",
+			"hvalue",
+			"colorreturn",
+			"color",
+			"- >",
+			"-",
+			"log",
+			"--",
+			"push",
+			"lambda",
+			"branch",
+			".lib",
+			"initializeuni",
+			"init",
+			"initalize",
+			"greedy"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"->",
+			"- "
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 35.0
+	},
+	"input":
+	{
+		"height": 49.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/Python/Python.sublime-build",
+	"project": "mjsStaticSite.sublime-project",
+	"replace":
+	{
+		"height": 94.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 750.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 570.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 225.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

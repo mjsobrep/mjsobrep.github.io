@@ -1,0 +1,14 @@
+# Site settings
+title: Your awesome title
+email: your-email@domain.com
+description: A site about stuff that I (Michael Sobrepera) work on, think, enjoy, etc...
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://www.michaelsobrepera.com" # the base hostname & protocol for your site
+twitter_username: jekyllrb
+github_username:  jekyll
+
+# Build settings
+markdown: kramdown
+
+permalink: none
+ignore: /subl
