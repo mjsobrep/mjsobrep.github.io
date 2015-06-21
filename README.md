@@ -1,0 +1,2 @@
+# mjsStaticSite
+My personal website
