@@ -1,0 +1,20 @@
+Jekyll:
+
+_config.yml:
+	encoding: utf-8
+	highlighter: pygments
+
+Building:
+	on windows:
+		may need jekyll serve --force_polling
+		if all goes to hell: jekyll serve --no-watch
+	jekyll build
+	jekyll build --watch
+	jekyll build -w
+	jekyll serve
+	jekyll serve --watch
+	jekyll serve -w
+
+change console encoding:
+	chcp 65001
+

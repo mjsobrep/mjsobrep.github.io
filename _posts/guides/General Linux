@@ -1,0 +1,4 @@
+General Linux
+
+Restart Network System:
+    sudo service network-manager restart
