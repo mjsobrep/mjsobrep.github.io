@@ -1,3 +1,10 @@
+---
+layout: guide
+title:  "Tkinter"
+date:   2015-06-22
+categories: guides
+---
+
 Tkinter
 
 STARTUP:

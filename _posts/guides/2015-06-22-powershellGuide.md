@@ -1,3 +1,10 @@
+---
+layout: guide
+title:  "PowerShell"
+date:   2015-06-22
+categories: guides
+---
+
 powershell tricks
 
 scoop -> to install stuff

@@ -1,3 +1,10 @@
+---
+layout: guide
+title:  "Intellectual Property"
+date:   2015-06-22
+categories: guides
+---
+
 Utility Patent -> 20 years after filing
     Provisional Patent -> not reviewed, locks you into first to file
 

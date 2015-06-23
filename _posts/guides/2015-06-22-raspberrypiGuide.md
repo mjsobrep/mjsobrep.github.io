@@ -1,3 +1,11 @@
+---
+layout: guide
+title:  "Raspberry Pi"
+date:   2015-06-22
+categories: guides
+---
+
+
 Raspberry Pi notes:
 
 

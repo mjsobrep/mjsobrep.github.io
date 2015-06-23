@@ -1,3 +1,10 @@
+---
+layout: guide
+title:  "Circuit Design"
+date:   2015-06-22
+categories: guides
+---
+
 SMC Breakout:
     https://learn.adafruit.com/smt-prototyping-using-breakout-pcbs
 

@@ -1,3 +1,10 @@
+---
+layout: guide
+title:  "Python"
+date:   2015-06-22
+categories: guides
+---
+
 python tricks
 
 debug:

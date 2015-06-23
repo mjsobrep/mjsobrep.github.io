@@ -1,3 +1,10 @@
+---
+layout: guide
+title:  "Jekyl"
+date:   2015-06-22
+categories: guides
+---
+
 Jekyll:
 
 _config.yml:
