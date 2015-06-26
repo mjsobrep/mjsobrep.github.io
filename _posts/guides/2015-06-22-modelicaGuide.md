@@ -3,6 +3,11 @@ layout: guide
 title:  "Modelica"
 date:   2015-06-25
 categories: guides
+tags:
+- modelica
+- code
+- programming
+- modeling
 ---
 
 * Evaluate Cell: shift+enter

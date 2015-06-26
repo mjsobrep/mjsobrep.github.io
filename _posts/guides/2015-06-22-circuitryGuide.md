@@ -3,6 +3,8 @@ layout: guide
 title:  "Circuit Design"
 date:   2015-06-25
 categories: guides
+tags: 
+- circuitry
 ---
 
 ###SMC Breakout:

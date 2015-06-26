@@ -3,6 +3,12 @@ layout: guide
 title:  "Node"
 date:   2015-06-25
 categories: guides
+tags:
+- web development
+- code
+- programming
+- node
+- javascript
 ---
 
 ####Arguments:

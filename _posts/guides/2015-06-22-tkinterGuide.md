@@ -3,6 +3,13 @@ layout: guide
 title:  "Tkinter"
 date:   2015-06-25
 categories: guides
+tags:
+- python
+- code
+- programming
+- gui
+- tkinter
+- tk
 ---
 ###STARTUP:
 * `from Tkinter import *`

@@ -3,6 +3,13 @@ layout: guide
 title:  "Raspberry Pi"
 date:   2015-06-25
 categories: guides
+tags:
+- raspberry pi
+- RPi
+- Pi
+- code
+- programming
+- physical computing
 ---
 
 [cool pinout](http://pi.gadgetoid.com/pinout/pin21_gpio9)

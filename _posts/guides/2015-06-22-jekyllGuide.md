@@ -3,6 +3,12 @@ layout: guide
 title:  "Jekyl"
 date:   2015-06-25
 categories: guides
+tags:
+- blogging
+- jekyll
+- code
+- programming
+- web development
 ---
 
 

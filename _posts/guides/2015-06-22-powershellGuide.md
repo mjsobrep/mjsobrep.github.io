@@ -3,6 +3,12 @@ layout: guide
 title:  "PowerShell"
 date:   2015-06-25
 categories: guides
+tags: 
+- windows
+- code
+- programming
+- powershell
+- ps
 ---
 * scoop -> to install stuff
 * PSget -> to install stuff
