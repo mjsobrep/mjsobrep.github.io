@@ -5,10 +5,10 @@ layout: default
 <div class="home">
 <h3>Welcome to my personal site, please have a look around. Feel free to contact me via <a href="https://www.linkedin.com/in/michaelsobrepera">LinkedIn</a> or <a href="mailto:mjsobrep@live.com">e-mail</a>. There are places to comment throughout, please feel free to leave your opinion.</h3>
 </br></br>
-  <h2>5 Most Recent Posts</h2>
+  <h2>2 Most Recent Blog Posts</h2>
 
   <table>
-    {% for post in site.posts offset: 0 limit: 5 %}
+    {% for post in site.categories.blog offset: 0 limit: 5 %}
     <tr>
       <td>{{ post.date | date: "%b %-d, %Y" }}</td>
       <td><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></td>
@@ -16,6 +16,7 @@ layout: default
     {% endfor %}
   </table>
 </br>
+
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
 </div>

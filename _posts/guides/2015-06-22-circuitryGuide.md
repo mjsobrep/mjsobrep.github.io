@@ -1,18 +1,18 @@
 ---
 layout: guide
 title:  "Circuit Design"
-date:   2015-06-22
+date:   2015-06-25
 categories: guides
 ---
 
-SMC Breakout:
-    https://learn.adafruit.com/smt-prototyping-using-breakout-pcbs
+###SMC Breakout:
+* https://learn.adafruit.com/smt-prototyping-using-breakout-pcbs
 
-Design Spark:
-    Propogate Library Changes: Tools->Update Components
-    Show Net in Schematic: Righ Click->display net name
-    Bus:
-        draw bus
-        name bus(rightclick->properties)
+###Design Spark:
+* Propogate Library Changes: Tools->Update Components
+* Show Net in Schematic: Righ Click->display net name
+* Bus:
+    * draw bus
+    * name bus(rightclick->properties)
 
-    Flip: F-key
+* Flip: F-key
