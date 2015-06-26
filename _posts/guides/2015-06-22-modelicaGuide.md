@@ -41,7 +41,7 @@ tags:
     * `public`
     * `protected`
 
-    * treated as headers, all variables after a visibilty statement and before another control statement will have that visibility 
+    * treated as headers, all variables after a visibility statement and before another control statement will have that visibility 
 
 
 ###Libraries:
@@ -53,7 +53,7 @@ Nested (local) classes are allowed
 
 * Special words to replace "class":
     * `model`: intended for models; cannot be used for connections
-    * `record`: inteneded for data structures; cannot have equations, cannot be used for connections
+    * `record`: intended for data structures; cannot have equations, cannot be used for connections
     * `type`: intended to introduce new types; must extend another type, record, or be an array
     * `connector`: defines connections; no equations
     * `block`: data flow of variables is known; all variables must be declared with "input" or "output" * followed by a type or class; no connections
@@ -119,7 +119,7 @@ Nested (local) classes are allowed
         * `plot(<args>)`
 
 * Arrays:
-    * Decleration:
+    * Declaration:
         * `<type>[<dim1,...>] <name>;`
         * OR
         * `<type> <name>[<dim1,...>];`
@@ -129,19 +129,19 @@ Nested (local) classes are allowed
             * OR
             * `<type> <name>[<dim1,...>] = \{\{x,y\},\{f,g\}\};`
 
-    * Multiplaction:
+    * Multiplication:
         * `*`
         * is element wise
 
-* Matricies:
+* Matrices:
     * Declaration:
         * `<type> <name>[<dim1,...>] = [<v>,<v>;...];`
     * Multiplication:
         * `*`
         * `is matrix multiplication`
 
-* Algorithims:
-    * start with keywork "algorithim"
+* Algorithms:
+    * start with keyword "algorithm"
     * are the only place where traditional procedural command flow exists:
 {% highlight modelica %}
         while <bool> loop

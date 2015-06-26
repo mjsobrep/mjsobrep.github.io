@@ -17,7 +17,7 @@ tags:
 * `root = Tk()`
 
 ###WIDGETS:
-* instation:
+* instantiation:
     * `button = ttk.Button(<parent>, text = '<some text>')`
     * `label = ttk.label(<parent>, text = '<some text>')`
 * adding:
@@ -31,14 +31,14 @@ tags:
     * Pack -> you left, right, blah
     * Grid -> its a gird
     * Place -> absolute positioning
-* Deleating:
+* Deleting:
     * `<widget>.destroy()`
 
 * EVENT HANDLERS:
     * command callbacks -> for obvious stuff
     * event bindings -> for custom stuff
 
-###widnows:
+###windows:
 * zoom to max:
     * `window.state('zoomed')`
 * configuration:

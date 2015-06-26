@@ -11,8 +11,8 @@ tags:
 * https://learn.adafruit.com/smt-prototyping-using-breakout-pcbs
 
 ###Design Spark:
-* Propogate Library Changes: Tools->Update Components
-* Show Net in Schematic: Righ Click->display net name
+* Propagate Library Changes: Tools->Update Components
+* Show Net in Schematic: Right Click->display net name
 * Bus:
     * draw bus
     * name bus(rightclick->properties)

@@ -14,14 +14,14 @@ tags:
 
 * Design Patent -> 14 years
 
-* Copyright -> automaticaly when you make a permanent work. Life of author +70 years 95 years from publication if no author
+* Copyright -> automatically when you make a permanent work. Life of author +70 years 95 years from publication if no author
 
 * Trade Secret
 
 ###Trademark
 * word, symbol, logo, design, slogan -> in the context of the trademark
 * Valid for the amount of time that the trademark is used. If the trademark becomes standard use, the trademark is lost.
-* Litigation based on likelyhood of conclusion, exceptions for parody
+* Litigation based on likelihood of conclusion, exceptions for parody
 
 
 ###Patent:
@@ -31,20 +31,20 @@ Must disclose enough to allow replication in whole of invention
 * Types of Applications:
     * Provisional:
         * locks you into first to file
-        * doesnt give patent rights
+        * doesn't give patent rights
         * Micro Organization (no corporation <3 prior fillings): $65
     * Non-Provisional:
         * commonly called "utility application"
         * can claim priority to prior US utility or provisional applications
-        * maintence fees at 3,6, and 11 years
-        * Can have PLT patent <- plant that can be assexually reproduced
+        * maintenance fees at 3,6, and 11 years
+        * Can have PLT patent <- plant that can be asexually reproduced
     * Design Patent Application:
         * 1 claim -> drawing
         * 14 years from issue
         * no maintenance fee
         * no provisional application
     * PCT (Patent Cooperation Treaty):
-        * gives opinon on patentability
+        * gives opinion on patent ability
         * if it comes back as go, then you can choose to send to any number of 140+ countries, often with discounted fees for those countries
 
 * What is patentable:
@@ -58,8 +58,8 @@ Must disclose enough to allow replication in whole of invention
     * laws of nature, natural phenomena, abstract ideas
 
 * Review Process:
-    * Examiner can pass through or reject, must provide evedince for rejection
-    * applicant can argue or ammend
+    * Examiner can pass through or reject, must provide evidence for rejection
+    * applicant can argue or amend
     * can go back and forth twice, then added cost
 
 * Claims are all that matter
@@ -73,7 +73,7 @@ Must disclose enough to allow replication in whole of invention
             * comprising (open)
             * consisting essentially of (excludes other things)
 
-* You cannot add new matter, only ammend existing matter
+* You cannot add new matter, only amend existing matter
 
 
 * If you want international stuff file something prior to public disclosure
