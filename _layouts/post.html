@@ -11,32 +11,18 @@ layout: default
   <article class="post-content">
     {{ content }}
   </article>
-  <div style = "width = 90%; margin: 0 auto;">
+
+  {% if page.pdf %}
+  <a href="{{page.pdf}}"><h3>{{page.title}}</h3></a>
+  {{page.pdf | insertPDF}}
+  {%endif%}
+  
   {% if page.imageDir %}
   {%include simplePictures.html %}
   {%endif%}
-  </div>
-  <!-- START: Livefyre Embed -->
-  <h2>Comments</h2>
-<div id="livefyre-comments"></div>
-<script type="text/javascript" src="http://zor.livefyre.com/wjs/v3.0/javascripts/livefyre.js"></script>
-<script type="text/javascript">
-(function () {
-    var articleId = fyre.conv.load.makeArticleId(null);
-    fyre.conv.load({}, [{
-        el: 'livefyre-comments',
-        network: "livefyre.com",
-        siteId: "375755",
-        articleId: articleId,
-        signed: false,
-        collectionMeta: {
-            articleId: articleId,
-            url: fyre.conv.load.makeCollectionUrl(),
-        }
-    }], function() {});
-}());
-</script>
-<!-- END: Livefyre Embed -->
-            
+
+
+  {% include comments.html %}
+  
 
 </div>

@@ -1,0 +1,17 @@
+---
+layout: page
+title: Papers
+permalink: /papers/
+---
+<h3>Here are some papers that I have written.</h3>
+
+<ul class="post-list">
+    {% for post in site.categories.papers %}
+    <li>
+
+          <span>{{post.date| date: "%-d %B %Y"}} <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></span>
+          </br>
+
+  </li>
+  {% endfor %}
+  </ul>

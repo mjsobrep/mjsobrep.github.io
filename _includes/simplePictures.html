@@ -1,7 +1,3 @@
-
-
-
-
 {%capture real%}{{page.imageDir|prepend:"/images/"}}{%endcapture%}
 {%for file in site.static_files %}
 {%capture match%}{{file|pathMatch:real}}{%endcapture%}

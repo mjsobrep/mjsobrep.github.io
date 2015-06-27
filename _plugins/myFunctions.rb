@@ -65,3 +65,46 @@ module Jekyll
 end
 
 Liquid::Template.register_tag('render_time', Jekyll::RenderTimeTag)
+
+
+module Jekyll
+  module InsertPDF
+    def insertPDF(file)
+        return "<div class='pdfBox'> <div class='pdfContent'>    <object class='pdfContent' data='"+file+"' type='application/pdf' width='100%'' height='100%''>   alt: <a href = '"+file+"'>"+file+"</a></object></div> </div>"
+    end
+  end
+end
+
+Liquid::Template.register_filter(Jekyll::InsertPDF)
+
+
+module Jekyll
+  class InsertPicFolder < Liquid::Tag
+
+    def initialize(tag_name, text, tokens)
+      super
+      @text = text
+    end
+
+    def render(context)
+      "#{@text}"
+    end
+  end
+end
+
+Liquid::Template.register_tag('render_time', Jekyll::InsertPicFolder)
+
+# module Jekyll
+#   module InsertPicFolder
+#     def insertPicFolder(file)
+#       directory = "/images/"+file
+#       toReturn = ''
+#       for file in site.static_files
+#         toReturn = toReturn+'\n'+ file
+#     end
+#     return toReturn
+#   end
+# end
+
+# Liquid::Template.register_filter(Jekyll::InsertPDF)
+
