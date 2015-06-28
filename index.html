@@ -10,8 +10,8 @@ layout: default
   <table>
     {% for post in site.categories.blog offset: 0 limit: 5 %}
     <tr>
-      <td>{{ post.date | date: "%b %-d, %Y" }}</td>
-      <td><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></td>
+      <td class=postTableDate>{{ post.date | date: "%b %-d, %Y" }}</td>
+      <td class=postTableRow><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></td>
     </tr>
     {% endfor %}
   </table>

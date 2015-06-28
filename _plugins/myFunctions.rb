@@ -70,7 +70,7 @@ Liquid::Template.register_tag('render_time', Jekyll::RenderTimeTag)
 module Jekyll
   module InsertPDF
     def insertPDF(file)
-      return "<div class='pdfBox'> <div class='pdfContent'>    <object class='pdfContent' data='"+file+"' type='application/pdf' width='100%'' height='100%''>   alt: <a href = '"+file+"'>"+file+"</a></object></div> </div>"
+      return "<div class='pdfBox'> <div class='pdfContent'>    <object class='pdfContent' data='"+url_encode('/'+file)+"' type='application/pdf' width='100%'' height='100%''>   alt: <a href = '"+url_encode('/'+file)+"'>"+file+"</a></object></div> </div>"
     end
   end
 end
@@ -82,7 +82,6 @@ module Jekyll
   module InsertPicFolder
     def insertPicFolder(directory,style)
       toReturn=''
-      puts directory
       Dir.glob('images/'+directory+'/*'){|image|
         if not File.directory?(image)
           toReturn = toReturn + '<a href='+url_encode('/'+image)+'><img src='+url_encode('/'+image)+' class='+style+'></a>'
