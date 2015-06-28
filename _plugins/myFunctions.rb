@@ -14,7 +14,7 @@ Liquid::Template.register_filter(Jekyll::StripFile)
 module Jekyll
   module StrCmp
     def compare(input1,input2)
-        input1<=>input2
+      input1<=>input2
     end
   end
 end
@@ -24,13 +24,13 @@ Liquid::Template.register_filter(Jekyll::StrCmp)
 module Jekyll
   module PathMatch
     def pathMatch(candidate,pattern)
-        rawPath = candidate["path"]
-        trimmedPath = rawPath[0,rawPath.rindex("/")]
-        toReturn = nil
-        if((trimmedPath<=>pattern)==0)
-            toReturn= true
-        end
-        return toReturn
+      rawPath = candidate["path"]
+      trimmedPath = rawPath[0,rawPath.rindex("/")]
+      toReturn = nil
+      if((trimmedPath<=>pattern)==0)
+        toReturn= true
+      end
+      return toReturn
     end
   end
 end
@@ -38,7 +38,7 @@ end
 Liquid::Template.register_filter(Jekyll::PathMatch)
 
 
- 
+
 # Percent encoding for URI confrming to RFC 3986.
 # Ref: http://tools.ietf.org/html/rfc3986#page-12
 module URLEncode
@@ -70,7 +70,7 @@ Liquid::Template.register_tag('render_time', Jekyll::RenderTimeTag)
 module Jekyll
   module InsertPDF
     def insertPDF(file)
-        return "<div class='pdfBox'> <div class='pdfContent'>    <object class='pdfContent' data='"+file+"' type='application/pdf' width='100%'' height='100%''>   alt: <a href = '"+file+"'>"+file+"</a></object></div> </div>"
+      return "<div class='pdfBox'> <div class='pdfContent'>    <object class='pdfContent' data='"+file+"' type='application/pdf' width='100%'' height='100%''>   alt: <a href = '"+file+"'>"+file+"</a></object></div> </div>"
     end
   end
 end
@@ -79,32 +79,18 @@ Liquid::Template.register_filter(Jekyll::InsertPDF)
 
 
 module Jekyll
-  class InsertPicFolder < Liquid::Tag
-
-    def initialize(tag_name, text, tokens)
-      super
-      @text = text
-    end
-
-    def render(context)
-      "#{@text}"
+  module InsertPicFolder
+    def insertPicFolder(directory,style)
+      toReturn=''
+      puts directory
+      Dir.glob('images/'+directory+'/*'){|image|
+        if not File.directory?(image)
+          toReturn = toReturn + '<a href='+url_encode('/'+image)+'><img src='+url_encode('/'+image)+' class='+style+'></a>'
+        end
+      }
+      return toReturn
     end
   end
 end
 
-Liquid::Template.register_tag('render_time', Jekyll::InsertPicFolder)
-
-# module Jekyll
-#   module InsertPicFolder
-#     def insertPicFolder(file)
-#       directory = "/images/"+file
-#       toReturn = ''
-#       for file in site.static_files
-#         toReturn = toReturn+'\n'+ file
-#     end
-#     return toReturn
-#   end
-# end
-
-# Liquid::Template.register_filter(Jekyll::InsertPDF)
-
+Liquid::Template.register_filter( Jekyll::InsertPicFolder)

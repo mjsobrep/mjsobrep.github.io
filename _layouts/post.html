@@ -16,13 +16,13 @@ layout: default
   <a href="{{page.pdf}}"><h3>{{page.title}}</h3></a>
   {{page.pdf | insertPDF}}
   {%endif%}
-  
+
   {% if page.imageDir %}
-  {%include simplePictures.html %}
+  {{ page.imageDir | insertPicFolder:'medPic'}}
   {%endif%}
 
 
   {% include comments.html %}
-  
+
 
 </div>
