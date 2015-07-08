@@ -151,7 +151,7 @@
 			"file": "/C/GIT/mjsStaticSite/primaryPages/experience.html",
 			"settings":
 			{
-				"buffer_size": 288,
+				"buffer_size": 255,
 				"line_ending": "Windows"
 			}
 		},
@@ -159,7 +159,7 @@
 			"file": "/C/GIT/mjsStaticSite/_plugins/myFunctions.rb",
 			"settings":
 			{
-				"buffer_size": 2151,
+				"buffer_size": 2003,
 				"line_ending": "Windows"
 			}
 		},
@@ -504,15 +504,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 288,
+						"buffer_size": 255,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								259,
-								259
+								0,
+								0
 							]
 						],
 						"settings":
@@ -532,15 +532,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2151,
+						"buffer_size": 2003,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1724,
-								1724
+								0,
+								0
 							]
 						],
 						"settings":

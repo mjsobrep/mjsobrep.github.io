@@ -70,7 +70,7 @@ Liquid::Template.register_tag('render_time', Jekyll::RenderTimeTag)
 module Jekyll
   module InsertPDF
     def insertPDF(file)
-      return "<div class='pdfBox'> <div class='pdfContent'>    <object class='pdfContent' data='"+url_encode('/'+file)+"' type='application/pdf' width='100%'' height='100%''>   alt: <a href = '"+url_encode('/'+file)+"'>"+file+"</a></object></div> </div>"
+      return "<div class='pdfBox'> <div class='pdfContent'>    <object class='pdfContent' data='"+url_encode('/'+file)+"' type='application/pdf' width='100%'' height='100%''>   alternate download: <a href = '"+url_encode('/'+file)+"'>"+file+"</a></object></div> </div>"
     end
   end
 end
@@ -93,3 +93,23 @@ module Jekyll
 end
 
 Liquid::Template.register_filter( Jekyll::InsertPicFolder)
+
+module Jekyll
+    module InsertYouTube
+        def insertYouTube(source)
+                  return "<div class='wideMediaBox'> <div class='mediaContent'>    <iframe class='mediaContent' width='100%' height='100%' src='"+source+"' frameborder='0' allowfullscreen></iframe></div> </div>"
+        end
+    end
+end
+
+Liquid::Template.register_filter(Jekyll::InsertYouTube)
+
+module Jekyll
+    module InsertPowerPoint
+        def insertPowerPoint(source)
+                  return "<div class='wideMediaBox'> <div class='mediaContent'>    <iframe class = 'mediaContent' src='"+source+"' width='100%' height = '100%' frameborder='0' scrolling='no'></iframe></div> </div>"
+        end
+    end
+end
+
+Liquid::Template.register_filter(Jekyll::InsertPowerPoint)
