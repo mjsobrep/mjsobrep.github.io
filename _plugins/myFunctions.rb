@@ -113,3 +113,13 @@ module Jekyll
 end
 
 Liquid::Template.register_filter(Jekyll::InsertPowerPoint)
+
+module Jekyll
+    module FourThreeIframe
+        def fourThreeIframe(source)
+                  return "<div class='fourThreeBox'> <div class='mediaContent'>    <iframe class='mediaContent' width='100%' height='100%' src='"+source+"' frameborder='0' allowfullscreen></iframe></div> </div>"
+        end
+    end
+end
+
+Liquid::Template.register_filter(Jekyll::FourThreeIframe)

@@ -237,7 +237,17 @@ pre {
     content: "";
     display: block;
     padding-top: 60%;  /* if no calc block support*/
-    padding-top: calc(56.25% + 24px); /* account for the little button bar */
+    padding-top: calc(56.26% + 23px); /* account for the little button bar */
+}
+
+.fourThreeBox{
+    position: relative;
+    width: 100%;     /* desired width */
+}
+.fourThreeBox:before{
+    content: "";
+    display: block;
+    padding-top: 75%/* account for the little button bar */
 }
 
 .mediaContent{
