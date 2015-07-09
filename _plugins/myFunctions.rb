@@ -70,7 +70,7 @@ Liquid::Template.register_tag('render_time', Jekyll::RenderTimeTag)
 module Jekyll
   module InsertPDF
     def insertPDF(file)
-      return "<div class='pdfBox'> <div class='pdfContent'>    <object class='pdfContent' data='"+url_encode('/'+file)+"' type='application/pdf' width='100%'' height='100%''>   alternate download: <a href = '"+url_encode('/'+file)+"'>"+file+"</a></object></div> </div>"
+      return "<div class='pdfBox'> <div class='pdfContent'>    <object class='pdfContent' data='"+url_encode('/'+file)+"' type='application/pdf' width='100%' height='100%'>   alternate download: <a href = '"+url_encode('/'+file)+"'>"+file+"</a></object></div> </div>"
     end
   end
 end

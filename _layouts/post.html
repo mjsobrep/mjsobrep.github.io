@@ -13,7 +13,6 @@ layout: default
   </article>
 
   {% if page.pdf %}
-  <a href="{{page.pdf}}"><h3>{{page.title}}</h3></a>
   {{page.pdf | insertPDF}}
   {%endif%}
 
