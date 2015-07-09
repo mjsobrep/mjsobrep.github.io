@@ -107,7 +107,7 @@ Liquid::Template.register_filter(Jekyll::InsertYouTube)
 module Jekyll
     module InsertPowerPoint
         def insertPowerPoint(source)
-                  return "<div class='wideMediaBox'> <div class='mediaContent'>    <iframe class = 'mediaContent' src='"+source+"' width='100%' height = '100%' frameborder='0' scrolling='no'></iframe></div> </div>"
+                  return "<div class='widePP'> <div class='mediaContent'>    <iframe class = 'mediaContent' src='"+source+"' width='100%' height = '100%' frameborder='0' scrolling='no'></iframe></div> </div>"
         end
     end
 end
