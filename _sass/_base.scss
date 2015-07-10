@@ -259,7 +259,9 @@ pre {
 }
 
 .medPic{
-  height:200px;
+  max-height: 200px;
+  width: auto;
+  width: auto\9; /* for ie8*/
   border-radius: 25px;
   padding:5px;
   text-align: center;
@@ -267,7 +269,7 @@ pre {
 
 .largePic{
     @extend .medPic;
-    height:400px;
+    max-height: 400px;
 }
 
 .center {
