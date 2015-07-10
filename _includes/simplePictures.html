@@ -1,7 +1,0 @@
-{%capture real%}{{page.imageDir|prepend:"/images/"}}{%endcapture%}
-{%for file in site.static_files %}
-{%capture match%}{{file|pathMatch:real}}{%endcapture%}
-{%if match contains 'true'%}
-<a href={{file.path|url_encode}}><img src={{file.path|url_encode}} style="height:200px; border-radius: 25px;padding:5px"></a>
-{%endif%}
-{%endfor%}

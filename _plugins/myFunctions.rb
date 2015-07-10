@@ -89,7 +89,7 @@ module Jekyll
             Dir.glob('images/'+directory+'/*'){|image|
                 if not File.directory?(image)
                     if(type.include? 'md')
-                        toReturn = toReturn + '[![]('+url_encode('/'+image)+'){: .'+style+'}]('+url_encode('/'+image)+'){: .center}'
+                        toReturn = toReturn + '[![]('+url_encode('/'+image)+'){: .'+style+'}]('+url_encode('/'+image)+')'
                     else
                         toReturn = toReturn + '<a href='+url_encode('/'+image)+'><img src='+url_encode('/'+image)+' class='+style+'></a>'
                     end

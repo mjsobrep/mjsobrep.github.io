@@ -40,36 +40,43 @@ Once we had a good initial understanding of the project, we began to develop con
 ##Paper Prototypes
 In order to illustrate our ideas to both ourselves and our sponsors, we made a few paper prototypes.
 
-{{"intussassist/Paper Prototype"|insertPicFolder:'largePic','md'}}
+<!-- {{"intussassist/Paper Prototype"|insertPicFolder:'largePic','md'}} -->
+{% include pics.html src="intussassist/Paper Prototype" style="medPic" %}
 
 ##Laser Cut MDF Enclosure
 As we continued to refine our ideas we needed a place to begin housing and testing our system, so we made a prototype pressure control box out of MDF.
 
-{{"intussassist/MDF Prototype"|insertPicFolder:'largePic','md'}}
+<!-- {{"intussassist/MDF Prototype"|insertPicFolder:'largePic','md'}} -->
+{% include pics.html src="intussassist/MDF Prototype" style="medPic" %}
 
 ##Hybrid Additive Subtractive Prototype
 We then began working on the enema tip designs. Grant did most of the design work, while I performed design reviews for him and fabricated the parts as a combination of 3D prints and machined parts.
 
-{{"intussassist/V2 enema tip"|insertPicFolder:'largePic','md'}}
+<!-- {{"intussassist/V2 enema tip"|insertPicFolder:'largePic','md'}} -->
+{% include pics.html src="intussassist/V2 enema tip" style="largePic" %}
 
 ##Pressure Control system
 While working on the enema tip designs, I was working on designing, laying out, ordering, and assembling the components for the pressure control system. I was also working on the code to make the system run while Kathryn worked on the front end for the system.
 
-{{"intussassist/Pressure Control Box"|insertPicFolder:'medPic','md'}}
+<!-- {{"intussassist/Pressure Control Box"|insertPicFolder:'medPic','md'}} -->
+{% include pics.html src="intussassist/Pressure Control Box" style="medPic" %}
 
 ##Handheld Controller
 I also developed the electronics and code (both front and back end) for a handheld controller. Kathryn and Grant worked together to make the first iteration casing for the controller and I built of their work to make an improved version.
 
-{{"intussassist/Handheld Controller"|insertPicFolder:'medPic','md'}}
+<!-- {{"intussassist/Handheld Controller"|insertPicFolder:'medPic','md'}} -->
+{% include pics.html src="intussassist/Handheld Controller" style="medPic" %}
 
 ##Final Enema Tip
 Grant continued to iterate on the enema tip design. I adjusted his designs to improve manufacturability and functionality and then machined a final prototype. Both Grant and I attempted to cast the soft portion of the tip, with Grant's results being far superior to my own.
 
-{{"intussassist/Final Enema Tip"|insertPicFolder:'medPic','md'}}
+<!-- {{"intussassist/Final Enema Tip"|insertPicFolder:'medPic','md'}} -->
+{% include pics.html src="intussassist/Final Enema Tip" style="medPic" %}
 
 ##The team
 [Grant Stearns](https://www.linkedin.com/pub/grant-stearns/36/a37/a20)  
 [Kathryn Murray](https://www.linkedin.com/pub/kathryn-murray/4a/606/9ab)  
 [Maria Diaz Ortiz](https://www.linkedin.com/pub/maria-diaz-ortiz/39/a07/43b)  
 [Michael Sobrepera](https://www.linkedin.com/in/michaelsobrepera)  
-{{"intussassist/team"|insertPicFolder:'largePic','md'}}
+<!-- {{"intussassist/team"|insertPicFolder:'largePic','md'}} -->
+{% include pics.html src="intussassist/team" style="largePic" %}
