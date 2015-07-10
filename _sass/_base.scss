@@ -262,6 +262,16 @@ pre {
   height:200px;
   border-radius: 25px;
   padding:5px;
+  text-align: center;
+}
+
+.largePic{
+    @extend .medPic;
+    height:400px;
+}
+
+.center {
+  text-align: center;
 }
 
 .postTableRow{
