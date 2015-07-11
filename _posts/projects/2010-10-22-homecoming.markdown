@@ -15,4 +15,4 @@ tags:
 - leadership
 ---
 
-During high school I was highly involved in the student government. One of the big events events every year was the homecoming dance. We spent a lot of time and money building really elaborate decorations. In 2010 the theme was "Arabian Nights".
+During high school I was highly involved in the student government. One of the big events events every year was the homecoming dance. We spent a lot of time and money building really elaborate decorations. In 2010 the theme was "Arabian Nights". As the student body president that year, I oversaw the planning and execution of the event. The profits from the event were funneled into various community service initiatives implemented by the student government.
