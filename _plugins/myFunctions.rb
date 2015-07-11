@@ -134,3 +134,13 @@ module Jekyll
 end
 
 Liquid::Template.register_filter(Jekyll::FourThreeIframe)
+
+module Jekyll
+    module NineSixIframe
+        def nineSixIframe(source)
+            return "<div class = 'center'><div class='nineSixBox'> <div class='mediaContent'>    <iframe class='mediaContent' width='100%' height='100%' src='"+source+"' frameborder='0' allowfullscreen></iframe></div> </div></div>"
+        end
+    end
+end
+
+Liquid::Template.register_filter(Jekyll::NineSixIframe)
