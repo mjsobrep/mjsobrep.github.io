@@ -140,14 +140,6 @@
 	"buffers":
 	[
 		{
-			"file": "/C/GIT/mjsStaticSite/_includes/simplePictures.html",
-			"settings":
-			{
-				"buffer_size": 332,
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "/C/GIT/mjsStaticSite/primaryPages/experience.html",
 			"settings":
 			{
@@ -159,7 +151,7 @@
 			"file": "/C/GIT/mjsStaticSite/_plugins/myFunctions.rb",
 			"settings":
 			{
-				"buffer_size": 2003,
+				"buffer_size": 3772,
 				"line_ending": "Windows"
 			}
 		},
@@ -273,6 +265,8 @@
 	],
 	"file_history":
 	[
+		"/C/Users/Michael/OneDrive/Documents/Raspberry Pi/Raspberry Pi Cheat",
+		"/C/GIT/mjsStaticSite/_includes/simplePictures.html",
 		"/C/GIT/mjsStaticSite/_posts/guides/2015-06-22-gitGuide.md",
 		"/C/GIT/mjsStaticSite/_sass/_base.scss",
 		"/C/GIT/mjsStaticSite/_layouts/post.html",
@@ -342,7 +336,6 @@
 		"/C/GIT/mjsStaticSite/primaryPages/workHistory.md",
 		"/C/GIT/mjsStaticSite/_posts/projects/index.html",
 		"/C/GIT/mjsStaticSite/_plugins/stripFile.rb",
-		"/C/GIT/mjsStaticSite/_includes/simplePictures.html",
 		"/C/Users/Michael/OneDrive/Desktop/bob.html",
 		"/C/GIT/mjsStaticSite/Windows PowerShell",
 		"/C/GIT/mjsStaticSite/.gitignore",
@@ -399,8 +392,7 @@
 		"/C/GIT/Intussasist/gui.py",
 		"/C/GIT/Intussasist/generateCommands",
 		"/C/GIT/CS3600/Project 3/tracking/bustersAgents.py",
-		"/C/GIT/CS3600/Project 3/tracking/ghostAgents.py",
-		"/C/GIT/CS3630/Project 6/keyboardLog.py"
+		"/C/GIT/CS3600/Project 3/tracking/ghostAgents.py"
 	],
 	"find":
 	{
@@ -467,39 +459,11 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/C/GIT/mjsStaticSite/_includes/simplePictures.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 332,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								332,
-								332
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Jekyll/Syntaxes/HTML (Jekyll).tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
 					"file": "/C/GIT/mjsStaticSite/primaryPages/experience.html",
 					"semi_transient": false,
 					"settings":
@@ -527,12 +491,12 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 1,
 					"file": "/C/GIT/mjsStaticSite/_plugins/myFunctions.rb",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2003,
+						"buffer_size": 3772,
 						"regions":
 						{
 						},
@@ -553,11 +517,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 2,
 					"semi_transient": false,
 					"settings":
 					{
