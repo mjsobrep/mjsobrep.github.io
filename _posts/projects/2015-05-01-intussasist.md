@@ -80,3 +80,7 @@ Grant continued to iterate on the enema tip design. I adjusted his designs to im
 [Michael Sobrepera](https://www.linkedin.com/in/michaelsobrepera)  
 <!-- {{"intussassist/team"|insertPicFolder:'largePic','md'}} -->
 {% include pics.html src="intussassist/team" style="largePic" %}
+
+
+##Capstone Expo
+{% include pics.html src="intussassist/expo" style="largePic" %}
