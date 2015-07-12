@@ -25,8 +25,8 @@ I met [Jose Gallo](http://www.josegallo.com/) at [The Engineer Guy](http://www.t
 
 <br/>
 
-{{"https://www.youtube.com/embed/gcfAp47YGyA" | insertYouTube}}
-{{"https://www.youtube.com/embed/jTJkhRjVaus" | insertYouTube}}
-{{"https://www.youtube.com/embed/Xse8pVynuTU" | insertYouTube}}
-{{"https://www.youtube.com/embed/qmZ0__i1iVQ" | nineSixIframe}}
-{{"https://www.youtube.com/embed/KpZX_1y0OSo" | insertYouTube}}
+{% include iframe.html src="'https://www.youtube.com/embed/gcfAp47YGyA'" width=100 ratio=56.25 %}
+{% include iframe.html src="'https://www.youtube.com/embed/jTJkhRjVaus'" width=100 ratio=56.25 %}
+{% include iframe.html src="'https://www.youtube.com/embed/Xse8pVynuTU'" width=100 ratio=56.25 %}
+{% include iframe.html src="'https://www.youtube.com/embed/qmZ0__i1iVQ'" width=50 ratio=177.7777777777778 %}
+{% include iframe.html src="'https://www.youtube.com/embed/KpZX_1y0OSo'" width=100 ratio=56.25 %}
