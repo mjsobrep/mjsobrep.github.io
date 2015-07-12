@@ -1,0 +1,18 @@
+# Site settings
+title: Michael Sobrepera
+email: mjsobrep@live.com
+description: A site about stuff that I (Michael Sobrepera) work on, think, enjoy, etc...
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://www.michaelsobrepera.com" # the base hostname & protocol for your site
+twitter_username: m_sobrepera
+github_username:  mjsobrep
+linkedin: https://www.linkedin.com/in/michaelsobrepera
+name: Michael Sobrepera
+phoneNum: (770)324-6196
+skype_username: michael.sobrepera
+grabcad_site: michael.sobrepera-1
+# Build settings
+markdown: kramdown
+
+permalink: none
+ignore: /subl

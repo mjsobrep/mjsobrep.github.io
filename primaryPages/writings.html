@@ -1,0 +1,15 @@
+---
+layout: page
+title: Writings
+permalink: /writings/
+---
+<h3>Here lies a smattering of writings. They are a combination of individual efforts and group work.</h3>
+
+  <table>
+    {% for post in site.categories.papers %}
+    <tr>
+      <td class=postTableDate>{{ post.date | date: "%b %-d, %Y" }}</td>
+      <td class=postTableRow><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></td>
+    </tr>
+    {% endfor %}
+  </table>
