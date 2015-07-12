@@ -144,3 +144,13 @@ module Jekyll
 end
 
 Liquid::Template.register_filter(Jekyll::NineSixIframe)
+
+module Jekyll
+    module StripNonNum
+        def stripNonNum(num)
+            return num.gsub(/[^0-9]/, '')
+        end
+    end
+end
+
+Liquid::Template.register_filter(Jekyll::StripNonNum)
