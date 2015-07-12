@@ -5,12 +5,13 @@ layout: default
 <div class="home">
 <h3>Welcome to my personal site, please have a look around. Feel free to contact me via <a href="https://www.linkedin.com/in/michaelsobrepera">LinkedIn</a> or <a href="mailto:mjsobrep@live.com">e-mail</a>. There are places to comment throughout the site, please feel free to leave your opinion.</h3>
 </br></br>
-  <h2>2 Most Recent Blog Posts</h2>
+  <h2>Most Recent Posts</h2>
 
   <table>
-    {% for post in site.categories.blog offset: 0 limit: 5 %}
+    {% for post in site.posts offset: 0 limit: 5 %}
     <tr>
       <td class=postTableDate>{{ post.date | date: "%b %-d, %Y" }}</td>
+      <td class=postTableRow><a href="{{post.categories }}">{{post.categories}}</td>
       <td class=postTableRow><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></td>
     </tr>
     {% endfor %}
