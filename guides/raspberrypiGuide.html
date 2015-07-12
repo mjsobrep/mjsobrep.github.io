@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Michael Sobrepera</title>
-  <meta name="description" content="A site about stuff that I (Michael Sobrepera) work on, think, enjoy, etc...">
+  <title>Raspberry Pi</title>
+  <meta name="description" content="cool pinout">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://www.michaelsobrepera.com/">
+  <link rel="canonical" href="http://www.michaelsobrepera.com/guides/raspberrypiGuide.html">
   <link rel="alternate" type="application/rss+xml" title="Michael Sobrepera" href="http://www.michaelsobrepera.com/feed.xml" />
 
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
@@ -89,22 +89,199 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="home">
-<h3>Welcome to my personal site, please have a look around. Feel free to contact me via <a href="https://www.linkedin.com/in/michaelsobrepera">LinkedIn</a> or <a href="mailto:mjsobrep@live.com">e-mail</a>. There are places to comment throughout the site, please feel free to leave your opinion.</h3>
-</br></br>
-  <h2>2 Most Recent Blog Posts</h2>
+        <div class="guide">
 
-  <table>
-    
-    <tr>
-      <td class=postTableDate>Jun 27, 2015</td>
-      <td class=postTableRow><a class="post-link" href="/blog/welcome.html">Welcome To My Site</a></td>
-    </tr>
-    
-  </table>
-</br>
+  <header class="post-header">
+    <h1 class="post-title">Raspberry Pi</h1>
+    <h3>Last Updated: 25 June 2015</h3>
+  </header>
 
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+  <article class="post-content">
+    <p><a href="http://pi.gadgetoid.com/pinout/pin21_gpio9">cool pinout</a></p>
+
+<p><a href="https://learn.adafruit.com/category/learn-raspberry-pi">Adafruit Guides</a></p>
+
+<h3 id="setup-and-access">SETUP AND ACCESS:</h3>
+<ul>
+  <li><a href="https://learn.adafruit.com/adafruits-raspberry-pi-lesson-3-network-setup/setting-up-wifi-with-occidentalis">Setup WIFI</a></li>
+  <li><a href="https://learn.adafruit.com/adafruits-raspberry-pi-lesson-6-using-ssh/overview">SSH</a></li>
+  <li>VNC:
+    <ul>
+      <li>Currently Running stuff:
+        <ul>
+          <li><code>startx</code></li>
+          <li><code>x11vnc -display :0 -q</code></li>
+        </ul>
+      </li>
+      <li>New Desktop:
+  <code>vncserver :1</code></li>
+    </ul>
+  </li>
+  <li>Video Out:
+    <ul>
+      <li><a href="https://learn.adafruit.com/using-a-mini-pal-ntsc-display-with-a-raspberry-pi/configure-and-test">PAL/NTSC Setup</a></li>
+      <li><a href="https://learn.adafruit.com/user-space-spi-tft-python-library-ili9341-2-8">TFT</a></li>
+      <li><a href="http://www.amazon.com/review/R2SWCZHX0PXU3T/ref=cm_cr_dp_title?ie=UTF8&amp;ASIN=B006MPRFJQ&amp;nodeID=1077068&amp;store=car">Amazon Screen</a></li>
+    </ul>
+  </li>
+</ul>
+
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="o">/</span><span class="n">boot</span><span class="o">/</span><span class="n">config</span><span class="o">.</span><span class="n">txt</span> <span class="n">settings</span> <span class="k">for</span> <span class="n">edge</span> <span class="n">to</span> <span class="n">edge</span> <span class="n">beauty</span><span class="p">:</span>
+    <span class="n">sdtv_mode</span><span class="o">=</span><span class="mi">0</span> <span class="c">#for NTSC</span>
+    <span class="n">sdtv_aspect</span><span class="o">=</span><span class="mi">3</span> <span class="c">#for 16:9</span>
+    <span class="n">framebuffer_width</span><span class="o">=</span><span class="mi">480</span>
+    <span class="n">framebuffer_height</span><span class="o">=</span><span class="mi">272</span>
+    <span class="n">disable_overscan</span><span class="o">=</span><span class="mi">1</span> <span class="c">#non-intuitive but the overscan_scale does the work</span>
+    <span class="n">overscan_scale</span><span class="o">=</span><span class="mi">1</span> <span class="c">#currently undocumented but works</span>
+    <span class="n">overscan_left</span><span class="o">=</span><span class="mi">16</span>
+    <span class="n">overscan_right</span><span class="o">=</span><span class="mi">16</span>
+    <span class="n">overscan_top</span><span class="o">=</span><span class="mi">8</span>
+    <span class="n">overscan_bottom</span><span class="o">=</span><span class="mi">8</span></code></pre></div>
+
+<h3 id="gpio">GPIO:</h3>
+<ul>
+  <li>GPIO Setup:
+    <ul>
+      <li>WiringPi:
+        <ul>
+          <li><code>git clone git://git.drogon.net/wiringPi</code></li>
+          <li><code>cd wiringPi</code></li>
+          <li><code>./build</code></li>
+          <li>Python Wrappers:
+            <ul>
+              <li><code>sudo apt-get install python-dev</code></li>
+              <li><code>sudo apt-get install python-setuptools</code></li>
+              <li><code>git clone https://github.com/Gadgetoid/WiringPi2-Python.git </code></li>
+              <li><code>cd WiringPi2-Python</code></li>
+              <li><code>sudo python setup.py install</code></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="https://learn.adafruit.com/reading-a-analog-in-and-controlling-audio-volume-with-the-raspberry-pi/script">ADC</a></li>
+      <li>setup:
+        <ul>
+          <li>wire to pin and ground</li>
+          <li>Setup global mode:
+            <ul>
+              <li><code>GPIO.setmode(GPIO.BCM)</code></li>
+            </ul>
+          </li>
+          <li>Setup Specific pin:
+            <ul>
+              <li><code>GPIO.setup(14, GPIO.IN, GPIO.PUD_UP)</code></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="screen-blankinghttpslearnadafruitcomraspi-animated-gif-picture-framemaking-changes"><a href="https://learn.adafruit.com/raspi-animated-gif-picture-frame/making-changes">Screen Blanking</a>:</h4>
+
+<ul>
+  <li><code>sudo nano /etc/kbd/config</code>
+    <ul>
+      <li>change: <code>BLANK_TIME=30</code></li>
+      <li>to: <code>BLANK_TIME=0</code></li>
+    </ul>
+  </li>
+  <li><code>sudo nano /etc/X11/xinit/xinitrc</code>
+    <ul>
+      <li>after first line, add:
+        <ul>
+          <li><code>xset s off</code></li>
+          <li><code>xset -dpms</code></li>
+          <li><code>xset s noblank</code></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>`sudo nano /etc/lightdm/lightdm.conf
+    <ul>
+      <li><code>[SeatDefaults]</code></li>
+      <li><code>xserver-command=X -s 0 -dpms</code></li>
+    </ul>
+  </li>
+  <li>`sudo nano /etc/xdg/lxsession/LXDE/autostart
+    <ul>
+      <li><code># @xscreensaver -no-splash</code> &lt;-make it commmented out
+        <ul>
+          <li>add:
+            <ul>
+              <li><code>@xset s off</code></li>
+              <li><code>@xset -dpms</code></li>
+              <li><code>@xset s noblank</code></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="starting-stuff-at-startup">Starting stuff at startup:</h3>
+<ul>
+  <li><a href="http://www.instructables.com/id/Raspberry-Pi-Launch-Python-script-on-startup/?ALLSTEPS">http://www.instructables.com/id/Raspberry-Pi-Launch-Python-script-on-startup/?ALLSTEPS</a></li>
+  <li>
+    <p><a href="http://www.raspberrypi.org/learning/tweeting-babbage/worksheet2/">http://www.raspberrypi.org/learning/tweeting-babbage/worksheet2/</a></p>
+  </li>
+  <li>Post XWindows Start:
+    <ul>
+      <li>EDIT: <code>/etc/xdg/lxsession/LXDE-pi/autostart</code>
+        <ul>
+          <li>at end add: <code>@/usr/bin/python /home/pi/...&lt;file.py&gt;</code></li>
+        </ul>
+      </li>
+      <li>To run as superuser:
+        <ul>
+          <li>EDIT: <code>/etc/xdg/lxsession/LXDE-pi/autostart</code>
+            <ul>
+              <li>at end add: <code>@/usr/bin/sudo /home/pi/...&lt;file.py&gt;</code></li>
+            </ul>
+          </li>
+          <li>EDIT: <code>&lt;file.py&gt;</code>
+            <ul>
+              <li>first line add: <code>#!/usr/bin/env python</code></li>
+            </ul>
+          </li>
+          <li>In terminal:
+            <ul>
+              <li><code>sudo chmod +x &lt;file.py&gt;</code></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+  </article>
+  <!-- START: Livefyre Embed -->
+
+  <!-- START: Livefyre Embed -->
+  <h2>Comments</h2>
+<div id="livefyre-comments"></div>
+<script type="text/javascript" src="http://zor.livefyre.com/wjs/v3.0/javascripts/livefyre.js"></script>
+<script type="text/javascript">
+(function () {
+    var articleId = fyre.conv.load.makeArticleId(null);
+    fyre.conv.load({}, [{
+        el: 'livefyre-comments',
+        network: "livefyre.com",
+        siteId: "375755",
+        articleId: articleId,
+        signed: false,
+        collectionMeta: {
+            articleId: articleId,
+            url: fyre.conv.load.makeCollectionUrl(),
+        }
+    }], function() {});
+}());
+</script>
+<!-- END: Livefyre Embed -->
+            
 
 </div>
 

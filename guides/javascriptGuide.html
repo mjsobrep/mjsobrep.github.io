@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Michael Sobrepera</title>
-  <meta name="description" content="A site about stuff that I (Michael Sobrepera) work on, think, enjoy, etc...">
+  <title>Javascript</title>
+  <meta name="description" content="  logging output: console.log();">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://www.michaelsobrepera.com/">
+  <link rel="canonical" href="http://www.michaelsobrepera.com/guides/javascriptGuide.html">
   <link rel="alternate" type="application/rss+xml" title="Michael Sobrepera" href="http://www.michaelsobrepera.com/feed.xml" />
 
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
@@ -89,22 +89,109 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="home">
-<h3>Welcome to my personal site, please have a look around. Feel free to contact me via <a href="https://www.linkedin.com/in/michaelsobrepera">LinkedIn</a> or <a href="mailto:mjsobrep@live.com">e-mail</a>. There are places to comment throughout the site, please feel free to leave your opinion.</h3>
-</br></br>
-  <h2>2 Most Recent Blog Posts</h2>
+        <div class="guide">
 
-  <table>
-    
-    <tr>
-      <td class=postTableDate>Jun 27, 2015</td>
-      <td class=postTableRow><a class="post-link" href="/blog/welcome.html">Welcome To My Site</a></td>
-    </tr>
-    
-  </table>
-</br>
+  <header class="post-header">
+    <h1 class="post-title">Javascript</h1>
+    <h3>Last Updated: 22 June 2015</h3>
+  </header>
 
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+  <article class="post-content">
+    <ul>
+  <li>logging output: <code>console.log();</code></li>
+</ul>
+
+<h2 id="jsdoc-cheat-sheet">JSDoc cheat sheet</h2>
+<ul>
+  <li><code>@author - author</code></li>
+  <li><code>@method - put on the constructor</code></li>
+  <li><code>@param - the arguments</code></li>
+  <li><code>@returns - the returns</code></li>
+  <li><code>@throws - what does this throw</code></li>
+  <li><code>@version - the version</code></li>
+  <li><code>@todo - things todo</code></li>
+</ul>
+
+<p>http://fabricjs.com/hovering/</p>
+
+<p><code>const ME = 0</code> //defines a constant variable</p>
+
+<h4 id="literals">Literals:</h4>
+<ul>
+  <li>Array: <code>var coffees = ["French Roast", "Colombian", "Kona"];</code> // can have empty spots (best to do this with {undefined})</li>
+  <li>Boolean: <code>var bob = true; var sue = false;</code></li>
+  <li>Int: (decimal: <code>105</code> -&gt; no leading zero) (octal: <code>017</code> -&gt; leading zero) (hex: <code>0x1DA7</code> -&gt; leading 0x)</li>
+  <li>Floating Point: must have <code>(num)(decimal)(num)</code> or <code>(num)(E(+/-)(num))</code></li>
+  <li>Object: <code>var car = { myCar: "Saturn", getCar: CarTypes("Honda"), special: Sales };</code></li>
+  <li>String: <code>autoboxing. use either "" or ''</code></li>
+</ul>
+
+<h4 id="function-pointers">function pointers:</h4>
+<ul>
+  <li><code>var square = function(number) {return number * number};</code></li>
+  <li><code>var x = square(4)</code> //x gets the value 16</li>
+  <li>could pass square as an argument</li>
+</ul>
+
+<h4 id="iterating">iterating:</h4>
+<ul>
+  <li><code>array.forEach(function(args))</code>   //will call function for all args</li>
+  <li><code>array.forEach(function(args){function body})</code></li>
+  <li>classic <code>for(int i = 0;i&lt;array.length;i++)</code></li>
+</ul>
+
+<h4 id="arrays">Arrays:</h4>
+<ul>
+  <li><code>pop()</code> //removes and returns last element</li>
+  <li><code>push()</code> //adds element to end and returns length</li>
+  <li><code>shift()</code> //removes and returns first element</li>
+  <li><code>unshift()</code> //adds element to the front and returns length</li>
+</ul>
+
+<h4 id="comparator">Comparator:</h4>
+<ul>
+  <li><code>var sortFn = function(a, b){body}</code>
+    <ul>
+      <li>if a is less than b by the sorting system, return -1 (or any negative number)</li>
+      <li>if a is greater than b by the sorting system, return 1 (or any positive number)</li>
+      <li>if a and b are considered equivalent, return 0.</li>
+    </ul>
+  </li>
+  <li><code>array.sort(sortFn);</code></li>
+</ul>
+
+<h4 id="inheritance">Inheritance:</h4>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">ClassName</span><span class="p">(</span><span class="nx">args</span><span class="p">){</span>
+        <span class="nx">SuperClassName</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="nx">Superargs</span><span class="p">)</span>
+    <span class="p">}</span></code></pre></div>
+
+
+  </article>
+  <!-- START: Livefyre Embed -->
+
+  <!-- START: Livefyre Embed -->
+  <h2>Comments</h2>
+<div id="livefyre-comments"></div>
+<script type="text/javascript" src="http://zor.livefyre.com/wjs/v3.0/javascripts/livefyre.js"></script>
+<script type="text/javascript">
+(function () {
+    var articleId = fyre.conv.load.makeArticleId(null);
+    fyre.conv.load({}, [{
+        el: 'livefyre-comments',
+        network: "livefyre.com",
+        siteId: "375755",
+        articleId: articleId,
+        signed: false,
+        collectionMeta: {
+            articleId: articleId,
+            url: fyre.conv.load.makeCollectionUrl(),
+        }
+    }], function() {});
+}());
+</script>
+<!-- END: Livefyre Embed -->
+            
 
 </div>
 

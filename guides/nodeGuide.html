@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Michael Sobrepera</title>
-  <meta name="description" content="A site about stuff that I (Michael Sobrepera) work on, think, enjoy, etc...">
+  <title>Node</title>
+  <meta name="description" content="Arguments:  args = process.argv;">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://www.michaelsobrepera.com/">
+  <link rel="canonical" href="http://www.michaelsobrepera.com/guides/nodeGuide.html">
   <link rel="alternate" type="application/rss+xml" title="Michael Sobrepera" href="http://www.michaelsobrepera.com/feed.xml" />
 
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
@@ -89,22 +89,60 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="home">
-<h3>Welcome to my personal site, please have a look around. Feel free to contact me via <a href="https://www.linkedin.com/in/michaelsobrepera">LinkedIn</a> or <a href="mailto:mjsobrep@live.com">e-mail</a>. There are places to comment throughout the site, please feel free to leave your opinion.</h3>
-</br></br>
-  <h2>2 Most Recent Blog Posts</h2>
+        <div class="guide">
 
-  <table>
-    
-    <tr>
-      <td class=postTableDate>Jun 27, 2015</td>
-      <td class=postTableRow><a class="post-link" href="/blog/welcome.html">Welcome To My Site</a></td>
-    </tr>
-    
-  </table>
-</br>
+  <header class="post-header">
+    <h1 class="post-title">Node</h1>
+    <h3>Last Updated: 25 June 2015</h3>
+  </header>
 
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+  <article class="post-content">
+    <h4 id="arguments">Arguments:</h4>
+<ul>
+  <li><code>args = process.argv;</code></li>
+</ul>
+
+<h4 id="loading-global-libraries">Loading Global Libraries:</h4>
+<ul>
+  <li><code>var &lt;lib&gt; = require('&lt;lib&gt;');</code></li>
+</ul>
+
+<h3 id="syncronous-file-io">syncronous file I/O:</h3>
+<ul>
+  <li>uses fs library:</li>
+  <li><code>&lt;buffer&gt;=readFileSync(&lt;path&gt;);</code></li>
+  <li>Buffer:
+    <ul>
+      <li><code>&lt;string&gt;=&lt;buffer&gt;.toString();</code></li>
+    </ul>
+  </li>
+</ul>
+
+  </article>
+  <!-- START: Livefyre Embed -->
+
+  <!-- START: Livefyre Embed -->
+  <h2>Comments</h2>
+<div id="livefyre-comments"></div>
+<script type="text/javascript" src="http://zor.livefyre.com/wjs/v3.0/javascripts/livefyre.js"></script>
+<script type="text/javascript">
+(function () {
+    var articleId = fyre.conv.load.makeArticleId(null);
+    fyre.conv.load({}, [{
+        el: 'livefyre-comments',
+        network: "livefyre.com",
+        siteId: "375755",
+        articleId: articleId,
+        signed: false,
+        collectionMeta: {
+            articleId: articleId,
+            url: fyre.conv.load.makeCollectionUrl(),
+        }
+    }], function() {});
+}());
+</script>
+<!-- END: Livefyre Embed -->
+            
 
 </div>
 

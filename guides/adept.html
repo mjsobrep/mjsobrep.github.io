@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Michael Sobrepera</title>
-  <meta name="description" content="A site about stuff that I (Michael Sobrepera) work on, think, enjoy, etc...">
+  <title>Adept Ace and V-Plus</title>
+  <meta name="description" content="Some Good Links:  cool adept stuff  coordinate systems  icobra manual  MICRO V+ STUFF  V+  ACE  VISUAL STUDIO GUI">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://www.michaelsobrepera.com/">
+  <link rel="canonical" href="http://www.michaelsobrepera.com/guides/adept.html">
   <link rel="alternate" type="application/rss+xml" title="Michael Sobrepera" href="http://www.michaelsobrepera.com/feed.xml" />
 
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
@@ -89,22 +89,310 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="home">
-<h3>Welcome to my personal site, please have a look around. Feel free to contact me via <a href="https://www.linkedin.com/in/michaelsobrepera">LinkedIn</a> or <a href="mailto:mjsobrep@live.com">e-mail</a>. There are places to comment throughout the site, please feel free to leave your opinion.</h3>
-</br></br>
-  <h2>2 Most Recent Blog Posts</h2>
+        <div class="guide">
 
-  <table>
-    
+  <header class="post-header">
+    <h1 class="post-title">Adept Ace and V-Plus</h1>
+    <h3>Last Updated: 10 July 2015</h3>
+  </header>
+
+  <article class="post-content">
+    <h3 id="some-good-links">Some Good Links:</h3>
+<ul>
+  <li><a href="http://www.adept.com/forum/viewtopic.php?f=45&amp;t=115">cool adept stuff</a></li>
+  <li><a href="http://ceeps.colostate-pueblo.edu/Engineering/RoboticsLaboratory/AdeptSCARA/Pages/CoordinateSystems.aspx">coordinate systems</a></li>
+  <li><a href="http://www1.adept.com/main/KE/DATA/Robot/iCobra/iCobra_UG.pdf">icobra manual</a></li>
+  <li><a href="http://www1.adept.com/main/KE/DATA/V%20Plus/MicroV/MicrovTOC.htm">MICRO V+ STUFF</a></li>
+  <li><a href="http://www1.adept.com/main/KE/DATA/V%20Plus/V%20Language%20User/V+Programming_TOC.html">V+</a></li>
+  <li><a href="http://www1.adept.com/main/KE/DATA/ACE/ACE_User/DL_Support/doc_frames.html">ACE</a></li>
+  <li><a href="https://www.youtube.com/watch?v=_jEhJyb9dFo&amp;list=WL&amp;index=3">VISUAL STUDIO GUI</a></li>
+</ul>
+
+<hr />
+
+<h3 id="monitor-mode">MONITOR MODE:</h3>
+<ul>
+  <li><code>ENABLE POWER</code></li>
+  <li><code>DISABLE POWER</code></li>
+  <li><code>DO @0 JMOVE 10</code>
+    <ul>
+      <li><code>DO(REQUIRED) @0(TASK NUMBER) JMOVE(MOVE COMMAND) 10(BY HOW MUCH)</code></li>
+    </ul>
+  </li>
+</ul>
+
+<table>
+  <tbody>
     <tr>
-      <td class=postTableDate>Jun 27, 2015</td>
-      <td class=postTableRow><a class="post-link" href="/blog/welcome.html">Welcome To My Site</a></td>
+      <td><code>ESTOP</code></td>
+      <td>(activates e-stop)</td>
     </tr>
-    
-  </table>
-</br>
+    <tr>
+      <td><code>EXECUTE taskNum program</code></td>
+      <td>(executes the program on the directed task number)</td>
+    </tr>
+    <tr>
+      <td><code>LIST expression</code></td>
+      <td>(lists the value of the expression)</td>
+    </tr>
+    <tr>
+      <td><code>PANIC</code></td>
+      <td>(stops all robots without turning off power)</td>
+    </tr>
+    <tr>
+      <td><code>PARAMETER parameter[i]=val</code></td>
+      <td>(sets the parameter to val)</td>
+    </tr>
+    <tr>
+      <td><code>PARAMETER parameter[i]</code></td>
+      <td>(displays parameter val)</td>
+    </tr>
+    <tr>
+      <td><code>PARAMETER</code></td>
+      <td>(displays all paramter values)</td>
+    </tr>
+    <tr>
+      <td><code>STORE</code></td>
+      <td>(stores RAM into NVRAM)</td>
+    </tr>
+    <tr>
+      <td><code>SWITCH switch[i]</code></td>
+      <td>(display setting of switch)</td>
+    </tr>
+    <tr>
+      <td><code>WHERE</code></td>
+      <td>(displays robot position and configuration)</td>
+    </tr>
+  </tbody>
+</table>
 
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+<p><br /></p>
+
+<hr />
+
+<h3 id="useful-commands">USEFUL COMMANDS</h3>
+<ul>
+  <li><code>JMOVE j1,..,jn</code>              (joint interpreted move to joint values. ommited values “,,” are not moved)</li>
+  <li><code>MOVE    loc</code>                     (joint interpolated move to ‘loc’)</li>
+  <li><code>MOVES loc</code>                     (straight line move to ‘loc’)</li>
+  <li><code>SIG</code></li>
+  <li><code>ACCEL acceleration(0-100), deceleration(0-100)</code></li>
+  <li><code>APPRO location, distance</code>      (joint interpolated movement to z above location by distance)</li>
+  <li><code>APPROS location, distance</code>     (staight-line movement to z above location by distance)</li>
+  <li><code>AUTO var, var, var..</code>          (local non-pervasive variable)</li>
+  <li><code>LOVAL var, var, var..</code>      (local pervasive variable)</li>
+  <li><code>GLOBAL var, var, var..</code>        (globale variable)
+<strong>NOTE ON VARIABLES: MUST BE DECLARED AFTER PROGRAM STATEMENT, BEFORE EXECUTABLES</strong></li>
+  <li><code>BITS firstRegisterIndex, numRegisters=value</code>    (changes output parsing ‘value’ in binary over outputs begining at ‘firstRegisterIndex’ and indexing for numRegisters)</li>
+  <li><code>BRAKE</code>                         (stops robot motion imediately at decel rate. program then proceeds)</li>
+  <li><code>BREAK</code>                         (pauses program until current motion is complete. program then proceeds)</li>
+  <li><code>CALL program</code>                  (JSR)</li>
+  <li><code>COARSE tolerance</code>              (makes movement less precisse but faster, the larger the tolerance, as a percent, the less accurate the move)</li>
+  <li><code>DECOMPOSE array[i]=loc</code>        (takes the 6 position variables of ‘loc; and places them into the array begining at index=’i’. in the event of a multidimension array, [i_1,i_2,i_n], only ‘i_n’ will be incremented</li>
+  <li><code>DELAY time</code>                    (delays all motion for time, in seconds, all other aspects of program will run up until next motion)</li>
+  <li><code>DEPART distance</code>                (moves tool upwards by distance)</li>
+  <li><code>DRIVE joint, change, speed</code>    (moves the joint at speed as %*monitor speed to incremental change)</li>
+  <li><code>FINE tol</code>                        (adjust motion tolerance to ‘tol’ which is a percent of standard, so smaller is tighter)</li>
+  <li><code>HALT</code>                               (hard program exit, blows   through all stacks)</li>
+  <li><code>HERE loc</code>                        (sets the location or location offset as the current robot position)</li>
+  <li><code>JHERE var1,...,varn</code>              (sets current joint values to variables in sequence)</li>
+  <li><code>LEFTY</code>                              (makes robot move as left handed arm)</li>
+  <li><code>RESET</code>                              (turns off all external output signals)</li>
+  <li><code>RETURN</code></li>
+  <li><code>RIGHTY</code>                        (sets robot in right handed mode)</li>
+  <li><code>SET loc1=loc2</code>                 (sets ‘loc1’ equal to ‘loc2’)</li>
+  <li><code>SET loc1=loc2:tran</code>            (sets ‘loc1’ equal to the result of ‘loc2’ post transformation</li>
+  <li><code>SIGNAL reg1,..,regn</code>           (turns register on or off. positive value is on negativ value is off)</li>
+  <li><code>MULTIPLE</code>                      (allows complete wrist movement)</li>
+  <li><code>SINGLE</code>                        (limits wrist movement to +/* 180 of center)</li>
+  <li><code>SPEED var</code>                     (sets speed to var, 100 is standard % speed, MMPS gives mm/s)</li>
+  <li><code>STOP</code>                          (equivalent to RETURN in the primary frame)</li>
+  <li><code>SWITCH switch=var</code>             (sets the switch value to ‘var’)</li>
+  <li><code>TIMER timer=time</code>              (sets the timer, 1-15, to the time, in seconds precise to milliseconds, time will count to zero)</li>
+  <li><code>TOOL val</code>                      (sets the tool offset to val)</li>
+  <li><code>WAIT bool</code>                     (waits until the boolean is true)</li>
+</ul>
+
+<hr />
+
+<h3 id="reference-frames">REFERENCE FRAMES</h3>
+<ul>
+  <li><code>HERE frame:loc</code>                (defines loc at the current location as a transformation from frame)</li>
+  <li><code>MOVE loc:loc</code>                  (moves to the vector of loc+loc)</li>
+  <li><code>TRANS(x,y,z,r,p,q)</code>            (returns the transformation)</li>
+</ul>
+
+<hr />
+
+<h3 id="control-structures">CONTROL STRUCTURES</h3>
+<ul>
+  <li><code>END</code>                           (needed after everything</li>
+  <li><code>EXIT</code>                (blows out all control structures)</li>
+  <li><code>FOR var = i_0 TO i_f inc</code></li>
+  <li><code>GOTO label</code>            (labels are done as integers at line start)</li>
+</ul>
+
+<hr />
+
+<div class="highlight"><pre><code class="language-c" data-lang="c"><span class="n">CASE</span> <span class="n">value</span> <span class="n">OF</span>
+    <span class="n">VALUE</span> <span class="n">value_1</span><span class="p">,...</span><span class="o">:</span>
+        <span class="n">group_of_steps</span>
+    <span class="n">VALUE</span> <span class="n">value_2</span><span class="p">,...</span><span class="o">:</span>
+        <span class="n">group_of_steps</span>
+    <span class="n">ANY</span>
+        <span class="n">group_of_steps</span>
+  <span class="n">END</span></code></pre></div>
+
+<hr />
+
+<div class="highlight"><pre><code class="language-c" data-lang="c"><span class="n">DO</span>
+    <span class="n">group_of_steps</span>
+<span class="n">UNTIL</span> <span class="n">logical_expression</span></code></pre></div>
+
+<hr />
+
+<h3 id="system-switches">SYSTEM SWITCHES</h3>
+<ul>
+  <li><code>AUTO.POWER.OFF</code>        (if on then power will shut off for motion errors</li>
+  <li><code>DRY.RUN</code>            (will run without any robot motion)</li>
+  <li><code>ESTOP.SIGNAL</code>            (determines whether estop status is output to DO 1)</li>
+  <li><code>POWER</code>                (changes high power state)</li>
+  <li><code>UPPER</code>                (for all boolean operations with strings, all characters are interpreted as uppercase)</li>
+</ul>
+
+<hr />
+
+<h3 id="transformation-stuff">TRANSFORMATION STUFF</h3>
+<ul>
+  <li><code>FRAME(loc1, loc2, loc3, loc4)</code>        (sets up a really accurate axis system)</li>
+  <li><code>INVERSE(transformation)</code></li>
+  <li><code>RX(ang)</code>                (rotates about the X-axis)</li>
+  <li><code>RY(ang)</code>                (rotates about the Y-axis)</li>
+  <li><code>RZ(ang)</code>                (rotates about the Z-axis)</li>
+  <li><code>SCALE(trans, scale)</code>            (returns the transformation by scale)</li>
+  <li><code>SHIFT(trans BY x,y,z)</code>           (returns trans shifted by x,y,z)</li>
+  <li><code>TOOL</code>                    (returns the tool offset)</li>
+  <li><code>TRANS(x,y,z,y,p,r)</code>            (returns trans defined by values)</li>
+</ul>
+
+<hr />
+
+<h3 id="functions">FUNCTIONS</h3>
+<ul>
+  <li><code>SIG(sig1,..,sign)</code>            (returns logical and of input signals)</li>
+  <li><code>INRANGE(loc)</code>                (returns values indicating whether loc is inrange. If 0, loc is in range. If bit 14 is active (8192), loc is too close. If bit 15 is active (16384), loc is too far.)</li>
+  <li><code>var BAND var</code>                (binary and)</li>
+  <li><code>STATE(select)</code>                (returns a value indicating various factors defining the <a href="http://www1.adept.com/main/KE/DATA/V%20Plus/MicroV/MicrovTOC.htm">state of the robot</a>)</li>
+</ul>
+
+<hr />
+
+<h3 id="passing-args">PASSING ARGS</h3>
+<ul>
+  <li>for undefined args use <code>DEFINED</code> to test arg list</li>
+</ul>
+
+<hr />
+
+<h3 id="interupts">INTERUPTS</h3>
+<ul>
+  <li><code>REACT</code></li>
+  <li><code>REACTE</code></li>
+  <li>
+    <h2 id="reacti"><code>REACTI</code></h2>
+  </li>
+</ul>
+
+<h3 id="startup-routine">STARTUP ROUTINE</h3>
+<ul>
+  <li>this can be done as a seperate program which is called from elsewhere</li>
+  <li>initialize global variables</li>
+  <li>set I/O ports as logically named global vars. Ex.: <code>cycle.start = 1001</code></li>
+  <li>set signals to startup preffered state</li>
+  <li>set up transformations ex:    <code>SET pallet = TRANS(62.4,-215.978,293.898,0,180,-46.208)</code></li>
+</ul>
+
+<hr />
+
+<h3 id="console-output">CONSOLE OUTPUT:</h3>
+<ul>
+  <li><code>TYPE output1,..,output n</code>        (outputs with modified text, limited to 512 char)</li>
+  <li><code>/S</code>                     (acting as a modifier will prevent Carriage Return)</li>
+  <li>Ex:    <code>TYPE /S, "This "</code></li>
+</ul>
+
+<hr />
+
+<h3 id="setting-up-autostart">SETTING UP AUTOSTART</h3>
+<ol>
+  <li>Create a program named AUTO, as well as any other programs required for the application. The AUTO program should initialize the application and possibly start other user programs in tasks 0, 1, and 2.</li>
+  <li>Create and initialize any global variables to be used by the application, for example, arm positions.</li>
+  <li>Use the <code>STORE</code> monitor command to store all programs and variables on NVRAM.</li>
+  <li><code>ENABLE AUTOSTART</code> in the monitor</li>
+</ol>
+
+<hr />
+
+<h3 id="signals">SIGNALS</h3>
+<ul>
+  <li>signals are simply booleans.</li>
+  <li>1-8 are outputs</li>
+  <li>2001-2512 are soft software signals</li>
+</ul>
+
+<hr />
+
+<h3 id="things-to-look-into">THINGS TO LOOK INTO</h3>
+<ul>
+  <li><code>CALIBRATE</code>             (command that calibrates encoders?)</li>
+  <li><code>EVENT</code></li>
+  <li><code>TOOL</code></li>
+  <li><code>KILL</code></li>
+  <li><code>EXECUTE</code></li>
+  <li><code>&lt;&gt;</code>                (appears to be !=)</li>
+  <li>do you need to declare global variables which have already been initialized?</li>
+  <li>modifiying monitor speed using MONITOR modifier</li>
+</ul>
+
+<hr />
+
+<h3 id="electrical">Electrical</h3>
+
+<ul>
+  <li>24 V
+    <ul>
+      <li>Molex P/N 44441-2002</li>
+      <li>Molex P/N 43375-0001</li>
+      <li>8 amp inline fuse</li>
+    </ul>
+  </li>
+</ul>
+
+  </article>
+  <!-- START: Livefyre Embed -->
+
+  <!-- START: Livefyre Embed -->
+  <h2>Comments</h2>
+<div id="livefyre-comments"></div>
+<script type="text/javascript" src="http://zor.livefyre.com/wjs/v3.0/javascripts/livefyre.js"></script>
+<script type="text/javascript">
+(function () {
+    var articleId = fyre.conv.load.makeArticleId(null);
+    fyre.conv.load({}, [{
+        el: 'livefyre-comments',
+        network: "livefyre.com",
+        siteId: "375755",
+        articleId: articleId,
+        signed: false,
+        collectionMeta: {
+            articleId: articleId,
+            url: fyre.conv.load.makeCollectionUrl(),
+        }
+    }], function() {});
+}());
+</script>
+<!-- END: Livefyre Embed -->
+            
 
 </div>
 

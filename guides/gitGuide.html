@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Michael Sobrepera</title>
-  <meta name="description" content="A site about stuff that I (Michael Sobrepera) work on, think, enjoy, etc...">
+  <title>GIT</title>
+  <meta name="description" content="CONFIGURATION:  remember passwords :          windows:                  git config --global credential.helper wincred                    linux:              ...">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://www.michaelsobrepera.com/">
+  <link rel="canonical" href="http://www.michaelsobrepera.com/guides/gitGuide.html">
   <link rel="alternate" type="application/rss+xml" title="Michael Sobrepera" href="http://www.michaelsobrepera.com/feed.xml" />
 
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
@@ -89,22 +89,213 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="home">
-<h3>Welcome to my personal site, please have a look around. Feel free to contact me via <a href="https://www.linkedin.com/in/michaelsobrepera">LinkedIn</a> or <a href="mailto:mjsobrep@live.com">e-mail</a>. There are places to comment throughout the site, please feel free to leave your opinion.</h3>
-</br></br>
-  <h2>2 Most Recent Blog Posts</h2>
+        <div class="guide">
 
-  <table>
-    
-    <tr>
-      <td class=postTableDate>Jun 27, 2015</td>
-      <td class=postTableRow><a class="post-link" href="/blog/welcome.html">Welcome To My Site</a></td>
-    </tr>
-    
-  </table>
-</br>
+  <header class="post-header">
+    <h1 class="post-title">GIT</h1>
+    <h3>Last Updated: 25 June 2015</h3>
+  </header>
 
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+  <article class="post-content">
+    <h3 id="configuration">CONFIGURATION:</h3>
+<ul>
+  <li>remember passwords :
+    <ul>
+      <li>windows:
+        <ul>
+          <li><code>git config --global credential.helper wincred</code></li>
+        </ul>
+      </li>
+      <li>linux:
+        <ul>
+          <li><code>git config --global credential.helper cache</code></li>
+          <li><code>git config --global credential.helper </code>cache –timeout=<sec>`</sec></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Posh-Git : helps powershell with git</li>
+  <li><code>git config --global user.name "&lt;user name&gt;"</code></li>
+  <li><code>git config --global user.email &lt;e-mail&gt;</code></li>
+  <li><code>git config --global core.editor vim</code></li>
+</ul>
+
+<p>Status : <code>git status</code>
+Fetch : <code>git fetch</code></p>
+
+<h3 id="settings">Settings:</h3>
+<ul>
+  <li><code>git config</code>
+    <ul>
+      <li><code>--list</code> : view list of all stuff</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="set-up-remote">Set up remote:</h3>
+<ul>
+  <li>make branch track remote:
+    <ul>
+      <li>Given a branch foo and a remote upstream:
+        <ul>
+          <li>As of Git 1.8.0 : <code>git branch -u upstream/foo</code></li>
+        </ul>
+      </li>
+      <li>Or, if local branch foo is not the current branch:
+        <ul>
+          <li><code>git branch -u upstream/foo foo</code></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="help--git-help-verb">Help : <code>git help &lt;verb&gt;</code></h4>
+
+<h3 id="setting-up-a-repository">Setting up a repository</h3>
+<ul>
+  <li><code>git init</code> : make a new repository</li>
+  <li><code>git clone &lt;URL&gt; &lt;directory name - optional&gt;</code>` : pull down a repository, optionally put it into a directory with name <directory name=""></directory></li>
+</ul>
+
+<h3 id="running">Running:</h3>
+<ul>
+  <li><code>git add &lt;filename&gt;</code> : will add a file to the next comment “staging”</li>
+  <li><code>git status</code> : will report repository status</li>
+  <li><code>git diff</code> : shows you what you have changed in your files</li>
+  <li><code>git commit</code>:
+    <ul>
+      <li><code>-m &lt;message&gt;</code> : puts message in directly</li>
+      <li><code>-a</code> : automatically stages any changed files</li>
+      <li><code>--amend</code> : modifies the prior commit, you can add files and notes</li>
+    </ul>
+  </li>
+  <li><code>git rm</code> : removes a file, requires a commit to complete</li>
+  <li>
+    <ul>
+      <li><code>--chached</code> : removes from staging area but keeps in directory</li>
+    </ul>
+  </li>
+  <li>git pull : pulls down remote repository into local
+    <ul>
+      <li><code>--rebase</code> : makes a mirror rather than a branch, does not cause merging when you push</li>
+    </ul>
+  </li>
+  <li>git mv <source /> <destination> : rename or move file</destination></li>
+  <li>git log : history of commits
+    <ul>
+      <li><code>-p</code> : shows the changes between commits</li>
+      <li><code>-&lt;n&gt;</code> : shows only the <n> most recent commits</n></li>
+      <li><code>--since</code> : since a date</li>
+      <li><code>--stat</code> : shows stats for each commit (num of files changed etc..)</li>
+      <li><code>--pretty</code> : takes a number of args to prettify output
+        <ul>
+          <li><code>--pretty=oneline</code> : makes every commit one line</li>
+          <li><code>--pretty=short</code> : makes a shortened format</li>
+          <li><code>--pretty=full</code> :</li>
+          <li><code>--pretty=fuller</code> :</li>
+          <li><code>--pretty=format: &lt;format&gt;</code> : formats output per format spec (http://www.git-scm.com/book/en/v2/ch00/pretty_format) &lt;- could make an output to a text file to run a script and generate a nice log</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><code>git push [remote-name] [branch-name]</code> : pushes up</li>
+</ul>
+
+<h3 id="tags">Tags:</h3>
+<ul>
+  <li>git tag : shows tags
+    <ul>
+      <li><code>-a &lt;version&gt;</code> : saves a version tag</li>
+      <li><code>-m &lt;message&gt;</code> : saves a message</li>
+      <li>after the fact : <code>git tag -a &lt;version&gt; &lt;beginning of commit checksum&gt;</code></li>
+    </ul>
+  </li>
+  <li><code>git show &lt;verion&gt;</code> : shows tagged data</li>
+  <li><code>git push &lt;remoterepo&gt; --tags</code> : pushes tag locations</li>
+  <li><code>git checkout -b &lt;newBranch&gt; &lt;tag&gt;</code> : checkout a tagged commit</li>
+</ul>
+
+<h3 id="branching">Branching:</h3>
+<ul>
+  <li><code>git branch</code> : shows available branches
+    <ul>
+      <li><code>&lt;newBranch&gt;</code> : makes a new branch at your current location</li>
+      <li><code>-d &lt;branch&gt;</code> : deletes a branch</li>
+      <li><code>-v</code> : shows shows last commit on each branch</li>
+      <li><code>--merged</code> : shows which branches have been merged into the working branch</li>
+      <li><code>--no-merged</code> : branches which you have not merged in</li>
+    </ul>
+  </li>
+  <li><code>git checkout &lt;branch&gt;</code> : switches to a new branch, if branch does not exist, it is created</li>
+  <li><code>git merge &lt;branch in&gt;</code> : merges branch in with the branch which you are currently on</li>
+  <li>Deleting:
+    <ul>
+      <li>local : <code>git branch -d &lt;branch&gt;</code></li>
+      <li>remote : <code>git push origin :&lt;remoteBranch&gt;</code></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="ignoring-files">Ignoring files:</h3>
+<ul>
+  <li>Make a file called “.gitignore”
+    <ul>
+      <li>lines with # are ignored</li>
+      <li>use glob notation</li>
+      <li>can use “/” for paths</li>
+      <li>EX:
+        <ul>
+          <li><code>*.[oa]</code> : ignore files ending in “o” or “a”</li>
+          <li><code>*~</code> : ignore files ending in ~</li>
+        </ul>
+      </li>
+      <li>thoughts : binaries (o,a). temps (tmp, *~), logs</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="get-a-remote-branch">get a remote branch:</h4>
+<ul>
+  <li><code>git fetch &lt;origin&gt; &lt;branch&gt;</code></li>
+  <li><code>git checkout &lt;branch&gt;</code></li>
+</ul>
+
+<h4 id="remove-all-of-some-file-type">Remove all of some file type</h4>
+<ul>
+  <li><code>git filter-branch -f --index-filter 'git rm --ignore-unmatch *.pptx</code></li>
+</ul>
+
+<h4 id="set-atom-as-git-editor">Set Atom as Git editor</h4>
+<ul>
+  <li><code>git config --global core.editor "atom --wait"</code></li>
+</ul>
+
+  </article>
+  <!-- START: Livefyre Embed -->
+
+  <!-- START: Livefyre Embed -->
+  <h2>Comments</h2>
+<div id="livefyre-comments"></div>
+<script type="text/javascript" src="http://zor.livefyre.com/wjs/v3.0/javascripts/livefyre.js"></script>
+<script type="text/javascript">
+(function () {
+    var articleId = fyre.conv.load.makeArticleId(null);
+    fyre.conv.load({}, [{
+        el: 'livefyre-comments',
+        network: "livefyre.com",
+        siteId: "375755",
+        articleId: articleId,
+        signed: false,
+        collectionMeta: {
+            articleId: articleId,
+            url: fyre.conv.load.makeCollectionUrl(),
+        }
+    }], function() {});
+}());
+</script>
+<!-- END: Livefyre Embed -->
+            
 
 </div>
 

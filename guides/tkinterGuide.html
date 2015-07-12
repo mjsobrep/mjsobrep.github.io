@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Michael Sobrepera</title>
-  <meta name="description" content="A site about stuff that I (Michael Sobrepera) work on, think, enjoy, etc...">
+  <title>Tkinter</title>
+  <meta name="description" content="STARTUP:  from Tkinter import *  import ttk  root = Tk()">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://www.michaelsobrepera.com/">
+  <link rel="canonical" href="http://www.michaelsobrepera.com/guides/tkinterGuide.html">
   <link rel="alternate" type="application/rss+xml" title="Michael Sobrepera" href="http://www.michaelsobrepera.com/feed.xml" />
 
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
@@ -89,22 +89,172 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="home">
-<h3>Welcome to my personal site, please have a look around. Feel free to contact me via <a href="https://www.linkedin.com/in/michaelsobrepera">LinkedIn</a> or <a href="mailto:mjsobrep@live.com">e-mail</a>. There are places to comment throughout the site, please feel free to leave your opinion.</h3>
-</br></br>
-  <h2>2 Most Recent Blog Posts</h2>
+        <div class="guide">
 
-  <table>
-    
-    <tr>
-      <td class=postTableDate>Jun 27, 2015</td>
-      <td class=postTableRow><a class="post-link" href="/blog/welcome.html">Welcome To My Site</a></td>
-    </tr>
-    
-  </table>
-</br>
+  <header class="post-header">
+    <h1 class="post-title">Tkinter</h1>
+    <h3>Last Updated: 25 June 2015</h3>
+  </header>
 
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+  <article class="post-content">
+    <h3 id="startup">STARTUP:</h3>
+<ul>
+  <li><code>from Tkinter import *</code></li>
+  <li><code>import ttk</code></li>
+  <li><code>root = Tk()</code></li>
+</ul>
+
+<h3 id="widgets">WIDGETS:</h3>
+<ul>
+  <li>instantiation:
+    <ul>
+      <li><code>button = ttk.Button(&lt;parent&gt;, text = '&lt;some text&gt;')</code></li>
+      <li><code>label = ttk.label(&lt;parent&gt;, text = '&lt;some text&gt;')</code></li>
+    </ul>
+  </li>
+  <li>adding:
+    <ul>
+      <li><code>button.pack()</code></li>
+    </ul>
+  </li>
+  <li>changing values:
+    <ul>
+      <li><code>button['text'] = '&lt;some text&gt;'</code></li>
+      <li><code>button.config(text = '&lt;some text&gt;')</code></li>
+    </ul>
+  </li>
+  <li>viewing configuration options:
+    <ul>
+      <li><code>button.config()</code></li>
+    </ul>
+  </li>
+  <li>Geometry Mgmnt:
+    <ul>
+      <li>Pack -&gt; you left, right, blah</li>
+      <li>Grid -&gt; its a gird</li>
+      <li>Place -&gt; absolute positioning</li>
+    </ul>
+  </li>
+  <li>Deleting:
+    <ul>
+      <li><code>&lt;widget&gt;.destroy()</code></li>
+    </ul>
+  </li>
+  <li>EVENT HANDLERS:
+    <ul>
+      <li>command callbacks -&gt; for obvious stuff</li>
+      <li>event bindings -&gt; for custom stuff</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="windows">windows:</h3>
+<ul>
+  <li>zoom to max:
+    <ul>
+      <li><code>window.state('zoomed')</code></li>
+    </ul>
+  </li>
+  <li>configuration:
+    <ul>
+      <li><code>root.config(background = 'black')</code></li>
+    </ul>
+  </li>
+  <li>Text Display:
+    <ul>
+      <li>text widget</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="canvas">CANVAS:</h3>
+<ul>
+  <li><code>canvas = Canvas(&lt;parent&gt;)</code></li>
+  <li><code>canvas.config(width = &lt;&gt;, height = &lt;&gt;)</code></li>
+  <li><code>line = canvas.create_line(&lt;x1&gt;,&lt;y1&gt;,&lt;x2&gt;,&lt;y2&gt;,fill = '&lt;color&gt;',width = &lt;width&gt;)</code></li>
+  <li><code>canvas.itemconfigure(line, fill='&lt;color&gt;')</code></li>
+  <li><code>canvas.coords(line)</code></li>
+  <li>CAN BE POLYLINE::
+    <ul>
+      <li><code>canvas.coords(line,&lt;x1&gt;,&lt;y1&gt;,&lt;x2&gt;,&lt;y2&gt;,&lt;x3&gt;,&lt;y3&gt;,&lt;x4&gt;,&lt;y4&gt;)</code></li>
+      <li>smmoth:
+        <ul>
+          <li><code>canvas.itemconfigure(line, smooth = True)</code></li>
+          <li><code>canvas.itemconfigure(line,splinesteps = &lt;numsteps&gt;)</code></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Delete items:
+    <ul>
+      <li><code>canvas.delete(&lt;item&gt;)</code></li>
+      <li><code>canvas.delete(all)</code></li>
+    </ul>
+  </li>
+  <li><code>rect = canvas.create_rectangle(&lt;x1&gt;,&lt;y1&gt;,&lt;x2&gt;,&lt;y2&gt;)</code></li>
+  <li><code>oval = canvas.create_oval(&lt;x1&gt;,&lt;y1&gt;,&lt;x2&gt;,&lt;y2&gt;)</code></li>
+  <li><code>arc = canvas.create_arc(&lt;x1&gt;,&lt;y1&gt;,&lt;x2&gt;,&lt;y2&gt;)</code></li>
+  <li><code>text = canvs.create_text(&lt;x1&gt;,&lt;y1&gt;, text = '&lt;text&gt;',font = (&lt;name&gt;,&lt;fontsize&gt;,&lt;bold&gt;))</code></li>
+  <li>changing order:
+    <ul>
+      <li><code>canvas.lift(&lt;item&gt;)</code></li>
+      <li><code>canvas.lower(&lt;item&gt;)</code></li>
+    </ul>
+  </li>
+  <li>adding a widget:
+    <ul>
+      <li><code>canvas.create_window(&lt;x1&gt;,&lt;y1&gt;,window = &lt;widget&gt;)</code></li>
+    </ul>
+  </li>
+  <li>TAGS:
+    <ul>
+      <li><code>canvas.itemconfigure(&lt;item&gt;,tag=(&lt;tag1&gt;,&lt;o: other tags&gt;))</code></li>
+      <li><code>canvas.gettags(&lt;item&gt;)</code></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="styles">STYLES:</h3>
+<ul>
+  <li><code>&lt;item&gt;.winfo_class() &lt;-returns style</code></li>
+  <li><code>style.configure('&lt;stylename&gt;',&lt;paramater&gt;=&lt;val&gt;)</code></li>
+  <li>new style: `
+    <ul>
+      <li><code>style.configure('&lt;newname&gt;.&lt;inherit&gt;',&lt;paramater&gt;=&lt;val&gt; )</code></li>
+    </ul>
+  </li>
+  <li><code>&lt;item&gt;.config(style = '&lt;style&gt;')</code></li>
+  <li><code>style.layout('&lt;style&gt;')</code></li>
+  <li><code>style.lookup('&lt;style&gt;','&lt;property&gt;')</code></li>
+</ul>
+
+<p><a href="http://effbot.org/tkinterbook/widget.htm">a nice resource</a></p>
+
+  </article>
+  <!-- START: Livefyre Embed -->
+
+  <!-- START: Livefyre Embed -->
+  <h2>Comments</h2>
+<div id="livefyre-comments"></div>
+<script type="text/javascript" src="http://zor.livefyre.com/wjs/v3.0/javascripts/livefyre.js"></script>
+<script type="text/javascript">
+(function () {
+    var articleId = fyre.conv.load.makeArticleId(null);
+    fyre.conv.load({}, [{
+        el: 'livefyre-comments',
+        network: "livefyre.com",
+        siteId: "375755",
+        articleId: articleId,
+        signed: false,
+        collectionMeta: {
+            articleId: articleId,
+            url: fyre.conv.load.makeCollectionUrl(),
+        }
+    }], function() {});
+}());
+</script>
+<!-- END: Livefyre Embed -->
+            
 
 </div>
 
