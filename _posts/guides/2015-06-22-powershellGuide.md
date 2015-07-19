@@ -1,9 +1,9 @@
 ---
 layout: guide
 title:  "PowerShell"
-date:   2015-06-25
+updated:   2015-06-25
 categories: guides
-tags: 
+tags:
 - windows
 - code
 - programming
@@ -24,4 +24,4 @@ tags:
 * vim
 * git
 * concfg : configuration
-* openssh 
+* openssh

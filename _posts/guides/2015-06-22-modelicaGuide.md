@@ -1,7 +1,7 @@
 ---
 layout: guide
 title:  "Modelica"
-date:   2015-06-25
+updated:   2015-06-25
 categories: guides
 tags:
 - modelica
@@ -21,7 +21,7 @@ tags:
 
 ####Assignment: done via `:=`
 
-####Equation: done via `=` 
+####Equation: done via `=`
 
 ###Variables:
 * Base Types:
@@ -41,7 +41,7 @@ tags:
     * `public`
     * `protected`
 
-    * treated as headers, all variables after a visibility statement and before another control statement will have that visibility 
+    * treated as headers, all variables after a visibility statement and before another control statement will have that visibility
 
 
 ###Libraries:
@@ -112,7 +112,7 @@ Nested (local) classes are allowed
     * `import <alias>=<packageName>;`
 
 * Simulation:
-    * `simulate(<class>)`   
+    * `simulate(<class>)`
 
 * Visualization:
     * Plot:

@@ -1,7 +1,7 @@
 ---
 layout: guide
 title:  "Linux"
-date:   2015-06-22
+updated:   2015-06-22
 categories: guides
 tags:
 - linux

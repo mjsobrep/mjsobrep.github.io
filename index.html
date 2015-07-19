@@ -9,34 +9,15 @@ layout: default
 </br>
 <h2>Most Recent Posts</h2>
 <table>
-    {% assign numToPrint=4 %}
-    {% assign numPrinted=0 %}
-
-    {% for post in site.posts %}
-        {% if post.categories contains 'guides' %}
-        {% else %}
+{% for post in site.posts offset: 0 limit: 5 %}
             <tr>
                 <td class=postTableDate>{{ post.date | date: "%b %-d, %Y" }}</td>
                 <td class=postTableRow><a href="{{post.categories }}">{{post.categories}}</td>
                     <td class=postTableRow><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></td>
                 </tr>
-            {% assign numPrinted=numPrinted+1 %}
-            {% if numPrinted==numToPrint %}
-                <h1>breaking out</h1>
-            {% else %}
-                <p>ugh: {{numPrinted}}</p>
-            {% endif %}
-        {% endif %}
-
     {% endfor %}
     </table>
 </br>
-
-{% assign bob = 5 %}
-{{bob}}
-{% if bob>4 %}
-<h1>wtf</h1>
-{% endif %}
 <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
 </div>

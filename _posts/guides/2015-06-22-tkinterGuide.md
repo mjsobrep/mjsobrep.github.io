@@ -1,7 +1,7 @@
 ---
 layout: guide
 title:  "Tkinter"
-date:   2015-06-25
+updated:   2015-06-25
 categories: guides
 tags:
 - python
@@ -82,6 +82,6 @@ tags:
 * `<item>.config(style = '<style>')`
 * `style.layout('<style>')`
 * `style.lookup('<style>','<property>')`
-    
+
 
 [a nice resource](http://effbot.org/tkinterbook/widget.htm)

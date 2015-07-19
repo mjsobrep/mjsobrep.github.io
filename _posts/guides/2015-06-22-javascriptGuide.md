@@ -1,7 +1,7 @@
 ---
 layout: guide
 title:  "Javascript"
-date:   2015-06-22
+updated:   2015-06-22
 categories: guides
 tags:
 - code

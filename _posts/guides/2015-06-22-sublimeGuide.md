@@ -1,7 +1,7 @@
 ---
 layout: guide
 title:  "Sublime"
-date:   2015-06-25
+updated:   2015-06-25
 categories: guides
 tags:
 - sublime
@@ -15,4 +15,3 @@ tags:
 * TEX:
     * LatexTools
         * `texify` : build
-        

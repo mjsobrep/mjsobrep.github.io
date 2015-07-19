@@ -1,7 +1,7 @@
 ---
 layout: guide
 title:  "Jekyl"
-date:   2015-06-25
+updated:   2015-06-25
 categories: guides
 tags:
 - blogging

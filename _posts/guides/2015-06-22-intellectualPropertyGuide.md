@@ -1,12 +1,12 @@
 ---
 layout: guide
 title:  "Intellectual Property"
-date:   2015-06-25
+updated:   2015-06-25
 categories: guides
-tags: 
-- ip 
-- legal 
-- product development 
+tags:
+- ip
+- legal
+- product development
 ---
 
 * Utility Patent -> 20 years after filing

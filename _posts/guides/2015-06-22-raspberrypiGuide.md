@@ -1,7 +1,7 @@
 ---
 layout: guide
 title:  "Raspberry Pi"
-date:   2015-06-25
+updated:   2015-06-25
 categories: guides
 tags:
 - raspberry pi
@@ -25,7 +25,7 @@ tags:
         * `x11vnc -display :0 -q`
     * New Desktop:
         `vncserver :1`
-    
+
 * Video Out:
     * [PAL/NTSC Setup](https://learn.adafruit.com/using-a-mini-pal-ntsc-display-with-a-raspberry-pi/configure-and-test)
     * [TFT](https://learn.adafruit.com/user-space-spi-tft-python-library-ili9341-2-8)
