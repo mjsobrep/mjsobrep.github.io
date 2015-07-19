@@ -1,0 +1,12 @@
+{% if include.tags %}
+<input class="toggle-box" id="header1" type="checkbox" >
+<label for="header1">Tags</label>
+<div>
+<ul class="tag">
+{% for tag in {{include.tags}} %}
+  {% assign t = tag | first %}
+  <li class="tag"><a href="tags/{{t | uri_escape}}" class = "tag">{{t}}</a></li>
+{% endfor %}
+</ul>
+</div>
+{% endif %}

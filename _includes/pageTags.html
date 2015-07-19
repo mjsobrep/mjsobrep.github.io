@@ -1,0 +1,11 @@
+{% if include.tags[0]!='' %}
+<input class="toggle-box" id="header1" type="checkbox" >
+<label for="header1">Tags</label>
+<div>
+<ul class="tag">
+{% for tag in {{include.tags}} %}
+  <li class="tag"><a href="/tags/{{tag}}" class = "tag">{{tag}}</a></li>
+{% endfor %}
+</ul>
+</div>
+{% endif %}

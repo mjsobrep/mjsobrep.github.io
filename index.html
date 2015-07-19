@@ -4,9 +4,10 @@ layout: default
 
 <div class="home">
 <h3>Welcome to my personal site, please have a look around. Feel free to contact me via <a href="https://www.linkedin.com/in/michaelsobrepera">LinkedIn</a> or <a href="mailto:mjsobrep@live.com">e-mail</a>. There are places to comment throughout the site, please feel free to leave your opinion.</h3>
-</br></br>
+</br>
+{% include tags.html tags=site.tags %}
+</br>
   <h2>Most Recent Posts</h2>
-
   <table>
     {% for post in site.posts offset: 0 limit: 5 %}
     <tr>
