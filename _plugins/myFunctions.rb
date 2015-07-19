@@ -186,3 +186,23 @@ module Jekyll
   end
 
 end
+
+module Jekyll
+    module StripCat
+        def stripCat(posts,category)
+            toReturn = [];
+            posts.each{|post|
+                if(not post.categories.include? category)
+                    toReturn<<(post)
+                    puts post.title+' accepted, cat: '+post.categories
+
+            else
+                puts post.title+' rejected, cat: '+post.categories
+            end
+            }
+            return bob
+        end
+    end
+end
+
+Liquid::Template.register_filter(Jekyll::StripCat)

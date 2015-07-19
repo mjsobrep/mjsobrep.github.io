@@ -3,22 +3,40 @@ layout: default
 ---
 
 <div class="home">
-<h3>Welcome to my personal site, please have a look around. Feel free to contact me via <a href="https://www.linkedin.com/in/michaelsobrepera">LinkedIn</a> or <a href="mailto:mjsobrep@live.com">e-mail</a>. There are places to comment throughout the site, please feel free to leave your opinion.</h3>
+    <h3>Welcome to my personal site, please have a look around. Feel free to contact me via <a href="https://www.linkedin.com/in/michaelsobrepera">LinkedIn</a> or <a href="mailto:mjsobrep@live.com">e-mail</a>. There are places to comment throughout the site, please feel free to leave your opinion.</h3>
 </br>
 {% include tags.html tags=site.tags %}
 </br>
-  <h2>Most Recent Posts</h2>
-  <table>
-    {% for post in site.posts offset: 0 limit: 5 %}
-    <tr>
-      <td class=postTableDate>{{ post.date | date: "%b %-d, %Y" }}</td>
-      <td class=postTableRow><a href="{{post.categories }}">{{post.categories}}</td>
-      <td class=postTableRow><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></td>
-    </tr>
+<h2>Most Recent Posts</h2>
+<table>
+    {% assign numToPrint=4 %}
+    {% assign numPrinted=0 %}
+
+    {% for post in site.posts %}
+        {% if post.categories contains 'guides' %}
+        {% else %}
+            <tr>
+                <td class=postTableDate>{{ post.date | date: "%b %-d, %Y" }}</td>
+                <td class=postTableRow><a href="{{post.categories }}">{{post.categories}}</td>
+                    <td class=postTableRow><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></td>
+                </tr>
+            {% assign numPrinted=numPrinted+1 %}
+            {% if numPrinted==numToPrint %}
+                <h1>breaking out</h1>
+            {% else %}
+                <p>ugh: {{numPrinted}}</p>
+            {% endif %}
+        {% endif %}
+
     {% endfor %}
-  </table>
+    </table>
 </br>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+{% assign bob = 5 %}
+{{bob}}
+{% if bob>4 %}
+<h1>wtf</h1>
+{% endif %}
+<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
 </div>

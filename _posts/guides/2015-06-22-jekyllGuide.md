@@ -31,7 +31,7 @@ tags:
 * chcp 65001
 
 ###My Publishing Script:
-This is done in powershell. I work on my working branch. 
+This is done in powershell. I work on my working branch.
 {% highlight powershell %}Function publishmichaelsobrepera{
     cd /;
     cd C:\;
@@ -49,4 +49,6 @@ This is done in powershell. I work on my working branch.
     git checkout working;
 }{% endhighlight %}
 
-[liquld](https://docs.shopify.com/themes/liquid-documentation/basics)
+[liquld](https://docs.shopify.com/themes/liquid-documentation/basics)  
+
+[Liquid Cheat Sheet](http://cheat.markdunkley.com/)
