@@ -13,7 +13,7 @@ tags:
 - set design
 - management
 - leadership
-thumb: "2010Homecoming/10-22-10 238.jpg"
+thumb: "2010Homecoming/10-22-10%20238.JPG"
 summary: Student government homecoming dance at KMHS, 2010
 ---
 
