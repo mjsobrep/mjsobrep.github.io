@@ -2,6 +2,6 @@
 layout: post
 title:  "The Federalist Party"
 date:   2010-10-07
-categories: papers
+categories: writings
 pdf: "otherFiles/papers/The Federalist Party.pdf"
 ---

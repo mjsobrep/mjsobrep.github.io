@@ -4,7 +4,7 @@
 <div>
 <ul class="tag">
 {% for tag in {{include.tags}} %}
-  <li class="tag"><a href="/tags/{{tag}}" class = "tag">{{tag}}</a></li>
+  <li class="tag"><a href="/tags/{{tag | uri_escape}}.html" class = "tag">{{tag}}</a></li>
 {% endfor %}
 </ul>
 </div>

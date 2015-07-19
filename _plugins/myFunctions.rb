@@ -1,5 +1,6 @@
 require 'liquid'
 require 'uri'
+require 'pry'
 
 module Jekyll
     module StripFile
@@ -157,3 +158,31 @@ module Jekyll
 end
 
 Liquid::Template.register_filter(Jekyll::StripNonNum)
+
+module Jekyll
+    class TagPageGenerator < Generator
+        class TagPage < Page
+          def initialize(site, base, dir, tag)
+            @site = site
+            @base = base
+            @dir = dir
+            @name = tag+'.html'
+
+            self.process(@name)
+            self.read_yaml(File.join(base, '_layouts'), 'tag.html')
+            self.data['destTitle'] = 'Tag: '+tag
+            self.data['destTag'] = site.tags[tag]
+
+            # category_title_prefix = site.config['category_title_prefix'] || 'Category: '
+            # self.data['title'] = "#{category_title_prefix}#{category}"
+          end
+        end
+
+    def generate(site)
+        site.tags.each_key do |tag|
+          site.pages << TagPage.new(site, site.source, 'tags', tag)
+      end
+    end
+  end
+
+end
