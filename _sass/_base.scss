@@ -1,3 +1,14 @@
+// Some good colors for boxy layouts
+$containerColor: rgba(106, 121, 134, 0.1);
+$blockColor: rgb(156, 205, 215);
+$blockFontColor: rgb(45, 10, 85);
+$blockActiverColor: rgb(43, 159, 128);
+
+@mixin border-radius($radius){
+    -moz-border-radius:   $radius;
+    -webkit-border-radius:$radius;
+    border-radius:        $radius;
+}
 /**
  * Reset some basic elements
  */
@@ -274,7 +285,7 @@ pre {
   max-height: 200px;
   width: auto;
   width: auto\9; /* for ie8*/
-  border-radius: 25px;
+  @include border-radius(25px);
   padding:5px;
   text-align: center;
 }
@@ -345,13 +356,12 @@ li.tag {
   display: inline-block;
   width:auto;
   height: auto;
-  background: rgb(156, 205, 215);
+  background: $blockColor;
   list-style: none;
-  -moz-border-radius:   7px;
-  -webkit-border-radius:7px;
-  border-radius:        7px;
+  @include border-radius(7px);
+
   font-size: 14pt;
-  color: rgb(255, 255, 255);
+  color: $blockFontColor;
   padding-left: 5px;
   padding-right: 5px;
   padding-bottom: 2px;
@@ -359,19 +369,18 @@ li.tag {
   margin: 1px;
 }
 li.tag:hover{
-    background: rgb(43, 159, 128)
+    background: $blockActiverColor
 }
 
 ul.tag {
-  background: rgba(106, 121, 134, 0.1);
+  background: $containerColor;
   margin: 4px; padding: 10px;
-  -moz-border-radius:   30px;
-  -webkit-border-radius:30px;
-  border-radius:        30px;
+  @include border-radius(30px);
+
 }
 
 a.tag{
-    color: rgb(45, 10, 85)
+    color: $blockFontColor
 }
 
 a.tag:hover{text-decoration: none}
@@ -400,9 +409,7 @@ a.tag:hover{text-decoration: none}
 
 .toggle-box + label:before {
   background-color: #4F5150;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
+  @include border-radius(10px);
   color: #FFFFFF;
   content: "+";
   display: block;
@@ -418,3 +425,44 @@ a.tag:hover{text-decoration: none}
 .toggle-box:checked + label:before {
   content: "\2212";
 }
+// end borrowed section
+.postContainer{
+    vertical-align: middle;
+    text-align: center;
+}
+
+.postBox:hover{
+    text-decoration: none;
+}
+div.postBox{
+    width:300px;
+    display: inline-table;
+    background: $blockColor;
+    @include border-radius(10px);
+    padding:10px;
+    margin:10px;
+    color: $blockFontColor;
+    vertical-align: middle
+}
+div.postBox:hover{
+    background: $blockActiverColor;
+}
+
+img.postBox{
+    @include border-radius(5px);
+
+    margin-bottom: 10px;
+}
+
+.postBoxDate{
+    text-align: center;
+    font-size: 10pt;
+    margin-bottom: 4px;
+    margin-top: 4px;
+}
+.postBoxTitle{
+    text-align: center;
+    font-size: 16pt;
+}
+
+.lameLink:hover{text-decoration: none}

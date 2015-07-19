@@ -5,12 +5,4 @@ permalink: /projects/
 ---
 <h3>Here are some projects that I have worked on. Take a look around.</h3>
 
-<ul class="post-list" style="list-style-type:disc">
-    {% for post in site.categories.projects %}
-    <li>
-
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-
-  </li>
-  {% endfor %}
-  </ul>
+{% include postsDisp.html posts=site.categories.projects %}

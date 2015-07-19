@@ -1,0 +1,19 @@
+
+<div class=postContainer>
+{% for post in include.posts %}
+<a class=lameLink href="{{ post.url | prepend: site.baseurl }}">
+<div class=postBox>
+      <p class=postBoxTitle>{{ post.title }}</p>
+    {% if post.thumb %}
+        <img src="/images/{{post.thumb}}" class=postBox>
+    {% endif %}
+    <hr>
+  <p class=postBoxDate>{{ post.date | date: "%b %-d, %Y" }}</p>
+  {% if post.summary %}
+  <hr>
+  <summary class=postBoxSnippet>{{post.summary}}</summary>
+  {% endif %}
+</div>
+</a>
+{% endfor %}
+</div>

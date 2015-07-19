@@ -5,11 +5,4 @@ permalink: /blog/
 ---
 <h3>This is where I post blog items.</h3>
 
-    <table>
-      {% for post in site.categories.blog %}
-      <tr>
-        <td class=postTableRow>{{ post.date | date: "%b %-d, %Y" }}</td>
-        <td class=postTableRow><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></td>
-      </tr>
-      {% endfor %}
-    </table>
+{% include postsDisp.html posts=site.categories.blog %}

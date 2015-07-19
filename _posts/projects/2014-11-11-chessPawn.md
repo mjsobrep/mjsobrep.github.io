@@ -15,6 +15,8 @@ tags:
 - CAD
 - solidworks
 - CNC
+thumb: "chesspawn/WP_20141111_14_27_46_Pro.jpg"
+summary: A pawn I designed and machined out of aluminum
 ---
 
 I wrote a [post processor]({% post_url projects/2014-11-03-TRL1440EXpost %}) to allow HSMWorks to post out to a Trak TRL-1440 EX. As a test of that project I decided to turn down a pawn. The results were very nice.

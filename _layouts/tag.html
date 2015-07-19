@@ -7,9 +7,10 @@ layout: default
     <h1 class="post-title">{{ page.destTitle }}</h1>
   </header>
 
+  {% include postsDisp.html posts=page.destTag %}
 
   <article class="post-content">
-    <table>
+    <!-- <table>
         {% for post in {{page.destTag}} %}
       <tr>
         <td class=postTableDate>{{ post.date | date: "%b %-d, %Y" }}</td>
@@ -17,6 +18,6 @@ layout: default
         <td class=postTableRow><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></td>
       </tr>
       {% endfor %}
-    </table>
+    </table> -->
   </article>
 </div>

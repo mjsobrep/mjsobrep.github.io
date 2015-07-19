@@ -15,5 +15,7 @@ tags:
 - mechanics
 - CAD
 - solidworks
+thumb: "wirePattern/WP_20150427_001.jpg"
+summary: A jig I helped a student in the BioID program design and machine
 ---
 One of the BioID students needed a jig to bend wire for some research he was doing. Unfortunately, time was short as it was the end of the semester; so I ended up fabricating the part for him instead of teaching him how to do it. We worked together on the design, then I machined it, trying to explain what I was doing as I went.

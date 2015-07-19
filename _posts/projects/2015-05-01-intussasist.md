@@ -14,6 +14,8 @@ tags:
 - mechanics
 - CAD
 - solidworks
+thumb: "intussassist/expo/IMG_5385_edited-2.jpg"
+summary: My senior design project, in which we discovered issues within the intussusception reduction provedure and addressed those issues with new design alternatives. 
 ---
 For our senior Design Project, Maria Diaz Ortiz, Kathryn Murray, Grant Stearns, and I evaluated the need for a new device to treat intussusception. We then went through multiple iterations of developing the device.
 
