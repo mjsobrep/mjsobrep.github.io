@@ -435,7 +435,7 @@ a.tag:hover{text-decoration: none}
     text-decoration: none;
 }
 div.postBox{
-    width:275px;
+    max-width:300px;
     display: inline-table;
     background: $blockColor;
     @include border-radius(10px);
@@ -450,7 +450,8 @@ div.postBox:hover{
 
 img.postBox{
     @include border-radius(5px);
-
+    width: 100%;
+    height: auto;
     margin-bottom: 10px;
 }
 
