@@ -10,7 +10,7 @@ layout: default
 <h2>Most Recent Posts</h2>
 <table>
 {% for post in site.posts offset: 0 limit: 5 %}
-            <tr>
+            <tr class="greyBorder">
                 <td class=postTableDate>{{ post.date | date: "%b %-d, %Y" }}</td>
                 <td class=postTableRow><a href="{{post.categories }}">{{post.categories}}</td>
                     <td class=postTableRow><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></td>
