@@ -1,8 +1,4 @@
-// Some good colors for boxy layouts
-$containerColor: rgba(106, 121, 134, 0.1);
-$blockColor: rgb(156, 205, 215);
-$blockFontColor: rgb(45, 10, 85);
-$blockActiverColor: rgb(43, 159, 128);
+@import 'colors';
 
 @mixin border-radius($radius){
     -moz-border-radius:   $radius;
@@ -171,6 +167,7 @@ pre {
     margin-left: auto;
     padding-right: $spacing-unit;
     padding-left: $spacing-unit;
+    background-color: $centerColor;
     @extend %clearfix;
 
     @include media-query($on-laptop) {
@@ -181,6 +178,15 @@ pre {
     }
 }
 
+.bodyWrapper{
+    @extend .wrapper;
+    padding-top:  $spacing-unit;
+}
+
+.hfWrapper{
+    @extend .wrapper;
+    background-color: $hfColor
+}
 /**
  * Clearfix
  */
@@ -435,7 +441,7 @@ a.tag:hover{text-decoration: none}
     text-decoration: none;
 }
 div.postBox{
-    max-width:300px;
+    width: 90%;
     display: inline-table;
     background: $blockColor;
     @include border-radius(10px);
@@ -451,10 +457,21 @@ div.postBox:hover{
 img.postBox{
     @include border-radius(5px);
     width: 100%;
+    max-width: 275px;
     height: auto;
-    margin-bottom: 10px;
+    border: 10px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
 }
 
+.dateSumBox{
+    min-width: 175px;
+max-width: 300px;
+display: inline-block;
+margin: 10px;
+vertical-align: top;
+}
 .postBoxDate{
     text-align: center;
     font-size: 10pt;

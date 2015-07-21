@@ -7,12 +7,14 @@
     {% if post.thumb %}
         <img src="/images/{{post.thumb}}" class=postBox>
     {% endif %}
+    <div class="dateSumBox">
     <hr>
   <p class=postBoxDate>{{ post.date | date: "%b %-d, %Y" }}</p>
   {% if post.summary %}
   <hr>
   <summary class=postBoxSnippet>{{post.summary}}</summary>
   {% endif %}
+  </div>
 </div>
 </a>
 {% endfor %}
