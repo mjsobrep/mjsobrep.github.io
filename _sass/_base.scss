@@ -308,6 +308,7 @@ pre {
 .postTableRow{
     vertical-align: middle;
     padding-right: 20px;
+    border-bottom: 3px solid rgb(220,220,220);
 }
 .postTableDate{
     @extend .postTableRow;
@@ -325,11 +326,9 @@ td, th{
     padding:2px;
     padding-left: 5px;
     padding-right: 5px;
-    border-style: hidden;
 }
 
 th{
-    border-bottom: 4px solid #000000;
     text-align: center;
 }
 
@@ -486,9 +485,4 @@ hr{
     border: 0;
 height: 3px;
 background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.75), rgba(0, 0, 0, 0));
-}
-
-.greyBorder{
-    display: block;
-    border-top: 2px gray dotted
 }
