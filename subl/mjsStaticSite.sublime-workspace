@@ -140,27 +140,11 @@
 	"buffers":
 	[
 		{
-			"file": "/C/GIT/mjsStaticSite/primaryPages/experience.html",
+			"file": "/C/Users/Michael/OneDrive/Desktop/Untitled.txt",
 			"settings":
 			{
-				"buffer_size": 255,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/GIT/mjsStaticSite/_plugins/myFunctions.rb",
-			"settings":
-			{
-				"buffer_size": 3772,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "{%for file in site.static_files %}\n{%capture match%}{{file|pathMatch:real}}{%endcapture%}\n{%if match contains 'true'%}\n<a href={{file.path|url_encode}}><img src={{file.path|url_encode}} style=\"height:200px; border-radius: 25px;padding:5px\"></a>\n{%endif%}\n{%endfor%}",
-			"settings":
-			{
-				"buffer_size": 265,
-				"line_ending": "Windows"
+				"buffer_size": 98287,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -265,13 +249,16 @@
 	],
 	"file_history":
 	[
+		"/C/GIT/mjsStaticSite/primaryPages/experience.html",
+		"/C/GIT/mjsStaticSite/_plugins/myFunctions.rb",
+		"/C/Users/Michael/OneDrive/Desktop/Raspberry_B1.err",
+		"/C/Users/Michael/AppData/Roaming/Microsoft/Signatures/yahooFancy.htm",
+		"/C/Users/Michael/OneDrive/Desktop/Untitled.txt",
 		"/C/Users/Michael/OneDrive/Documents/Raspberry Pi/Raspberry Pi Cheat",
 		"/C/GIT/mjsStaticSite/_includes/simplePictures.html",
 		"/C/GIT/mjsStaticSite/_posts/guides/2015-06-22-gitGuide.md",
 		"/C/GIT/mjsStaticSite/_sass/_base.scss",
 		"/C/GIT/mjsStaticSite/_layouts/post.html",
-		"/C/GIT/mjsStaticSite/primaryPages/experience.html",
-		"/C/GIT/mjsStaticSite/_plugins/myFunctions.rb",
 		"/C/Users/Michael/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
 		"/C/Users/Michael/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
 		"/C/GIT/mjsStaticSite/_posts/guides/2015-06-22-jekyllGuide.md",
@@ -389,10 +376,7 @@
 		"/C/Users/Michael/OneDrive/Documents/Arduino/intussasist_handheld/intussasist_handheld.ino",
 		"/C/GIT/CS3600/Project 4/Project 4b/MJSTesting.py",
 		"/C/GIT/CS3630/Project 6/controller.py",
-		"/C/GIT/Intussasist/gui.py",
-		"/C/GIT/Intussasist/generateCommands",
-		"/C/GIT/CS3600/Project 3/tracking/bustersAgents.py",
-		"/C/GIT/CS3600/Project 3/tracking/ghostAgents.py"
+		"/C/GIT/Intussasist/gui.py"
 	],
 	"find":
 	{
@@ -459,16 +443,16 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/C/GIT/mjsStaticSite/primaryPages/experience.html",
+					"file": "/C/Users/Michael/OneDrive/Desktop/Untitled.txt",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 255,
+						"buffer_size": 98287,
 						"regions":
 						{
 						},
@@ -481,64 +465,7 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/Jekyll/Syntaxes/HTML (Jekyll).tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/C/GIT/mjsStaticSite/_plugins/myFunctions.rb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3772,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 265,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								265,
-								265
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
