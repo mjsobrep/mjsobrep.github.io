@@ -139,14 +139,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "/C/Users/Michael/OneDrive/Desktop/Untitled.txt",
-			"settings":
-			{
-				"buffer_size": 98287,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -242,18 +234,16 @@
 	"expanded_folders":
 	[
 		"/C/GIT/mjsStaticSite",
-		"/C/GIT/mjsStaticSite/_posts",
-		"/C/GIT/mjsStaticSite/images",
-		"/C/GIT/mjsStaticSite/otherFiles",
-		"/C/GIT/mjsStaticSite/primaryPages"
+		"/C/GIT/mjsStaticSite/images"
 	],
 	"file_history":
 	[
+		"/C/Users/Michael/OneDrive/Desktop/Amazing deals for summer.msg",
+		"/C/Users/Michael/OneDrive/Desktop/Untitled.txt",
 		"/C/GIT/mjsStaticSite/primaryPages/experience.html",
 		"/C/GIT/mjsStaticSite/_plugins/myFunctions.rb",
 		"/C/Users/Michael/OneDrive/Desktop/Raspberry_B1.err",
 		"/C/Users/Michael/AppData/Roaming/Microsoft/Signatures/yahooFancy.htm",
-		"/C/Users/Michael/OneDrive/Desktop/Untitled.txt",
 		"/C/Users/Michael/OneDrive/Documents/Raspberry Pi/Raspberry Pi Cheat",
 		"/C/GIT/mjsStaticSite/_includes/simplePictures.html",
 		"/C/GIT/mjsStaticSite/_posts/guides/2015-06-22-gitGuide.md",
@@ -375,8 +365,7 @@
 		"/C/Users/Michael/OneDrive/Documents/Arduino/intussasist_handheld/testingSerial/testingSerial.ino",
 		"/C/Users/Michael/OneDrive/Documents/Arduino/intussasist_handheld/intussasist_handheld.ino",
 		"/C/GIT/CS3600/Project 4/Project 4b/MJSTesting.py",
-		"/C/GIT/CS3630/Project 6/controller.py",
-		"/C/GIT/Intussasist/gui.py"
+		"/C/GIT/CS3630/Project 6/controller.py"
 	],
 	"find":
 	{
@@ -443,37 +432,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "/C/Users/Michael/OneDrive/Desktop/Untitled.txt",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 98287,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
