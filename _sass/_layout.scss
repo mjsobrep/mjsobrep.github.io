@@ -215,6 +215,10 @@
 
 .post-content {
     margin-bottom: $spacing-unit;
+    h1 {
+        text-decoration: line-through;
+        color: red;
+    }
 
     h2 {
         font-size: 32px;
