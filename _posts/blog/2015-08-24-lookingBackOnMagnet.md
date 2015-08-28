@@ -74,7 +74,7 @@ I didn't start doing research until just now (final semester). That was a mistak
 Remember that tuition is only a small portion of your costs. There are fees as well as living costs. At GT the fees are insane and living in Atlanta is very expensive. For me, the cost of living is the largest portion of my educational cost. There are of course other schools for which that will be different. Lots of people get blindsided by this, don't be one of them.
 
 ###School rankings
-You don't need to go to the number 1 school, fit is more important. However, the unranked school will hold you back. You want to make sure people have heard of your school and think of it positively. You also need a school that will chalenge and push you to grow.
+You don't need to go to the number 1 school, fit is more important. However, the unranked school will hold you back. You want to make sure people have heard of your school and think of it positively. You also need a school that will challenge and push you to grow.
 
 ###Computer Science
 I don't know how people are able to function in today's world without having great computer skills. It really doesn't matter what you are doing, being able to think algorithmically, store data, and process data will make your life easier. Take a bunch of CS classes, they will teach you a different way to think and a very portable set of hard skills.
