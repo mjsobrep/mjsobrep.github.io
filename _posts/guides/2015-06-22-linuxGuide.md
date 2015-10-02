@@ -7,5 +7,10 @@ tags:
 - linux
 ---
 
-####Restart Network System:
-* sudo service network-manager restart
+#### Restart Network System:
+* `sudo service network-manager restart`
+
+### Setup
+
+#### GIT
+* http://www.ubuntumanual.org/posts/393/how-to-setup-and-use-github-in-ubuntu
