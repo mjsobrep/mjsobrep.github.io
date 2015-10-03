@@ -13,9 +13,10 @@ tags:
     * [ThomasNet](http://www.thomasnet.com/)
 * Raw Materials
     * metals
+        * Metal Supermarkets (there is both a national group and local stores)
+        * [Speedy Metals](http://www.speedymetals.com/)
     * Plasitcs
         * [TAP Plastics](http://www.tapplastics.com/)
-        *
 * Electronics
     * High Level
         * Adafruit
