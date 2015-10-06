@@ -2,6 +2,7 @@
 layout: post
 title:  "Christmas List"
 categories: blog
+updated:   2015-10-06
 tags:
 - Presents
 - Christmas
@@ -19,6 +20,7 @@ I figured I would throw the list here this year. I will keep adding stuff on as 
 * I really want a machine that I can run Virtual Machines on top of
 * [Twiddler](http://twiddler.tekgear.com/)
 * A holo lens
+* SurfaceBook
 
 ###Tools (as always)
 * [Glowforge](http://glowforge.com/) - cool laser cutter, currently on sale
@@ -46,8 +48,11 @@ I figured I would throw the list here this year. I will keep adding stuff on as 
     * [Nine2Five Mocha](http://www.lemsshoes.com/mens-nine2five-mocha.html)
     * Toms?
 
-###Cell Phone - My phone is really sucking it up, time for a new one
-* I'll have to see what new phones come out, I am thinking a Windows Phone 10
+###Mobile Electronics
+* My phone is really sucking it up, time for a new one
+    * I'll have to see what new phones come out, I am thinking a Windows Phone 10
+* Microsoft Band
+
 
 ###Camera
 * DSLR with video capability?
