@@ -17,7 +17,7 @@ I figured I would throw the list here this year. I will keep adding stuff on as 
 ###Money
 
 ###Computer
-* [surface pro dock]()
+* [surface pro dock](http://www.amazon.com/dp/B0163HP38W)
 * I really want a machine that I can run Virtual Machines on top of
 * [Twiddler](http://twiddler.tekgear.com/)
 * A holo lens
