@@ -17,6 +17,7 @@ I figured I would throw the list here this year. I will keep adding stuff on as 
 ###Money
 
 ###Computer
+* [surface pro dock]()
 * I really want a machine that I can run Virtual Machines on top of
 * [Twiddler](http://twiddler.tekgear.com/)
 * A holo lens
@@ -28,10 +29,10 @@ I figured I would throw the list here this year. I will keep adding stuff on as 
 * A CNC lathe and/or mill
     * Obviously something professional like a Haas would be sweet, but there are also people like Tormach that make pretty slick machines for cheap
 * Batteries for drills
-* [A slightly more professional laser cutter](http://www.mitsubishilaser.co.uk/products/laser/model-nx-f.html)
+* [A slightly more professional laser cutter](https://www.mcmachinery.com/products-and-solutions/category/laser/five-axis-laser/)
     * Hehe, watch the video
 * Plasma cutter
-
+* [ooh, fancy](https://www.youtube.com/watch?v=s9IdZ2pI5dA)
 
 ###House stuff
 * Big bowls
@@ -69,3 +70,6 @@ I figured I would throw the list here this year. I will keep adding stuff on as 
 * Jump training
 * Pilot training
 * Scuba training
+* Bike trailer for Abita:
+    * http://www.amazon.com/dp/B00B3HMH2I/
+    * http://www.amazon.com/dp/B008CNK97G
