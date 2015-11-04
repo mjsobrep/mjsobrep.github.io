@@ -18,6 +18,7 @@ I figured I would throw the list here this year. I will keep adding stuff on as 
 
 ###Computer
 * [surface pro dock](http://www.amazon.com/dp/B0163HP38W)
+* My external monitor is starting to look rough. It would be nice to have something to keep up with the PPI on my surface Pro 3. 
 * I really want a machine that I can run Virtual Machines on top of
 * [Twiddler](http://twiddler.tekgear.com/)
 * A holo lens
