@@ -18,6 +18,7 @@ tags:
 thumb: "soundReactiveGuitar/WP_20150515_001.jpg"
 summary: I helped a friend add frequency reactive lighting to some guitars which he was building
 ---
+_Update: You can buy the guitars I was working on from [Gallo Guitars](http://www.gallo.guitars/)_
 
 I met [Jose Gallo](http://www.josegallo.com/) at [The Engineer Guy](http://www.theengineerguy.com/). I was with my Senior Design team and was wearing a GT shirt. So he approached us and asked if any of us have experience with microcontrollers and electronics, which I do. He showed us a guitar he was working on which had LEDs within the body and asked if I could help him to make it react to the sound being played. I agreed to help him and got to work. I ended up using a Teensy microcontroller because of its very solid audio library. I set it up to perform an FFT and create a number of visualizations, selectable by a push button. In the end I was very pleased with the results and learned a good bit in the process. Jose was also pretty excited.
 

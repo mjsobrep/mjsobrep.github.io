@@ -452,13 +452,14 @@ div.postBox:hover{
 
 img.postBox{
     @include border-radius(5px);
-    width: 100%;
+    width: auto;
     max-width: 275px;
     height: auto;
+    max-height: 200px;
     border: 10px;
     display: inline-block;
     vertical-align: top;
-    text-align: center;
+    text-align: left;
 }
 
 .dateSumBox{

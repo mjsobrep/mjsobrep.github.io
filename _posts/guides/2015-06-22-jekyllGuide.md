@@ -1,6 +1,6 @@
 ---
 layout: guide
-title:  "Jekyl"
+title:  "Jekyll"
 updated:   2015-06-25
 categories: guides
 tags:
