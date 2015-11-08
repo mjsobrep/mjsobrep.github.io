@@ -2,7 +2,7 @@
 layout: post
 title:  "Christmas List"
 categories: blog
-updated:   2015-10-06
+updated:   2015-11-08
 tags:
 - Presents
 - Christmas
@@ -18,7 +18,7 @@ I figured I would throw the list here this year. I will keep adding stuff on as 
 
 ###Computer
 * [surface pro dock](http://www.amazon.com/dp/B0163HP38W)
-* My external monitor is starting to look rough. It would be nice to have something to keep up with the PPI on my surface Pro 3. 
+* My external monitor is starting to look rough. It would be nice to have something to keep up with the PPI on my surface Pro 3.
 * I really want a machine that I can run Virtual Machines on top of
 * [Twiddler](http://twiddler.tekgear.com/)
 * A holo lens
@@ -49,6 +49,8 @@ I figured I would throw the list here this year. I will keep adding stuff on as 
     * [Nine2Five coffee and cream](http://www.lemsshoes.com/mens-nine2five-coffee-cream.html)
     * [Nine2Five Mocha](http://www.lemsshoes.com/mens-nine2five-mocha.html)
     * Toms?
+* Some nice leather combat boots
+* Good all weather hiking boots
 
 ###Mobile Electronics
 * My phone is really sucking it up, time for a new one
