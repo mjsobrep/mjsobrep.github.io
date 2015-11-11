@@ -2,7 +2,7 @@
 layout: post
 title:  "Christmas List"
 categories: blog
-updated:   2015-11-08
+updated:   2015-11-11
 tags:
 - Presents
 - Christmas
@@ -13,6 +13,9 @@ summary: Annual Christmas (also birthday, and this year graduation) list | some 
 Every year I make a Christmas list to get shared around, they are generally pretty comical (lots of large earth movers most years). Of course my birthday is right before Christmas, so the list covers that as well. This year I also am graduating right before Christmas :)
 
 I figured I would throw the list here this year. I will keep adding stuff on as I think of them. Of course no one needs to get me any of the stuff on here, but hopefully you think at least some of the items are interesting.
+
+###Sailboat
+Yeah, I find myself without a sailboat. That is no good. I haven't figured out where I would sail, how I would get a boat there, etc... But I sure would like to start sailing again. I guess I could take the cheaper option and join the GT Sailing club... but...
 
 ###Money
 
