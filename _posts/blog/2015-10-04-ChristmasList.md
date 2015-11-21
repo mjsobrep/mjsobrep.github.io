@@ -28,6 +28,7 @@ Yeah, I find myself without a sailboat. That is no good. I haven't figured out w
 * SurfaceBook
 
 ###Tools (as always)
+* A [scopemeter](http://en-us.fluke.com/products/portable-oscilloscopes/)
 * [Glowforge](http://glowforge.com/) - cool laser cutter, currently on sale
 * Welding equipment
 * A CNC lathe and/or mill
