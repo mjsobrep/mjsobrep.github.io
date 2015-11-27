@@ -78,5 +78,5 @@ Yeah, I find myself without a sailboat. That is no good. I haven't figured out w
 * Pilot training
 * Scuba training
 * Bike trailer for Abita:
-    * http://www.amazon.com/dp/B00B3HMH2I/
-    * http://www.amazon.com/dp/B008CNK97G
+    * [More industrial](http://www.amazon.com/dp/B00B3HMH2I/)
+    * [Like ones for kids](http://www.amazon.com/dp/B008CNK97G)
