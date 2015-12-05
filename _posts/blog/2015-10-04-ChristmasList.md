@@ -80,3 +80,6 @@ Yeah, I find myself without a sailboat. That is no good. I haven't figured out w
 * Bike trailer for Abita:
     * [More industrial](http://www.amazon.com/dp/B00B3HMH2I/)
     * [Like ones for kids](http://www.amazon.com/dp/B008CNK97G)
+* Water Rover:
+    * [website](https://www.waterrover.com/)
+    * [amazon](http://www.amazon.com/dp/B0038C599Y/)
