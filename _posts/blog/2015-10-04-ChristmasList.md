@@ -69,6 +69,13 @@ Yeah, I find myself without a sailboat. That is no good. I haven't figured out w
 * XBOX one
 * Playstation 4
 
+###Cycling
+* leg warmers
+* arm warmers
+* base layer
+* windbreaker
+* helmet
+
 ###Other stuff
 * Cammelback
 * Gun
@@ -83,3 +90,4 @@ Yeah, I find myself without a sailboat. That is no good. I haven't figured out w
 * Water Rover:
     * [website](https://www.waterrover.com/)
     * [amazon](http://www.amazon.com/dp/B0038C599Y/)
+* White board markers
