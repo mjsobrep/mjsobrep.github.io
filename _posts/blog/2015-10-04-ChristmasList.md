@@ -75,6 +75,8 @@ Yeah, I find myself without a sailboat. That is no good. I haven't figured out w
 * base layer
 * windbreaker
 * helmet
+* Bike Rack
+* Saddle Bags
 
 ###Other stuff
 * Cammelback

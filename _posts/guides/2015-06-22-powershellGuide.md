@@ -18,10 +18,15 @@ tags:
 * PSColor : adds coloring
 * posh-git -> to have git in powershell
 * out-diff : for reading diff files from git
-* jump-location : for navigating about the file directory
+* ~~jump-location : for navigating about the file directory~~
 
 ####Via Scoop:
 * vim
 * git
 * concfg : configuration
 * openssh
+
+####Chocolatey
+
+####PowerShell Gallery
+* Z-Location
