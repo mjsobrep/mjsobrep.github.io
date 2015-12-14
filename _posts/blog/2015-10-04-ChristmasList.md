@@ -62,8 +62,16 @@ Yeah, I find myself without a sailboat. That is no good. I haven't figured out w
 * Microsoft Band
 
 
-###Camera
-* DSLR with video capability?
+###Camera (I have a Nikon D7200)
+* ~~DSLR with video capability?~~
+* Lenses
+    * [Nikon AF-S 50mm/f1.8](http://www.nikonusa.com/en/nikon-products/product/refurbished-camera-lenses/af-s-nikkor-50mm-f%252f1.8g-refurbished.html)
+    * [Nikon AF-S 35mm/f1.8](http://www.nikonusa.com/en/nikon-products/product/refurbished-camera-lenses/af-s-dx-nikkor-35mm-f%252f1.8g-refurbished.html)
+* Lens Hood for [Nikon 18-140 lens](http://www.amazon.com/dp/B00ECGX8FM/)
+* Tripod
+* Flash
+* Diffuser
+* Creative Cloud photographer subscription
 
 ###Gaming
 * XBOX one
