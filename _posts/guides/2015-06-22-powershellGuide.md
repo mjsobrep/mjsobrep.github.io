@@ -16,7 +16,7 @@ tags:
 
 ####Via PSget:
 * PSColor : adds coloring
-* posh-git -> to have git in powershell
+* [posh-git](https://github.com/dahlbyk/posh-git) -> to have git in powershell
 * out-diff : for reading diff files from git
 * ~~jump-location : for navigating about the file directory~~
 
@@ -29,4 +29,6 @@ tags:
 ####Chocolatey
 
 ####PowerShell Gallery
-* Z-Location
+* [Z-Location](https://github.com/vors/ZLocation)
+
+## Run in ConEMU
