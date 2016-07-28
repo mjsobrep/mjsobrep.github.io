@@ -12,11 +12,11 @@ tags:
 ---
 
 
-####_config.yml:
+#### _config.yml:
 * encoding: utf-8
 * highlighter: pygments
 
-###Building:
+### Building:
 * on windows:
     * may need jekyll serve --force_polling
     * if all goes to hell: jekyll serve --no-watch
@@ -27,10 +27,10 @@ tags:
 * jekyll serve --watch
 * jekyll serve -w
 
-####change console encoding:
+#### change console encoding:
 * chcp 65001
 
-###My Publishing Script:
+### My Publishing Script:
 This is done in powershell. I work on my working branch.
 {% highlight powershell %}Function publishmichaelsobrepera{
     cd /;

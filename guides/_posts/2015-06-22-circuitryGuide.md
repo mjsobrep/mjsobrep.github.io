@@ -7,10 +7,10 @@ tags:
 - circuitry
 ---
 
-###SMC Breakout:
+### SMC Breakout:
 * https://learn.adafruit.com/smt-prototyping-using-breakout-pcbs
 
-###Design Spark:
+### Design Spark:
 * Propagate Library Changes: Tools->Update Components
 * Show Net in Schematic: Right Click->display net name
 * Bus:

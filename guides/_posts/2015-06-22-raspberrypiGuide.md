@@ -16,7 +16,7 @@ tags:
 
 [Adafruit Guides](https://learn.adafruit.com/category/learn-raspberry-pi)
 
-###SETUP AND ACCESS:
+### SETUP AND ACCESS:
 * [Setup WIFI](https://learn.adafruit.com/adafruits-raspberry-pi-lesson-3-network-setup/setting-up-wifi-with-occidentalis)
 * [SSH](https://learn.adafruit.com/adafruits-raspberry-pi-lesson-6-using-ssh/overview)
 * VNC:
@@ -46,7 +46,7 @@ tags:
 
 
 
-###GPIO:
+### GPIO:
 * GPIO Setup:
     * WiringPi:
         * `git clone git://git.drogon.net/wiringPi`
@@ -66,7 +66,7 @@ tags:
         * Setup Specific pin:
             * `GPIO.setup(14, GPIO.IN, GPIO.PUD_UP)`
 
-####[Screen Blanking](https://learn.adafruit.com/raspi-animated-gif-picture-frame/making-changes):
+#### [Screen Blanking](https://learn.adafruit.com/raspi-animated-gif-picture-frame/making-changes):
 
 * `sudo nano /etc/kbd/config`
     * change: `BLANK_TIME=30`
@@ -89,7 +89,7 @@ tags:
             * `@xset -dpms`
             * `@xset s noblank`
 
-###Starting stuff at startup:
+### Starting stuff at startup:
 * [http://www.instructables.com/id/Raspberry-Pi-Launch-Python-script-on-startup/?ALLSTEPS](http://www.instructables.com/id/Raspberry-Pi-Launch-Python-script-on-startup/?ALLSTEPS)
 * [http://www.raspberrypi.org/learning/tweeting-babbage/worksheet2/](http://www.raspberrypi.org/learning/tweeting-babbage/worksheet2/)
 

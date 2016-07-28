@@ -14,16 +14,16 @@ tags:
 * Insert Input Cell: Ctrl+Shift+I
 * Insert New Cell of type above: Alt+Enter
 
-####Identifier:
+#### Identifier:
 * constant
 * input
 * output
 
-####Assignment: done via `:=`
+#### Assignment: done via `:=`
 
-####Equation: done via `=`
+#### Equation: done via `=`
 
-###Variables:
+### Variables:
 * Base Types:
     * `Integer`
     * `Real(unit = "<unit>" ~ opt, min = <min> ~ opt, max = <max> ~ opt)`
@@ -44,11 +44,11 @@ tags:
     * treated as headers, all variables after a visibility statement and before another control statement will have that visibility
 
 
-###Libraries:
+### Libraries:
 * loadModel(<library>);
 * Standard Library: Modelica
 
-###Classes:
+### Classes:
 Nested (local) classes are allowed
 
 * Special words to replace "class":

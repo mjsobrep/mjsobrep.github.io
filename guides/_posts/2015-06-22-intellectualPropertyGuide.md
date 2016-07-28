@@ -18,13 +18,13 @@ tags:
 
 * Trade Secret
 
-###Trademark
+### Trademark
 * word, symbol, logo, design, slogan -> in the context of the trademark
 * Valid for the amount of time that the trademark is used. If the trademark becomes standard use, the trademark is lost.
 * Litigation based on likelihood of conclusion, exceptions for parody
 
 
-###Patent:
+### Patent:
 Right to exclude others form making, using, selling, offering for sale or importing invention
 Must disclose enough to allow replication in whole of invention
 

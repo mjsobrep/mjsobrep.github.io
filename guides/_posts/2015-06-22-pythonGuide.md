@@ -8,7 +8,7 @@ tags:
 - code
 - programming
 ---
-###debug:
+### debug:
 * `import pdb`
 * breakpoint : `pdb.set_trace()`
 * step in : s
@@ -16,7 +16,7 @@ tags:
 * return out of function : r
 * next breakpoint : c
 
-###LAMBDA:
+### LAMBDA:
 {% highlight python %}
 >>>g = lambda x: x*2  1
 >>>g(3)
@@ -25,9 +25,9 @@ tags:
 6
 {% endhighlight %}
 
-####INSTALL SETUP TOOLS:
+#### INSTALL SETUP TOOLS:
 * IN POWERSHELL : `(Invoke-WebRequest https://bootstrap.pypa.io/ez_setup.py).Content | python -`
 
-####INSTALL PACKAGES:
+#### INSTALL PACKAGES:
 * PackageManager (PIP): `sudo apt-get install python-pip`
 * Serial: `pip install pyserial`

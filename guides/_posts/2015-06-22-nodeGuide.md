@@ -11,13 +11,13 @@ tags:
 - javascript
 ---
 
-####Arguments:
+#### Arguments:
 * `args = process.argv;`
 
-####Loading Global Libraries:
+#### Loading Global Libraries:
 * `var <lib> = require('<lib>');`
 
-###syncronous file I/O:
+### syncronous file I/O:
 * uses fs library:
 * `<buffer>=readFileSync(<path>);`
 * Buffer:

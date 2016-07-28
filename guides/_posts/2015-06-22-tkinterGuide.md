@@ -11,12 +11,12 @@ tags:
 - tkinter
 - tk
 ---
-###STARTUP:
+### STARTUP:
 * `from Tkinter import *`
 * `import ttk`
 * `root = Tk()`
 
-###WIDGETS:
+### WIDGETS:
 * instantiation:
     * `button = ttk.Button(<parent>, text = '<some text>')`
     * `label = ttk.label(<parent>, text = '<some text>')`
@@ -38,7 +38,7 @@ tags:
     * command callbacks -> for obvious stuff
     * event bindings -> for custom stuff
 
-###windows:
+### windows:
 * zoom to max:
     * `window.state('zoomed')`
 * configuration:
@@ -47,7 +47,7 @@ tags:
 * Text Display:
     * text widget
 
-###CANVAS:
+### CANVAS:
 * `canvas = Canvas(<parent>)`
 * `canvas.config(width = <>, height = <>)`
 * `line = canvas.create_line(<x1>,<y1>,<x2>,<y2>,fill = '<color>',width = <width>)`
@@ -74,7 +74,7 @@ tags:
     * `canvas.itemconfigure(<item>,tag=(<tag1>,<o: other tags>))`
     * `canvas.gettags(<item>)`
 
-###STYLES:
+### STYLES:
 * `<item>.winfo_class() <-returns style`
 * `style.configure('<stylename>',<paramater>=<val>)`
 * new style: `

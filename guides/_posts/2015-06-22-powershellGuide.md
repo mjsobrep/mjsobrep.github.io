@@ -14,21 +14,21 @@ tags:
 * PSget -> to install stuff
 * concfg -> to configure stuff
 
-####Via PSget:
+#### Via PSget:
 * PSColor : adds coloring
 * [posh-git](https://github.com/dahlbyk/posh-git) -> to have git in powershell
 * out-diff : for reading diff files from git
-* ~~jump-location : for navigating about the file directory~~
+* <del>jump-location : for navigating about the file directory</del>
 
-####Via Scoop:
+#### Via Scoop:
 * vim
 * git
 * concfg : configuration
 * openssh
 
-####Chocolatey
+#### Chocolatey
 
-####PowerShell Gallery
+#### PowerShell Gallery
 * [Z-Location](https://github.com/vors/ZLocation)
 
 ## Run in ConEMU
