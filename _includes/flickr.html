@@ -1,13 +1,15 @@
 {% comment %}
 
+{::nomarkdown}
 {% include flickr.html 
     src="https://www.flickr.com/photos/138686863@N06/albums/72157671679417635" 
     title="first 3d prints" 
     img="https://c8.staticflickr.com/9/8748/27995772103_0efee1368a_c.jpg" 
     width=600 
     height=800 
-    %}
-    
+    %} 
+{:/nomarkdown}
+
 {% endcomment %}
 
 <style media="screen" type="text/css">
@@ -27,8 +29,8 @@
 
 <div class='flBox{{include.ratio|stripNonNum}}{{include.width|stripNonNum}}'> 
     <div class='mediaContent'>  
-        <a data-flickr-embed="true"  href={{include.src}} title='{{include.title}}'>
-            <img src={{include.img}} width=100% height=100% alt='{{include.title}}'>
+        <a data-flickr-embed="true"  href="{{include.src | remove: '"' | remove: "'"}}" title="{{include.title | remove: '"' | remove: "'"}}">
+            <img src="{{include.img | remove: '"' | remove: "'"}}" width=100% height=100% alt="{{include.title | remove: '"' | remove: "'"}}" />
         </a>
         <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>  
     </div> 
