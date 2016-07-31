@@ -4,20 +4,26 @@ layout: default
 
 <div class="home">
     <h3>Welcome to my personal site, please have a look around. Feel free to contact me via <a href="https://www.linkedin.com/in/michaelsobrepera">LinkedIn</a> or <a href="mailto:mjsobrep@live.com">e-mail</a>. To schedule things with me, take a look at <a href= "{{'calendar.html' | prepend: site.baseurl}}">my calendar</a> (you can even subscribe to it) and send me an invitation for a time that is free. There are places to comment throughout the site, please feel free to leave your opinion.</h3>
-</br>
-{% include tags.html tags=site.tags %}
-</br>
-<h2>Most Recent Posts</h2>
-<table>
-{% for post in site.posts offset: 0 limit: 5 %}
-            <tr >
-                <td class=postTableDate>{{ post.date | date: "%b %-d, %Y" }}</td>
-                <td class=postTableRow><a href="{{post.categories }}">{{post.categories}}</td>
-                    <td class=postTableRow><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></td>
-                </tr>
-    {% endfor %}
-    </table>
-</br>
-<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+    </br>
+    {% include tags.html tags=site.tags %}
+    </br>
+    <div style="max-width:425px; float:left">
+    <h2>Most Recent Posts</h2>
+    <table>
+    {% for post in site.posts offset: 0 limit: 5 %}
+                <tr >
+                    <td class=postTableDate>{{ post.date | date: "%b %-d, %Y" }}</td>
+                    <td class=postTableRow><a href="{{post.categories }}">{{post.categories}}</td>
+                        <td class=postTableRow><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></td>
+                    </tr>
+        {% endfor %}
+        </table>
+    </br>
+    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+    </div>
+    <div style="text-align:center">
+        <div style="display:inline-block">
+            <a class="twitter-timeline" data-width="300" data-height="400" data-theme="light" data-link-color="#2B7BB9" href="https://twitter.com/mjsobrep">Tweets by mjsobrep</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+    </div>
 </div>
