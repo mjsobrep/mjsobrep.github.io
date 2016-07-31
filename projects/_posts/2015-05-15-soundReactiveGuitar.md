@@ -3,7 +3,6 @@ layout: post
 title:  "Sound Reactive Guitar"
 date:   2015-05-15
 categories: projects
-imageDir: soundReactiveGuitar
 tags:
 - electronics
 - electronics design
@@ -15,7 +14,7 @@ tags:
 - LED
 - music
 - art
-thumb: "soundReactiveGuitar/WP_20150515_001.jpg"
+thumb: https://c6.staticflickr.com/9/8314/28565885061_b25d66ed81_n.jpg
 summary: I helped a friend add frequency reactive lighting to some guitars which he was building
 ---
 _Update: You can buy the guitars I was working on from [Gallo Guitars](http://www.gallo.guitars/)_
@@ -33,3 +32,14 @@ I met [Jose Gallo](http://www.josegallo.com/) at [The Engineer Guy](http://www.t
 {% include iframe.html src="'https://www.youtube.com/embed/Xse8pVynuTU'" width=100 ratio=56.25 %}
 {% include iframe.html src="'https://www.youtube.com/embed/qmZ0__i1iVQ'" width=50 ratio=177.7777777777778 %}
 {% include iframe.html src="'https://www.youtube.com/embed/KpZX_1y0OSo'" width=100 ratio=56.25 %}
+
+{::nomarkdown}
+{% include flickr.html
+        src="https://www.flickr.com/photos/138686863@N06/albums/72157670919837312"
+        title="sound reactive guitar"
+        img="https://c8.staticflickr.com/9/8857/28028214663_0cf1fce1b7_z.jpg"
+        width=640
+        height=360
+        %}
+{:/nomarkdown}
+
