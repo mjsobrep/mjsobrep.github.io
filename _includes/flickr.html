@@ -14,12 +14,12 @@
 
 <style media="screen" type="text/css">
 
-.flBox{{include.ratio|stripNonNum}}{{include.width|stripNonNum}}{
+.flBox{{include.height|stripNonNum}}{{include.width|stripNonNum}}{
     position: relative;
     max-width: {{include.width|stripNonNum}}px;     /* desired width */
     margin: auto;
 }
-.flBox{{include.ratio|stripNonNum}}{{include.width|stripNonNum}}:before{
+.flBox{{include.height|stripNonNum}}{{include.width|stripNonNum}}:before{
     content: "";
     display: block;
     padding-top: {{include.height | times: 100 | divided_by: include.width}}% /* account for the little button bar */
@@ -27,7 +27,7 @@
 
 </style>
 
-<div class='flBox{{include.ratio|stripNonNum}}{{include.width|stripNonNum}}'> 
+<div class='flBox{{include.height|stripNonNum}}{{include.width|stripNonNum}}'> 
     <div class='mediaContent'>  
         <a data-flickr-embed="true"  href="{{include.src | remove: '"' | remove: "'"}}" title="{{include.title | remove: '"' | remove: "'"}}">
             <img src="{{include.img | remove: '"' | remove: "'"}}" width=100% height=100% alt="{{include.title | remove: '"' | remove: "'"}}" />
