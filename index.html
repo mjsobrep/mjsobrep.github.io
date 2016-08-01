@@ -7,7 +7,8 @@ layout: default
     </br>
     {% include tags.html tags=site.tags %}
     </br>
-    <div style="max-width:425px; float:left">
+    <div style="text-align:center">
+    <div style="max-width:425px; display:inline-block; margin:2px">
     <h2>Most Recent Posts</h2>
     <table>
     {% for post in site.posts offset: 0 limit: 5 %}
@@ -21,9 +22,8 @@ layout: default
     </br>
     <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
     </div>
-    <div style="text-align:center">
-        <div style="display:inline-block">
-            <a class="twitter-timeline" data-width="300" data-height="400" data-theme="light" data-link-color="#2B7BB9" href="https://twitter.com/mjsobrep">Tweets by mjsobrep</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-        </div>
+    <div style="display:inline-block; width:300px; margin:2px">
+        <a class="twitter-timeline" data-width="300" data-height="400" data-theme="light" data-link-color="#2B7BB9" href="https://twitter.com/mjsobrep">Tweets by mjsobrep</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
+</div>
 </div>
