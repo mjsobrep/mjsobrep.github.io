@@ -102,7 +102,27 @@
           </li>
           {% endif %}
 
+          {% if site.flickr_alias %}
+          <li>
+            <a href="https://flickr.com/photos/{{ site.flickr_alias }}">
+              <span class="icon  icon--flickr">
+                <svg viewBox="0 0 16 16">
+                  <g transform="translate(198.05 -1036.4)">
+                    <g transform="matrix(.016983 0 0 .016983 -194.69 1034.5)">
+                      <circle cx="273.02" cy="581.29" r="471.07" style="fill:#828282"/>
+                      <g>
+                        <circle cx="89.714" cy="594.08" r="148.57" style="fill:#bebebe"/>
+                        <circle r="148.57" style="fill:#e9e9e9" cx="447.14" cy="594.08"/>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </span>
 
+              <span class="username">{{ site.flickr_alias }}</span>
+            </a>
+          </li>
+          {% endif %}
 
         </ul>
       </div>
