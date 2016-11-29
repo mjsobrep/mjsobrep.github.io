@@ -30,6 +30,12 @@ I hadn't posted a list yet, and that came up. So here it is, enjoy. I don't real
 - a small christmas tree branch 
 
 ## Tools
+- smart watch/fitness tracker
+    - tough, I am a klutz
+    - capable of doing cycling
+    - HR 
+    - GPS
+    - Good phone stuff
 - ratcheting screw driver
 - oscilloscope or fluke scopemeter
 - batteries for my drill
@@ -70,6 +76,7 @@ I hadn't posted a list yet, and that came up. So here it is, enjoy. I don't real
 - oven thermometer
 - a fast instant read thermometer
 - good garlic press
+- mortar and pestle
 
 ## books
 - Tomorrow's Professor: Preparing for Careers in Science and Engineering
@@ -94,3 +101,5 @@ I hadn't posted a list yet, and that came up. So here it is, enjoy. I don't real
 - jump training
 - scuba training
 - plane tickets somewhere
+- alochol, my liquor cabinet is looking a bit sad
+    - mixing ingredients (bitters?)
