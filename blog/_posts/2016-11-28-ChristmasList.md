@@ -6,7 +6,7 @@ tags:
 - Presents
 - Christmas
 - Fun
-summary: Annual Christmas (also birthday, and this year graduation) list
+summary: Annual Christmas (also birthday) list
 ---
 I hadn't posted a list yet, and that came up. So here it is, enjoy. I don't really expect to get anything off of here, but who knows. It gives me a place to look in 8 years when I get a real paycheck. 
 
