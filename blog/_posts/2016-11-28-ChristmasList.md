@@ -1,0 +1,96 @@
+---
+layout: post
+title:  "Christmas List"
+categories: blog
+tags:
+- Presents
+- Christmas
+- Fun
+summary: Annual Christmas (also birthday, and this year graduation) list
+---
+I hadn't posted a list yet, and that came up. So here it is, enjoy. I don't really expect to get anything off of here, but who knows. It gives me a place to look in 8 years when I get a real paycheck. 
+
+## stuff for my apt
+- Router (mine just died on 11/28, family will not be happy when they come for christmas with no internet)
+- Outdoor table and chairs
+- washer and dryer
+- outdoor led globe lights
+- grill
+- amazon dot (if not, then a bluetooth receiver)
+- IP camera
+- some home automation stuff
+    - lights
+    - thermostat
+    - on/off outlet stuff
+    - tv/stereo IR beamer
+- New computer speakers (maybe an alexa instead of the dot listed above?)
+- maid service
+- smoker
+- rosemary plant (with more grow lights)
+- a small christmas tree branch 
+
+## Tools
+- ratcheting screw driver
+- oscilloscope or fluke scopemeter
+- batteries for my drill
+- jigsaw
+- shovel
+- switching power supply
+- dust buster
+- good bluetooth mouse 
+- robotic vacuum
+- twiddler
+- new phone...
+- desktop computer
+
+## Project stuff
+- R/Pi 3
+- power supply for LED lights
+
+## Clothing
+- hiking boots
+- ski pants
+- cycling cold weather gear
+- long sleeve shirts (synthetic, good for daily use and hiking)
+- hiking pants (synthetic)
+- 100% transmission cycling glasses
+- wool hiking socks
+- hats
+
+## Stuff for Abita
+- A bike trailer
+    - https://www.walmart.com/ip/2-IN-1-Pet-Dog-Bike-Trailer-Bicycle-Trailer-Stroller-Jogging-w-Suspension-Red/39752210
+    - https://www.amazon.com/dp/B005DDG69S
+    - https://www.amazon.com/dp/B00N11PEPQ/
+    - https://www.amazon.com/gp/product/B00CYLHD94/
+
+## Kitchen supplies
+- A juicer
+- A water filter
+- oven thermometer
+- a fast instant read thermometer
+- good garlic press
+
+## books
+- Tomorrow's Professor: Preparing for Careers in Science and Engineering
+- Sapiens: A Brief History of Humankind
+
+## camping
+- tent
+- hammock cover
+- good framed backpack (need to be sized)
+- camp stove
+
+## Fun
+- sail boat (something that can fit through my door or a rental)
+- Mardi Gras
+- sunsail vacation
+- volleyball
+- gun
+    - gun safe
+    - ammunition
+    - a lawyer (living in philly...)
+- pilot training
+- jump training
+- scuba training
+- plane tickets somewhere
