@@ -1,7 +1,7 @@
 ---
 layout: guide
 title:  "Suppliers"
-updated:   2015-09-29
+updated:   2016-10-17
 categories: guides
 tags:
 - prototyping
@@ -59,3 +59,9 @@ tags:
     * U-Line
 * Metrology
     * Epsilon - extensometers
+* Prototyping
+    * Shapeways
+    * Stratasys Direct
+    * ProtoLabs
+    * quikparts
+    * 
