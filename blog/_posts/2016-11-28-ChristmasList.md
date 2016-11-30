@@ -17,6 +17,8 @@ I hadn't posted a list yet, and that came up. So here it is, enjoy. I don't real
 - outdoor led globe lights
 - grill
 - amazon dot (if not, then a bluetooth receiver)
+- HEPA Air filter
+- bluetooth bathroom speaker
 - IP camera
 - some home automation stuff
     - lights
