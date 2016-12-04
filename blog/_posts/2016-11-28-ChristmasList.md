@@ -2,6 +2,7 @@
 layout: post
 title:  "Christmas List"
 categories: blog
+updated: 2016-12-04
 tags:
 - Presents
 - Christmas
@@ -79,6 +80,8 @@ I hadn't posted a list yet, and that came up. So here it is, enjoy. I don't real
 - a fast instant read thermometer
 - good garlic press
 - mortar and pestle
+- muddler
+- bar/drink book
 
 ## books
 - Tomorrow's Professor: Preparing for Careers in Science and Engineering
