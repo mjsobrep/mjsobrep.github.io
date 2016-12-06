@@ -107,5 +107,5 @@ I hadn't posted a list yet, and that came up. So here it is, enjoy. I don't real
 - jump training
 - scuba training
 - plane tickets somewhere
-- alochol, my liquor cabinet is looking a bit sad
+- alcohol, my liquor cabinet is looking a bit sad
     - mixing ingredients (bitters?)
