@@ -31,6 +31,7 @@ I hadn't posted a list yet, and that came up. So here it is, enjoy. I don't real
 - smoker
 - rosemary plant (with more grow lights)
 - a small christmas tree branch 
+- sheets
 
 ## Tools
 - smart watch/fitness tracker
