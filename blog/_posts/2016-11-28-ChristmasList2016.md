@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Christmas List"
+title:  "Christmas List 2016"
 categories: blog
-updated: 2016-12-04
+updated: 2016-12-08
 tags:
 - Presents
 - Christmas
@@ -52,6 +52,7 @@ I hadn't posted a list yet, and that came up. So here it is, enjoy. I don't real
 - twiddler
 - new phone...
 - desktop computer
+- Battery powered car jumper
 
 ## Project stuff
 - R/Pi 3
