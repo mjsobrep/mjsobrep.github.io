@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <base target="_parent" />
-  <title>Michael Sobrepera</title>
-  <meta name="description" content="A site about stuff that I (Michael Sobrepera) work on, think, enjoy, etc...">
+  <title>Jekyll</title>
+  <meta name="description" content="_config.yml:  encoding: utf-8  highlighter: pygments">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://www.michaelsobrepera.com/calendar.html">
+  <link rel="canonical" href="http://www.michaelsobrepera.com/guides/jekyllGuide.html">
   <link rel="alternate" type="application/rss+xml" title="Michael Sobrepera" href="http://www.michaelsobrepera.com/feed.xml" />
 
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
@@ -309,30 +309,113 @@
 
     <div class="page-content">
       <div class="bodyWrapper">
-        <h1>Calendar</h1>
-<br/>
+        <div class="guide">
 
-<h2>Personal Calendar (relevant outside of working hours)</h2>
+  <header class="post-header">
+    <h1 class="post-title">Jekyll</h1>
+    <h3>Last Updated: 25 June 2015</h3>
+    <!-- borrowed from http://www.realcombiz.com/2014/01/how-to-expand-collapse-toggle-div-layer.html -->
+
+<input class="toggle-box" id="header1" type="checkbox" >
+<label for="header1">Tags</label>
+<div>
+<ul class="tag">
+
+  <li class="tag"><a href="/tags/blogging.html" class = "tag">blogging</a></li>
+
+  <li class="tag"><a href="/tags/jekyll.html" class = "tag">jekyll</a></li>
+
+  <li class="tag"><a href="/tags/code.html" class = "tag">code</a></li>
+
+  <li class="tag"><a href="/tags/programming.html" class = "tag">programming</a></li>
+
+  <li class="tag"><a href="/tags/web%20development.html" class = "tag">web development</a></li>
+
+</ul>
+</div>
+
+
+  </header>
+
+  <article class="post-content">
+    <h4 id="configyml">_config.yml:</h4>
 <ul>
-    <li class='calListItem'><a href="https://sharing.calendar.live.com/calendar/private/4daf7a00-2fa1-4e90-becf-a465291322b8/0b077663-1428-4c8e-baf8-8f7cdd547643/cid-5081e31f30d8f168/index.html">View In Browser</a>
-    </li>
-
-    <li class='calListItem'><a href="webcals://sharing.calendar.live.com/calendar/private/4daf7a00-2fa1-4e90-becf-a465291322b8/0b077663-1428-4c8e-baf8-8f7cdd547643/cid-5081e31f30d8f168/calendar.ics">Import to Calendar App (ICS)</a>
-    </li>
-
-    <li class='calListItem'><a href="https://sharing.calendar.live.com/calendar/private/4daf7a00-2fa1-4e90-becf-a465291322b8/0b077663-1428-4c8e-baf8-8f7cdd547643/cid-5081e31f30d8f168/calendar.xml">View In Feed Browser (XML)</a>
-    </li>
+  <li>encoding: utf-8</li>
+  <li>highlighter: pygments</li>
 </ul>
 
-<h2>Work Calendar (relevant inside of working hours)</h2>
+<h3 id="building">Building:</h3>
 <ul>
-    <li class='calListItem'><a href="https://calendar.google.com/calendar/embed?src=mjsobrep%40seas.upenn.edu&ctz=America/New_York">View In Browser</a>
-    </li>
-
-    <li class='calListItem'><a href="https://calendar.google.com/calendar/ical/mjsobrep%40seas.upenn.edu/public/basic.ics">Import to Calendar App (ICS)</a>
-    </li>
+  <li>on windows:
+    <ul>
+      <li>may need jekyll serve –force_polling</li>
+      <li>if all goes to hell: jekyll serve –no-watch</li>
+    </ul>
+  </li>
+  <li>jekyll build</li>
+  <li>jekyll build –watch</li>
+  <li>jekyll build -w</li>
+  <li>jekyll serve</li>
+  <li>jekyll serve –watch</li>
+  <li>jekyll serve -w</li>
 </ul>
 
+<h4 id="change-console-encoding">change console encoding:</h4>
+<ul>
+  <li>chcp 65001</li>
+</ul>
+
+<h3 id="my-publishing-script">My Publishing Script:</h3>
+<p>This is done in powershell. I work on my working branch.</p>
+
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="k">Function </span>publishmichaelsobrepera<span class="o">{</span>
+    <span class="nb">cd</span> /;
+    <span class="nb">cd </span>C:<span class="se">\;</span>
+    <span class="nb">cd </span>C:<span class="se">\G</span>IT<span class="se">\m</span>jsStaticSite;
+    git checkout master;
+    git reset --hard working;
+    jekyll build;
+    <span class="nb">Get-ChildItem </span>C:<span class="se">\G</span>IT<span class="se">\m</span>jsStaticSite -Exclude _site -Recurse | <span class="nb">Where</span> <span class="o">{</span><span class="nv">$_</span> -notlike <span class="s1">'C:\GIT\mjsStaticSite\_site\*'</span><span class="o">}</span> | <span class="nb">select</span> -ExpandProperty FullName | <span class="nb">sort </span>Length -Descending | <span class="nb">Remove-Item</span> -force;
+    xcopy C:<span class="se">\G</span>IT<span class="se">\m</span>jsStaticSite<span class="se">\_</span>site C:<span class="se">\G</span>IT<span class="se">\m</span>jsStaticSite /v /s /e ;
+    <span class="nb">Get-ChildItem </span>C:<span class="se">\G</span>IT<span class="se">\m</span>jsStaticSite<span class="se">\_</span>site -Recurse | <span class="nb">select</span> -ExpandProperty FullName | <span class="nb">sort </span>Length -Descending | <span class="nb">Remove-Item</span> -Force;
+    <span class="nb">Remove-Item </span>C:<span class="se">\G</span>IT<span class="se">\m</span>jsStaticSite<span class="se">\_</span>site -Force;
+    git add <span class="k">*</span>;
+    git commit -a -m <span class="s1">'automated commit to publish'</span>;
+    git push gitHub master --force;
+    git checkout working;
+<span class="o">}</span></code></pre></figure>
+
+<p><a href="https://docs.shopify.com/themes/liquid-documentation/basics">liquld</a></p>
+
+<p><a href="http://cheat.markdunkley.com/">Liquid Cheat Sheet</a></p>
+
+  </article>
+  <!-- START: Livefyre Embed -->
+
+  <!-- START: Livefyre Embed -->
+  <h2>Comments</h2>
+<div id="livefyre-comments"></div>
+<script type="text/javascript" src="http://zor.livefyre.com/wjs/v3.0/javascripts/livefyre.js"></script>
+<script type="text/javascript">
+(function () {
+    var articleId = fyre.conv.load.makeArticleId(null);
+    fyre.conv.load({}, [{
+        el: 'livefyre-comments',
+        network: "livefyre.com",
+        siteId: "375755",
+        articleId: articleId,
+        signed: false,
+        collectionMeta: {
+            articleId: articleId,
+            url: fyre.conv.load.makeCollectionUrl(),
+        }
+    }], function() {});
+}());
+</script>
+<!-- END: Livefyre Embed -->
+
+
+</div>
 
       </div>
     </div>

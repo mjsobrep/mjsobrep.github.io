@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <base target="_parent" />
-  <title>Michael Sobrepera</title>
-  <meta name="description" content="A site about stuff that I (Michael Sobrepera) work on, think, enjoy, etc...">
+  <title>Tkinter</title>
+  <meta name="description" content="STARTUP:  from Tkinter import *  import ttk  root = Tk()">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://www.michaelsobrepera.com/calendar.html">
+  <link rel="canonical" href="http://www.michaelsobrepera.com/guides/tkinterGuide.html">
   <link rel="alternate" type="application/rss+xml" title="Michael Sobrepera" href="http://www.michaelsobrepera.com/feed.xml" />
 
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
@@ -309,30 +309,197 @@
 
     <div class="page-content">
       <div class="bodyWrapper">
-        <h1>Calendar</h1>
-<br/>
+        <div class="guide">
 
-<h2>Personal Calendar (relevant outside of working hours)</h2>
+  <header class="post-header">
+    <h1 class="post-title">Tkinter</h1>
+    <h3>Last Updated: 25 June 2015</h3>
+    <!-- borrowed from http://www.realcombiz.com/2014/01/how-to-expand-collapse-toggle-div-layer.html -->
+
+<input class="toggle-box" id="header1" type="checkbox" >
+<label for="header1">Tags</label>
+<div>
+<ul class="tag">
+
+  <li class="tag"><a href="/tags/python.html" class = "tag">python</a></li>
+
+  <li class="tag"><a href="/tags/code.html" class = "tag">code</a></li>
+
+  <li class="tag"><a href="/tags/programming.html" class = "tag">programming</a></li>
+
+  <li class="tag"><a href="/tags/gui.html" class = "tag">gui</a></li>
+
+  <li class="tag"><a href="/tags/tkinter.html" class = "tag">tkinter</a></li>
+
+  <li class="tag"><a href="/tags/tk.html" class = "tag">tk</a></li>
+
+</ul>
+</div>
+
+
+  </header>
+
+  <article class="post-content">
+    <h3 id="startup">STARTUP:</h3>
 <ul>
-    <li class='calListItem'><a href="https://sharing.calendar.live.com/calendar/private/4daf7a00-2fa1-4e90-becf-a465291322b8/0b077663-1428-4c8e-baf8-8f7cdd547643/cid-5081e31f30d8f168/index.html">View In Browser</a>
-    </li>
-
-    <li class='calListItem'><a href="webcals://sharing.calendar.live.com/calendar/private/4daf7a00-2fa1-4e90-becf-a465291322b8/0b077663-1428-4c8e-baf8-8f7cdd547643/cid-5081e31f30d8f168/calendar.ics">Import to Calendar App (ICS)</a>
-    </li>
-
-    <li class='calListItem'><a href="https://sharing.calendar.live.com/calendar/private/4daf7a00-2fa1-4e90-becf-a465291322b8/0b077663-1428-4c8e-baf8-8f7cdd547643/cid-5081e31f30d8f168/calendar.xml">View In Feed Browser (XML)</a>
-    </li>
+  <li><code class="highlighter-rouge">from Tkinter import *</code></li>
+  <li><code class="highlighter-rouge">import ttk</code></li>
+  <li><code class="highlighter-rouge">root = Tk()</code></li>
 </ul>
 
-<h2>Work Calendar (relevant inside of working hours)</h2>
+<h3 id="widgets">WIDGETS:</h3>
 <ul>
-    <li class='calListItem'><a href="https://calendar.google.com/calendar/embed?src=mjsobrep%40seas.upenn.edu&ctz=America/New_York">View In Browser</a>
-    </li>
-
-    <li class='calListItem'><a href="https://calendar.google.com/calendar/ical/mjsobrep%40seas.upenn.edu/public/basic.ics">Import to Calendar App (ICS)</a>
-    </li>
+  <li>instantiation:
+    <ul>
+      <li><code class="highlighter-rouge">button = ttk.Button(&lt;parent&gt;, text = '&lt;some text&gt;')</code></li>
+      <li><code class="highlighter-rouge">label = ttk.label(&lt;parent&gt;, text = '&lt;some text&gt;')</code></li>
+    </ul>
+  </li>
+  <li>adding:
+    <ul>
+      <li><code class="highlighter-rouge">button.pack()</code></li>
+    </ul>
+  </li>
+  <li>changing values:
+    <ul>
+      <li><code class="highlighter-rouge">button['text'] = '&lt;some text&gt;'</code></li>
+      <li><code class="highlighter-rouge">button.config(text = '&lt;some text&gt;')</code></li>
+    </ul>
+  </li>
+  <li>viewing configuration options:
+    <ul>
+      <li><code class="highlighter-rouge">button.config()</code></li>
+    </ul>
+  </li>
+  <li>Geometry Mgmnt:
+    <ul>
+      <li>Pack -&gt; you left, right, blah</li>
+      <li>Grid -&gt; its a gird</li>
+      <li>Place -&gt; absolute positioning</li>
+    </ul>
+  </li>
+  <li>Deleting:
+    <ul>
+      <li><code class="highlighter-rouge">&lt;widget&gt;.destroy()</code></li>
+    </ul>
+  </li>
+  <li>EVENT HANDLERS:
+    <ul>
+      <li>command callbacks -&gt; for obvious stuff</li>
+      <li>event bindings -&gt; for custom stuff</li>
+    </ul>
+  </li>
 </ul>
 
+<h3 id="windows">windows:</h3>
+<ul>
+  <li>zoom to max:
+    <ul>
+      <li><code class="highlighter-rouge">window.state('zoomed')</code></li>
+    </ul>
+  </li>
+  <li>configuration:
+    <ul>
+      <li><code class="highlighter-rouge">root.config(background = 'black')</code></li>
+    </ul>
+  </li>
+  <li>Text Display:
+    <ul>
+      <li>text widget</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="canvas">CANVAS:</h3>
+<ul>
+  <li><code class="highlighter-rouge">canvas = Canvas(&lt;parent&gt;)</code></li>
+  <li><code class="highlighter-rouge">canvas.config(width = &lt;&gt;, height = &lt;&gt;)</code></li>
+  <li><code class="highlighter-rouge">line = canvas.create_line(&lt;x1&gt;,&lt;y1&gt;,&lt;x2&gt;,&lt;y2&gt;,fill = '&lt;color&gt;',width = &lt;width&gt;)</code></li>
+  <li><code class="highlighter-rouge">canvas.itemconfigure(line, fill='&lt;color&gt;')</code></li>
+  <li><code class="highlighter-rouge">canvas.coords(line)</code></li>
+  <li>CAN BE POLYLINE::
+    <ul>
+      <li><code class="highlighter-rouge">canvas.coords(line,&lt;x1&gt;,&lt;y1&gt;,&lt;x2&gt;,&lt;y2&gt;,&lt;x3&gt;,&lt;y3&gt;,&lt;x4&gt;,&lt;y4&gt;)</code></li>
+      <li>smmoth:
+        <ul>
+          <li><code class="highlighter-rouge">canvas.itemconfigure(line, smooth = True)</code></li>
+          <li><code class="highlighter-rouge">canvas.itemconfigure(line,splinesteps = &lt;numsteps&gt;)</code></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Delete items:
+    <ul>
+      <li><code class="highlighter-rouge">canvas.delete(&lt;item&gt;)</code></li>
+      <li><code class="highlighter-rouge">canvas.delete(all)</code></li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">rect = canvas.create_rectangle(&lt;x1&gt;,&lt;y1&gt;,&lt;x2&gt;,&lt;y2&gt;)</code></li>
+  <li><code class="highlighter-rouge">oval = canvas.create_oval(&lt;x1&gt;,&lt;y1&gt;,&lt;x2&gt;,&lt;y2&gt;)</code></li>
+  <li><code class="highlighter-rouge">arc = canvas.create_arc(&lt;x1&gt;,&lt;y1&gt;,&lt;x2&gt;,&lt;y2&gt;)</code></li>
+  <li><code class="highlighter-rouge">text = canvs.create_text(&lt;x1&gt;,&lt;y1&gt;, text = '&lt;text&gt;',font = (&lt;name&gt;,&lt;fontsize&gt;,&lt;bold&gt;))</code></li>
+  <li>changing order:
+    <ul>
+      <li><code class="highlighter-rouge">canvas.lift(&lt;item&gt;)</code></li>
+      <li><code class="highlighter-rouge">canvas.lower(&lt;item&gt;)</code></li>
+    </ul>
+  </li>
+  <li>adding a widget:
+    <ul>
+      <li><code class="highlighter-rouge">canvas.create_window(&lt;x1&gt;,&lt;y1&gt;,window = &lt;widget&gt;)</code></li>
+    </ul>
+  </li>
+  <li>TAGS:
+    <ul>
+      <li><code class="highlighter-rouge">canvas.itemconfigure(&lt;item&gt;,tag=(&lt;tag1&gt;,&lt;o: other tags&gt;))</code></li>
+      <li><code class="highlighter-rouge">canvas.gettags(&lt;item&gt;)</code></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="styles">STYLES:</h3>
+<ul>
+  <li><code class="highlighter-rouge">&lt;item&gt;.winfo_class() &lt;-returns style</code></li>
+  <li><code class="highlighter-rouge">style.configure('&lt;stylename&gt;',&lt;paramater&gt;=&lt;val&gt;)</code></li>
+  <li>new style: `
+    <ul>
+      <li><code class="highlighter-rouge">style.configure('&lt;newname&gt;.&lt;inherit&gt;',&lt;paramater&gt;=&lt;val&gt; )</code></li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">&lt;item&gt;.config(style = '&lt;style&gt;')</code></li>
+  <li><code class="highlighter-rouge">style.layout('&lt;style&gt;')</code></li>
+  <li><code class="highlighter-rouge">style.lookup('&lt;style&gt;','&lt;property&gt;')</code></li>
+</ul>
+
+<p><a href="http://effbot.org/tkinterbook/widget.htm">a nice resource</a></p>
+
+  </article>
+  <!-- START: Livefyre Embed -->
+
+  <!-- START: Livefyre Embed -->
+  <h2>Comments</h2>
+<div id="livefyre-comments"></div>
+<script type="text/javascript" src="http://zor.livefyre.com/wjs/v3.0/javascripts/livefyre.js"></script>
+<script type="text/javascript">
+(function () {
+    var articleId = fyre.conv.load.makeArticleId(null);
+    fyre.conv.load({}, [{
+        el: 'livefyre-comments',
+        network: "livefyre.com",
+        siteId: "375755",
+        articleId: articleId,
+        signed: false,
+        collectionMeta: {
+            articleId: articleId,
+            url: fyre.conv.load.makeCollectionUrl(),
+        }
+    }], function() {});
+}());
+</script>
+<!-- END: Livefyre Embed -->
+
+
+</div>
 
       </div>
     </div>

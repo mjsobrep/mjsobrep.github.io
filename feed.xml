@@ -1,30 +1,942 @@
----
-layout: null
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>{{ site.title | xml_escape }}</title>
-    <description>{{ site.description | xml_escape }}</description>
-    <link>{{ site.url }}{{ site.baseurl }}/</link>
-    <atom:link href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml"/>
-    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
-    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
-    <generator>Jekyll v{{ jekyll.version }}</generator>
-    {% for post in site.posts limit:10 %}
+    <title>Michael Sobrepera</title>
+    <description>A site about stuff that I (Michael Sobrepera) work on, think, enjoy, etc...</description>
+    <link>http://www.michaelsobrepera.com/</link>
+    <atom:link href="http://www.michaelsobrepera.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 08 Dec 2016 17:24:32 -0500</pubDate>
+    <lastBuildDate>Thu, 08 Dec 2016 17:24:32 -0500</lastBuildDate>
+    <generator>Jekyll v3.1.6</generator>
+    
       <item>
-        <title>{{ post.title | xml_escape }}</title>
-        <description>{{ post.content | xml_escape }}</description>
-        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-        <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
-        <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
-        {% for tag in post.tags %}
-        <category>{{ tag | xml_escape }}</category>
-        {% endfor %}
-        {% for cat in post.categories %}
-        <category>{{ cat | xml_escape }}</category>
-        {% endfor %}
+        <title>Christmas List 2016</title>
+        <description>&lt;p&gt;I hadn’t posted a list yet, and that came up. So here it is, enjoy. I don’t really expect to get anything off of here, but who knows. It gives me a place to look in 8 years when I get a real paycheck.&lt;/p&gt;
+
+&lt;h2 id=&quot;stuff-for-my-apt&quot;&gt;stuff for my apt&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Router (mine just died on 11/28, family will not be happy when they come for christmas with no internet)&lt;/li&gt;
+  &lt;li&gt;Outdoor table and chairs&lt;/li&gt;
+  &lt;li&gt;washer and dryer&lt;/li&gt;
+  &lt;li&gt;outdoor led globe lights&lt;/li&gt;
+  &lt;li&gt;grill&lt;/li&gt;
+  &lt;li&gt;amazon dot (if not, then a bluetooth receiver)&lt;/li&gt;
+  &lt;li&gt;HEPA Air filter&lt;/li&gt;
+  &lt;li&gt;bluetooth bathroom speaker&lt;/li&gt;
+  &lt;li&gt;IP camera&lt;/li&gt;
+  &lt;li&gt;some home automation stuff
+    &lt;ul&gt;
+      &lt;li&gt;lights&lt;/li&gt;
+      &lt;li&gt;thermostat&lt;/li&gt;
+      &lt;li&gt;on/off outlet stuff&lt;/li&gt;
+      &lt;li&gt;tv/stereo IR beamer&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;New computer speakers (maybe an alexa instead of the dot listed above?)&lt;/li&gt;
+  &lt;li&gt;maid service&lt;/li&gt;
+  &lt;li&gt;smoker&lt;/li&gt;
+  &lt;li&gt;rosemary plant (with more grow lights)&lt;/li&gt;
+  &lt;li&gt;a small christmas tree branch&lt;/li&gt;
+  &lt;li&gt;sheets&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;tools&quot;&gt;Tools&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;smart watch/fitness tracker
+    &lt;ul&gt;
+      &lt;li&gt;tough, I am a klutz&lt;/li&gt;
+      &lt;li&gt;capable of doing cycling&lt;/li&gt;
+      &lt;li&gt;HR&lt;/li&gt;
+      &lt;li&gt;GPS&lt;/li&gt;
+      &lt;li&gt;Good phone stuff&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;ratcheting screw driver&lt;/li&gt;
+  &lt;li&gt;oscilloscope or fluke scopemeter&lt;/li&gt;
+  &lt;li&gt;batteries for my drill&lt;/li&gt;
+  &lt;li&gt;jigsaw&lt;/li&gt;
+  &lt;li&gt;shovel&lt;/li&gt;
+  &lt;li&gt;switching power supply&lt;/li&gt;
+  &lt;li&gt;dust buster&lt;/li&gt;
+  &lt;li&gt;good bluetooth mouse&lt;/li&gt;
+  &lt;li&gt;robotic vacuum&lt;/li&gt;
+  &lt;li&gt;twiddler&lt;/li&gt;
+  &lt;li&gt;new phone…&lt;/li&gt;
+  &lt;li&gt;desktop computer&lt;/li&gt;
+  &lt;li&gt;Battery powered car jumper&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;project-stuff&quot;&gt;Project stuff&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;R/Pi 3&lt;/li&gt;
+  &lt;li&gt;power supply for LED lights&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;clothing&quot;&gt;Clothing&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;hiking boots&lt;/li&gt;
+  &lt;li&gt;ski pants&lt;/li&gt;
+  &lt;li&gt;cycling cold weather gear&lt;/li&gt;
+  &lt;li&gt;long sleeve shirts (synthetic, good for daily use and hiking)&lt;/li&gt;
+  &lt;li&gt;hiking pants (synthetic)&lt;/li&gt;
+  &lt;li&gt;100% transmission cycling glasses&lt;/li&gt;
+  &lt;li&gt;wool hiking socks&lt;/li&gt;
+  &lt;li&gt;hats&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;stuff-for-abita&quot;&gt;Stuff for Abita&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;A bike trailer
+    &lt;ul&gt;
+      &lt;li&gt;https://www.walmart.com/ip/2-IN-1-Pet-Dog-Bike-Trailer-Bicycle-Trailer-Stroller-Jogging-w-Suspension-Red/39752210&lt;/li&gt;
+      &lt;li&gt;https://www.amazon.com/dp/B005DDG69S&lt;/li&gt;
+      &lt;li&gt;https://www.amazon.com/dp/B00N11PEPQ/&lt;/li&gt;
+      &lt;li&gt;https://www.amazon.com/gp/product/B00CYLHD94/&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;kitchen-supplies&quot;&gt;Kitchen supplies&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;A juicer&lt;/li&gt;
+  &lt;li&gt;A water filter&lt;/li&gt;
+  &lt;li&gt;oven thermometer&lt;/li&gt;
+  &lt;li&gt;a fast instant read thermometer&lt;/li&gt;
+  &lt;li&gt;good garlic press&lt;/li&gt;
+  &lt;li&gt;mortar and pestle&lt;/li&gt;
+  &lt;li&gt;muddler&lt;/li&gt;
+  &lt;li&gt;bar/drink book&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;books&quot;&gt;books&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Tomorrow’s Professor: Preparing for Careers in Science and Engineering&lt;/li&gt;
+  &lt;li&gt;Sapiens: A Brief History of Humankind&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;camping&quot;&gt;camping&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;tent&lt;/li&gt;
+  &lt;li&gt;hammock cover&lt;/li&gt;
+  &lt;li&gt;good framed backpack (need to be sized)&lt;/li&gt;
+  &lt;li&gt;camp stove&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;fun&quot;&gt;Fun&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;sail boat (something that can fit through my door or a rental)&lt;/li&gt;
+  &lt;li&gt;Mardi Gras&lt;/li&gt;
+  &lt;li&gt;sunsail vacation&lt;/li&gt;
+  &lt;li&gt;volleyball&lt;/li&gt;
+  &lt;li&gt;gun
+    &lt;ul&gt;
+      &lt;li&gt;gun safe&lt;/li&gt;
+      &lt;li&gt;ammunition&lt;/li&gt;
+      &lt;li&gt;a lawyer (living in philly…)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;pilot training&lt;/li&gt;
+  &lt;li&gt;jump training&lt;/li&gt;
+  &lt;li&gt;scuba training&lt;/li&gt;
+  &lt;li&gt;plane tickets somewhere&lt;/li&gt;
+  &lt;li&gt;alcohol, my liquor cabinet is looking a bit sad
+    &lt;ul&gt;
+      &lt;li&gt;mixing ingredients (bitters?)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Mon, 28 Nov 2016 00:00:00 -0500</pubDate>
+        <link>http://www.michaelsobrepera.com/blog/ChristmasList2016.html</link>
+        <guid isPermaLink="true">http://www.michaelsobrepera.com/blog/ChristmasList2016.html</guid>
+        
+        <category>Presents</category>
+        
+        <category>Christmas</category>
+        
+        <category>Fun</category>
+        
+        
+        <category>blog</category>
+        
       </item>
-    {% endfor %}
+    
+      <item>
+        <title>My Rules (warning: mature content)</title>
+        <description>&lt;p&gt;I feel like for the last 6 months I have really stopped following some of the rules I had been living by. Doing that got me into a situation that I am very unhappy about. So I decided to write them down for myself to try to remember them. In the process I re-evaluated some of them and added quite a few new ones.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Answer questions honestly, even if they hurt.&lt;/li&gt;
+  &lt;li&gt;Don’t ask questions to which you do not want the answer.&lt;/li&gt;
+  &lt;li&gt;Always ask “why did I do that” before doing it.&lt;/li&gt;
+  &lt;li&gt;Remember to take the costs of actions into account
+    &lt;ul&gt;
+      &lt;li&gt;If you are 90% sure that an action is correct, but the cost of being wrong on that path is extremely costly. And you are 10% sure that another action is right, but the cost of taking it is small, perhaps it is better to take the less sure option.&lt;/li&gt;
+      &lt;li&gt;Don’t forget about opportunity costs.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Remember there is always a confidence interval.
+    &lt;ul&gt;
+      &lt;li&gt;You can’t see all of the variables, there is error on the inputs to your calculations.
+        &lt;ul&gt;
+          &lt;li&gt;especially remember to include emotional variables.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Your model is wrong, even given perfect inputs, you would be wrong.&lt;/li&gt;
+      &lt;li&gt;For big decisions, lean on others to help you.
+        &lt;ul&gt;
+          &lt;li&gt;you don’t need to do exactly as they say, but they should be inputs to your model.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Fear is the path to the darkside. Fear leads to anger. Anger leads to hate. Hate leads to suffering. -Yoda
+    &lt;ul&gt;
+      &lt;li&gt;Don’t make decisions from a place of fear, but instead from a place of hope. Don’t act out of hate, instead out of love.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Rules for sex:
+    &lt;ul&gt;
+      &lt;li&gt;The first time both people must be sober.&lt;/li&gt;
+      &lt;li&gt;You must discuss what happens if she gets pregnant before hand.&lt;/li&gt;
+      &lt;li&gt;She must be someone you will always love, even if your relationship were to end.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Learn from your mistakes. They suck, if you don’t learn from them, they will suck again.&lt;/li&gt;
+  &lt;li&gt;Be open with your feelings. Bottling them up will not help you. Share them with people you trust, they will help you.&lt;/li&gt;
+  &lt;li&gt;When you love someone, hang onto the things you love. Don’t worry about the things you don’t love, let the good outweigh the bad.
+    &lt;ul&gt;
+      &lt;li&gt;Love her for exactly who she is, not for who she could be.&lt;/li&gt;
+      &lt;li&gt;Let go of her fitness, that isn’t your job. You think she is beautiful the way she is, be honest with yourself on that.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Walk your dog. Don’t have a dog? Rescue a dog.&lt;/li&gt;
+  &lt;li&gt;No matter how much a relationship hurts, you can’t push the other person away, you can’t ignore it, you can’t bottle it up. You have to talk to them.&lt;/li&gt;
+  &lt;li&gt;Never forget the importance of family and friends.&lt;/li&gt;
+  &lt;li&gt;Let your partner know what you want find out what she wants, then work with her to figure out how you can both get what you need.&lt;/li&gt;
+  &lt;li&gt;Don’t loose sight of your priorities. And remember to consider that the order in which you chase them is a big deal.&lt;/li&gt;
+  &lt;li&gt;Never try to go back, take what you have learned and move forward.&lt;/li&gt;
+  &lt;li&gt;Remember what “success” is to you.&lt;/li&gt;
+  &lt;li&gt;Don’t hold on too tight, it will all slip through your fingers.
+    &lt;ul&gt;
+      &lt;li&gt;Don’t be afraid, be measured.&lt;/li&gt;
+      &lt;li&gt;Stress does not equate to caring and a lack of stress does not mean you don’t care.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;As a child you need to keep your ID in check and as an adult, you need to keep your pride in check. Don’t let them rule you.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        <pubDate>Fri, 07 Oct 2016 00:00:00 -0400</pubDate>
+        <link>http://www.michaelsobrepera.com/guides/rules.html</link>
+        <guid isPermaLink="true">http://www.michaelsobrepera.com/guides/rules.html</guid>
+        
+        <category>life</category>
+        
+        
+        <category>guides</category>
+        
+      </item>
+    
+      <item>
+        <title>JetBrains IDEs</title>
+        <description>&lt;h2 id=&quot;hanging-on-linux&quot;&gt;Hanging on Linux:&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Bind process to a small number of cores: &lt;code class=&quot;highlighter-rouge&quot;&gt;taskset -c 4-5 ./clion.sh&lt;/code&gt;
+    &lt;ul&gt;
+      &lt;li&gt;you can substitute 4-5 for whatever you like&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;powershell-in-terminal&quot;&gt;PowerShell in Terminal&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;It will run PowerShell 32bit if you have a 32 bit IDE:
+    &lt;ul&gt;
+      &lt;li&gt;Set execution policy to remote signed in 32bit&lt;/li&gt;
+      &lt;li&gt;Install needed programs in 32 bit&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Window length is cut off:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;powershell.exe -NoProfile -Command &quot;mode con:cols=800; powershell.exe&quot;&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Colors are off:
+    &lt;ul&gt;
+      &lt;li&gt;Regedit&lt;/li&gt;
+      &lt;li&gt;Go to: &lt;code class=&quot;highlighter-rouge&quot;&gt;HKEY_CURRENT_USER\Console&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Delete: &lt;code class=&quot;highlighter-rouge&quot;&gt;ScreenColors&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Mon, 01 Feb 2016 00:00:00 -0500</pubDate>
+        <link>http://www.michaelsobrepera.com/guides/jetbrains.html</link>
+        <guid isPermaLink="true">http://www.michaelsobrepera.com/guides/jetbrains.html</guid>
+        
+        <category>c++</category>
+        
+        <category>IDE</category>
+        
+        <category>Python</category>
+        
+        
+        <category>guides</category>
+        
+      </item>
+    
+      <item>
+        <title>CMake</title>
+        <description>&lt;h2 id=&quot;flags-for-different-stuff&quot;&gt;Flags for different stuff:&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Performance Profiling: &lt;code class=&quot;highlighter-rouge&quot;&gt;cmake -DCMAKE_CXX_FLAGS=-pg ..&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Wed, 13 Jan 2016 00:00:00 -0500</pubDate>
+        <link>http://www.michaelsobrepera.com/guides/cmake.html</link>
+        <guid isPermaLink="true">http://www.michaelsobrepera.com/guides/cmake.html</guid>
+        
+        <category>c++</category>
+        
+        
+        <category>guides</category>
+        
+      </item>
+    
+      <item>
+        <title>Computer Vision (CS 4495) Projects</title>
+        <description>&lt;p&gt;I am currently taking a class in &lt;a href=&quot;http://www.cc.gatech.edu/~hays/compvision/&quot;&gt;Computer Vision&lt;/a&gt; from &lt;a href=&quot;http://www.cc.gatech.edu/~hays/&quot;&gt;James Hays&lt;/a&gt; at Georgia Tech. He posts all of our projects (which is awesome). Rather than figuring out how to port them over to my website (which could be tough with the way I have it set up) and having to deal with the large extra load of files, I will just link to where he has them posted.&lt;/p&gt;
+
+&lt;h3 id=&quot;project-1-image-filtering-and-hybrid-imageshttpwwwccgatecheduhayscompvisionresultsproj1msobrepera3indexhtml&quot;&gt;&lt;a href=&quot;http://www.cc.gatech.edu/~hays/compvision/results/proj1/msobrepera3/index.html&quot;&gt;Project 1: Image Filtering and Hybrid Images&lt;/a&gt;&lt;/h3&gt;
+
+&lt;h3 id=&quot;project-2-feature-detection-and-matchinghttpwwwccgatecheduhayscompvisionresultsproj2msobrepera3indexhtml&quot;&gt;&lt;a href=&quot;http://www.cc.gatech.edu/~hays/compvision/results/proj2/msobrepera3/index.html&quot;&gt;Project 2: Feature detection and matching&lt;/a&gt;&lt;/h3&gt;
+
+&lt;h3 id=&quot;project-3-camera-calibration-and-fundamental-matrix-estimation-with-ransachttpwwwccgatecheduhayscompvisionresultsproj3msobrepera3indexhtml&quot;&gt;&lt;a href=&quot;http://www.cc.gatech.edu/~hays/compvision/results/proj3/msobrepera3/index.html&quot;&gt;Project 3: Camera Calibration and Fundamental Matrix Estimation with RANSAC&lt;/a&gt;&lt;/h3&gt;
+
+&lt;h3 id=&quot;project-4-scene-recognition-with-bag-of-wordshttpwwwccgatecheduhayscompvisionresultsproj4msobrepera3indexhtml&quot;&gt;&lt;a href=&quot;http://www.cc.gatech.edu/~hays/compvision/results/proj4/msobrepera3/index.html&quot;&gt;Project 4: Scene recognition with bag of words&lt;/a&gt;&lt;/h3&gt;
+</description>
+        <pubDate>Sat, 07 Nov 2015 00:00:00 -0500</pubDate>
+        <link>http://www.michaelsobrepera.com/projects/CS4495Projects.html</link>
+        <guid isPermaLink="true">http://www.michaelsobrepera.com/projects/CS4495Projects.html</guid>
+        
+        <category>computer vision</category>
+        
+        <category>CV</category>
+        
+        <category>matlab</category>
+        
+        <category>code</category>
+        
+        
+        <category>projects</category>
+        
+      </item>
+    
+      <item>
+        <title>NSF GRFP Proposal</title>
+        <description>&lt;p&gt;This is the proposal which I submitted this year for the National Science Foundation Graduate Research Fellowship Program. The only change from the actual submission is the addition of the header and footer. I actually think the idea is pretty interesting.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 27 Oct 2015 00:00:00 -0400</pubDate>
+        <link>http://www.michaelsobrepera.com/writings/NSFProposal.html</link>
+        <guid isPermaLink="true">http://www.michaelsobrepera.com/writings/NSFProposal.html</guid>
+        
+        
+        <category>writings</category>
+        
+      </item>
+    
+      <item>
+        <title>NSF GRFP Personal Statement</title>
+        <description>&lt;p&gt;This is the personal statement which I submitted this year for the National Science Foundation Graduate Research Fellowship Program. The only change from the actual submission is the addition of the header and footer. The statement talks about my background, why I want to pursue a PhD, why I think I am qualified to pursue a PhD, and what impact I think I can have.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 27 Oct 2015 00:00:00 -0400</pubDate>
+        <link>http://www.michaelsobrepera.com/writings/NSFPersonal.html</link>
+        <guid isPermaLink="true">http://www.michaelsobrepera.com/writings/NSFPersonal.html</guid>
+        
+        
+        <category>writings</category>
+        
+      </item>
+    
+      <item>
+        <title>Christmas List</title>
+        <description>&lt;p&gt;Every year I make a Christmas list to get shared around, they are generally pretty comical (lots of large earth movers most years). Of course my birthday is right before Christmas, so the list covers that as well. This year I also am graduating right before Christmas :)&lt;/p&gt;
+
+&lt;p&gt;I figured I would throw the list here this year. I will keep adding stuff on as I think of them. Of course no one needs to get me any of the stuff on here, but hopefully you think at least some of the items are interesting.&lt;/p&gt;
+
+&lt;h3 id=&quot;sailboat&quot;&gt;Sailboat&lt;/h3&gt;
+&lt;p&gt;Yeah, I find myself without a sailboat. That is no good. I haven’t figured out where I would sail, how I would get a boat there, etc… But I sure would like to start sailing again. I guess I could take the cheaper option and join the GT Sailing club… but…&lt;/p&gt;
+
+&lt;h3 id=&quot;money&quot;&gt;Money&lt;/h3&gt;
+
+&lt;h3 id=&quot;computer&quot;&gt;Computer&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/B0163HP38W&quot;&gt;surface pro dock&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;My external monitor is starting to look rough. It would be nice to have something to keep up with the PPI on my surface Pro 3.&lt;/li&gt;
+  &lt;li&gt;I really want a machine that I can run Virtual Machines on top of&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://twiddler.tekgear.com/&quot;&gt;Twiddler&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;A holo lens&lt;/li&gt;
+  &lt;li&gt;SurfaceBook&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;tools-as-always&quot;&gt;Tools (as always)&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;A &lt;a href=&quot;http://en-us.fluke.com/products/portable-oscilloscopes/&quot;&gt;scopemeter&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://glowforge.com/&quot;&gt;Glowforge&lt;/a&gt; - cool laser cutter, currently on sale&lt;/li&gt;
+  &lt;li&gt;Welding equipment&lt;/li&gt;
+  &lt;li&gt;A CNC lathe and/or mill
+    &lt;ul&gt;
+      &lt;li&gt;Obviously something professional like a Haas would be sweet, but there are also people like Tormach that make pretty slick machines for cheap&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Batteries for drills&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.mcmachinery.com/products-and-solutions/category/laser/five-axis-laser/&quot;&gt;A slightly more professional laser cutter&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Hehe, watch the video&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Plasma cutter&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=s9IdZ2pI5dA&quot;&gt;ooh, fancy&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;house-stuff&quot;&gt;House stuff&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Big bowls&lt;/li&gt;
+  &lt;li&gt;Juicer - maybe I would become healthy :P&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;shoes---my-shoes-are-at-their-end-need-something-new&quot;&gt;Shoes - My shoes are at their end, need something new&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Running
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;http://www.merrell.com/US/en/bare-access-4/17570M.html?dwvar_17570M_color=J03927&quot;&gt;bare-access-4&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://www.merrell.com/US/en/trail-glove-3/17571M.html?dwvar_17571M_color=J03905&quot;&gt;trail-glove-3&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://www.merrell.com/US/en/vapor-glove-2/17572M.html?dwvar_17572M_color=J03911#start=1&quot;&gt;vapor-glove-2&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Tennis&lt;/li&gt;
+  &lt;li&gt;Crossover
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;http://www.lemsshoes.com/mens-nine2five-coffee-cream.html&quot;&gt;Nine2Five coffee and cream&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://www.lemsshoes.com/mens-nine2five-mocha.html&quot;&gt;Nine2Five Mocha&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;Toms?&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Some nice leather combat boots&lt;/li&gt;
+  &lt;li&gt;Good all weather hiking boots&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;mobile-electronics&quot;&gt;Mobile Electronics&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;My phone is really sucking it up, time for a new one
+    &lt;ul&gt;
+      &lt;li&gt;I’ll have to see what new phones come out, I am thinking a Windows Phone 10&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Microsoft Band&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;camera-i-have-a-nikon-d7200&quot;&gt;Camera (I have a Nikon D7200)&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;~~DSLR with video capability?~~&lt;/li&gt;
+  &lt;li&gt;Lenses
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;http://www.nikonusa.com/en/nikon-products/product/refurbished-camera-lenses/af-s-nikkor-50mm-f%252f1.8g-refurbished.html&quot;&gt;Nikon AF-S 50mm/f1.8&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://www.nikonusa.com/en/nikon-products/product/refurbished-camera-lenses/af-s-dx-nikkor-35mm-f%252f1.8g-refurbished.html&quot;&gt;Nikon AF-S 35mm/f1.8&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Lens Hood for &lt;a href=&quot;http://www.amazon.com/dp/B00ECGX8FM/&quot;&gt;Nikon 18-140 lens&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Tripod&lt;/li&gt;
+  &lt;li&gt;Flash&lt;/li&gt;
+  &lt;li&gt;Diffuser&lt;/li&gt;
+  &lt;li&gt;Creative Cloud photographer subscription&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;gaming&quot;&gt;Gaming&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;XBOX one&lt;/li&gt;
+  &lt;li&gt;Playstation 4&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;cycling&quot;&gt;Cycling&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;leg warmers&lt;/li&gt;
+  &lt;li&gt;arm warmers&lt;/li&gt;
+  &lt;li&gt;base layer&lt;/li&gt;
+  &lt;li&gt;windbreaker&lt;/li&gt;
+  &lt;li&gt;helmet&lt;/li&gt;
+  &lt;li&gt;Bike Rack&lt;/li&gt;
+  &lt;li&gt;Saddle Bags&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;other-stuff&quot;&gt;Other stuff&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Cammelback&lt;/li&gt;
+  &lt;li&gt;Gun
+    &lt;ul&gt;
+      &lt;li&gt;and a gun safe&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Motorcycle&lt;/li&gt;
+  &lt;li&gt;Jump training&lt;/li&gt;
+  &lt;li&gt;Pilot training&lt;/li&gt;
+  &lt;li&gt;Scuba training&lt;/li&gt;
+  &lt;li&gt;Bike trailer for Abita:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/B00B3HMH2I/&quot;&gt;More industrial&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/B008CNK97G&quot;&gt;Like ones for kids&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Water Rover:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://www.waterrover.com/&quot;&gt;website&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/B0038C599Y/&quot;&gt;amazon&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;White board markers&lt;/li&gt;
+  &lt;li&gt;Umbrella&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sun, 04 Oct 2015 00:00:00 -0400</pubDate>
+        <link>http://www.michaelsobrepera.com/blog/ChristmasList.html</link>
+        <guid isPermaLink="true">http://www.michaelsobrepera.com/blog/ChristmasList.html</guid>
+        
+        <category>Presents</category>
+        
+        <category>Christmas</category>
+        
+        <category>Fun</category>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>KUKA</title>
+        <description>&lt;p&gt;There is a free editor called
+&lt;a href=&quot;http://www.orangeapps.de/?lng=en&amp;amp;page=apps/orangeedit&quot;&gt;OrangeEdit&lt;/a&gt; which can
+make writing KRL code a bit easier.&lt;/p&gt;
+
+&lt;h2 id=&quot;kr-c2&quot;&gt;KR C2&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Accessing windows: &lt;code class=&quot;highlighter-rouge&quot;&gt;CTRL+ESC&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Turning it off: If the batteries are good, pull the switch down. Can change options for whether it will hibernate, cold shutdown, or warm shutdown&lt;/li&gt;
+  &lt;li&gt;Backing up:
+    &lt;ul&gt;
+      &lt;li&gt;Put in a USB DRIVE&lt;/li&gt;
+      &lt;li&gt;Go into Windows (&lt;code class=&quot;highlighter-rouge&quot;&gt;CTRL+ESC&lt;/code&gt;)&lt;/li&gt;
+      &lt;li&gt;run and configure via: C:\KRC\UTIL\KRCCONFIGURATOR\KrcConfigurator.exe&lt;/li&gt;
+      &lt;li&gt;As an expert, file-&amp;gt;archive-&amp;gt;all&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;rsi-specifically-rsi-rsi-233&quot;&gt;RSI (Specifically RSI RSI 2.3.3)&lt;/h3&gt;
+
+&lt;h4 id=&quot;setup-incomplete&quot;&gt;Setup (incomplete)&lt;/h4&gt;
+&lt;p&gt;This will help you setup and run the KUKA provided RSI example for Ethernet
+control. You will need a PC running Windows (preferably 7. You can find the KUKA RSI
+examples as well as RSI visual in: &lt;code class=&quot;highlighter-rouge&quot;&gt;D:\KUKA_OPT\RSI&lt;/code&gt; on your KRC2 controller
+(after you have installed RSI). Specifically, we will be
+working with the example at &lt;code class=&quot;highlighter-rouge&quot;&gt;D:\KUKA_OPT\RSI\DOC\Examples\Ethernet&lt;/code&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Logon as an expert user&lt;/li&gt;
+  &lt;li&gt;Press &lt;code class=&quot;highlighter-rouge&quot;&gt;ctrl&lt;/code&gt;+&lt;code class=&quot;highlighter-rouge&quot;&gt;esc&lt;/code&gt; to access windows&lt;/li&gt;
+  &lt;li&gt;Press &lt;code class=&quot;highlighter-rouge&quot;&gt;My Computer&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Copy &lt;code class=&quot;highlighter-rouge&quot;&gt;D:\KUKA_OPT\RSI\DOC\Example\RealtimeEthernet\Server_app\ServerApplication.exe&lt;/code&gt; to the
+external windows machine via USB&lt;/li&gt;
+  &lt;li&gt;Copy &lt;code class=&quot;highlighter-rouge&quot;&gt;RSIEthernet.dat&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;RSIEthernet.src&lt;/code&gt; from 
+&lt;code class=&quot;highlighter-rouge&quot;&gt;D:\KUKA_OPT\RSI\DOC\Example\RealtimeEthernet\SRC_KRL\PROGRAM&lt;/code&gt; to
+the main programs folder&lt;/li&gt;
+  &lt;li&gt;Copy ?.xml&lt;/li&gt;
+  &lt;li&gt;Modify vx win to say:
+[Boot]
+Bootline=elPci(0,1)pc:vxworks h=192.0.1.2 b=192.0.1.1 e=172.0.1.1 u=target pw=vxworks&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;TODO: Finish this up&lt;/p&gt;
+
+&lt;h2 id=&quot;kr-c4&quot;&gt;KR C4&lt;/h2&gt;
+
+&lt;h3 id=&quot;important-commands&quot;&gt;Important commands:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;View Windows : RobotKey-&amp;gt;Startup-&amp;gt;Service-&amp;gt;Minimize HMI&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.robot-forum.com/robotforum/kuka-robot-forum/krc4-logout-time/&quot;&gt;Change Logout time&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;rsi-specifically-rsi-32&quot;&gt;RSI (Specifically RSI 32)&lt;/h3&gt;
+
+&lt;h4 id=&quot;setup&quot;&gt;Setup&lt;/h4&gt;
+&lt;p&gt;This will help you setup and run the KUKA provided RSI example for Ethernet
+control. You will need a PC running modern Windows. You can find the KUKA RSI
+examples as well as RSI visual in: &lt;code class=&quot;highlighter-rouge&quot;&gt;D:\KUKA_OPT\RSI&lt;/code&gt; on your KRC4 controller
+(after you have installed RSI). Specifically, we will be
+working with the example at &lt;code class=&quot;highlighter-rouge&quot;&gt;D:\KUKA_OPT\RSI\DOC\Examples\Ethernet&lt;/code&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Connect NIC on PC to KLI port in controller via CAT 5 cable&lt;/li&gt;
+  &lt;li&gt;Copy files from &lt;code class=&quot;highlighter-rouge&quot;&gt;D:\KUKA_OPT\RSI\DOC\Examples\Ethernet\Config&lt;/code&gt; to
+&lt;code class=&quot;highlighter-rouge&quot;&gt;C:\KRC\Roboter\Config\user\common\SensorInterface&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Modify the &lt;code class=&quot;highlighter-rouge&quot;&gt;RSI_EthernetConfig.xml&lt;/code&gt; file to have the &lt;code class=&quot;highlighter-rouge&quot;&gt;IP_NUMBER&lt;/code&gt; set to 10.100.1.2&lt;/li&gt;
+  &lt;li&gt;Enter &lt;code class=&quot;highlighter-rouge&quot;&gt;Expert Mode&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Add a new virtual adapter for windows if one does not already exist (This
+ will be the KLI adapter) This can be done manually:
+    &lt;ol&gt;
+      &lt;li&gt;RobotButton -&amp;gt; Startup -&amp;gt; Network Configuration&lt;/li&gt;
+      &lt;li&gt;The first page should say: &lt;code class=&quot;highlighter-rouge&quot;&gt;Fixed IP Address&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;172.31.1.147&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;255.255.255.0&lt;/code&gt;,
+&lt;code class=&quot;highlighter-rouge&quot;&gt;172.31.1.47&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Click &lt;code class=&quot;highlighter-rouge&quot;&gt;Advanced&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Select the adapter for the 172.31.1.147 adapter and click &lt;code class=&quot;highlighter-rouge&quot;&gt;windows interface&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Click &lt;code class=&quot;highlighter-rouge&quot;&gt;Add interface&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Change the new interface to be named &lt;code class=&quot;highlighter-rouge&quot;&gt;RSI&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Set the address type to &lt;code class=&quot;highlighter-rouge&quot;&gt;real-time IP address&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Set the IP address to &lt;code class=&quot;highlighter-rouge&quot;&gt;10.100.1.1&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Set the subnet mask to &lt;code class=&quot;highlighter-rouge&quot;&gt;255.255.255.0&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Click &lt;code class=&quot;highlighter-rouge&quot;&gt;User-defined filters&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Add a filter set to type &lt;code class=&quot;highlighter-rouge&quot;&gt;IP protocol&lt;/code&gt;, address: &lt;code class=&quot;highlighter-rouge&quot;&gt;10.100.1.1&lt;/code&gt;, subnet:
+&lt;code class=&quot;highlighter-rouge&quot;&gt;255.255.255.0&lt;/code&gt;, parameters: &lt;code class=&quot;highlighter-rouge&quot;&gt;17&lt;/code&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;This can also be done automatically:
+    &lt;ol&gt;
+      &lt;li&gt;Minimize the HMI (startup-&amp;gt;service-&amp;gt;minimize HMI)&lt;/li&gt;
+      &lt;li&gt;Click the windows button -&amp;gt; all programs -&amp;gt; RSI-Network&lt;/li&gt;
+      &lt;li&gt;Under RSI Ethernet, select &lt;code class=&quot;highlighter-rouge&quot;&gt;New&lt;/code&gt; then click &lt;code class=&quot;highlighter-rouge&quot;&gt;Edit&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Type in &lt;code class=&quot;highlighter-rouge&quot;&gt;10.100.1.1&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Check to see that everything got setup properly per the manual instructions&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;On the PC, set the IP address to &lt;code class=&quot;highlighter-rouge&quot;&gt;10.100.1.2&lt;/code&gt;, subnet to &lt;code class=&quot;highlighter-rouge&quot;&gt;255.255.255.0&lt;/code&gt;,
+Default gateway to &lt;code class=&quot;highlighter-rouge&quot;&gt;10.100.1.1&lt;/code&gt;, turn of DHCP&lt;/li&gt;
+  &lt;li&gt;Copy the &lt;code class=&quot;highlighter-rouge&quot;&gt;RSI_Ethernet.src&lt;/code&gt; file from
+&lt;code class=&quot;highlighter-rouge&quot;&gt;D:\KUKA_OPT\RSI\DOC\Examples\Ethernet\&lt;/code&gt; to the KRC4 programs folder.&lt;/li&gt;
+  &lt;li&gt;Alter the home points in the &lt;code class=&quot;highlighter-rouge&quot;&gt;RSI_Ethernet.src&lt;/code&gt; file to be appropriate for
+your setup.&lt;/li&gt;
+  &lt;li&gt;Copy the &lt;code class=&quot;highlighter-rouge&quot;&gt;D:\KUKA_OPT\RSI\DOC\Examples\Ethernet\Server.exe&lt;/code&gt; file to your
+computer.&lt;/li&gt;
+  &lt;li&gt;Run the &lt;code class=&quot;highlighter-rouge&quot;&gt;Server.exe&lt;/code&gt; file, and press the play button&lt;/li&gt;
+  &lt;li&gt;Place the robot into automatic mode&lt;/li&gt;
+  &lt;li&gt;Run the &lt;code class=&quot;highlighter-rouge&quot;&gt;RSI_Ethernet.src&lt;/code&gt; file on the KRC4&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;If you have problems, there is some debugging you can do:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Try pinging in both directions
+    &lt;ul&gt;
+      &lt;li&gt;From your PC: &lt;code class=&quot;highlighter-rouge&quot;&gt;windowskey&lt;/code&gt;+&lt;code class=&quot;highlighter-rouge&quot;&gt;R&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;cmd.exe&lt;/code&gt;-&amp;gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;enter&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;ping 10.100.1.1&lt;/code&gt;-&amp;gt;enter&lt;/li&gt;
+      &lt;li&gt;From KRC4:
+        &lt;ol&gt;
+          &lt;li&gt;Minimize HMI&lt;/li&gt;
+          &lt;li&gt;Press windows button&lt;/li&gt;
+          &lt;li&gt;Select &lt;code class=&quot;highlighter-rouge&quot;&gt;All Programs&lt;/code&gt;&lt;/li&gt;
+          &lt;li&gt;Select &lt;code class=&quot;highlighter-rouge&quot;&gt;Accessories&lt;/code&gt;&lt;/li&gt;
+          &lt;li&gt;Select &lt;code class=&quot;highlighter-rouge&quot;&gt;cmd&lt;/code&gt;&lt;/li&gt;
+          &lt;li&gt;Type &lt;code class=&quot;highlighter-rouge&quot;&gt;ping 10.100.1.2&lt;/code&gt;-&amp;gt;enter&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Try disabling the firewall on your PC&lt;/li&gt;
+  &lt;li&gt;Check the Network Configuration page on the KRC4 for accuracy&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;just-some-info&quot;&gt;Just some info&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Always uses UDP&lt;/li&gt;
+  &lt;li&gt;Configured via XML files (should use RSI visual as an abstraction to a GUI)
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;project&gt;.rsi
+&lt;/project&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;project&gt;.rsi.diagram
+&lt;/project&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;project&gt;.rsi.xml
+&lt;/project&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Order of packets is very Important&lt;/li&gt;
+  &lt;li&gt;The RSI Context can do a lot of different types of signal processing
+    &lt;ul&gt;
+      &lt;li&gt;Setup via RSI visual&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Ethernet Object
+    &lt;ul&gt;
+      &lt;li&gt;64 I/O points&lt;/li&gt;
+      &lt;li&gt;Configured via XML file (pg 43)
+        &lt;ul&gt;
+          &lt;li&gt;Referenced by Ethernet Object in RSI visual&lt;/li&gt;
+          &lt;li&gt;Keywords:
+            &lt;ul&gt;
+              &lt;li&gt;DEF_RIst
+                &lt;ul&gt;
+                  &lt;li&gt;Cartesian actual position&lt;/li&gt;
+                &lt;/ul&gt;
+              &lt;/li&gt;
+              &lt;li&gt;DEF_RSol
+                &lt;ul&gt;
+                  &lt;li&gt;Cartesian setpoint&lt;/li&gt;
+                &lt;/ul&gt;
+              &lt;/li&gt;
+              &lt;li&gt;DEF_Delay
+                &lt;ul&gt;
+                  &lt;li&gt;Number of late data packets&lt;/li&gt;
+                &lt;/ul&gt;
+              &lt;/li&gt;
+              &lt;li&gt;additional on pg 47-48&lt;/li&gt;
+              &lt;li&gt;DEF_EStr
+                &lt;ul&gt;
+                  &lt;li&gt;Allows writing of error and notifications on the controller&lt;/li&gt;
+                  &lt;li&gt;
+                    &lt;estr&gt;xxx&lt;/estr&gt;
+                    &lt;ul&gt;
+                      &lt;li&gt;Writes a notification&lt;/li&gt;
+                    &lt;/ul&gt;
+                  &lt;/li&gt;
+                  &lt;li&gt;
+                    &lt;estr&gt;Error:xxx&lt;/estr&gt;
+                    &lt;ul&gt;
+                      &lt;li&gt;Acknowledgement message&lt;/li&gt;
+                      &lt;li&gt;Will stop the robot&lt;/li&gt;
+                    &lt;/ul&gt;
+                  &lt;/li&gt;
+                  &lt;li&gt;
+                    &lt;estr /&gt;
+
+                    &lt;ul&gt;
+                      &lt;li&gt;No message/error&lt;/li&gt;
+                    &lt;/ul&gt;
+                  &lt;/li&gt;
+                &lt;/ul&gt;
+              &lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Server (computer) must respond to client (KR C4) within either 4 or 12 ms
+depending on whether using slow or fast mode.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Can perform corrections on movements within a program. When in IPO mode, this only works on lin and circ moves.&lt;/li&gt;
+  &lt;li&gt;Can do motion control from external system (still called a correction)
+    &lt;ul&gt;
+      &lt;li&gt;Can be absolute (takes pose at RSI_ON as &amp;lt;0…0&amp;gt;)&lt;/li&gt;
+      &lt;li&gt;Can be relative (from current position)&lt;/li&gt;
+      &lt;li&gt;RSI_MOVECORR()&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Safety
+    &lt;ul&gt;
+      &lt;li&gt;Software limits will work (per manual pg 21)&lt;/li&gt;
+      &lt;li&gt;There are limits on MAX corrections
+        &lt;ul&gt;
+          &lt;li&gt;These can easily get in the way though&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Global Variables
+    &lt;ul&gt;
+      &lt;li&gt;RSIERRMSG
+        &lt;ul&gt;
+          &lt;li&gt;True: RSI Errors are displayed on the TP&lt;/li&gt;
+          &lt;li&gt;False: No messages, errors must be handled by the KRL program&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;RSITECHIDX
+    &lt;ul&gt;
+      &lt;li&gt;Defines which function generator RSI will use&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;RSI monitor
+    &lt;ul&gt;
+      &lt;li&gt;Can be used to visualize, monitor, and record signals across RSI Interface&lt;/li&gt;
+      &lt;li&gt;Display-&amp;gt;RSI monitor&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Logging
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;C:\KRC\Roboter\config\user\common\Logging-RSI.xml&lt;/code&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;class Name = &quot;RSILogger | LogLevel=[&amp;lt;error&amp;gt;|&amp;lt;info&amp;gt;]&quot;&lt;/code&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;One liner guide on pg 69&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;what-do-you-need-to-use-rsi&quot;&gt;What do you need to use RSI:&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Robot Sensor Interface on KRC4&lt;/li&gt;
+  &lt;li&gt;An external windows PC with RSI visual for setup (can use linux et al for
+  actual running).&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Thu, 01 Oct 2015 00:00:00 -0400</pubDate>
+        <link>http://www.michaelsobrepera.com/guides/kuka.html</link>
+        <guid isPermaLink="true">http://www.michaelsobrepera.com/guides/kuka.html</guid>
+        
+        <category>robotics</category>
+        
+        <category>industrial robotics</category>
+        
+        <category>code</category>
+        
+        <category>programming</category>
+        
+        <category>autmation</category>
+        
+        
+        <category>guides</category>
+        
+      </item>
+    
+      <item>
+        <title>Suppliers</title>
+        <description>&lt;ul&gt;
+  &lt;li&gt;General directories of Suppliers
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;http://www.thomasnet.com/&quot;&gt;ThomasNet&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Raw Materials
+    &lt;ul&gt;
+      &lt;li&gt;metals
+        &lt;ul&gt;
+          &lt;li&gt;Metal Supermarkets (there is both a national group and local stores)&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;http://www.speedymetals.com/&quot;&gt;Speedy Metals&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Plasitcs
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;http://www.tapplastics.com/&quot;&gt;TAP Plastics&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Electronics
+    &lt;ul&gt;
+      &lt;li&gt;High Level
+        &lt;ul&gt;
+          &lt;li&gt;Adafruit&lt;/li&gt;
+          &lt;li&gt;Sain Smart&lt;/li&gt;
+          &lt;li&gt;Spark Fun&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Low Level
+        &lt;ul&gt;
+          &lt;li&gt;Digikey&lt;/li&gt;
+          &lt;li&gt;Mouser&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Cabling
+        &lt;ul&gt;
+          &lt;li&gt;L-Com - connectors and wires&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;General
+    &lt;ul&gt;
+      &lt;li&gt;McMaster&lt;/li&gt;
+      &lt;li&gt;Grainger&lt;/li&gt;
+      &lt;li&gt;Essentra&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Automation
+    &lt;ul&gt;
+      &lt;li&gt;Automation Direct&lt;/li&gt;
+      &lt;li&gt;Beckhoff&lt;/li&gt;
+      &lt;li&gt;Allen Bradley&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Machine components
+    &lt;ul&gt;
+      &lt;li&gt;Misumi&lt;/li&gt;
+      &lt;li&gt;PIC Design&lt;/li&gt;
+      &lt;li&gt;80/20 - aluminum extrusion&lt;/li&gt;
+      &lt;li&gt;Rexroth - linear motion and aluminum extrusion&lt;/li&gt;
+      &lt;li&gt;Berg - motion and pins&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Pneumatics
+    &lt;ul&gt;
+      &lt;li&gt;SMC&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Tools
+    &lt;ul&gt;
+      &lt;li&gt;Grizzly - Wood and metal working&lt;/li&gt;
+      &lt;li&gt;Shars&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Safety
+    &lt;ul&gt;
+      &lt;li&gt;Banner&lt;/li&gt;
+      &lt;li&gt;Keyence&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Med Supplies
+    &lt;ul&gt;
+      &lt;li&gt;Qosina - disposables and leur locks&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Springs
+    &lt;ul&gt;
+      &lt;li&gt;Lee Springs&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Optics
+    &lt;ul&gt;
+      &lt;li&gt;Edmund Optics&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Shipping Supplies
+    &lt;ul&gt;
+      &lt;li&gt;U-Line&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Metrology
+    &lt;ul&gt;
+      &lt;li&gt;Epsilon - extensometers&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Prototyping
+    &lt;ul&gt;
+      &lt;li&gt;Shapeways&lt;/li&gt;
+      &lt;li&gt;Stratasys Direct&lt;/li&gt;
+      &lt;li&gt;ProtoLabs&lt;/li&gt;
+      &lt;li&gt;quikparts&lt;/li&gt;
+      &lt;li&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Tue, 29 Sep 2015 00:00:00 -0400</pubDate>
+        <link>http://www.michaelsobrepera.com/guides/suppliers.html</link>
+        <guid isPermaLink="true">http://www.michaelsobrepera.com/guides/suppliers.html</guid>
+        
+        <category>prototyping</category>
+        
+        <category>fabrication</category>
+        
+        <category>production</category>
+        
+        
+        <category>guides</category>
+        
+      </item>
+    
   </channel>
 </rss>

@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <base target="_parent" />
-  <title>Michael Sobrepera</title>
-  <meta name="description" content="A site about stuff that I (Michael Sobrepera) work on, think, enjoy, etc...">
+  <title>Modelica</title>
+  <meta name="description" content="  Evaluate Cell: shift+enter  Insert Input Cell: Ctrl+Shift+I  Insert New Cell of type above: Alt+Enter">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://www.michaelsobrepera.com/calendar.html">
+  <link rel="canonical" href="http://www.michaelsobrepera.com/guides/modelicaGuide.html">
   <link rel="alternate" type="application/rss+xml" title="Michael Sobrepera" href="http://www.michaelsobrepera.com/feed.xml" />
 
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
@@ -309,30 +309,302 @@
 
     <div class="page-content">
       <div class="bodyWrapper">
-        <h1>Calendar</h1>
-<br/>
+        <div class="guide">
 
-<h2>Personal Calendar (relevant outside of working hours)</h2>
-<ul>
-    <li class='calListItem'><a href="https://sharing.calendar.live.com/calendar/private/4daf7a00-2fa1-4e90-becf-a465291322b8/0b077663-1428-4c8e-baf8-8f7cdd547643/cid-5081e31f30d8f168/index.html">View In Browser</a>
-    </li>
+  <header class="post-header">
+    <h1 class="post-title">Modelica</h1>
+    <h3>Last Updated: 25 June 2015</h3>
+    <!-- borrowed from http://www.realcombiz.com/2014/01/how-to-expand-collapse-toggle-div-layer.html -->
 
-    <li class='calListItem'><a href="webcals://sharing.calendar.live.com/calendar/private/4daf7a00-2fa1-4e90-becf-a465291322b8/0b077663-1428-4c8e-baf8-8f7cdd547643/cid-5081e31f30d8f168/calendar.ics">Import to Calendar App (ICS)</a>
-    </li>
+<input class="toggle-box" id="header1" type="checkbox" >
+<label for="header1">Tags</label>
+<div>
+<ul class="tag">
 
-    <li class='calListItem'><a href="https://sharing.calendar.live.com/calendar/private/4daf7a00-2fa1-4e90-becf-a465291322b8/0b077663-1428-4c8e-baf8-8f7cdd547643/cid-5081e31f30d8f168/calendar.xml">View In Feed Browser (XML)</a>
-    </li>
+  <li class="tag"><a href="/tags/modelica.html" class = "tag">modelica</a></li>
+
+  <li class="tag"><a href="/tags/code.html" class = "tag">code</a></li>
+
+  <li class="tag"><a href="/tags/programming.html" class = "tag">programming</a></li>
+
+  <li class="tag"><a href="/tags/modeling.html" class = "tag">modeling</a></li>
+
+</ul>
+</div>
+
+
+  </header>
+
+  <article class="post-content">
+    <ul>
+  <li>Evaluate Cell: shift+enter</li>
+  <li>Insert Input Cell: Ctrl+Shift+I</li>
+  <li>Insert New Cell of type above: Alt+Enter</li>
 </ul>
 
-<h2>Work Calendar (relevant inside of working hours)</h2>
+<h4 id="identifier">Identifier:</h4>
 <ul>
-    <li class='calListItem'><a href="https://calendar.google.com/calendar/embed?src=mjsobrep%40seas.upenn.edu&ctz=America/New_York">View In Browser</a>
-    </li>
-
-    <li class='calListItem'><a href="https://calendar.google.com/calendar/ical/mjsobrep%40seas.upenn.edu/public/basic.ics">Import to Calendar App (ICS)</a>
-    </li>
+  <li>constant</li>
+  <li>input</li>
+  <li>output</li>
 </ul>
 
+<h4 id="assignment-done-via-">Assignment: done via <code class="highlighter-rouge">:=</code></h4>
+
+<h4 id="equation-done-via-">Equation: done via <code class="highlighter-rouge">=</code></h4>
+
+<h3 id="variables">Variables:</h3>
+<ul>
+  <li>Base Types:
+    <ul>
+      <li><code class="highlighter-rouge">Integer</code></li>
+      <li><code class="highlighter-rouge">Real(unit = "&lt;unit&gt;" ~ opt, min = &lt;min&gt; ~ opt, max = &lt;max&gt; ~ opt)</code></li>
+      <li><code class="highlighter-rouge">Boolean</code></li>
+    </ul>
+  </li>
+  <li>Variability:
+    <ul>
+      <li>constant - never changes</li>
+      <li>parameter - changes between simulations</li>
+      <li>discrete - changes on events</li>
+    </ul>
+  </li>
+  <li>Starting Value:
+    <ul>
+      <li><code class="highlighter-rouge">&lt;type&gt; &lt;var&gt;(start = &lt;val&gt;);</code></li>
+    </ul>
+  </li>
+  <li>Visibility:
+    <ul>
+      <li><code class="highlighter-rouge">public</code></li>
+      <li>
+        <p><code class="highlighter-rouge">protected</code></p>
+      </li>
+      <li>treated as headers, all variables after a visibility statement and before another control statement will have that visibility</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="libraries">Libraries:</h3>
+<ul>
+  <li>loadModel(<library>);</library></li>
+  <li>Standard Library: Modelica</li>
+</ul>
+
+<h3 id="classes">Classes:</h3>
+<p>Nested (local) classes are allowed</p>
+
+<ul>
+  <li>Special words to replace “class”:
+    <ul>
+      <li><code class="highlighter-rouge">model</code>: intended for models; cannot be used for connections</li>
+      <li><code class="highlighter-rouge">record</code>: intended for data structures; cannot have equations, cannot be used for connections</li>
+      <li><code class="highlighter-rouge">type</code>: intended to introduce new types; must extend another type, record, or be an array</li>
+      <li><code class="highlighter-rouge">connector</code>: defines connections; no equations</li>
+      <li><code class="highlighter-rouge">block</code>: data flow of variables is known; all variables must be declared with “input” or “output” * followed by a type or class; no connections</li>
+      <li><code class="highlighter-rouge">function</code>: defines inputs and outputs, no equation, exactly one algorithm(<code class="highlighter-rouge">&lt;output var&gt;:=&lt;computation&gt;</code>)
+        <ul>
+          <li><code class="highlighter-rouge">calling</code>: <function name="">(<input1>,...)</input1></function></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Define:
+    <ul>
+      <li><code class="highlighter-rouge">class &lt;classname&gt;</code>
+        <ul>
+          <li>public
+            <ul>
+              <li><code class="highlighter-rouge">parameter &lt;type&gt; &lt;var&gt; = &lt;val ~ opt&gt;;</code></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>end <code class="highlighter-rouge">&lt;classname - to instantiate&gt;</code>;</p>
+      </li>
+      <li><code class="highlighter-rouge">type &lt;classname&gt; = &lt;sourceClass to instantiate&gt;</code></li>
+    </ul>
+  </li>
+  <li>Container Classes:
+    <ul>
+      <li><code class="highlighter-rouge">class &lt;container classname&gt;</code>
+        <ul>
+          <li><code class="highlighter-rouge">&lt;contained classname&gt; &lt;thisname&gt;(&lt;paramater ~ opt&gt;=&lt;val&gt;,...);</code></li>
+        </ul>
+      </li>
+      <li>end <code class="highlighter-rouge">&lt;container classname&gt;</code></li>
+    </ul>
+  </li>
+  <li>Drilling Down:
+    <ul>
+      <li><code class="highlighter-rouge">&lt;classname&gt;.&lt;classname...&gt;.&lt;parameter&gt;</code></li>
+      <li><code class="highlighter-rouge">&lt;classname&gt;(&lt;paramater1&gt;,&lt;paramater2&gt;,...)</code></li>
+    </ul>
+  </li>
+  <li>View flattened class:
+    <ul>
+      <li><code class="highlighter-rouge">instantiateModel(&lt;class&gt;)</code></li>
+    </ul>
+  </li>
+  <li>Inheritance:
+    <ul>
+      <li><code class="highlighter-rouge">class &lt;name&gt;</code>
+        <ul>
+          <li><code class="highlighter-rouge">extends &lt;super&gt;;</code>
+  …Standard class stuff</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Generics:
+    <ul>
+      <li>prefix type with keyword : “replaceable” :: <code class="highlighter-rouge">replaceable &lt;type&gt; &lt;name&gt;;</code></li>
+      <li>Declaring:
+        <ul>
+          <li><code class="highlighter-rouge">class &lt;name&gt; = &lt;c lass type&gt;(redeclare &lt;type&gt; &lt;name&gt;,...)</code></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Partial Classes:
+    <ul>
+      <li>may be extended, but not instantiated</li>
+      <li><code class="highlighter-rouge">partial class &lt;classname&gt;</code></li>
+    </ul>
+  </li>
+  <li>Package:
+    <ul>
+      <li>Organizes classes of all types and constants</li>
+    </ul>
+  </li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-modelica" data-lang="modelica">    package &lt;name&gt;
+        &lt;stuff&gt;
+    end &lt;name&gt;;</code></pre></figure>
+
+<ul>
+  <li>if importing other packages, prevent conflicts by using encapsulated package:</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-modelica" data-lang="modelica">    encapsulated package &lt;PackageName&gt;
+        import &lt;import&gt;
+        ...
+    end &lt;PackageName&gt;;</code></pre></figure>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>* `import &lt;packageName&gt;;`
+* `import &lt;alias&gt;=&lt;packageName&gt;;`
+</code></pre>
+</div>
+
+<ul>
+  <li>Simulation:
+    <ul>
+      <li><code class="highlighter-rouge">simulate(&lt;class&gt;)</code></li>
+    </ul>
+  </li>
+  <li>Visualization:
+    <ul>
+      <li>Plot:
+        <ul>
+          <li><code class="highlighter-rouge">plot(&lt;args&gt;)</code></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Arrays:
+    <ul>
+      <li>Declaration:
+        <ul>
+          <li><code class="highlighter-rouge">&lt;type&gt;[&lt;dim1,...&gt;] &lt;name&gt;;</code></li>
+          <li>OR</li>
+          <li>
+            <p><code class="highlighter-rouge">&lt;type&gt; &lt;name&gt;[&lt;dim1,...&gt;];</code></p>
+          </li>
+          <li>Can initialize with declaration:
+            <ul>
+              <li><code class="highlighter-rouge">&lt;type&gt;[&lt;dim1,...&gt;] &lt;name&gt; = {x,y,z};</code></li>
+              <li>OR</li>
+              <li><code class="highlighter-rouge">&lt;type&gt; &lt;name&gt;[&lt;dim1,...&gt;] = \{\{x,y\},\{f,g\}\};</code></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Multiplication:
+        <ul>
+          <li><code class="highlighter-rouge">*</code></li>
+          <li>is element wise</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Matrices:
+    <ul>
+      <li>Declaration:
+        <ul>
+          <li><code class="highlighter-rouge">&lt;type&gt; &lt;name&gt;[&lt;dim1,...&gt;] = [&lt;v&gt;,&lt;v&gt;;...];</code></li>
+        </ul>
+      </li>
+      <li>Multiplication:
+        <ul>
+          <li><code class="highlighter-rouge">*</code></li>
+          <li><code class="highlighter-rouge">is matrix multiplication</code></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Algorithms:
+    <ul>
+      <li>start with keyword “algorithm”</li>
+      <li>are the only place where traditional procedural command flow exists:</li>
+    </ul>
+  </li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-modelica" data-lang="modelica">        while &lt;bool&gt; loop
+            &lt;body&gt;
+        end while;</code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-modelica" data-lang="modelica">        if &lt;bool&gt; then
+            &lt;body&gt;
+        elseif &lt;bool&gt; then
+            &lt;body&gt;
+        else
+            &lt;body&gt;
+        end if;</code></pre></figure>
+
+<ul>
+  <li><code class="highlighter-rouge">reinit(&lt;var&gt;,&lt;new val&gt;)</code> : reinitializes variable, useful in while loop</li>
+</ul>
+
+  </article>
+  <!-- START: Livefyre Embed -->
+
+  <!-- START: Livefyre Embed -->
+  <h2>Comments</h2>
+<div id="livefyre-comments"></div>
+<script type="text/javascript" src="http://zor.livefyre.com/wjs/v3.0/javascripts/livefyre.js"></script>
+<script type="text/javascript">
+(function () {
+    var articleId = fyre.conv.load.makeArticleId(null);
+    fyre.conv.load({}, [{
+        el: 'livefyre-comments',
+        network: "livefyre.com",
+        siteId: "375755",
+        articleId: articleId,
+        signed: false,
+        collectionMeta: {
+            articleId: articleId,
+            url: fyre.conv.load.makeCollectionUrl(),
+        }
+    }], function() {});
+}());
+</script>
+<!-- END: Livefyre Embed -->
+
+
+</div>
 
       </div>
     </div>

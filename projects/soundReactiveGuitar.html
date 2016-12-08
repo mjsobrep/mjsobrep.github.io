@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <base target="_parent" />
-  <title>Michael Sobrepera</title>
-  <meta name="description" content="A site about stuff that I (Michael Sobrepera) work on, think, enjoy, etc...">
+  <title>Sound Reactive Guitar</title>
+  <meta name="description" content="Update: You can buy the guitars I was working on from Gallo Guitars">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://www.michaelsobrepera.com/calendar.html">
+  <link rel="canonical" href="http://www.michaelsobrepera.com/projects/soundReactiveGuitar.html">
   <link rel="alternate" type="application/rss+xml" title="Michael Sobrepera" href="http://www.michaelsobrepera.com/feed.xml" />
 
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
@@ -309,30 +309,227 @@
 
     <div class="page-content">
       <div class="bodyWrapper">
-        <h1>Calendar</h1>
-<br/>
+        <div class="post">
 
-<h2>Personal Calendar (relevant outside of working hours)</h2>
+  <header class="post-header">
+    <h1 class="post-title">Sound Reactive Guitar</h1>
+    <p class="post-meta">May 15, 2015</p>
+    <!-- borrowed from http://www.realcombiz.com/2014/01/how-to-expand-collapse-toggle-div-layer.html -->
+
+<input class="toggle-box" id="header1" type="checkbox" >
+<label for="header1">Tags</label>
+<div>
+<ul class="tag">
+
+  <li class="tag"><a href="/tags/electronics.html" class = "tag">electronics</a></li>
+
+  <li class="tag"><a href="/tags/electronics%20design.html" class = "tag">electronics design</a></li>
+
+  <li class="tag"><a href="/tags/electronics%20prototyping.html" class = "tag">electronics prototyping</a></li>
+
+  <li class="tag"><a href="/tags/digital%20signal%20processing.html" class = "tag">digital signal processing</a></li>
+
+  <li class="tag"><a href="/tags/DSP.html" class = "tag">DSP</a></li>
+
+  <li class="tag"><a href="/tags/microcontroller.html" class = "tag">microcontroller</a></li>
+
+  <li class="tag"><a href="/tags/teensy.html" class = "tag">teensy</a></li>
+
+  <li class="tag"><a href="/tags/LED.html" class = "tag">LED</a></li>
+
+  <li class="tag"><a href="/tags/music.html" class = "tag">music</a></li>
+
+  <li class="tag"><a href="/tags/art.html" class = "tag">art</a></li>
+
+</ul>
+</div>
+
+
+  </header>
+
+
+  <article class="post-content">
+    <p><em>Update: You can buy the guitars I was working on from <a href="http://www.gallo.guitars/">Gallo Guitars</a></em></p>
+
+<p>I met <a href="http://www.josegallo.com/">Jose Gallo</a> at <a href="http://www.theengineerguy.com/">The Engineer Guy</a>. I was with my Senior Design team and was wearing a GT shirt. So he approached us and asked if any of us have experience with microcontrollers and electronics, which I do. He showed us a guitar he was working on which had LEDs within the body and asked if I could help him to make it react to the sound being played. I agreed to help him and got to work. I ended up using a Teensy microcontroller because of its very solid audio library. I set it up to perform an FFT and create a number of visualizations, selectable by a push button. In the end I was very pleased with the results and learned a good bit in the process. Jose was also pretty excited.</p>
+
+<h4 id="design">Design</h4>
 <ul>
-    <li class='calListItem'><a href="https://sharing.calendar.live.com/calendar/private/4daf7a00-2fa1-4e90-becf-a465291322b8/0b077663-1428-4c8e-baf8-8f7cdd547643/cid-5081e31f30d8f168/index.html">View In Browser</a>
-    </li>
-
-    <li class='calListItem'><a href="webcals://sharing.calendar.live.com/calendar/private/4daf7a00-2fa1-4e90-becf-a465291322b8/0b077663-1428-4c8e-baf8-8f7cdd547643/cid-5081e31f30d8f168/calendar.ics">Import to Calendar App (ICS)</a>
-    </li>
-
-    <li class='calListItem'><a href="https://sharing.calendar.live.com/calendar/private/4daf7a00-2fa1-4e90-becf-a465291322b8/0b077663-1428-4c8e-baf8-8f7cdd547643/cid-5081e31f30d8f168/calendar.xml">View In Feed Browser (XML)</a>
-    </li>
+  <li><a href="\otherFiles\projects\soundReactiveGuitar\electronics layout Rev 1.2.pdf">My electronics design</a></li>
+  <li><a href="https://github.com/mjsobrep/soundReactiveGuitar">My code</a></li>
 </ul>
 
-<h2>Work Calendar (relevant inside of working hours)</h2>
-<ul>
-    <li class='calListItem'><a href="https://calendar.google.com/calendar/embed?src=mjsobrep%40seas.upenn.edu&ctz=America/New_York">View In Browser</a>
-    </li>
+<p><br /></p>
 
-    <li class='calListItem'><a href="https://calendar.google.com/calendar/ical/mjsobrep%40seas.upenn.edu/public/basic.ics">Import to Calendar App (ICS)</a>
-    </li>
-</ul>
+<style media="screen" type="text/css">
 
+.ifBox5625100{
+    position: relative;
+    width: 100%;     /* desired width */
+    margin: auto;
+}
+.ifBox5625100:before{
+    content: "";
+    display: block;
+    padding-top: 56.25%/* account for the little button bar */
+}
+
+</style>
+
+<div class="ifBox5625100"> 
+    <div class="mediaContent">    
+        <iframe class="mediaContent" width="100%" height="100%" src="https://www.youtube.com/embed/gcfAp47YGyA" frameborder="0" allowfullscreen=""></iframe>
+    </div> 
+</div>
+<p><br /></p>
+
+<style media="screen" type="text/css">
+
+.ifBox5625100{
+    position: relative;
+    width: 100%;     /* desired width */
+    margin: auto;
+}
+.ifBox5625100:before{
+    content: "";
+    display: block;
+    padding-top: 56.25%/* account for the little button bar */
+}
+
+</style>
+
+<div class="ifBox5625100"> 
+    <div class="mediaContent">    
+        <iframe class="mediaContent" width="100%" height="100%" src="https://www.youtube.com/embed/jTJkhRjVaus" frameborder="0" allowfullscreen=""></iframe>
+    </div> 
+</div>
+<p><br /></p>
+
+<style media="screen" type="text/css">
+
+.ifBox5625100{
+    position: relative;
+    width: 100%;     /* desired width */
+    margin: auto;
+}
+.ifBox5625100:before{
+    content: "";
+    display: block;
+    padding-top: 56.25%/* account for the little button bar */
+}
+
+</style>
+
+<div class="ifBox5625100"> 
+    <div class="mediaContent">    
+        <iframe class="mediaContent" width="100%" height="100%" src="https://www.youtube.com/embed/Xse8pVynuTU" frameborder="0" allowfullscreen=""></iframe>
+    </div> 
+</div>
+<p><br /></p>
+
+<style media="screen" type="text/css">
+
+.ifBox177777777777777850{
+    position: relative;
+    width: 50%;     /* desired width */
+    margin: auto;
+}
+.ifBox177777777777777850:before{
+    content: "";
+    display: block;
+    padding-top: 177.7777777777778%/* account for the little button bar */
+}
+
+</style>
+
+<div class="ifBox177777777777777850"> 
+    <div class="mediaContent">    
+        <iframe class="mediaContent" width="100%" height="100%" src="https://www.youtube.com/embed/qmZ0__i1iVQ" frameborder="0" allowfullscreen=""></iframe>
+    </div> 
+</div>
+<p><br /></p>
+
+<style media="screen" type="text/css">
+
+.ifBox5625100{
+    position: relative;
+    width: 100%;     /* desired width */
+    margin: auto;
+}
+.ifBox5625100:before{
+    content: "";
+    display: block;
+    padding-top: 56.25%/* account for the little button bar */
+}
+
+</style>
+
+<div class="ifBox5625100"> 
+    <div class="mediaContent">    
+        <iframe class="mediaContent" width="100%" height="100%" src="https://www.youtube.com/embed/KpZX_1y0OSo" frameborder="0" allowfullscreen=""></iframe>
+    </div> 
+</div>
+<p><br /></p>
+
+
+
+<style media="screen" type="text/css">
+
+.flBox360640{
+    position: relative;
+    max-width: 640px;     /* desired width */
+    margin: auto;
+}
+.flBox360640:before{
+    content: "";
+    display: block;
+    padding-top: 56% /* account for the little button bar */
+}
+
+</style>
+
+<div class='flBox360640'> 
+    <div class='mediaContent'>  
+        <a data-flickr-embed="true"  href="https://www.flickr.com/photos/138686863@N06/albums/72157670919837312" title="sound reactive guitar">
+            <img src="https://c8.staticflickr.com/9/8857/28028214663_0cf1fce1b7_z.jpg" width=100% height=100% alt="sound reactive guitar" />
+        </a>
+        <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>  
+    </div> 
+</div>
+<br>
+
+
+  </article>
+
+  
+
+  
+
+
+    <!-- START: Livefyre Embed -->
+  <h2>Comments</h2>
+<div id="livefyre-comments"></div>
+<script type="text/javascript" src="http://zor.livefyre.com/wjs/v3.0/javascripts/livefyre.js"></script>
+<script type="text/javascript">
+(function () {
+    var articleId = fyre.conv.load.makeArticleId(null);
+    fyre.conv.load({}, [{
+        el: 'livefyre-comments',
+        network: "livefyre.com",
+        siteId: "375755",
+        articleId: articleId,
+        signed: false,
+        collectionMeta: {
+            articleId: articleId,
+            url: fyre.conv.load.makeCollectionUrl(),
+        }
+    }], function() {});
+}());
+</script>
+<!-- END: Livefyre Embed -->
+
+
+</div>
 
       </div>
     </div>
