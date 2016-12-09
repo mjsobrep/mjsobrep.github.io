@@ -53,6 +53,7 @@ I hadn't posted a list yet, and that came up. So here it is, enjoy. I don't real
 - new phone...
 - desktop computer
 - Battery powered car jumper
+- sewing machine
 
 ## Project stuff
 - R/Pi 3
