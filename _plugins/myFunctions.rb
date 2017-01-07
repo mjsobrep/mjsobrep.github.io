@@ -1,6 +1,6 @@
 require 'liquid'
 require 'uri'
-require 'pry'
+# require 'pry'
 
 module Jekyll
     module StripFile
