@@ -17,3 +17,6 @@ markdown: kramdown
 
 permalink: none
 ignore: /subl
+
+# To work with Travis
+exclude: [vendor]
