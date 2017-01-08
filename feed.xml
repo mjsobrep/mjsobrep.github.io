@@ -5,9 +5,9 @@
     <description>A site about stuff that I (Michael Sobrepera) work on, think, enjoy, etc...</description>
     <link>http://www.michaelsobrepera.com/</link>
     <atom:link href="http://www.michaelsobrepera.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 08 Dec 2016 17:24:32 -0500</pubDate>
-    <lastBuildDate>Thu, 08 Dec 2016 17:24:32 -0500</lastBuildDate>
-    <generator>Jekyll v3.1.6</generator>
+    <pubDate>Sun, 08 Jan 2017 03:46:33 +0000</pubDate>
+    <lastBuildDate>Sun, 08 Jan 2017 03:46:33 +0000</lastBuildDate>
+    <generator>Jekyll v3.3.1</generator>
     
       <item>
         <title>Christmas List 2016</title>
@@ -64,6 +64,7 @@
   &lt;li&gt;new phone…&lt;/li&gt;
   &lt;li&gt;desktop computer&lt;/li&gt;
   &lt;li&gt;Battery powered car jumper&lt;/li&gt;
+  &lt;li&gt;sewing machine&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;project-stuff&quot;&gt;Project stuff&lt;/h2&gt;
@@ -144,9 +145,10 @@
       &lt;li&gt;mixing ingredients (bitters?)&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
+  &lt;li&gt;Standing bucket of tennis balls (gotta work on that serve)&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-        <pubDate>Mon, 28 Nov 2016 00:00:00 -0500</pubDate>
+        <pubDate>Mon, 28 Nov 2016 00:00:00 +0000</pubDate>
         <link>http://www.michaelsobrepera.com/blog/ChristmasList2016.html</link>
         <guid isPermaLink="true">http://www.michaelsobrepera.com/blog/ChristmasList2016.html</guid>
         
@@ -226,7 +228,7 @@
   &lt;li&gt;As a child you need to keep your ID in check and as an adult, you need to keep your pride in check. Don’t let them rule you.&lt;/li&gt;
 &lt;/ol&gt;
 </description>
-        <pubDate>Fri, 07 Oct 2016 00:00:00 -0400</pubDate>
+        <pubDate>Fri, 07 Oct 2016 00:00:00 +0000</pubDate>
         <link>http://www.michaelsobrepera.com/guides/rules.html</link>
         <guid isPermaLink="true">http://www.michaelsobrepera.com/guides/rules.html</guid>
         
@@ -270,7 +272,7 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 </description>
-        <pubDate>Mon, 01 Feb 2016 00:00:00 -0500</pubDate>
+        <pubDate>Mon, 01 Feb 2016 00:00:00 +0000</pubDate>
         <link>http://www.michaelsobrepera.com/guides/jetbrains.html</link>
         <guid isPermaLink="true">http://www.michaelsobrepera.com/guides/jetbrains.html</guid>
         
@@ -292,7 +294,7 @@
   &lt;li&gt;Performance Profiling: &lt;code class=&quot;highlighter-rouge&quot;&gt;cmake -DCMAKE_CXX_FLAGS=-pg ..&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-        <pubDate>Wed, 13 Jan 2016 00:00:00 -0500</pubDate>
+        <pubDate>Wed, 13 Jan 2016 00:00:00 +0000</pubDate>
         <link>http://www.michaelsobrepera.com/guides/cmake.html</link>
         <guid isPermaLink="true">http://www.michaelsobrepera.com/guides/cmake.html</guid>
         
@@ -307,15 +309,15 @@
         <title>Computer Vision (CS 4495) Projects</title>
         <description>&lt;p&gt;I am currently taking a class in &lt;a href=&quot;http://www.cc.gatech.edu/~hays/compvision/&quot;&gt;Computer Vision&lt;/a&gt; from &lt;a href=&quot;http://www.cc.gatech.edu/~hays/&quot;&gt;James Hays&lt;/a&gt; at Georgia Tech. He posts all of our projects (which is awesome). Rather than figuring out how to port them over to my website (which could be tough with the way I have it set up) and having to deal with the large extra load of files, I will just link to where he has them posted.&lt;/p&gt;
 
-&lt;h3 id=&quot;project-1-image-filtering-and-hybrid-imageshttpwwwccgatecheduhayscompvisionresultsproj1msobrepera3indexhtml&quot;&gt;&lt;a href=&quot;http://www.cc.gatech.edu/~hays/compvision/results/proj1/msobrepera3/index.html&quot;&gt;Project 1: Image Filtering and Hybrid Images&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;project-1-image-filtering-and-hybrid-images&quot;&gt;&lt;a href=&quot;http://www.cc.gatech.edu/~hays/compvision/results/proj1/msobrepera3/index.html&quot;&gt;Project 1: Image Filtering and Hybrid Images&lt;/a&gt;&lt;/h3&gt;
 
-&lt;h3 id=&quot;project-2-feature-detection-and-matchinghttpwwwccgatecheduhayscompvisionresultsproj2msobrepera3indexhtml&quot;&gt;&lt;a href=&quot;http://www.cc.gatech.edu/~hays/compvision/results/proj2/msobrepera3/index.html&quot;&gt;Project 2: Feature detection and matching&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;project-2-feature-detection-and-matching&quot;&gt;&lt;a href=&quot;http://www.cc.gatech.edu/~hays/compvision/results/proj2/msobrepera3/index.html&quot;&gt;Project 2: Feature detection and matching&lt;/a&gt;&lt;/h3&gt;
 
-&lt;h3 id=&quot;project-3-camera-calibration-and-fundamental-matrix-estimation-with-ransachttpwwwccgatecheduhayscompvisionresultsproj3msobrepera3indexhtml&quot;&gt;&lt;a href=&quot;http://www.cc.gatech.edu/~hays/compvision/results/proj3/msobrepera3/index.html&quot;&gt;Project 3: Camera Calibration and Fundamental Matrix Estimation with RANSAC&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;project-3-camera-calibration-and-fundamental-matrix-estimation-with-ransac&quot;&gt;&lt;a href=&quot;http://www.cc.gatech.edu/~hays/compvision/results/proj3/msobrepera3/index.html&quot;&gt;Project 3: Camera Calibration and Fundamental Matrix Estimation with RANSAC&lt;/a&gt;&lt;/h3&gt;
 
-&lt;h3 id=&quot;project-4-scene-recognition-with-bag-of-wordshttpwwwccgatecheduhayscompvisionresultsproj4msobrepera3indexhtml&quot;&gt;&lt;a href=&quot;http://www.cc.gatech.edu/~hays/compvision/results/proj4/msobrepera3/index.html&quot;&gt;Project 4: Scene recognition with bag of words&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;project-4-scene-recognition-with-bag-of-words&quot;&gt;&lt;a href=&quot;http://www.cc.gatech.edu/~hays/compvision/results/proj4/msobrepera3/index.html&quot;&gt;Project 4: Scene recognition with bag of words&lt;/a&gt;&lt;/h3&gt;
 </description>
-        <pubDate>Sat, 07 Nov 2015 00:00:00 -0500</pubDate>
+        <pubDate>Sat, 07 Nov 2015 00:00:00 +0000</pubDate>
         <link>http://www.michaelsobrepera.com/projects/CS4495Projects.html</link>
         <guid isPermaLink="true">http://www.michaelsobrepera.com/projects/CS4495Projects.html</guid>
         
@@ -336,7 +338,7 @@
         <title>NSF GRFP Proposal</title>
         <description>&lt;p&gt;This is the proposal which I submitted this year for the National Science Foundation Graduate Research Fellowship Program. The only change from the actual submission is the addition of the header and footer. I actually think the idea is pretty interesting.&lt;/p&gt;
 </description>
-        <pubDate>Tue, 27 Oct 2015 00:00:00 -0400</pubDate>
+        <pubDate>Tue, 27 Oct 2015 00:00:00 +0000</pubDate>
         <link>http://www.michaelsobrepera.com/writings/NSFProposal.html</link>
         <guid isPermaLink="true">http://www.michaelsobrepera.com/writings/NSFProposal.html</guid>
         
@@ -349,7 +351,7 @@
         <title>NSF GRFP Personal Statement</title>
         <description>&lt;p&gt;This is the personal statement which I submitted this year for the National Science Foundation Graduate Research Fellowship Program. The only change from the actual submission is the addition of the header and footer. The statement talks about my background, why I want to pursue a PhD, why I think I am qualified to pursue a PhD, and what impact I think I can have.&lt;/p&gt;
 </description>
-        <pubDate>Tue, 27 Oct 2015 00:00:00 -0400</pubDate>
+        <pubDate>Tue, 27 Oct 2015 00:00:00 +0000</pubDate>
         <link>http://www.michaelsobrepera.com/writings/NSFPersonal.html</link>
         <guid isPermaLink="true">http://www.michaelsobrepera.com/writings/NSFPersonal.html</guid>
         
@@ -438,7 +440,7 @@
 
 &lt;h3 id=&quot;camera-i-have-a-nikon-d7200&quot;&gt;Camera (I have a Nikon D7200)&lt;/h3&gt;
 &lt;ul&gt;
-  &lt;li&gt;~~DSLR with video capability?~~&lt;/li&gt;
+  &lt;li&gt;&lt;del&gt;DSLR with video capability?&lt;/del&gt;&lt;/li&gt;
   &lt;li&gt;Lenses
     &lt;ul&gt;
       &lt;li&gt;&lt;a href=&quot;http://www.nikonusa.com/en/nikon-products/product/refurbished-camera-lenses/af-s-nikkor-50mm-f%252f1.8g-refurbished.html&quot;&gt;Nikon AF-S 50mm/f1.8&lt;/a&gt;&lt;/li&gt;
@@ -497,7 +499,7 @@
   &lt;li&gt;Umbrella&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-        <pubDate>Sun, 04 Oct 2015 00:00:00 -0400</pubDate>
+        <pubDate>Sun, 04 Oct 2015 00:00:00 +0000</pubDate>
         <link>http://www.michaelsobrepera.com/blog/ChristmasList.html</link>
         <guid isPermaLink="true">http://www.michaelsobrepera.com/blog/ChristmasList.html</guid>
         
@@ -696,20 +698,21 @@ computer.&lt;/li&gt;
                 &lt;ul&gt;
                   &lt;li&gt;Allows writing of error and notifications on the controller&lt;/li&gt;
                   &lt;li&gt;
-                    &lt;estr&gt;xxx&lt;/estr&gt;
+                    &lt;EStr&gt;xxx&amp;lt;/Estr&amp;gt;
+&lt;/EStr&gt;
                     &lt;ul&gt;
                       &lt;li&gt;Writes a notification&lt;/li&gt;
                     &lt;/ul&gt;
                   &lt;/li&gt;
                   &lt;li&gt;
-                    &lt;estr&gt;Error:xxx&lt;/estr&gt;
+                    &lt;EStr&gt;Error:xxx&lt;/EStr&gt;
                     &lt;ul&gt;
                       &lt;li&gt;Acknowledgement message&lt;/li&gt;
                       &lt;li&gt;Will stop the robot&lt;/li&gt;
                     &lt;/ul&gt;
                   &lt;/li&gt;
                   &lt;li&gt;
-                    &lt;estr /&gt;
+                    &lt;EStr /&gt;
 
                     &lt;ul&gt;
                       &lt;li&gt;No message/error&lt;/li&gt;
@@ -783,7 +786,7 @@ depending on whether using slow or fast mode.&lt;/li&gt;
   actual running).&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-        <pubDate>Thu, 01 Oct 2015 00:00:00 -0400</pubDate>
+        <pubDate>Thu, 01 Oct 2015 00:00:00 +0000</pubDate>
         <link>http://www.michaelsobrepera.com/guides/kuka.html</link>
         <guid isPermaLink="true">http://www.michaelsobrepera.com/guides/kuka.html</guid>
         
@@ -923,7 +926,7 @@ depending on whether using slow or fast mode.&lt;/li&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 </description>
-        <pubDate>Tue, 29 Sep 2015 00:00:00 -0400</pubDate>
+        <pubDate>Tue, 29 Sep 2015 00:00:00 +0000</pubDate>
         <link>http://www.michaelsobrepera.com/guides/suppliers.html</link>
         <guid isPermaLink="true">http://www.michaelsobrepera.com/guides/suppliers.html</guid>
         
