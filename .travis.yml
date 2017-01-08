@@ -5,12 +5,12 @@ rvm:
 git:
   depth: 3
 
-script: build.sh
+script: bash build.sh
 
 deploy:
   skip_cleanup: true
   provider: script
-  script: deploy.sh
+  script: bash deploy.sh
   on:
     branch: deploy
 
