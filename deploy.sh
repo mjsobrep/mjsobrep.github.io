@@ -7,25 +7,21 @@
 set -o errexit -o nounset
 
 
-# will run every time travis spins, against the deploy branch.
-# Need to make sure we are actually on the deploy branch
+echo "deploying to master branch from deploy branch"
+cd _site
 
-if [[ $TRAVIS_BRANCH == 'deploy' ]] ; then
-    echo "deploying to master branch from deploy branch"
-    cd _site
+git init
+git config user.name "Travis CI"
+git config user.email "mjsobrep@live.com"
 
-    git init
-    git config user.name "Travis CI"
-    git config user.email "mjsobrep@live.com"
-    
-    git remote add upstream "https://$GH_TOKEN@github.com/mjsobrep/mjsobrep.github.io.git"
-    git fetch upstream
-    git reset upstream/master # Make all of our changes off of the master branch
-    touch . # make all of the files look fresh
+git remote add upstream "https://$GH_TOKEN@github.com/mjsobrep/mjsobrep.github.io.git"
+git fetch upstream
+git reset upstream/master # Make all of our changes off of the master branch
+touch . # make all of the files look fresh
 
 
-    git add -A :/
-    git commit -m 'automated commit to publish from travis';
-    git push -q upstream HEAD:master
-fi
+git add -A :/
+git commit -m 'automated commit to publish from travis';
+git push -q upstream HEAD:master
+
 exit 0
