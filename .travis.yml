@@ -1,4 +1,9 @@
 language: ruby
+rvm:
+    - 2.2
+
+git:
+  depth: 3
 
 script: build.sh
 
