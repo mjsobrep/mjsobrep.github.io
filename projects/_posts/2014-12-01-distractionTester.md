@@ -22,7 +22,7 @@ I handled the design and development of the testing system. I used a firebase ba
 #### [distraction tester](https://3110.firebaseapp.com/)
 
 ## Paper
-We wrote a [paper]({% post_url 2014-12-01-distractionTester-paper %}) summarizing our results.
+We wrote a [paper]({% post_url writings/2014-12-01-distractionTester-paper %}) summarizing our results.
 
 ## Video
 We also had to make a video introduction for our project. You can take a look at it here:

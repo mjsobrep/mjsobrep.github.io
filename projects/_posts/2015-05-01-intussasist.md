@@ -49,7 +49,7 @@ improved solution for reduction of intussusception in children.
 {{"otherFiles/projects/intussassist/TD3_FinalPoster_4602_Spring 2015.pdf"|insertPDF}}
 <br/>
 
-### For a much more detailed delve into the project, take a look at the [final report for the project]({% post_url 2015-05-01-intussassistPaper %}).
+### For a much more detailed delve into the project, take a look at the [final report for the project]({% post_url writings/2015-05-01-intussassistPaper %}).
 <br/>
 
 ## My Role in the Project

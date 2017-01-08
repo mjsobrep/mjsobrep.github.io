@@ -18,7 +18,7 @@ thumb: "https://c3.staticflickr.com/9/8581/28578754586_28f31ee0dd_n.jpg"
 summary: A pawn I designed and machined out of aluminum
 ---
 
-I wrote a [post processor]({% post_url 2014-11-03-TRL1440EXpost %}) to allow HSMWorks to post out to a Trak TRL-1440 EX. As a test of that project I decided to turn down a pawn. The results were very nice.
+I wrote a [post processor]({% post_url projects/2014-11-03-TRL1440EXpost %}) to allow HSMWorks to post out to a Trak TRL-1440 EX. As a test of that project I decided to turn down a pawn. The results were very nice.
 
 {% include iframe.html src="'https://www.youtube.com/embed/MpWchM_FHIs'" width=100 ratio=56.25 %}
 

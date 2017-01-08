@@ -15,4 +15,4 @@ As part of the first group based class within the BME curriculum at Georgia Tech
 
 ## [GitHub Repo](https://github.com/mjsobrep/CysticFibrosisModelingSuite)
 
-## [Paper]({% post_url 2012-12-05-CFmodeling-paper %})
+## [Paper]({% post_url writings/2012-12-05-CFmodeling-paper %})
