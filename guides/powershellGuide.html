@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <base target="_parent" />
   <title>PowerShell</title>
-  <meta name="description" content="  scoop -&gt; to install stuff  PSget -&gt; to install stuff  concfg -&gt; to configure stuff">
+  <meta name="description" content="  scoop -&gt; to install stuff  PSget -&gt; to install stuff  concfg -&gt; to configure stuff  chocolatey -&gt; package manager  PowerShellGallery-&gt; to in...">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="http://www.michaelsobrepera.com/guides/powershellGuide.html">
@@ -313,7 +313,7 @@
 
   <header class="post-header">
     <h1 class="post-title">PowerShell</h1>
-    <h3>Last Updated: 25 June 2015</h3>
+    <h3>Last Updated: 20 February 2017</h3>
     <!-- borrowed from http://www.realcombiz.com/2014/01/how-to-expand-collapse-toggle-div-layer.html -->
 
 <input class="toggle-box" id="header1" type="checkbox" >
@@ -342,6 +342,40 @@
   <li>scoop -&gt; to install stuff</li>
   <li>PSget -&gt; to install stuff</li>
   <li>concfg -&gt; to configure stuff</li>
+  <li>chocolatey -&gt; package manager</li>
+  <li>PowerShellGallery-&gt; to install stuff</li>
+</ul>
+
+<p>##Setting up:</p>
+<ul>
+  <li>Open administator powershell</li>
+  <li><code class="highlighter-rouge">Set-ExecutionPolicy RemoteSigned</code></li>
+  <li><code class="highlighter-rouge">iwr https://chocolatey.org/install.ps1 -UseBasicParsing | iex</code></li>
+  <li><code class="highlighter-rouge">choco install ConEmu</code></li>
+  <li><code class="highlighter-rouge">choco install git</code></li>
+  <li><code class="highlighter-rouge">choco install poshgit</code></li>
+  <li><code class="highlighter-rouge">Install-Module -Name ZLocation</code></li>
+  <li><code class="highlighter-rouge">choco install visualstudiocode</code></li>
+  <li><code class="highlighter-rouge">choco install python3</code></li>
+  <li><code class="highlighter-rouge">choco install python2</code></li>
+  <li><code class="highlighter-rouge">choco install mingw</code></li>
+  <li><code class="highlighter-rouge">choco install cmake</code></li>
+  <li><code class="highlighter-rouge">choco install doxygen</code></li>
+  <li><code class="highlighter-rouge">choco install miktex</code></li>
+  <li><code class="highlighter-rouge">choco install texstudio</code></li>
+  <li><code class="highlighter-rouge">choco install googlechrome</code></li>
+  <li><code class="highlighter-rouge">choco install firefox</code></li>
+  <li><code class="highlighter-rouge">choco install dropbox</code></li>
+  <li><code class="highlighter-rouge">choco install sumatrapdf</code></li>
+  <li><code class="highlighter-rouge">choco install slack</code></li>
+</ul>
+
+<h3 id="some-less-useful-stuff">some less useful stuff:</h3>
+<ul>
+  <li><code class="highlighter-rouge">choco install gimp</code></li>
+  <li><code class="highlighter-rouge">choco install inkscape</code></li>
+  <li><code class="highlighter-rouge">choco install wireshark</code></li>
+  <li><code class="highlighter-rouge">choco install audacity</code></li>
 </ul>
 
 <h4 id="via-psget">Via PSget:</h4>
@@ -366,8 +400,6 @@
 <ul>
   <li><a href="https://github.com/vors/ZLocation">Z-Location</a></li>
 </ul>
-
-<h2 id="run-in-conemu">Run in ConEMU</h2>
 
   </article>
   <!-- START: Livefyre Embed -->
