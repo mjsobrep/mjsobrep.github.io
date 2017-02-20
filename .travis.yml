@@ -5,6 +5,10 @@ rvm:
 git:
   depth: 3
 
+branches:
+  except:
+  - master
+
 script: bash build.sh
 
 deploy:
