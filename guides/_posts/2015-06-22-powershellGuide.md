@@ -16,7 +16,7 @@ tags:
 * chocolatey -> package manager
 * PowerShellGallery-> to install stuff
 
-##Setting up:
+## Setting up:
 - Open administator powershell
 - `Set-ExecutionPolicy RemoteSigned`
 - `iwr https://chocolatey.org/install.ps1 -UseBasicParsing | iex`
