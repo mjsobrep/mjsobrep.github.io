@@ -104,3 +104,6 @@ tags:
             * first line add: `#!/usr/bin/env python`
         * In terminal:
             * `sudo chmod +x <file.py>`
+
+## Making images of SD card
+Here is a great [guide to pulling the image and shrinking it](http://www.aoakley.com/articles/2015-10-09-resizing-sd-images.php)
