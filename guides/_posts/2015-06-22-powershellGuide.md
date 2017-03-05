@@ -60,3 +60,7 @@ tags:
 
 #### PowerShell Gallery
 * [Z-Location](https://github.com/vors/ZLocation)
+
+## Using SSH 
+Once you have putty installed, just use the plink command. 
+
