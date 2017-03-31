@@ -5,9 +5,9 @@
     <description>A site about stuff that I (Michael Sobrepera) work on, think, enjoy, etc...</description>
     <link>http://www.michaelsobrepera.com/</link>
     <atom:link href="http://www.michaelsobrepera.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 11 Mar 2017 23:06:11 +0000</pubDate>
-    <lastBuildDate>Sat, 11 Mar 2017 23:06:11 +0000</lastBuildDate>
-    <generator>Jekyll v3.4.2</generator>
+    <pubDate>Fri, 31 Mar 2017 05:34:58 +0000</pubDate>
+    <lastBuildDate>Fri, 31 Mar 2017 05:34:58 +0000</lastBuildDate>
+    <generator>Jekyll v3.4.3</generator>
     
       <item>
         <title>VS Code tips</title>
@@ -343,35 +343,6 @@ chmod a+x /usr/local/bin/rcode&lt;/code&gt;&lt;/pre&gt;
         
         
         <category>guides</category>
-        
-      </item>
-    
-      <item>
-        <title>Computer Vision (CS 4495) Projects</title>
-        <description>&lt;p&gt;I am currently taking a class in &lt;a href=&quot;http://www.cc.gatech.edu/~hays/compvision/&quot;&gt;Computer Vision&lt;/a&gt; from &lt;a href=&quot;http://www.cc.gatech.edu/~hays/&quot;&gt;James Hays&lt;/a&gt; at Georgia Tech. He posts all of our projects (which is awesome). Rather than figuring out how to port them over to my website (which could be tough with the way I have it set up) and having to deal with the large extra load of files, I will just link to where he has them posted.&lt;/p&gt;
-
-&lt;h3 id=&quot;project-1-image-filtering-and-hybrid-images&quot;&gt;&lt;a href=&quot;http://www.cc.gatech.edu/~hays/compvision/results/proj1/msobrepera3/index.html&quot;&gt;Project 1: Image Filtering and Hybrid Images&lt;/a&gt;&lt;/h3&gt;
-
-&lt;h3 id=&quot;project-2-feature-detection-and-matching&quot;&gt;&lt;a href=&quot;http://www.cc.gatech.edu/~hays/compvision/results/proj2/msobrepera3/index.html&quot;&gt;Project 2: Feature detection and matching&lt;/a&gt;&lt;/h3&gt;
-
-&lt;h3 id=&quot;project-3-camera-calibration-and-fundamental-matrix-estimation-with-ransac&quot;&gt;&lt;a href=&quot;http://www.cc.gatech.edu/~hays/compvision/results/proj3/msobrepera3/index.html&quot;&gt;Project 3: Camera Calibration and Fundamental Matrix Estimation with RANSAC&lt;/a&gt;&lt;/h3&gt;
-
-&lt;h3 id=&quot;project-4-scene-recognition-with-bag-of-words&quot;&gt;&lt;a href=&quot;http://www.cc.gatech.edu/~hays/compvision/results/proj4/msobrepera3/index.html&quot;&gt;Project 4: Scene recognition with bag of words&lt;/a&gt;&lt;/h3&gt;
-</description>
-        <pubDate>Sat, 07 Nov 2015 00:00:00 +0000</pubDate>
-        <link>http://www.michaelsobrepera.com/projects/CS4495Projects.html</link>
-        <guid isPermaLink="true">http://www.michaelsobrepera.com/projects/CS4495Projects.html</guid>
-        
-        <category>computer vision</category>
-        
-        <category>CV</category>
-        
-        <category>matlab</category>
-        
-        <category>code</category>
-        
-        
-        <category>projects</category>
         
       </item>
     
@@ -840,6 +811,142 @@ depending on whether using slow or fast mode.&lt;/li&gt;
         <category>programming</category>
         
         <category>autmation</category>
+        
+        
+        <category>guides</category>
+        
+      </item>
+    
+      <item>
+        <title>Suppliers</title>
+        <description>&lt;ul&gt;
+  &lt;li&gt;General directories of Suppliers
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;http://www.thomasnet.com/&quot;&gt;ThomasNet&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Raw Materials
+    &lt;ul&gt;
+      &lt;li&gt;metals
+        &lt;ul&gt;
+          &lt;li&gt;Metal Supermarkets (there is both a national group and local stores)&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;http://www.speedymetals.com/&quot;&gt;Speedy Metals&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Plasitcs
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;http://www.tapplastics.com/&quot;&gt;TAP Plastics&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Electronics
+    &lt;ul&gt;
+      &lt;li&gt;High Level
+        &lt;ul&gt;
+          &lt;li&gt;Adafruit&lt;/li&gt;
+          &lt;li&gt;Sain Smart&lt;/li&gt;
+          &lt;li&gt;Spark Fun&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Low Level
+        &lt;ul&gt;
+          &lt;li&gt;Digikey&lt;/li&gt;
+          &lt;li&gt;Mouser&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Cabling
+        &lt;ul&gt;
+          &lt;li&gt;L-Com - connectors and wires&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;General
+    &lt;ul&gt;
+      &lt;li&gt;McMaster&lt;/li&gt;
+      &lt;li&gt;Grainger&lt;/li&gt;
+      &lt;li&gt;Essentra&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Automation
+    &lt;ul&gt;
+      &lt;li&gt;Automation Direct&lt;/li&gt;
+      &lt;li&gt;Beckhoff&lt;/li&gt;
+      &lt;li&gt;Allen Bradley&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Machine components
+    &lt;ul&gt;
+      &lt;li&gt;Misumi&lt;/li&gt;
+      &lt;li&gt;PIC Design&lt;/li&gt;
+      &lt;li&gt;80/20 - aluminum extrusion&lt;/li&gt;
+      &lt;li&gt;Rexroth - linear motion and aluminum extrusion&lt;/li&gt;
+      &lt;li&gt;Berg - motion and pins&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Pneumatics
+    &lt;ul&gt;
+      &lt;li&gt;SMC&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Tools
+    &lt;ul&gt;
+      &lt;li&gt;Grizzly - Wood and metal working&lt;/li&gt;
+      &lt;li&gt;Shars&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Safety
+    &lt;ul&gt;
+      &lt;li&gt;Banner&lt;/li&gt;
+      &lt;li&gt;Keyence&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Med Supplies
+    &lt;ul&gt;
+      &lt;li&gt;Qosina - disposables and leur locks&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Springs
+    &lt;ul&gt;
+      &lt;li&gt;Lee Springs&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Optics
+    &lt;ul&gt;
+      &lt;li&gt;Edmund Optics&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Shipping Supplies
+    &lt;ul&gt;
+      &lt;li&gt;U-Line&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Metrology
+    &lt;ul&gt;
+      &lt;li&gt;Epsilon - extensometers&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Prototyping
+    &lt;ul&gt;
+      &lt;li&gt;Shapeways&lt;/li&gt;
+      &lt;li&gt;Stratasys Direct&lt;/li&gt;
+      &lt;li&gt;ProtoLabs&lt;/li&gt;
+      &lt;li&gt;quikparts&lt;/li&gt;
+      &lt;li&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Tue, 29 Sep 2015 00:00:00 +0000</pubDate>
+        <link>http://www.michaelsobrepera.com/guides/suppliers.html</link>
+        <guid isPermaLink="true">http://www.michaelsobrepera.com/guides/suppliers.html</guid>
+        
+        <category>prototyping</category>
+        
+        <category>fabrication</category>
+        
+        <category>production</category>
         
         
         <category>guides</category>
