@@ -1,7 +1,7 @@
 ---
 layout: guide
 title:  "PowerShell"
-updated:   2017-02-20
+updated:   2017-04-14
 categories: guides
 tags:
 - windows
@@ -60,3 +60,13 @@ tags:
 
 #### PowerShell Gallery
 * [Z-Location](https://github.com/vors/ZLocation)
+
+## Remote access stuff
+
+### ssh
+use putty, which has a command "plink":
+`plink <username>@<server>`
+
+### ftp
+putty also has pscp: 
+`pscp <list of local files> <username>@<server>:<subdirectory tree>`
