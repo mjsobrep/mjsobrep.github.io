@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <base target="_parent" />
   <title>Linux</title>
-  <meta name="description" content="Restart Network System:  sudo service network-manager restart">
+  <meta name="description" content="Useful Snippets">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="http://www.michaelsobrepera.com/guides/linuxGuide.html">
@@ -315,7 +315,7 @@
 
   <header class="post-header">
     <h1 class="post-title">Linux</h1>
-    <h3>Last Updated: 22 June 2015</h3>
+    <h3>Last Updated: 3 May 2017</h3>
     <!-- borrowed from http://www.realcombiz.com/2014/01/how-to-expand-collapse-toggle-div-layer.html -->
 
 <input class="toggle-box" id="header1" type="checkbox" >
@@ -332,25 +332,47 @@
   </header>
 
   <article class="post-content">
-    <h4 id="restart-network-system">Restart Network System:</h4>
+    <h2 id="useful-snippets">Useful Snippets</h2>
+
+<h4 id="restart-network-system">Restart Network System:</h4>
 <ul>
   <li><code class="highlighter-rouge">sudo service network-manager restart</code></li>
 </ul>
 
-<h3 id="setup">Setup</h3>
+<h2 id="setup">Setup</h2>
 
-<h4 id="git">GIT</h4>
+<h3 id="git">GIT</h3>
 <ul>
   <li>http://www.ubuntumanual.org/posts/393/how-to-setup-and-use-github-in-ubuntu</li>
 </ul>
 
-<h4 id="bashrc">.bashrc</h4>
+<h3 id="bashrc">.bashrc</h3>
 
-<h5 id="load-posh-git">load posh git</h5>
-<p><code class="highlighter-rouge">source ~/Documents/posh-git-sh/git-prompt.sh</code>
-<code class="highlighter-rouge">PROMPT_COMMAND='__git_ps1 "\u@\h:\w" "\\\$ ";'$PROMPT_COMMAND</code></p>
+<h4 id="load-virtualenv-stuff">load virtualenv stuff</h4>
 
-<h5 id="load-autojump">load autojump</h5>
+<h1 id="virtualenv-and-virtualenvwrapper">virtualenv and virtualenvwrapper</h1>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">export </span><span class="nv">WORKON_HOME</span><span class="o">=</span><span class="nv">$HOME</span>/.virtualenvs
+<span class="nb">source</span> /usr/local/bin/virtualenvwrapper.sh</code></pre></figure>
+
+<h4 id="load-posh-git">load posh git</h4>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">NC</span><span class="o">=</span><span class="s1">'\033[0m'</span> <span class="c"># No Color</span>
+
+<span class="c"># Regular Colors</span>
+<span class="nv">Black</span><span class="o">=</span><span class="s1">'\033[0;30m'</span>        <span class="c"># Black</span>
+<span class="nv">Red</span><span class="o">=</span><span class="s1">'\033[0;31m'</span>          <span class="c"># Red</span>
+<span class="nv">Green</span><span class="o">=</span><span class="s1">'\033[0;32m'</span>        <span class="c"># Green</span>
+<span class="nv">Yellow</span><span class="o">=</span><span class="s1">'\033[0;33m'</span>       <span class="c"># Yellow</span>
+<span class="nv">Blue</span><span class="o">=</span><span class="s1">'\033[0;34m'</span>         <span class="c"># Blue</span>
+<span class="nv">Purple</span><span class="o">=</span><span class="s1">'\033[0;35m'</span>       <span class="c"># Purple</span>
+<span class="nv">Cyan</span><span class="o">=</span><span class="s1">'\033[0;36m'</span>         <span class="c"># Cyan</span>
+<span class="nv">White</span><span class="o">=</span><span class="s1">'\033[0;37m'</span>        <span class="c"># White</span>
+
+<span class="nb">source</span> ~/Dropbox/ConfigFiles/Linux/posh-git/git-prompt.sh
+<span class="nv">PROMPT_COMMAND</span><span class="o">=</span><span class="s1">'__posh_git_ps1 "\u@\h:\w" "${Cyan}`basename \"$VIRTUAL_ENV\"`${NC}\\\$ ";'</span><span class="nv">$PROMPT_COMMAND</span></code></pre></figure>
+
+<h4 id="load-autojump">load autojump</h4>
 <p><code class="highlighter-rouge">. /usr/share/autojump/autojump.sh</code></p>
 
   </article>
