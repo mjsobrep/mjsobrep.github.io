@@ -1,23 +1,18 @@
 language: ruby
 rvm:
-    - 2.2.0
-
+- 2.2.0
 git:
   depth: 3
-
 branches:
   except:
   - master
-
 script: bash build.sh
-
 deploy:
   skip_cleanup: true
   provider: script
   script: bash deploy.sh
   on:
     branch: deploy
-
 env:
   global:
-    - secure: bMTQBpghYZxdg78N/s8ZvKtpTXASmSrEw+VIm6U6PtN2KSkpBTeAAaJCva4i9ME2wcDlfQwDNcWLiGbJQj5SWbib8XFYsoSEG53+HPIyPyBu1Tn718bL1M4I/udaQCVP88YdQrn+ar8k14M3viYRBAihy0bc4b7bJGwHWG6sUQiht6zKrT8cKvny+iU5Nsyrdbvn2pQxOqNEjobULua2AEqCUxnPg+xaWs0RKwGJ+WVPga4jhe2Gf9GkjfBklwKc3lrtRqFrvmpySiTAW7z2XBHLn73JAuqzGAk+H9TyMU2n2Z/GgBJmxqtTlyH8qJ216MSw/9MQsBgrFRl9sI/8voZfb0sVlmSuajvkmLy283FvbjcMZONBsgtjunaOzH5CfDIGrEvcjjo4gdkOzoiIbucOB7H4nsC1hP0JdoqT+o2Lz7OGHqZ6eChXsihJdftXJvFPmv38ZuKQz+1x8rn65LEy3oZGrW9DtYUtiOOyd5fxxe5DhuJpd2cMoWofp1ecrCyZq2hTpEP/68wn+IIXjvxgNkDQEtxFkh6GMCd9yLIL/s//Bhxxy7vkamYjL//QSZ+zQV/qNQwW1V12TJHTO7xNEevlUDziW01WsLzvnffEw+bg0qW3mrm4wercVgf40Q/xj2EUV5Nv+zkEhsr9xC8v7sW9oCyv0w+POVeqva4=
+    - secure: HI0t0dTZN/AHBx1uO1gn5R64/LE91sYhCgLCB+EpamaSn9Xnz5nssJy1H0rhv6O+Y4Ygqrcvf129vdfL6U4UonH+7JijGtKzEZtEwtBUFFw4kYahnVCFwqDmXrmIC4dpWoPo1cL10Wmq7BZY661zrbgYQfCaFeYhAGN4urnzrf4RJWfOODplhTUnrTH6I8HBlp9VMkb7f+E/K3JTDLmlwuUYDRgX5o0wSeU/m7vdwP03qHHPEvDTHsVrm70t/WR8peB3Wtvmq2VzFlCpc8VxRVNe/VQ1tlgHpMbBOrzYPaf5U1S4CDgu/AXf3eK7PPK+iQD+AIFhlSKRmUM0jCCJh9KQUyeYKVWtRCy2NKkcg4LtMg2HurCC4IH/TWfmCkoXISr10QTFWNZoknV51u2XhqugEO9sRzZ3LhHrpLyLb0OYSx3BqwsuT1gjfpv+sxA/cEEg8wOV+TaDspx9MBA5/Rucd44Nb5z63cEy9VbhUvzDWh7vfajjyAhtqY4PoUISC99ZE9Ptd0TXTH0qE6qpxpjbrTysCV6XgK7cbPAaRSyckOLVr4R0LIC+IIgQNZBx931J8ptPsjhKHXRD6mNFHmILE0bf2rCceOFU4Ra3TLIugqSTeo7nmY+V3tg2spYDQsQ7iL01Q1zma4JUQ4fRXDNdmC8q2ZwRU0Z2iVw8snc=
