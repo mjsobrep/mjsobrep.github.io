@@ -21,8 +21,8 @@ tags:
 
 #### load virtualenv stuff
 
-# virtualenv and virtualenvwrapper
 {% highlight bash %}
+# virtualenv and virtualenvwrapper
 export WORKON_HOME=$HOME/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
 {% endhighlight %}
