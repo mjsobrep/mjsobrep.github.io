@@ -9,6 +9,13 @@ tags:
 - programming
 ---
 
+I am leaving this up for the sake of posterity. It should absolutely not be followed. I think it is probably best to just not use matcaffe for anything...
+
+
+
+
+
+
 Installing Caffe is a huge pain. Here is how I am doing it. I don't have a GPU, I want to be able to run in python2 and python3 as well as Matlab. I haven't tested this enough to know if it works how I want it to, I am in the process of learning caffe. This is mostly just for my notes. 
 
 There is a really good [reference](https://github.com/BVLC/caffe/wiki/Ubuntu-16.04-or-15.10-Installation-Guide) and the official (not so good) [Install Instructions](caffe.berkeleyvision.org/installation.html)
@@ -33,7 +40,7 @@ This may or may not be necessary:
 edit line 54 from `CC='gcc'` to `CC='gcc-4.9'` and edit line 69 from `CXX='g++'` to `CXX='g++-4.9'`
 
 ### General stuff
-First get all the easy s{% highlight bash %}tuff out of the way (copied from the [guide](https://github.com/BVLC/caffe/wiki/Ubuntu-16.04-or-15.10-Installation-Guide))
+First get all the easy stuff out of the way (copied from the [guide](https://github.com/BVLC/caffe/wiki/Ubuntu-16.04-or-15.10-Installation-Guide))
 
 {% highlight bash %}
 sudo apt-get update
