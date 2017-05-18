@@ -5,9 +5,345 @@
     <description>A site about stuff that I (Michael Sobrepera) work on, think, enjoy, etc...</description>
     <link>http://www.michaelsobrepera.com/</link>
     <atom:link href="http://www.michaelsobrepera.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 04 May 2017 03:13:30 +0000</pubDate>
-    <lastBuildDate>Thu, 04 May 2017 03:13:30 +0000</lastBuildDate>
+    <pubDate>Thu, 18 May 2017 05:13:42 +0000</pubDate>
+    <lastBuildDate>Thu, 18 May 2017 05:13:42 +0000</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
+    
+      <item>
+        <title>Running OpenPose on AWS</title>
+        <description>&lt;p&gt;I am doing some work that requires Pose Tracking for my thesis work (as a tool, not a goal). The pose tracking algorithim that I am currently most excited about is the &lt;a href=&quot;https://arxiv.org/pdf/1611.08050.pdf&quot;&gt;Part Affinity Field based method&lt;/a&gt;. I’m looking forward to playing with the new Facbook method too.&lt;/p&gt;
+
+&lt;p&gt;The kind folks at the CMU Perceptual Computing Lab have been kind enough to package their code into a clean library with nice wrappers called &lt;a href=&quot;https://github.com/CMU-Perceptual-Computing-Lab/openpose&quot;&gt;OpenPose&lt;/a&gt;. For now, I wanted to get the demo running in AWS. So I &lt;a href=&quot;https://github.com/mjsobrep/openpose/blob/master/Dockerfile&quot;&gt;dockerized it&lt;/a&gt; and put it up on &lt;a href=&quot;https://hub.docker.com/r/mjsobrep/openpose/&quot;&gt;docker hub&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;This was my first time using Docker or AWS, so it was a learning experience. Lets go through how you can run their code on AWS using docker to make it easier:&lt;/p&gt;
+
+&lt;h2 id=&quot;setup-ec2-instance&quot;&gt;Setup EC2 Instance&lt;/h2&gt;
+&lt;p&gt;Start of by provisioning an AWS ubuntu deep learning on a p2 instance&lt;/p&gt;
+
+&lt;p&gt;Then &lt;a href=&quot;http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html&quot;&gt;SSH&lt;/a&gt; into that machine when it is ready and do this:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.docker.com/engine/installation/linux/ubuntu/&quot;&gt;Install docker&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/NVIDIA/nvidia-docker&quot;&gt;Install NVidia Drivers&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;wget -P /tmp https://github.com/NVIDIA/nvidia-docker/releases/download/v1.0.1/nvidia-docker_1.0.1-1_amd64.deb&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;sudo dpkg -i /tmp/nvidia-docker*.deb &amp;amp;&amp;amp; rm /tmp/nvidia-docker*.deb&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;nvidia-docker run --rm nvidia/cuda nvidia-smi&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Make a place to store our data: &lt;code class=&quot;highlighter-rouge&quot;&gt;mkdir data&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;run&quot;&gt;Run&lt;/h2&gt;
+
+&lt;h3 id=&quot;docker&quot;&gt;Docker&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;sudo nvidia-docker run -v /home/ubuntu/data:/data -it mjsobrep/openpose:x1 bash&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;some-helpful-hints-while-you-are-running-in-docker&quot;&gt;Some helpful hints while you are running in Docker&lt;/h4&gt;
+&lt;p&gt;To leave the docker:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Ctrl+p&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;Ctrl+q&lt;/code&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Now we have detached from the docker, but it is still running&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Let’s see where the docker is running by running: &lt;code class=&quot;highlighter-rouge&quot;&gt;sudo docker ps&lt;/code&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Now we have the container ID&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Let’s stop it by running: &lt;code class=&quot;highlighter-rouge&quot;&gt;sudo docker stop &amp;lt;container id&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;openpose&quot;&gt;OpenPose&lt;/h3&gt;
+&lt;p&gt;You should now be in bash inside of the docker container. Lets run some examples:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Check out what options we have:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;./build/examples/openpose/openpose.bin --help&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Lets make a place for us to put the output:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;mkdir ../data/output&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;mkdir ../data/output/poses&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;./build/examples/openpose/openpose.bin --video examples/media/video.avi --write_video ../data/output/result.avi --write_pose_json ../data/output/poses --no_display&lt;/code&gt;
+    &lt;ul&gt;
+      &lt;li&gt;You could pass the &lt;code class=&quot;highlighter-rouge&quot;&gt;--num_gpu &amp;lt;#&amp;gt;&lt;/code&gt; flag to use more than 1 gpu&lt;/li&gt;
+      &lt;li&gt;This will take a while to run (maybe around 1.5 minutes on a p2.xlarge)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Hopefully, you will get a printout along the lines of:&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Real-time pose estimation demo successfully finished. Total time: 81.456782 seconds.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;using-your-own-video&quot;&gt;Using your own video&lt;/h4&gt;
+&lt;p&gt;To use your own video, simply put the video in the data folder (&lt;code class=&quot;highlighter-rouge&quot;&gt;/home/ubuntu/data&lt;/code&gt;) on the EC2 machine and change the &lt;code class=&quot;highlighter-rouge&quot;&gt;--video&lt;/code&gt; argument to OpenPose&lt;/p&gt;
+
+&lt;h2 id=&quot;getting-data-off-aws&quot;&gt;Getting data off AWS&lt;/h2&gt;
+&lt;p&gt;All of your output will be in the data folder… Now we need to get it back so we can take a look:
+Just follow this &lt;a href=&quot;http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html&quot;&gt;guide&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;stop-your-ec2&quot;&gt;Stop your EC2&lt;/h2&gt;
+&lt;p&gt;Don’t forget to stop the EC2 instance when you are done. Don’t want to spend too much money…&lt;/p&gt;
+
+&lt;h2 id=&quot;future-things-to-try&quot;&gt;Future Things to Try:&lt;/h2&gt;
+&lt;p&gt;I’m curious to try deployment using some nvidia tools, per this &lt;a href=&quot;https://github.com/NVIDIA/nvidia-docker/wiki/Deploy-on-Amazon-EC2&quot;&gt;guide&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I could come from a basic ubuntu AMI instead of the learning one and do all of &lt;a href=&quot;http://www.cs.stevens.edu/~kbatsos/awscudasetup.html&quot;&gt;this&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I’m also curious whether I could use the EC2 container service with an elastic gpu&lt;/p&gt;
+</description>
+        <pubDate>Wed, 17 May 2017 00:00:00 +0000</pubDate>
+        <link>http://www.michaelsobrepera.com/guides/openposeaws.html</link>
+        <guid isPermaLink="true">http://www.michaelsobrepera.com/guides/openposeaws.html</guid>
+        
+        <category>code</category>
+        
+        <category>AWS</category>
+        
+        <category>ML</category>
+        
+        <category>Docker</category>
+        
+        
+        <category>guides</category>
+        
+      </item>
+    
+      <item>
+        <title>Building Caffe with Matlab, Opencv3, and python2/3 with virtualenvs</title>
+        <description>&lt;p&gt;I am leaving this up for the sake of posterity. It should absolutely not be followed. I think it is probably best to just not use matcaffe for anything…&lt;/p&gt;
+
+&lt;p&gt;Installing Caffe is a huge pain. Here is how I am doing it. I don’t have a GPU, I want to be able to run in python2 and python3 as well as Matlab. I haven’t tested this enough to know if it works how I want it to, I am in the process of learning caffe. This is mostly just for my notes.&lt;/p&gt;
+
+&lt;p&gt;There is a really good &lt;a href=&quot;https://github.com/BVLC/caffe/wiki/Ubuntu-16.04-or-15.10-Installation-Guide&quot;&gt;reference&lt;/a&gt; and the official (not so good) &lt;a href=&quot;caffe.berkeleyvision.org/installation.html&quot;&gt;Install Instructions&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;some-dependencies&quot;&gt;Some dependencies:&lt;/h2&gt;
+&lt;h3 id=&quot;matlab&quot;&gt;Matlab&lt;/h3&gt;
+&lt;p&gt;Matlab installation kind of varies based on where you get it from, butmake sure it is installed&lt;/p&gt;
+
+&lt;h4 id=&quot;setting-up-mex-compilation&quot;&gt;Setting up MEX compilation&lt;/h4&gt;
+&lt;p&gt;Matlab needs an older compiler, 4.9&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo apt-get install gcc-4.9 g++-4.9
+&lt;span class=&quot;c&quot;&gt;# you may need to update alternatives&lt;/span&gt;
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.9 20
+sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.9 20
+sudo update-alternatives --config gcc
+sudo update-alternatives --config g++&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;This may or may not be necessary:
+&lt;code class=&quot;highlighter-rouge&quot;&gt;sudo gedit /usr/local/MATLAB/R2017a/bin/mexopts.sh&lt;/code&gt;
+edit line 54 from &lt;code class=&quot;highlighter-rouge&quot;&gt;CC='gcc'&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;CC='gcc-4.9'&lt;/code&gt; and edit line 69 from &lt;code class=&quot;highlighter-rouge&quot;&gt;CXX='g++'&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;CXX='g++-4.9'&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;general-stuff&quot;&gt;General stuff&lt;/h3&gt;
+&lt;p&gt;First get all the easy stuff out of the way (copied from the &lt;a href=&quot;https://github.com/BVLC/caffe/wiki/Ubuntu-16.04-or-15.10-Installation-Guide&quot;&gt;guide&lt;/a&gt;)&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install -y build-essential cmake git pkg-config
+sudo apt-get install -y libprotobuf-dev libleveldb-dev libsnappy-dev libhdf5-serial-dev protobuf-compiler
+sudo apt-get install -y libatlas-base-dev 
+sudo apt-get install -y --no-install-recommends libboost-all-dev
+sudo apt-get install -y libgflags-dev libgoogle-glog-dev liblmdb-dev
+
+&lt;span class=&quot;c&quot;&gt;# (Python general)&lt;/span&gt;
+sudo apt-get install -y python-pip
+
+&lt;span class=&quot;c&quot;&gt;# (Python 2.7 development files)&lt;/span&gt;
+sudo apt-get install -y python-dev
+&lt;span class=&quot;c&quot;&gt;# sudo apt-get install -y python-numpy python-scipy # honestly not sure that this is needed&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# (or, Python 3.5 development files)&lt;/span&gt;
+sudo apt-get install -y python3-dev
+&lt;span class=&quot;c&quot;&gt;# sudo apt-get install -y python3-numpy python3-scipy &lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# sudo apt-get install -y python-numpy python-scipy &lt;/span&gt;
+ 
+&lt;span class=&quot;c&quot;&gt;# (OpenCV 2.4)&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# sudo apt-get install -y libopencv-dev # I prefer to use 3.2&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;opencv&quot;&gt;OpenCV&lt;/h3&gt;
+&lt;p&gt;I follow this &lt;a href=&quot;http://www.pyimagesearch.com/2016/10/24/ubuntu-16-04-how-to-install-opencv/&quot;&gt;guide&lt;/a&gt; except that I use OpenCV 3.2.&lt;/p&gt;
+
+&lt;h3 id=&quot;python&quot;&gt;Python&lt;/h3&gt;
+&lt;p&gt;I chose to try to install for both python 2 and 3 in virtual environments. So:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;mkvirtualenv caffe2 -p python2
+mkvirtualenv caffe3 -p python3&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Then I went into the python folder in the caffe repo and executed: &lt;code class=&quot;highlighter-rouge&quot;&gt;for req in $(cat requirements.txt); do pip install $req; done&lt;/code&gt; for each of the virtual env (&lt;code class=&quot;highlighter-rouge&quot;&gt;workon caffe2&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;workon caffe3&lt;/code&gt;)&lt;/p&gt;
+
+&lt;h3 id=&quot;weird-naming&quot;&gt;Weird naming&lt;/h3&gt;
+&lt;p&gt;I then followed the instructions from the guide and did some sym linking:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /usr/lib/x86_64-linux-gnu
+sudo ln -s libhdf5_serial.so.10.1.0 libhdf5.so
+sudo ln -s libhdf5_serial_hl.so.10.0.2 libhdf5_hl.so &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;make-file&quot;&gt;Make File&lt;/h2&gt;
+&lt;p&gt;I then edited the makefile (first copy the example to make your working copy):&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-make&quot; data-lang=&quot;make&quot;&gt;&lt;span class=&quot;c&quot;&gt;## Refer to http://caffe.berkeleyvision.org/installation.html
+# Contributions simplifying and improving our build system are welcome!
+&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# cuDNN acceleration switch (uncomment to build with cuDNN).
+# USE_CUDNN := 1
+&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# CPU-only switch (uncomment to build without GPU support).
+&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;CPU_ONLY&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; 1
+
+&lt;span class=&quot;c&quot;&gt;# uncomment to disable IO dependencies and corresponding data layers
+# USE_OPENCV := 0
+# USE_LEVELDB := 0
+# USE_LMDB := 0
+&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# uncomment to allow MDB_NOLOCK when reading LMDB files (only if necessary)
+#	You should not set this flag if you will be reading LMDBs with any
+#	possibility of simultaneous read and write
+# ALLOW_LMDB_NOLOCK := 1
+&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Uncomment if you're using OpenCV 3
+&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;OPENCV_VERSION&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; 3
+
+&lt;span class=&quot;c&quot;&gt;# To customize your choice of compiler, uncomment and set the following.
+# N.B. the default for Linux is g++ and the default for OSX is clang++
+# CUSTOM_CXX := g++
+&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# CUDA directory contains bin/ and lib/ directories that we need.
+&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;CUDA_DIR&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; /usr/local/cuda
+&lt;span class=&quot;c&quot;&gt;# On Ubuntu 14.04, if cuda tools are installed via
+# &quot;sudo apt-get install nvidia-cuda-toolkit&quot; then use this instead:
+# CUDA_DIR := /usr
+&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# CUDA architecture setting: going with all of them.
+# For CUDA &amp;lt; 6.0, comment the *_50 through *_61 lines for compatibility.
+# For CUDA &amp;lt; 8.0, comment the *_60 and *_61 lines for compatibility.
+&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;CUDA_ARCH&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; -gencode &lt;span class=&quot;nv&quot;&gt;arch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;compute_20,code&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;sm_20 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+		-gencode &lt;span class=&quot;nv&quot;&gt;arch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;compute_20,code&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;sm_21 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+		-gencode &lt;span class=&quot;nv&quot;&gt;arch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;compute_30,code&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;sm_30 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+		-gencode &lt;span class=&quot;nv&quot;&gt;arch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;compute_35,code&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;sm_35 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+		-gencode &lt;span class=&quot;nv&quot;&gt;arch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;compute_50,code&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;sm_50 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+		-gencode &lt;span class=&quot;nv&quot;&gt;arch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;compute_52,code&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;sm_52 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+		-gencode &lt;span class=&quot;nv&quot;&gt;arch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;compute_60,code&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;sm_60 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+		-gencode &lt;span class=&quot;nv&quot;&gt;arch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;compute_61,code&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;sm_61 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+		-gencode &lt;span class=&quot;nv&quot;&gt;arch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;compute_61,code&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;compute_61
+
+&lt;span class=&quot;c&quot;&gt;# BLAS choice:
+# atlas for ATLAS (default)
+# mkl for MKL
+# open for OpenBlas
+&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;BLAS&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; atlas
+&lt;span class=&quot;c&quot;&gt;# Custom (MKL/ATLAS/OpenBLAS) include and lib directories.
+# Leave commented to accept the defaults for your choice of BLAS
+# (which should work)!
+# BLAS_INCLUDE := /path/to/your/blas
+# BLAS_LIB := /path/to/your/blas
+&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Homebrew puts openblas in a directory that is not on the standard search path
+# BLAS_INCLUDE := $(shell brew --prefix openblas)/include
+# BLAS_LIB := $(shell brew --prefix openblas)/lib
+&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# This is required only if you will compile the matlab interface.
+# MATLAB directory should contain the mex binary in /bin.
+&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;MATLAB_DIR&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; /usr/local/MATLAB/R2017a
+&lt;span class=&quot;c&quot;&gt;# MATLAB_DIR := /Applications/MATLAB_R2012b.app
+&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# NOTE: this is required only if you will compile the python interface.
+# We need to be able to find Python.h and numpy/arrayobject.h.
+&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;PYTHON_INCLUDE&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; ~/.virtualenvs/caffe2/include/python2.7 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+		~/.virtualenvs/caffe2/lib/python2.7/site-packages/numpy/core/include/
+&lt;span class=&quot;c&quot;&gt;# Anaconda Python distribution is quite popular. Include path:
+# Verify anaconda location, sometimes it's in root.
+# ANACONDA_HOME := $(HOME)/anaconda
+# PYTHON_INCLUDE := $(ANACONDA_HOME)/include \
+&lt;/span&gt;		&lt;span class=&quot;c&quot;&gt;# $(ANACONDA_HOME)/include/python2.7 \
+&lt;/span&gt;		&lt;span class=&quot;c&quot;&gt;# $(ANACONDA_HOME)/lib/python2.7/site-packages/numpy/core/include
+&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Uncomment to use Python 3 (default is Python 2)
+&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PYTHON_LIBRARIES&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; boost_python3 python3.5m
+&lt;span class=&quot;nv&quot;&gt;PYTHON_INCLUDE&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; ~/.virtualenvs/caffe3/include/python3.5m &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+                ~/.virtualenvs/caffe3/lib/python3.5/site-packages/numpy/core/include/
+
+&lt;span class=&quot;c&quot;&gt;# We need to be able to find libpythonX.X.so or .dylib.
+&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PYTHON_LIB&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; /usr/lib
+&lt;span class=&quot;c&quot;&gt;# PYTHON_LIB := $(ANACONDA_HOME)/lib
+&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Homebrew installs numpy in a non standard path (keg only)
+# PYTHON_INCLUDE += $(dir $(shell python -c 'import numpy.core; print(numpy.core.__file__)'))/include
+# PYTHON_LIB += $(shell brew --prefix numpy)/lib
+&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Uncomment to support layers written in Python (will link against Python libs)
+# WITH_PYTHON_LAYER := 1
+&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Whatever else you find you need goes here.
+&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;INCLUDE_DIRS&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$(PYTHON_INCLUDE)&lt;/span&gt; /usr/local/include &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+		/usr/include/hdf5/serial/
+&lt;span class=&quot;nv&quot;&gt;LIBRARY_DIRS&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$(PYTHON_LIB)&lt;/span&gt; /usr/local/lib /usr/lib /usr/lib/x86_64-linux-gnu/hdf5/serial &lt;span class=&quot;c&quot;&gt;#/usr/local/share/OpenCV/3rdparty/lib/&lt;/span&gt;
+
+ &lt;span class=&quot;nv&quot;&gt;LIBRARIES&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; glog gflags protobuf leveldb snappy &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+  lmdb boost_system boost_filesystem hdf5_hl hdf5 m &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+  opencv_core opencv_highgui opencv_imgproc opencv_imgcodecs opencv_videoio
+
+&lt;span class=&quot;c&quot;&gt;# If Homebrew is installed at a non standard location (for example your home directory) and you use it for general dependencies
+# INCLUDE_DIRS += $(shell brew --prefix)/include
+# LIBRARY_DIRS += $(shell brew --prefix)/lib
+&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# NCCL acceleration switch (uncomment to build with NCCL)
+# https://github.com/NVIDIA/nccl (last tested version: v1.2.3-1+cuda8.0)
+# USE_NCCL := 1
+&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Uncomment to use `pkg-config` to specify OpenCV library paths.
+# (Usually not necessary -- OpenCV libraries are normally installed in one of the above $LIBRARY_DIRS.)
+# USE_PKG_CONFIG := 1
+&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# N.B. both build and distribute dirs are cleared on `make clean`
+&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;BUILD_DIR&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; build
+&lt;span class=&quot;nv&quot;&gt;DISTRIBUTE_DIR&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; distribute
+
+&lt;span class=&quot;c&quot;&gt;# Uncomment for debugging. Does not work on OSX due to https://github.com/BVLC/caffe/issues/171
+# DEBUG := 1
+&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# The ID of the GPU that 'make runtest' will use to run unit tests.
+&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;TEST_GPUID&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; 0
+
+&lt;span class=&quot;c&quot;&gt;# enable pretty build (comment to see full commands)
+&lt;/span&gt;	&lt;span class=&quot;nv&quot;&gt;Q&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;?=&lt;/span&gt; @
+  
+  &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;build&quot;&gt;build&lt;/h2&gt;
+&lt;p&gt;Finally, I build and test:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;make all
+make &lt;span class=&quot;nb&quot;&gt;test
+&lt;/span&gt;make runtest
+make pycaffe 
+make matcaffe
+make mattest
+make distribute&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;final-touch-up-to-help-python-find-caffe&quot;&gt;Final touch up to help python find caffe&lt;/h2&gt;
+</description>
+        <pubDate>Wed, 03 May 2017 00:00:00 +0000</pubDate>
+        <link>http://www.michaelsobrepera.com/guides/buildCaffe.html</link>
+        <guid isPermaLink="true">http://www.michaelsobrepera.com/guides/buildCaffe.html</guid>
+        
+        <category>learning</category>
+        
+        <category>code</category>
+        
+        <category>programming</category>
+        
+        
+        <category>guides</category>
+        
+      </item>
     
       <item>
         <title>A chat with union reps at UPenn</title>
@@ -524,451 +860,6 @@ chmod a+x /usr/local/bin/rcode&lt;/code&gt;&lt;/pre&gt;
         
         
         <category>writings</category>
-        
-      </item>
-    
-      <item>
-        <title>Christmas List</title>
-        <description>&lt;p&gt;Every year I make a Christmas list to get shared around, they are generally pretty comical (lots of large earth movers most years). Of course my birthday is right before Christmas, so the list covers that as well. This year I also am graduating right before Christmas :)&lt;/p&gt;
-
-&lt;p&gt;I figured I would throw the list here this year. I will keep adding stuff on as I think of them. Of course no one needs to get me any of the stuff on here, but hopefully you think at least some of the items are interesting.&lt;/p&gt;
-
-&lt;h3 id=&quot;sailboat&quot;&gt;Sailboat&lt;/h3&gt;
-&lt;p&gt;Yeah, I find myself without a sailboat. That is no good. I haven’t figured out where I would sail, how I would get a boat there, etc… But I sure would like to start sailing again. I guess I could take the cheaper option and join the GT Sailing club… but…&lt;/p&gt;
-
-&lt;h3 id=&quot;money&quot;&gt;Money&lt;/h3&gt;
-
-&lt;h3 id=&quot;computer&quot;&gt;Computer&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/B0163HP38W&quot;&gt;surface pro dock&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;My external monitor is starting to look rough. It would be nice to have something to keep up with the PPI on my surface Pro 3.&lt;/li&gt;
-  &lt;li&gt;I really want a machine that I can run Virtual Machines on top of&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://twiddler.tekgear.com/&quot;&gt;Twiddler&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;A holo lens&lt;/li&gt;
-  &lt;li&gt;SurfaceBook&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;tools-as-always&quot;&gt;Tools (as always)&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;A &lt;a href=&quot;http://en-us.fluke.com/products/portable-oscilloscopes/&quot;&gt;scopemeter&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://glowforge.com/&quot;&gt;Glowforge&lt;/a&gt; - cool laser cutter, currently on sale&lt;/li&gt;
-  &lt;li&gt;Welding equipment&lt;/li&gt;
-  &lt;li&gt;A CNC lathe and/or mill
-    &lt;ul&gt;
-      &lt;li&gt;Obviously something professional like a Haas would be sweet, but there are also people like Tormach that make pretty slick machines for cheap&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Batteries for drills&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.mcmachinery.com/products-and-solutions/category/laser/five-axis-laser/&quot;&gt;A slightly more professional laser cutter&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Hehe, watch the video&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Plasma cutter&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=s9IdZ2pI5dA&quot;&gt;ooh, fancy&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;house-stuff&quot;&gt;House stuff&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Big bowls&lt;/li&gt;
-  &lt;li&gt;Juicer - maybe I would become healthy :P&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;shoes---my-shoes-are-at-their-end-need-something-new&quot;&gt;Shoes - My shoes are at their end, need something new&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Running
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;http://www.merrell.com/US/en/bare-access-4/17570M.html?dwvar_17570M_color=J03927&quot;&gt;bare-access-4&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;http://www.merrell.com/US/en/trail-glove-3/17571M.html?dwvar_17571M_color=J03905&quot;&gt;trail-glove-3&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;http://www.merrell.com/US/en/vapor-glove-2/17572M.html?dwvar_17572M_color=J03911#start=1&quot;&gt;vapor-glove-2&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Tennis&lt;/li&gt;
-  &lt;li&gt;Crossover
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;http://www.lemsshoes.com/mens-nine2five-coffee-cream.html&quot;&gt;Nine2Five coffee and cream&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;http://www.lemsshoes.com/mens-nine2five-mocha.html&quot;&gt;Nine2Five Mocha&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;Toms?&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Some nice leather combat boots&lt;/li&gt;
-  &lt;li&gt;Good all weather hiking boots&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;mobile-electronics&quot;&gt;Mobile Electronics&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;My phone is really sucking it up, time for a new one
-    &lt;ul&gt;
-      &lt;li&gt;I’ll have to see what new phones come out, I am thinking a Windows Phone 10&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Microsoft Band&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;camera-i-have-a-nikon-d7200&quot;&gt;Camera (I have a Nikon D7200)&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;del&gt;DSLR with video capability?&lt;/del&gt;&lt;/li&gt;
-  &lt;li&gt;Lenses
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;http://www.nikonusa.com/en/nikon-products/product/refurbished-camera-lenses/af-s-nikkor-50mm-f%252f1.8g-refurbished.html&quot;&gt;Nikon AF-S 50mm/f1.8&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;http://www.nikonusa.com/en/nikon-products/product/refurbished-camera-lenses/af-s-dx-nikkor-35mm-f%252f1.8g-refurbished.html&quot;&gt;Nikon AF-S 35mm/f1.8&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Lens Hood for &lt;a href=&quot;http://www.amazon.com/dp/B00ECGX8FM/&quot;&gt;Nikon 18-140 lens&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Tripod&lt;/li&gt;
-  &lt;li&gt;Flash&lt;/li&gt;
-  &lt;li&gt;Diffuser&lt;/li&gt;
-  &lt;li&gt;Creative Cloud photographer subscription&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;gaming&quot;&gt;Gaming&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;XBOX one&lt;/li&gt;
-  &lt;li&gt;Playstation 4&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;cycling&quot;&gt;Cycling&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;leg warmers&lt;/li&gt;
-  &lt;li&gt;arm warmers&lt;/li&gt;
-  &lt;li&gt;base layer&lt;/li&gt;
-  &lt;li&gt;windbreaker&lt;/li&gt;
-  &lt;li&gt;helmet&lt;/li&gt;
-  &lt;li&gt;Bike Rack&lt;/li&gt;
-  &lt;li&gt;Saddle Bags&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;other-stuff&quot;&gt;Other stuff&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Cammelback&lt;/li&gt;
-  &lt;li&gt;Gun
-    &lt;ul&gt;
-      &lt;li&gt;and a gun safe&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Motorcycle&lt;/li&gt;
-  &lt;li&gt;Jump training&lt;/li&gt;
-  &lt;li&gt;Pilot training&lt;/li&gt;
-  &lt;li&gt;Scuba training&lt;/li&gt;
-  &lt;li&gt;Bike trailer for Abita:
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/B00B3HMH2I/&quot;&gt;More industrial&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/B008CNK97G&quot;&gt;Like ones for kids&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Water Rover:
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://www.waterrover.com/&quot;&gt;website&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;http://www.amazon.com/dp/B0038C599Y/&quot;&gt;amazon&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;White board markers&lt;/li&gt;
-  &lt;li&gt;Umbrella&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Sun, 04 Oct 2015 00:00:00 +0000</pubDate>
-        <link>http://www.michaelsobrepera.com/blog/ChristmasList.html</link>
-        <guid isPermaLink="true">http://www.michaelsobrepera.com/blog/ChristmasList.html</guid>
-        
-        <category>Presents</category>
-        
-        <category>Christmas</category>
-        
-        <category>Fun</category>
-        
-        
-        <category>blog</category>
-        
-      </item>
-    
-      <item>
-        <title>KUKA</title>
-        <description>&lt;p&gt;There is a free editor called
-&lt;a href=&quot;http://www.orangeapps.de/?lng=en&amp;amp;page=apps/orangeedit&quot;&gt;OrangeEdit&lt;/a&gt; which can
-make writing KRL code a bit easier.&lt;/p&gt;
-
-&lt;h2 id=&quot;kr-c2&quot;&gt;KR C2&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Accessing windows: &lt;code class=&quot;highlighter-rouge&quot;&gt;CTRL+ESC&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Turning it off: If the batteries are good, pull the switch down. Can change options for whether it will hibernate, cold shutdown, or warm shutdown&lt;/li&gt;
-  &lt;li&gt;Backing up:
-    &lt;ul&gt;
-      &lt;li&gt;Put in a USB DRIVE&lt;/li&gt;
-      &lt;li&gt;Go into Windows (&lt;code class=&quot;highlighter-rouge&quot;&gt;CTRL+ESC&lt;/code&gt;)&lt;/li&gt;
-      &lt;li&gt;run and configure via: C:\KRC\UTIL\KRCCONFIGURATOR\KrcConfigurator.exe&lt;/li&gt;
-      &lt;li&gt;As an expert, file-&amp;gt;archive-&amp;gt;all&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;rsi-specifically-rsi-rsi-233&quot;&gt;RSI (Specifically RSI RSI 2.3.3)&lt;/h3&gt;
-
-&lt;h4 id=&quot;setup-incomplete&quot;&gt;Setup (incomplete)&lt;/h4&gt;
-&lt;p&gt;This will help you setup and run the KUKA provided RSI example for Ethernet
-control. You will need a PC running Windows (preferably 7. You can find the KUKA RSI
-examples as well as RSI visual in: &lt;code class=&quot;highlighter-rouge&quot;&gt;D:\KUKA_OPT\RSI&lt;/code&gt; on your KRC2 controller
-(after you have installed RSI). Specifically, we will be
-working with the example at &lt;code class=&quot;highlighter-rouge&quot;&gt;D:\KUKA_OPT\RSI\DOC\Examples\Ethernet&lt;/code&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Logon as an expert user&lt;/li&gt;
-  &lt;li&gt;Press &lt;code class=&quot;highlighter-rouge&quot;&gt;ctrl&lt;/code&gt;+&lt;code class=&quot;highlighter-rouge&quot;&gt;esc&lt;/code&gt; to access windows&lt;/li&gt;
-  &lt;li&gt;Press &lt;code class=&quot;highlighter-rouge&quot;&gt;My Computer&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Copy &lt;code class=&quot;highlighter-rouge&quot;&gt;D:\KUKA_OPT\RSI\DOC\Example\RealtimeEthernet\Server_app\ServerApplication.exe&lt;/code&gt; to the
-external windows machine via USB&lt;/li&gt;
-  &lt;li&gt;Copy &lt;code class=&quot;highlighter-rouge&quot;&gt;RSIEthernet.dat&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;RSIEthernet.src&lt;/code&gt; from 
-&lt;code class=&quot;highlighter-rouge&quot;&gt;D:\KUKA_OPT\RSI\DOC\Example\RealtimeEthernet\SRC_KRL\PROGRAM&lt;/code&gt; to
-the main programs folder&lt;/li&gt;
-  &lt;li&gt;Copy ?.xml&lt;/li&gt;
-  &lt;li&gt;Modify vx win to say:
-[Boot]
-Bootline=elPci(0,1)pc:vxworks h=192.0.1.2 b=192.0.1.1 e=172.0.1.1 u=target pw=vxworks&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;TODO: Finish this up&lt;/p&gt;
-
-&lt;h2 id=&quot;kr-c4&quot;&gt;KR C4&lt;/h2&gt;
-
-&lt;h3 id=&quot;important-commands&quot;&gt;Important commands:&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;View Windows : RobotKey-&amp;gt;Startup-&amp;gt;Service-&amp;gt;Minimize HMI&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.robot-forum.com/robotforum/kuka-robot-forum/krc4-logout-time/&quot;&gt;Change Logout time&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;rsi-specifically-rsi-32&quot;&gt;RSI (Specifically RSI 32)&lt;/h3&gt;
-
-&lt;h4 id=&quot;setup&quot;&gt;Setup&lt;/h4&gt;
-&lt;p&gt;This will help you setup and run the KUKA provided RSI example for Ethernet
-control. You will need a PC running modern Windows. You can find the KUKA RSI
-examples as well as RSI visual in: &lt;code class=&quot;highlighter-rouge&quot;&gt;D:\KUKA_OPT\RSI&lt;/code&gt; on your KRC4 controller
-(after you have installed RSI). Specifically, we will be
-working with the example at &lt;code class=&quot;highlighter-rouge&quot;&gt;D:\KUKA_OPT\RSI\DOC\Examples\Ethernet&lt;/code&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Connect NIC on PC to KLI port in controller via CAT 5 cable&lt;/li&gt;
-  &lt;li&gt;Copy files from &lt;code class=&quot;highlighter-rouge&quot;&gt;D:\KUKA_OPT\RSI\DOC\Examples\Ethernet\Config&lt;/code&gt; to
-&lt;code class=&quot;highlighter-rouge&quot;&gt;C:\KRC\Roboter\Config\user\common\SensorInterface&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Modify the &lt;code class=&quot;highlighter-rouge&quot;&gt;RSI_EthernetConfig.xml&lt;/code&gt; file to have the &lt;code class=&quot;highlighter-rouge&quot;&gt;IP_NUMBER&lt;/code&gt; set to 10.100.1.2&lt;/li&gt;
-  &lt;li&gt;Enter &lt;code class=&quot;highlighter-rouge&quot;&gt;Expert Mode&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Add a new virtual adapter for windows if one does not already exist (This
- will be the KLI adapter) This can be done manually:
-    &lt;ol&gt;
-      &lt;li&gt;RobotButton -&amp;gt; Startup -&amp;gt; Network Configuration&lt;/li&gt;
-      &lt;li&gt;The first page should say: &lt;code class=&quot;highlighter-rouge&quot;&gt;Fixed IP Address&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;172.31.1.147&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;255.255.255.0&lt;/code&gt;,
-&lt;code class=&quot;highlighter-rouge&quot;&gt;172.31.1.47&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;Click &lt;code class=&quot;highlighter-rouge&quot;&gt;Advanced&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;Select the adapter for the 172.31.1.147 adapter and click &lt;code class=&quot;highlighter-rouge&quot;&gt;windows interface&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;Click &lt;code class=&quot;highlighter-rouge&quot;&gt;Add interface&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;Change the new interface to be named &lt;code class=&quot;highlighter-rouge&quot;&gt;RSI&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;Set the address type to &lt;code class=&quot;highlighter-rouge&quot;&gt;real-time IP address&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;Set the IP address to &lt;code class=&quot;highlighter-rouge&quot;&gt;10.100.1.1&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;Set the subnet mask to &lt;code class=&quot;highlighter-rouge&quot;&gt;255.255.255.0&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;Click &lt;code class=&quot;highlighter-rouge&quot;&gt;User-defined filters&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;Add a filter set to type &lt;code class=&quot;highlighter-rouge&quot;&gt;IP protocol&lt;/code&gt;, address: &lt;code class=&quot;highlighter-rouge&quot;&gt;10.100.1.1&lt;/code&gt;, subnet:
-&lt;code class=&quot;highlighter-rouge&quot;&gt;255.255.255.0&lt;/code&gt;, parameters: &lt;code class=&quot;highlighter-rouge&quot;&gt;17&lt;/code&gt;&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;This can also be done automatically:
-    &lt;ol&gt;
-      &lt;li&gt;Minimize the HMI (startup-&amp;gt;service-&amp;gt;minimize HMI)&lt;/li&gt;
-      &lt;li&gt;Click the windows button -&amp;gt; all programs -&amp;gt; RSI-Network&lt;/li&gt;
-      &lt;li&gt;Under RSI Ethernet, select &lt;code class=&quot;highlighter-rouge&quot;&gt;New&lt;/code&gt; then click &lt;code class=&quot;highlighter-rouge&quot;&gt;Edit&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;Type in &lt;code class=&quot;highlighter-rouge&quot;&gt;10.100.1.1&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;Check to see that everything got setup properly per the manual instructions&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;On the PC, set the IP address to &lt;code class=&quot;highlighter-rouge&quot;&gt;10.100.1.2&lt;/code&gt;, subnet to &lt;code class=&quot;highlighter-rouge&quot;&gt;255.255.255.0&lt;/code&gt;,
-Default gateway to &lt;code class=&quot;highlighter-rouge&quot;&gt;10.100.1.1&lt;/code&gt;, turn of DHCP&lt;/li&gt;
-  &lt;li&gt;Copy the &lt;code class=&quot;highlighter-rouge&quot;&gt;RSI_Ethernet.src&lt;/code&gt; file from
-&lt;code class=&quot;highlighter-rouge&quot;&gt;D:\KUKA_OPT\RSI\DOC\Examples\Ethernet\&lt;/code&gt; to the KRC4 programs folder.&lt;/li&gt;
-  &lt;li&gt;Alter the home points in the &lt;code class=&quot;highlighter-rouge&quot;&gt;RSI_Ethernet.src&lt;/code&gt; file to be appropriate for
-your setup.&lt;/li&gt;
-  &lt;li&gt;Copy the &lt;code class=&quot;highlighter-rouge&quot;&gt;D:\KUKA_OPT\RSI\DOC\Examples\Ethernet\Server.exe&lt;/code&gt; file to your
-computer.&lt;/li&gt;
-  &lt;li&gt;Run the &lt;code class=&quot;highlighter-rouge&quot;&gt;Server.exe&lt;/code&gt; file, and press the play button&lt;/li&gt;
-  &lt;li&gt;Place the robot into automatic mode&lt;/li&gt;
-  &lt;li&gt;Run the &lt;code class=&quot;highlighter-rouge&quot;&gt;RSI_Ethernet.src&lt;/code&gt; file on the KRC4&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;If you have problems, there is some debugging you can do:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Try pinging in both directions
-    &lt;ul&gt;
-      &lt;li&gt;From your PC: &lt;code class=&quot;highlighter-rouge&quot;&gt;windowskey&lt;/code&gt;+&lt;code class=&quot;highlighter-rouge&quot;&gt;R&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;cmd.exe&lt;/code&gt;-&amp;gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;enter&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;ping 10.100.1.1&lt;/code&gt;-&amp;gt;enter&lt;/li&gt;
-      &lt;li&gt;From KRC4:
-        &lt;ol&gt;
-          &lt;li&gt;Minimize HMI&lt;/li&gt;
-          &lt;li&gt;Press windows button&lt;/li&gt;
-          &lt;li&gt;Select &lt;code class=&quot;highlighter-rouge&quot;&gt;All Programs&lt;/code&gt;&lt;/li&gt;
-          &lt;li&gt;Select &lt;code class=&quot;highlighter-rouge&quot;&gt;Accessories&lt;/code&gt;&lt;/li&gt;
-          &lt;li&gt;Select &lt;code class=&quot;highlighter-rouge&quot;&gt;cmd&lt;/code&gt;&lt;/li&gt;
-          &lt;li&gt;Type &lt;code class=&quot;highlighter-rouge&quot;&gt;ping 10.100.1.2&lt;/code&gt;-&amp;gt;enter&lt;/li&gt;
-        &lt;/ol&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Try disabling the firewall on your PC&lt;/li&gt;
-  &lt;li&gt;Check the Network Configuration page on the KRC4 for accuracy&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;just-some-info&quot;&gt;Just some info&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;Always uses UDP&lt;/li&gt;
-  &lt;li&gt;Configured via XML files (should use RSI visual as an abstraction to a GUI)
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;project&gt;.rsi
-&lt;/project&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;project&gt;.rsi.diagram
-&lt;/project&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;project&gt;.rsi.xml
-&lt;/project&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Order of packets is very Important&lt;/li&gt;
-  &lt;li&gt;The RSI Context can do a lot of different types of signal processing
-    &lt;ul&gt;
-      &lt;li&gt;Setup via RSI visual&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Ethernet Object
-    &lt;ul&gt;
-      &lt;li&gt;64 I/O points&lt;/li&gt;
-      &lt;li&gt;Configured via XML file (pg 43)
-        &lt;ul&gt;
-          &lt;li&gt;Referenced by Ethernet Object in RSI visual&lt;/li&gt;
-          &lt;li&gt;Keywords:
-            &lt;ul&gt;
-              &lt;li&gt;DEF_RIst
-                &lt;ul&gt;
-                  &lt;li&gt;Cartesian actual position&lt;/li&gt;
-                &lt;/ul&gt;
-              &lt;/li&gt;
-              &lt;li&gt;DEF_RSol
-                &lt;ul&gt;
-                  &lt;li&gt;Cartesian setpoint&lt;/li&gt;
-                &lt;/ul&gt;
-              &lt;/li&gt;
-              &lt;li&gt;DEF_Delay
-                &lt;ul&gt;
-                  &lt;li&gt;Number of late data packets&lt;/li&gt;
-                &lt;/ul&gt;
-              &lt;/li&gt;
-              &lt;li&gt;additional on pg 47-48&lt;/li&gt;
-              &lt;li&gt;DEF_EStr
-                &lt;ul&gt;
-                  &lt;li&gt;Allows writing of error and notifications on the controller&lt;/li&gt;
-                  &lt;li&gt;
-                    &lt;EStr&gt;xxx&amp;lt;/Estr&amp;gt;
-&lt;/EStr&gt;
-                    &lt;ul&gt;
-                      &lt;li&gt;Writes a notification&lt;/li&gt;
-                    &lt;/ul&gt;
-                  &lt;/li&gt;
-                  &lt;li&gt;
-                    &lt;EStr&gt;Error:xxx&lt;/EStr&gt;
-                    &lt;ul&gt;
-                      &lt;li&gt;Acknowledgement message&lt;/li&gt;
-                      &lt;li&gt;Will stop the robot&lt;/li&gt;
-                    &lt;/ul&gt;
-                  &lt;/li&gt;
-                  &lt;li&gt;
-                    &lt;EStr /&gt;
-
-                    &lt;ul&gt;
-                      &lt;li&gt;No message/error&lt;/li&gt;
-                    &lt;/ul&gt;
-                  &lt;/li&gt;
-                &lt;/ul&gt;
-              &lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Server (computer) must respond to client (KR C4) within either 4 or 12 ms
-depending on whether using slow or fast mode.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Can perform corrections on movements within a program. When in IPO mode, this only works on lin and circ moves.&lt;/li&gt;
-  &lt;li&gt;Can do motion control from external system (still called a correction)
-    &lt;ul&gt;
-      &lt;li&gt;Can be absolute (takes pose at RSI_ON as &amp;lt;0…0&amp;gt;)&lt;/li&gt;
-      &lt;li&gt;Can be relative (from current position)&lt;/li&gt;
-      &lt;li&gt;RSI_MOVECORR()&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Safety
-    &lt;ul&gt;
-      &lt;li&gt;Software limits will work (per manual pg 21)&lt;/li&gt;
-      &lt;li&gt;There are limits on MAX corrections
-        &lt;ul&gt;
-          &lt;li&gt;These can easily get in the way though&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Global Variables
-    &lt;ul&gt;
-      &lt;li&gt;RSIERRMSG
-        &lt;ul&gt;
-          &lt;li&gt;True: RSI Errors are displayed on the TP&lt;/li&gt;
-          &lt;li&gt;False: No messages, errors must be handled by the KRL program&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;RSITECHIDX
-    &lt;ul&gt;
-      &lt;li&gt;Defines which function generator RSI will use&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;RSI monitor
-    &lt;ul&gt;
-      &lt;li&gt;Can be used to visualize, monitor, and record signals across RSI Interface&lt;/li&gt;
-      &lt;li&gt;Display-&amp;gt;RSI monitor&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Logging
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;C:\KRC\Roboter\config\user\common\Logging-RSI.xml&lt;/code&gt;
-        &lt;ul&gt;
-          &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;class Name = &quot;RSILogger | LogLevel=[&amp;lt;error&amp;gt;|&amp;lt;info&amp;gt;]&quot;&lt;/code&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;One liner guide on pg 69&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;what-do-you-need-to-use-rsi&quot;&gt;What do you need to use RSI:&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;Robot Sensor Interface on KRC4&lt;/li&gt;
-  &lt;li&gt;An external windows PC with RSI visual for setup (can use linux et al for
-  actual running).&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Thu, 01 Oct 2015 00:00:00 +0000</pubDate>
-        <link>http://www.michaelsobrepera.com/guides/kuka.html</link>
-        <guid isPermaLink="true">http://www.michaelsobrepera.com/guides/kuka.html</guid>
-        
-        <category>robotics</category>
-        
-        <category>industrial robotics</category>
-        
-        <category>code</category>
-        
-        <category>programming</category>
-        
-        <category>autmation</category>
-        
-        
-        <category>guides</category>
         
       </item>
     
