@@ -411,11 +411,11 @@ hr {
 /**
  * Specials for home page
  */
-.home p {
-  font-size: 26px; }
+.big-home p {
+  font-size: 22px; }
   @media screen and (max-width: 800px) {
-    .home p {
-      font-size: 22px; } }
+    .big-home p {
+      font-size: 18px; } }
 
 /**
  * Site header
