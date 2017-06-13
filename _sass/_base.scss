@@ -495,12 +495,12 @@ background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(255, 255, 255
 /**
  * Specials for home page
  */
-.home {
+.big-home {
     p{
-        font-size: 26px;
+        font-size: 22px;
 
         @include media-query($on-laptop) {
-            font-size: 22px;
+            font-size: 18px;
         }
     }
 } 
