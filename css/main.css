@@ -409,6 +409,15 @@ hr {
   font-size: 16pt; }
 
 /**
+ * Specials for home page
+ */
+.home p {
+  font-size: 26px; }
+  @media screen and (max-width: 800px) {
+    .home p {
+      font-size: 22px; } }
+
+/**
  * Site header
  */
 .site-header {
