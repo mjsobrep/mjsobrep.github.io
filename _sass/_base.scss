@@ -491,3 +491,15 @@ background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(255, 255, 255
 .calListItem{
     font-size: 16pt;
 }
+
+/**
+ * Specials for home page
+ */
+.home-page {
+    p{
+        font-size: 26px;
+
+        @include media-query($on-laptop) {
+            font-size: 22px;
+        }
+    }
