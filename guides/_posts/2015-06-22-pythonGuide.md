@@ -1,7 +1,7 @@
 ---
 layout: guide
 title:  "Python"
-updated:   2015-06-25
+updated:   2017-06-29
 categories: guides
 tags:
 - python
@@ -31,3 +31,4 @@ tags:
 #### INSTALL PACKAGES:
 * PackageManager (PIP): `sudo apt-get install python-pip`
 * Serial: `pip install pyserial`
+* [Guide to making packages](https://packaging.python.org/)
