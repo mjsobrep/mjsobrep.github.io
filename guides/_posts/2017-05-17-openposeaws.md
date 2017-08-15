@@ -2,6 +2,7 @@
 layout: guide
 title:  "Running OpenPose on AWS"
 categories: guides
+updated: 2017-08-14
 tags:
 - code
 - AWS
@@ -11,7 +12,7 @@ tags:
 
 I am doing some work that requires Pose Tracking for my thesis work (as a tool, not a goal). The pose tracking algorithim that I am currently most excited about is the [Part Affinity Field based method](https://arxiv.org/pdf/1611.08050.pdf). I'm looking forward to playing with the new Facbook method too. 
 
-The kind folks at the CMU Perceptual Computing Lab have been kind enough to package their code into a clean library with nice wrappers called [OpenPose](https://github.com/CMU-Perceptual-Computing-Lab/openpose). For now, I wanted to get the demo running in AWS. So I [dockerized it](https://github.com/mjsobrep/openpose/blob/master/Dockerfile) and put it up on [docker hub](https://hub.docker.com/r/mjsobrep/openpose/).
+The kind folks at the CMU Perceptual Computing Lab have been kind enough to package their code into a clean library with nice wrappers called [OpenPose](https://github.com/CMU-Perceptual-Computing-Lab/openpose). For now, I wanted to get the demo running in AWS. So I [dockerized it](https://github.com/mjsobrep/DockerFiles-public/blob/master/openpose/Dockerfile) and put it up on [docker hub](https://hub.docker.com/r/mjsobrep/openpose/).
 
 This was my first time using Docker or AWS, so it was a learning experience. Lets go through how you can run their code on AWS using docker to make it easier:
 
