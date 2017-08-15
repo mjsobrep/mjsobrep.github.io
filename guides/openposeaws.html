@@ -323,7 +323,7 @@
 
   <header class="post-header">
     <h1 class="post-title">Running OpenPose on AWS</h1>
-    <p class="post-meta">May 17, 2017 • updated: Aug 14, 2017</p>
+    <p class="post-meta">May 17, 2017 • updated: Aug 15, 2017</p>
     <!-- borrowed from http://www.realcombiz.com/2014/01/how-to-expand-collapse-toggle-div-layer.html -->
 
 <input class="toggle-box" id="header1" type="checkbox" >
@@ -372,7 +372,7 @@
 <h2 id="run">Run</h2>
 
 <h3 id="docker">Docker</h3>
-<p><code class="highlighter-rouge">sudo nvidia-docker run -v /home/ubuntu/data:/data -it mjsobrep/openpose:x1 bash</code></p>
+<p><code class="highlighter-rouge">sudo nvidia-docker run -v /home/ubuntu/data:/data -it mjsobrep/openpose:latest bash</code></p>
 
 <h4 id="some-helpful-hints-while-you-are-running-in-docker">Some helpful hints while you are running in Docker</h4>
 <p>To leave the docker:</p>
@@ -404,7 +404,7 @@
       <li><code class="highlighter-rouge">mkdir ../data/output/poses</code></li>
     </ul>
   </li>
-  <li><code class="highlighter-rouge">./build/examples/openpose/openpose.bin --video examples/media/video.avi --write_video ../data/output/result.avi --write_pose_json ../data/output/poses --no_display</code>
+  <li><code class="highlighter-rouge">./build/examples/openpose/openpose.bin --video examples/media/video.avi --write_video ../data/output/result.avi --write_keypoint_json ../data/output/poses --no_display</code>
     <ul>
       <li>You could pass the <code class="highlighter-rouge">--num_gpu &lt;#&gt;</code> flag to use more than 1 gpu</li>
       <li>This will take a while to run (maybe around 1.5 minutes on a p2.xlarge)</li>

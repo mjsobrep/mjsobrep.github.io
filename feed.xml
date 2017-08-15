@@ -5,8 +5,8 @@
     <description>A site about stuff that I (Michael Sobrepera) work on, think, enjoy, etc...</description>
     <link>http://www.michaelsobrepera.com/</link>
     <atom:link href="http://www.michaelsobrepera.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 15 Aug 2017 04:03:20 +0000</pubDate>
-    <lastBuildDate>Tue, 15 Aug 2017 04:03:20 +0000</lastBuildDate>
+    <pubDate>Tue, 15 Aug 2017 17:48:25 +0000</pubDate>
+    <lastBuildDate>Tue, 15 Aug 2017 17:48:25 +0000</lastBuildDate>
     <generator>Jekyll v3.5.2</generator>
     
       <item>
@@ -37,7 +37,7 @@
 &lt;h2 id=&quot;run&quot;&gt;Run&lt;/h2&gt;
 
 &lt;h3 id=&quot;docker&quot;&gt;Docker&lt;/h3&gt;
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;sudo nvidia-docker run -v /home/ubuntu/data:/data -it mjsobrep/openpose:x1 bash&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;sudo nvidia-docker run -v /home/ubuntu/data:/data -it mjsobrep/openpose:latest bash&lt;/code&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;some-helpful-hints-while-you-are-running-in-docker&quot;&gt;Some helpful hints while you are running in Docker&lt;/h4&gt;
 &lt;p&gt;To leave the docker:&lt;/p&gt;
@@ -69,7 +69,7 @@
       &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;mkdir ../data/output/poses&lt;/code&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;./build/examples/openpose/openpose.bin --video examples/media/video.avi --write_video ../data/output/result.avi --write_pose_json ../data/output/poses --no_display&lt;/code&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;./build/examples/openpose/openpose.bin --video examples/media/video.avi --write_video ../data/output/result.avi --write_keypoint_json ../data/output/poses --no_display&lt;/code&gt;
     &lt;ul&gt;
       &lt;li&gt;You could pass the &lt;code class=&quot;highlighter-rouge&quot;&gt;--num_gpu &amp;lt;#&amp;gt;&lt;/code&gt; flag to use more than 1 gpu&lt;/li&gt;
       &lt;li&gt;This will take a while to run (maybe around 1.5 minutes on a p2.xlarge)&lt;/li&gt;
