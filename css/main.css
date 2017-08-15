@@ -211,7 +211,7 @@ pre {
 .nineSixBox:before {
   content: "";
   display: block;
-  padding-top: 177.77778%; }
+  padding-top: 177.7777777778%; }
 
 .mediaContent {
   position: absolute;
@@ -403,7 +403,7 @@ img.postBox {
 hr {
   border: 0;
   height: 3px;
-  background-image: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.75), white, rgba(255, 255, 255, 0.75), transparent); }
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.75), white, rgba(255, 255, 255, 0.75), rgba(0, 0, 0, 0)); }
 
 .calListItem {
   font-size: 16pt; }

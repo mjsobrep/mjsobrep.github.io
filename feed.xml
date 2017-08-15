@@ -5,15 +5,15 @@
     <description>A site about stuff that I (Michael Sobrepera) work on, think, enjoy, etc...</description>
     <link>http://www.michaelsobrepera.com/</link>
     <atom:link href="http://www.michaelsobrepera.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 29 Jun 2017 18:06:16 +0000</pubDate>
-    <lastBuildDate>Thu, 29 Jun 2017 18:06:16 +0000</lastBuildDate>
-    <generator>Jekyll v3.5.0</generator>
+    <pubDate>Tue, 15 Aug 2017 04:03:20 +0000</pubDate>
+    <lastBuildDate>Tue, 15 Aug 2017 04:03:20 +0000</lastBuildDate>
+    <generator>Jekyll v3.5.2</generator>
     
       <item>
         <title>Running OpenPose on AWS</title>
         <description>&lt;p&gt;I am doing some work that requires Pose Tracking for my thesis work (as a tool, not a goal). The pose tracking algorithim that I am currently most excited about is the &lt;a href=&quot;https://arxiv.org/pdf/1611.08050.pdf&quot;&gt;Part Affinity Field based method&lt;/a&gt;. I’m looking forward to playing with the new Facbook method too.&lt;/p&gt;
 
-&lt;p&gt;The kind folks at the CMU Perceptual Computing Lab have been kind enough to package their code into a clean library with nice wrappers called &lt;a href=&quot;https://github.com/CMU-Perceptual-Computing-Lab/openpose&quot;&gt;OpenPose&lt;/a&gt;. For now, I wanted to get the demo running in AWS. So I &lt;a href=&quot;https://github.com/mjsobrep/openpose/blob/master/Dockerfile&quot;&gt;dockerized it&lt;/a&gt; and put it up on &lt;a href=&quot;https://hub.docker.com/r/mjsobrep/openpose/&quot;&gt;docker hub&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The kind folks at the CMU Perceptual Computing Lab have been kind enough to package their code into a clean library with nice wrappers called &lt;a href=&quot;https://github.com/CMU-Perceptual-Computing-Lab/openpose&quot;&gt;OpenPose&lt;/a&gt;. For now, I wanted to get the demo running in AWS. So I &lt;a href=&quot;https://github.com/mjsobrep/DockerFiles-public/blob/master/openpose/Dockerfile&quot;&gt;dockerized it&lt;/a&gt; and put it up on &lt;a href=&quot;https://hub.docker.com/r/mjsobrep/openpose/&quot;&gt;docker hub&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;This was my first time using Docker or AWS, so it was a learning experience. Lets go through how you can run their code on AWS using docker to make it easier:&lt;/p&gt;
 
