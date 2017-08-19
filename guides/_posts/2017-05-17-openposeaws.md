@@ -2,6 +2,7 @@
 layout: guide
 title:  "Running OpenPose on AWS"
 categories: guides
+updated: 2017-08-15
 tags:
 - code
 - AWS
@@ -11,7 +12,7 @@ tags:
 
 I am doing some work that requires Pose Tracking for my thesis work (as a tool, not a goal). The pose tracking algorithim that I am currently most excited about is the [Part Affinity Field based method](https://arxiv.org/pdf/1611.08050.pdf). I'm looking forward to playing with the new Facbook method too. 
 
-The kind folks at the CMU Perceptual Computing Lab have been kind enough to package their code into a clean library with nice wrappers called [OpenPose](https://github.com/CMU-Perceptual-Computing-Lab/openpose). For now, I wanted to get the demo running in AWS. So I [dockerized it](https://github.com/mjsobrep/openpose/blob/master/Dockerfile) and put it up on [docker hub](https://hub.docker.com/r/mjsobrep/openpose/).
+The kind folks at the CMU Perceptual Computing Lab have been kind enough to package their code into a clean library with nice wrappers called [OpenPose](https://github.com/CMU-Perceptual-Computing-Lab/openpose). For now, I wanted to get the demo running in AWS. So I [dockerized it](https://github.com/mjsobrep/DockerFiles-public/blob/master/openpose/Dockerfile) and put it up on [docker hub](https://hub.docker.com/r/mjsobrep/openpose/).
 
 This was my first time using Docker or AWS, so it was a learning experience. Lets go through how you can run their code on AWS using docker to make it easier:
 
@@ -30,7 +31,7 @@ Then [SSH](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html) into t
 ## Run
 
 ### Docker
-`sudo nvidia-docker run -v /home/ubuntu/data:/data -it mjsobrep/openpose:x1 bash`
+`sudo nvidia-docker run -v /home/ubuntu/data:/data -it mjsobrep/openpose:latest bash`
 
 #### Some helpful hints while you are running in Docker
 To leave the docker:
@@ -47,7 +48,7 @@ You should now be in bash inside of the docker container. Lets run some examples
 - Lets make a place for us to put the output:
   - `mkdir ../data/output`
   -	`mkdir ../data/output/poses`
-- `./build/examples/openpose/openpose.bin --video examples/media/video.avi --write_video ../data/output/result.avi --write_pose_json ../data/output/poses --no_display`
+- `./build/examples/openpose/openpose.bin --video examples/media/video.avi --write_video ../data/output/result.avi --write_keypoint_json ../data/output/poses --no_display`
   - You could pass the `--num_gpu <#>` flag to use more than 1 gpu
   - This will take a while to run (maybe around 1.5 minutes on a p2.xlarge)
 
