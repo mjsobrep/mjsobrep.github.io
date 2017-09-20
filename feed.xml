@@ -5,9 +5,27 @@
     <description>A site about stuff that I (Michael Sobrepera) work on, think, enjoy, etc...</description>
     <link>http://www.michaelsobrepera.com/</link>
     <atom:link href="http://www.michaelsobrepera.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 28 Aug 2017 15:50:42 +0000</pubDate>
-    <lastBuildDate>Mon, 28 Aug 2017 15:50:42 +0000</lastBuildDate>
+    <pubDate>Wed, 20 Sep 2017 19:59:51 +0000</pubDate>
+    <lastBuildDate>Wed, 20 Sep 2017 19:59:51 +0000</lastBuildDate>
     <generator>Jekyll v3.5.2</generator>
+    
+      <item>
+        <title>Tips for LaTeX</title>
+        <description>&lt;h2 id=&quot;exporting-latex-as-plain-text&quot;&gt;Exporting LaTeX as plain text&lt;/h2&gt;
+&lt;p&gt;Sometimes you need your latex as plain text to copy and paste into online forms and the like. Doing it this way will bring all of your refs and what not correctly. I would recomend turning off page numbers, headers, footers, etc before doing this.&lt;/p&gt;
+
+&lt;p&gt;You can convert a pdf to plaintext by using pdftotext &lt;code class=&quot;highlighter-rouge&quot;&gt;pdftotext &amp;lt;target&amp;gt;.pdf&lt;/code&gt; which generates &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;target&amp;gt;.txt&lt;/code&gt; using the &lt;code class=&quot;highlighter-rouge&quot;&gt;-raw&lt;/code&gt; option might be useuful for tables and the like&lt;/p&gt;
+</description>
+        <pubDate>Wed, 20 Sep 2017 00:00:00 +0000</pubDate>
+        <link>http://www.michaelsobrepera.com/guides/latex.html</link>
+        <guid isPermaLink="true">http://www.michaelsobrepera.com/guides/latex.html</guid>
+        
+        <category>LaTeX</category>
+        
+        
+        <category>guides</category>
+        
+      </item>
     
       <item>
         <title>Running OpenPose on AWS</title>
@@ -844,19 +862,6 @@ chmod a+x /usr/local/bin/rcode&lt;/code&gt;&lt;/pre&gt;
         <pubDate>Tue, 27 Oct 2015 00:00:00 +0000</pubDate>
         <link>http://www.michaelsobrepera.com/writings/NSFProposal.html</link>
         <guid isPermaLink="true">http://www.michaelsobrepera.com/writings/NSFProposal.html</guid>
-        
-        
-        <category>writings</category>
-        
-      </item>
-    
-      <item>
-        <title>NSF GRFP Personal Statement</title>
-        <description>&lt;p&gt;This is the personal statement which I submitted this year for the National Science Foundation Graduate Research Fellowship Program. The only change from the actual submission is the addition of the header and footer. The statement talks about my background, why I want to pursue a PhD, why I think I am qualified to pursue a PhD, and what impact I think I can have.&lt;/p&gt;
-</description>
-        <pubDate>Tue, 27 Oct 2015 00:00:00 +0000</pubDate>
-        <link>http://www.michaelsobrepera.com/writings/NSFPersonal.html</link>
-        <guid isPermaLink="true">http://www.michaelsobrepera.com/writings/NSFPersonal.html</guid>
         
         
         <category>writings</category>

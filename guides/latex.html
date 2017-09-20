@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <base target="_parent" />
-  <title>Michael Sobrepera</title>
-  <meta name="description" content="A site about stuff that I (Michael Sobrepera) work on, think, enjoy, etc...">
+  <title>Tips for LaTeX</title>
+  <meta name="description" content="Exporting LaTeX as plain textSometimes you need your latex as plain text to copy and paste into online forms and the like. Doing it this way will bring all o...">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://www.michaelsobrepera.com/tags/ML.html">
+  <link rel="canonical" href="http://www.michaelsobrepera.com/guides/latex.html">
   <link rel="alternate" type="application/rss+xml" title="Michael Sobrepera" href="http://www.michaelsobrepera.com/feed.xml" />
 
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
@@ -321,41 +321,58 @@
 
     <div class="page-content">
       <div class="bodyWrapper">
-        <div class="post">
+        <div class="guide">
 
   <header class="post-header">
-    <h1 class="post-title">Tag: ML</h1>
+    <h1 class="post-title">Tips for LaTeX</h1>
+    <p class="post-meta">Sep 20, 2017 • updated: Sep 20, 2017</p>
+    <!-- borrowed from http://www.realcombiz.com/2014/01/how-to-expand-collapse-toggle-div-layer.html -->
+
+<input class="toggle-box" id="header1" type="checkbox" >
+<label for="header1">Tags</label>
+<div>
+<ul class="tag">
+
+  <li class="tag"><a href="/tags/LaTeX.html" class = "tag">LaTeX</a></li>
+
+</ul>
+</div>
+
+
   </header>
 
-  
-<div class=postContainer>
-
-<a class=lameLink href="/guides/openposeaws.html">
-<div class=postBox>
-      <p class=postBoxTitle>Running OpenPose on AWS</p>
-    
-    <div class="dateSumBox">
-    <hr>
-  <p class=postBoxDate>May 17, 2017</p>
-  
-  </div>
-</div>
-</a>
-
-</div>
-
-
   <article class="post-content">
-    <!-- <table>
-        
-      <tr>
-        <td class=postTableDate>May 17, 2017</td>
-        <td class=postTableRow><a href="/guides">guides</td>
-        <td class=postTableRow><a class="post-link" href="/guides/openposeaws.html">Running OpenPose on AWS</a></td>
-      </tr>
-      
-    </table> -->
+    <h2 id="exporting-latex-as-plain-text">Exporting LaTeX as plain text</h2>
+<p>Sometimes you need your latex as plain text to copy and paste into online forms and the like. Doing it this way will bring all of your refs and what not correctly. I would recomend turning off page numbers, headers, footers, etc before doing this.</p>
+
+<p>You can convert a pdf to plaintext by using pdftotext <code class="highlighter-rouge">pdftotext &lt;target&gt;.pdf</code> which generates <code class="highlighter-rouge">&lt;target&gt;.txt</code> using the <code class="highlighter-rouge">-raw</code> option might be useuful for tables and the like</p>
+
   </article>
+  <!-- START: Livefyre Embed -->
+
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+
+var disqus_config = function () {
+this.page.url = "http://michaelsobrepera.com/guides/latex.html";  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = "/guides/latex"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+  
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://michaelsobrepera.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
 </div>
 
       </div>
