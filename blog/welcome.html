@@ -355,15 +355,15 @@
 
 <figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="k">Function </span>publishmichaelsobrepera<span class="o">{</span>
     <span class="nb">cd</span> /;
-    <span class="nb">cd </span>C:<span class="se">\;</span>
-    <span class="nb">cd </span>C:<span class="se">\G</span>IT<span class="se">\m</span>jsStaticSite;
+    <span class="nb">cd </span>C:\;
+    <span class="nb">cd </span>C:\GIT\mjsStaticSite;
     git checkout master;
     git reset --hard working;
     jekyll build;
-    <span class="nb">Get-ChildItem </span>C:<span class="se">\G</span>IT<span class="se">\m</span>jsStaticSite -Exclude _site -Recurse | <span class="nb">Where</span> <span class="o">{</span><span class="nv">$_</span> -notlike <span class="s1">'C:\GIT\mjsStaticSite\_site\*'</span><span class="o">}</span> | <span class="nb">select</span> -ExpandProperty FullName | <span class="nb">sort </span>Length -Descending | <span class="nb">Remove-Item</span> -force;
-    xcopy C:<span class="se">\G</span>IT<span class="se">\m</span>jsStaticSite<span class="se">\_</span>site C:<span class="se">\G</span>IT<span class="se">\m</span>jsStaticSite /v /s /e ;
-    <span class="nb">Get-ChildItem </span>C:<span class="se">\G</span>IT<span class="se">\m</span>jsStaticSite<span class="se">\_</span>site -Recurse | <span class="nb">select</span> -ExpandProperty FullName | <span class="nb">sort </span>Length -Descending | <span class="nb">Remove-Item</span> -Force;
-    <span class="nb">Remove-Item </span>C:<span class="se">\G</span>IT<span class="se">\m</span>jsStaticSite<span class="se">\_</span>site -Force;
+    <span class="nb">Get-ChildItem </span>C:\GIT\mjsStaticSite -Exclude _site -Recurse | <span class="nb">Where</span> <span class="o">{</span><span class="nv">$_</span> -notlike <span class="s1">'C:\GIT\mjsStaticSite\_site\*'</span><span class="o">}</span> | <span class="nb">select</span> -ExpandProperty FullName | <span class="nb">sort </span>Length -Descending | <span class="nb">Remove-Item</span> -force;
+    xcopy C:\GIT\mjsStaticSite\_site C:\GIT\mjsStaticSite /v /s /e ;
+    <span class="nb">Get-ChildItem </span>C:\GIT\mjsStaticSite\_site -Recurse | <span class="nb">select</span> -ExpandProperty FullName | <span class="nb">sort </span>Length -Descending | <span class="nb">Remove-Item</span> -Force;
+    <span class="nb">Remove-Item </span>C:\GIT\mjsStaticSite\_site -Force;
     git add <span class="k">*</span>;
     git commit -a -m <span class="s1">'automated commit to publish'</span>;
     git push gitHub master --force;

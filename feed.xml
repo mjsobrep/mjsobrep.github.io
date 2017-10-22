@@ -5,9 +5,9 @@
     <description>A site about stuff that I (Michael Sobrepera) work on, think, enjoy, etc...</description>
     <link>http://www.michaelsobrepera.com/</link>
     <atom:link href="http://www.michaelsobrepera.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 20 Sep 2017 19:59:51 +0000</pubDate>
-    <lastBuildDate>Wed, 20 Sep 2017 19:59:51 +0000</lastBuildDate>
-    <generator>Jekyll v3.5.2</generator>
+    <pubDate>Sun, 22 Oct 2017 16:36:53 +0000</pubDate>
+    <lastBuildDate>Sun, 22 Oct 2017 16:36:53 +0000</lastBuildDate>
+    <generator>Jekyll v3.6.2</generator>
     
       <item>
         <title>Tips for LaTeX</title>
@@ -149,12 +149,12 @@ Just follow this &lt;a href=&quot;http://docs.aws.amazon.com/AWSEC2/latest/UserG
 &lt;h4 id=&quot;setting-up-mex-compilation&quot;&gt;Setting up MEX compilation&lt;/h4&gt;
 &lt;p&gt;Matlab needs an older compiler, 4.9&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo apt-get install gcc-4.9 g++-4.9
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get install gcc-4.9 g++-4.9
 &lt;span class=&quot;c&quot;&gt;# you may need to update alternatives&lt;/span&gt;
-sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.9 20
-sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.9 20
-sudo update-alternatives --config gcc
-sudo update-alternatives --config g++&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;update-alternatives &lt;span class=&quot;nt&quot;&gt;--install&lt;/span&gt; /usr/bin/gcc gcc /usr/bin/gcc-4.9 20
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;update-alternatives &lt;span class=&quot;nt&quot;&gt;--install&lt;/span&gt; /usr/bin/g++ g++ /usr/bin/g++-4.9 20
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;update-alternatives &lt;span class=&quot;nt&quot;&gt;--config&lt;/span&gt; gcc
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;update-alternatives &lt;span class=&quot;nt&quot;&gt;--config&lt;/span&gt; g++&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;This may or may not be necessary:
 &lt;code class=&quot;highlighter-rouge&quot;&gt;sudo gedit /usr/local/MATLAB/R2017a/bin/mexopts.sh&lt;/code&gt;
@@ -163,23 +163,23 @@ edit line 54 from &lt;code class=&quot;highlighter-rouge&quot;&gt;CC='gcc'&lt;/c
 &lt;h3 id=&quot;general-stuff&quot;&gt;General stuff&lt;/h3&gt;
 &lt;p&gt;First get all the easy stuff out of the way (copied from the &lt;a href=&quot;https://github.com/BVLC/caffe/wiki/Ubuntu-16.04-or-15.10-Installation-Guide&quot;&gt;guide&lt;/a&gt;)&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo apt-get update
-sudo apt-get upgrade
-sudo apt-get install -y build-essential cmake git pkg-config
-sudo apt-get install -y libprotobuf-dev libleveldb-dev libsnappy-dev libhdf5-serial-dev protobuf-compiler
-sudo apt-get install -y libatlas-base-dev 
-sudo apt-get install -y --no-install-recommends libboost-all-dev
-sudo apt-get install -y libgflags-dev libgoogle-glog-dev liblmdb-dev
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get update
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get upgrade
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get install &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt; build-essential cmake git pkg-config
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get install &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt; libprotobuf-dev libleveldb-dev libsnappy-dev libhdf5-serial-dev protobuf-compiler
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get install &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt; libatlas-base-dev 
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get install &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--no-install-recommends&lt;/span&gt; libboost-all-dev
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get install &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt; libgflags-dev libgoogle-glog-dev liblmdb-dev
 
 &lt;span class=&quot;c&quot;&gt;# (Python general)&lt;/span&gt;
-sudo apt-get install -y python-pip
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get install &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt; python-pip
 
 &lt;span class=&quot;c&quot;&gt;# (Python 2.7 development files)&lt;/span&gt;
-sudo apt-get install -y python-dev
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get install &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt; python-dev
 &lt;span class=&quot;c&quot;&gt;# sudo apt-get install -y python-numpy python-scipy # honestly not sure that this is needed&lt;/span&gt;
 
 &lt;span class=&quot;c&quot;&gt;# (or, Python 3.5 development files)&lt;/span&gt;
-sudo apt-get install -y python3-dev
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get install &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt; python3-dev
 &lt;span class=&quot;c&quot;&gt;# sudo apt-get install -y python3-numpy python3-scipy &lt;/span&gt;
 &lt;span class=&quot;c&quot;&gt;# sudo apt-get install -y python-numpy python-scipy &lt;/span&gt;
  
@@ -192,8 +192,8 @@ sudo apt-get install -y python3-dev
 &lt;h3 id=&quot;python&quot;&gt;Python&lt;/h3&gt;
 &lt;p&gt;I chose to try to install for both python 2 and 3 in virtual environments. So:&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;mkvirtualenv caffe2 -p python2
-mkvirtualenv caffe3 -p python3&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;mkvirtualenv caffe2 &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; python2
+mkvirtualenv caffe3 &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; python3&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Then I went into the python folder in the caffe repo and executed: &lt;code class=&quot;highlighter-rouge&quot;&gt;for req in $(cat requirements.txt); do pip install $req; done&lt;/code&gt; for each of the virtual env (&lt;code class=&quot;highlighter-rouge&quot;&gt;workon caffe2&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;workon caffe3&lt;/code&gt;)&lt;/p&gt;
 
@@ -201,8 +201,8 @@ mkvirtualenv caffe3 -p python3&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 &lt;p&gt;I then followed the instructions from the guide and did some sym linking:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /usr/lib/x86_64-linux-gnu
-sudo ln -s libhdf5_serial.so.10.1.0 libhdf5.so
-sudo ln -s libhdf5_serial_hl.so.10.0.2 libhdf5_hl.so &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;ln &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; libhdf5_serial.so.10.1.0 libhdf5.so
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;ln &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; libhdf5_serial_hl.so.10.0.2 libhdf5_hl.so &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h2 id=&quot;make-file&quot;&gt;Make File&lt;/h2&gt;
 &lt;p&gt;I then edited the makefile (first copy the example to make your working copy):&lt;/p&gt;
@@ -242,15 +242,15 @@ sudo ln -s libhdf5_serial_hl.so.10.0.2 libhdf5_hl.so &lt;/code&gt;&lt;/pre&gt;&l
 &lt;span class=&quot;c&quot;&gt;# CUDA architecture setting: going with all of them.
 # For CUDA &amp;lt; 6.0, comment the *_50 through *_61 lines for compatibility.
 # For CUDA &amp;lt; 8.0, comment the *_60 and *_61 lines for compatibility.
-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;CUDA_ARCH&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; -gencode &lt;span class=&quot;nv&quot;&gt;arch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;compute_20,code&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;sm_20 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-		-gencode &lt;span class=&quot;nv&quot;&gt;arch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;compute_20,code&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;sm_21 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-		-gencode &lt;span class=&quot;nv&quot;&gt;arch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;compute_30,code&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;sm_30 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-		-gencode &lt;span class=&quot;nv&quot;&gt;arch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;compute_35,code&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;sm_35 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-		-gencode &lt;span class=&quot;nv&quot;&gt;arch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;compute_50,code&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;sm_50 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-		-gencode &lt;span class=&quot;nv&quot;&gt;arch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;compute_52,code&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;sm_52 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-		-gencode &lt;span class=&quot;nv&quot;&gt;arch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;compute_60,code&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;sm_60 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-		-gencode &lt;span class=&quot;nv&quot;&gt;arch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;compute_61,code&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;sm_61 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-		-gencode &lt;span class=&quot;nv&quot;&gt;arch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;compute_61,code&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;compute_61
+&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;CUDA_ARCH&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-gencode&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;arch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;compute_20,code&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;sm_20 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+		&lt;span class=&quot;nt&quot;&gt;-gencode&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;arch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;compute_20,code&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;sm_21 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+		&lt;span class=&quot;nt&quot;&gt;-gencode&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;arch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;compute_30,code&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;sm_30 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+		&lt;span class=&quot;nt&quot;&gt;-gencode&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;arch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;compute_35,code&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;sm_35 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+		&lt;span class=&quot;nt&quot;&gt;-gencode&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;arch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;compute_50,code&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;sm_50 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+		&lt;span class=&quot;nt&quot;&gt;-gencode&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;arch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;compute_52,code&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;sm_52 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+		&lt;span class=&quot;nt&quot;&gt;-gencode&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;arch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;compute_60,code&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;sm_60 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+		&lt;span class=&quot;nt&quot;&gt;-gencode&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;arch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;compute_61,code&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;sm_61 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+		&lt;span class=&quot;nt&quot;&gt;-gencode&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;arch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;compute_61,code&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;compute_61
 
 &lt;span class=&quot;c&quot;&gt;# BLAS choice:
 # atlas for ATLAS (default)
@@ -776,6 +776,7 @@ chmod a+x /usr/local/bin/rcode&lt;/code&gt;&lt;/pre&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;As a child you need to keep your ID in check and as an adult, you need to keep your pride in check. Don’t let them rule you.&lt;/li&gt;
+  &lt;li&gt;If you wouldn’t pay market price for the alcohol, don’t drink it.&lt;/li&gt;
 &lt;/ol&gt;
 </description>
         <pubDate>Fri, 07 Oct 2016 00:00:00 +0000</pubDate>
