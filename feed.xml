@@ -5,9 +5,55 @@
     <description>A site about stuff that I (Michael Sobrepera) work on, think, enjoy, etc...</description>
     <link>http://www.michaelsobrepera.com/</link>
     <atom:link href="http://www.michaelsobrepera.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 22 Oct 2017 17:18:00 +0000</pubDate>
-    <lastBuildDate>Sun, 22 Oct 2017 17:18:00 +0000</lastBuildDate>
+    <pubDate>Mon, 30 Oct 2017 07:05:30 +0000</pubDate>
+    <lastBuildDate>Mon, 30 Oct 2017 07:05:30 +0000</lastBuildDate>
     <generator>Jekyll v3.6.2</generator>
+    
+      <item>
+        <title>Philly Take Out</title>
+        <description>&lt;p&gt;This is a guide for me on where to get take out next and where I have gotten stuff in the past&lt;/p&gt;
+
+&lt;h2 id=&quot;next&quot;&gt;Next&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Tampoco&lt;/li&gt;
+  &lt;li&gt;Vietnam Express&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;tried&quot;&gt;Tried&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Gusto’s Pizza (8/10)
+    &lt;ul&gt;
+      &lt;li&gt;Pretty good pizza&lt;/li&gt;
+      &lt;li&gt;A bit price: meat lovers is like $18&lt;/li&gt;
+      &lt;li&gt;Pesto Chicken (9/10)&lt;/li&gt;
+      &lt;li&gt;Meat Lovers (8/10)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Fuzhou House (8/10)
+    &lt;ul&gt;
+      &lt;li&gt;Affordable good takeout&lt;/li&gt;
+      &lt;li&gt;Never spicy enough. When it asks, select spicy&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Phoebe’s BBQ
+    &lt;ul&gt;
+      &lt;li&gt;Mac n cheese - good&lt;/li&gt;
+      &lt;li&gt;Mashed potatoes - good&lt;/li&gt;
+      &lt;li&gt;Wings - horrible&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Mon, 09 Oct 2017 00:00:00 +0000</pubDate>
+        <link>http://www.michaelsobrepera.com/guides/PhillyTakeOut.html</link>
+        <guid isPermaLink="true">http://www.michaelsobrepera.com/guides/PhillyTakeOut.html</guid>
+        
+        <category>food</category>
+        
+        
+        <category>guides</category>
+        
+      </item>
     
       <item>
         <title>Tips for LaTeX</title>
@@ -749,9 +795,8 @@ chmod a+x /usr/local/bin/rcode&lt;/code&gt;&lt;/pre&gt;
   &lt;/li&gt;
   &lt;li&gt;Rules for sex:
     &lt;ul&gt;
-      &lt;li&gt;The first time both people must be sober.&lt;/li&gt;
-      &lt;li&gt;You must discuss what happens if she gets pregnant before hand.&lt;/li&gt;
-      &lt;li&gt;She must be someone you will always love, even if your relationship were to end.&lt;/li&gt;
+      &lt;li&gt;You can’t go any farther than you have been when inebriated/impaired.&lt;/li&gt;
+      &lt;li&gt;You must discuss what happens if she gets pregnant before having sex.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;Learn from your mistakes. They suck, if you don’t learn from them, they will suck again.&lt;/li&gt;
@@ -776,7 +821,7 @@ chmod a+x /usr/local/bin/rcode&lt;/code&gt;&lt;/pre&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;As a child you need to keep your ID in check and as an adult, you need to keep your pride in check. Don’t let them rule you.&lt;/li&gt;
-  &lt;li&gt;If you wouldn’t pay market price for the alcohol, don’t drink it.&lt;/li&gt;
+  &lt;li&gt;If alcohol is so low quality that you wouldn’t pay market price for it, don’t drink it (I’m talking to you grad student events).&lt;/li&gt;
 &lt;/ol&gt;
 </description>
         <pubDate>Fri, 07 Oct 2016 00:00:00 +0000</pubDate>
@@ -853,19 +898,6 @@ chmod a+x /usr/local/bin/rcode&lt;/code&gt;&lt;/pre&gt;
         
         
         <category>guides</category>
-        
-      </item>
-    
-      <item>
-        <title>NSF GRFP Proposal</title>
-        <description>&lt;p&gt;This is the proposal which I submitted this year for the National Science Foundation Graduate Research Fellowship Program. The only change from the actual submission is the addition of the header and footer. I actually think the idea is pretty interesting.&lt;/p&gt;
-</description>
-        <pubDate>Tue, 27 Oct 2015 00:00:00 +0000</pubDate>
-        <link>http://www.michaelsobrepera.com/writings/NSFProposal.html</link>
-        <guid isPermaLink="true">http://www.michaelsobrepera.com/writings/NSFProposal.html</guid>
-        
-        
-        <category>writings</category>
         
       </item>
     
