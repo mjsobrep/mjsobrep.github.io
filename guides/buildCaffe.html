@@ -15,18 +15,6 @@
 
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-64998639-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
-
-
 </head>
 
   <body>
@@ -359,7 +347,7 @@
 <h4 id="setting-up-mex-compilation">Setting up MEX compilation</h4>
 <p>Matlab needs an older compiler, 4.9</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo </span>apt-get install gcc-4.9 g++-4.9
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo </span>apt-get <span class="nb">install </span>gcc-4.9 g++-4.9
 <span class="c"># you may need to update alternatives</span>
 <span class="nb">sudo </span>update-alternatives <span class="nt">--install</span> /usr/bin/gcc gcc /usr/bin/gcc-4.9 20
 <span class="nb">sudo </span>update-alternatives <span class="nt">--install</span> /usr/bin/g++ g++ /usr/bin/g++-4.9 20
@@ -375,21 +363,21 @@ edit line 54 from <code class="highlighter-rouge">CC='gcc'</code> to <code class
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo </span>apt-get update
 <span class="nb">sudo </span>apt-get upgrade
-<span class="nb">sudo </span>apt-get install <span class="nt">-y</span> build-essential cmake git pkg-config
-<span class="nb">sudo </span>apt-get install <span class="nt">-y</span> libprotobuf-dev libleveldb-dev libsnappy-dev libhdf5-serial-dev protobuf-compiler
-<span class="nb">sudo </span>apt-get install <span class="nt">-y</span> libatlas-base-dev 
-<span class="nb">sudo </span>apt-get install <span class="nt">-y</span> <span class="nt">--no-install-recommends</span> libboost-all-dev
-<span class="nb">sudo </span>apt-get install <span class="nt">-y</span> libgflags-dev libgoogle-glog-dev liblmdb-dev
+<span class="nb">sudo </span>apt-get <span class="nb">install</span> <span class="nt">-y</span> build-essential cmake git pkg-config
+<span class="nb">sudo </span>apt-get <span class="nb">install</span> <span class="nt">-y</span> libprotobuf-dev libleveldb-dev libsnappy-dev libhdf5-serial-dev protobuf-compiler
+<span class="nb">sudo </span>apt-get <span class="nb">install</span> <span class="nt">-y</span> libatlas-base-dev 
+<span class="nb">sudo </span>apt-get <span class="nb">install</span> <span class="nt">-y</span> <span class="nt">--no-install-recommends</span> libboost-all-dev
+<span class="nb">sudo </span>apt-get <span class="nb">install</span> <span class="nt">-y</span> libgflags-dev libgoogle-glog-dev liblmdb-dev
 
 <span class="c"># (Python general)</span>
-<span class="nb">sudo </span>apt-get install <span class="nt">-y</span> python-pip
+<span class="nb">sudo </span>apt-get <span class="nb">install</span> <span class="nt">-y</span> python-pip
 
 <span class="c"># (Python 2.7 development files)</span>
-<span class="nb">sudo </span>apt-get install <span class="nt">-y</span> python-dev
+<span class="nb">sudo </span>apt-get <span class="nb">install</span> <span class="nt">-y</span> python-dev
 <span class="c"># sudo apt-get install -y python-numpy python-scipy # honestly not sure that this is needed</span>
 
 <span class="c"># (or, Python 3.5 development files)</span>
-<span class="nb">sudo </span>apt-get install <span class="nt">-y</span> python3-dev
+<span class="nb">sudo </span>apt-get <span class="nb">install</span> <span class="nt">-y</span> python3-dev
 <span class="c"># sudo apt-get install -y python3-numpy python3-scipy </span>
 <span class="c"># sudo apt-get install -y python-numpy python-scipy </span>
  
@@ -411,8 +399,8 @@ mkvirtualenv caffe3 <span class="nt">-p</span> python3</code></pre></figure>
 <p>I then followed the instructions from the guide and did some sym linking:</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">cd</span> /usr/lib/x86_64-linux-gnu
-<span class="nb">sudo </span>ln <span class="nt">-s</span> libhdf5_serial.so.10.1.0 libhdf5.so
-<span class="nb">sudo </span>ln <span class="nt">-s</span> libhdf5_serial_hl.so.10.0.2 libhdf5_hl.so </code></pre></figure>
+<span class="nb">sudo ln</span> <span class="nt">-s</span> libhdf5_serial.so.10.1.0 libhdf5.so
+<span class="nb">sudo ln</span> <span class="nt">-s</span> libhdf5_serial_hl.so.10.0.2 libhdf5_hl.so </code></pre></figure>
 
 <h2 id="make-file">Make File</h2>
 <p>I then edited the makefile (first copy the example to make your working copy):</p>
@@ -452,15 +440,15 @@ mkvirtualenv caffe3 <span class="nt">-p</span> python3</code></pre></figure>
 <span class="c"># CUDA architecture setting: going with all of them.
 # For CUDA &lt; 6.0, comment the *_50 through *_61 lines for compatibility.
 # For CUDA &lt; 8.0, comment the *_60 and *_61 lines for compatibility.
-</span><span class="nv">CUDA_ARCH</span> <span class="o">:=</span> <span class="nt">-gencode</span> <span class="nv">arch</span><span class="o">=</span>compute_20,code<span class="o">=</span>sm_20 <span class="se">\</span>
-		<span class="nt">-gencode</span> <span class="nv">arch</span><span class="o">=</span>compute_20,code<span class="o">=</span>sm_21 <span class="se">\</span>
-		<span class="nt">-gencode</span> <span class="nv">arch</span><span class="o">=</span>compute_30,code<span class="o">=</span>sm_30 <span class="se">\</span>
-		<span class="nt">-gencode</span> <span class="nv">arch</span><span class="o">=</span>compute_35,code<span class="o">=</span>sm_35 <span class="se">\</span>
-		<span class="nt">-gencode</span> <span class="nv">arch</span><span class="o">=</span>compute_50,code<span class="o">=</span>sm_50 <span class="se">\</span>
-		<span class="nt">-gencode</span> <span class="nv">arch</span><span class="o">=</span>compute_52,code<span class="o">=</span>sm_52 <span class="se">\</span>
-		<span class="nt">-gencode</span> <span class="nv">arch</span><span class="o">=</span>compute_60,code<span class="o">=</span>sm_60 <span class="se">\</span>
-		<span class="nt">-gencode</span> <span class="nv">arch</span><span class="o">=</span>compute_61,code<span class="o">=</span>sm_61 <span class="se">\</span>
-		<span class="nt">-gencode</span> <span class="nv">arch</span><span class="o">=</span>compute_61,code<span class="o">=</span>compute_61
+</span><span class="nv">CUDA_ARCH</span> <span class="o">:=</span> <span class="nt">-gencode</span> <span class="nb">arch</span><span class="o">=</span>compute_20,code<span class="o">=</span>sm_20 <span class="se">\</span>
+		<span class="nt">-gencode</span> <span class="nb">arch</span><span class="o">=</span>compute_20,code<span class="o">=</span>sm_21 <span class="se">\</span>
+		<span class="nt">-gencode</span> <span class="nb">arch</span><span class="o">=</span>compute_30,code<span class="o">=</span>sm_30 <span class="se">\</span>
+		<span class="nt">-gencode</span> <span class="nb">arch</span><span class="o">=</span>compute_35,code<span class="o">=</span>sm_35 <span class="se">\</span>
+		<span class="nt">-gencode</span> <span class="nb">arch</span><span class="o">=</span>compute_50,code<span class="o">=</span>sm_50 <span class="se">\</span>
+		<span class="nt">-gencode</span> <span class="nb">arch</span><span class="o">=</span>compute_52,code<span class="o">=</span>sm_52 <span class="se">\</span>
+		<span class="nt">-gencode</span> <span class="nb">arch</span><span class="o">=</span>compute_60,code<span class="o">=</span>sm_60 <span class="se">\</span>
+		<span class="nt">-gencode</span> <span class="nb">arch</span><span class="o">=</span>compute_61,code<span class="o">=</span>sm_61 <span class="se">\</span>
+		<span class="nt">-gencode</span> <span class="nb">arch</span><span class="o">=</span>compute_61,code<span class="o">=</span>compute_61
 
 <span class="c"># BLAS choice:
 # atlas for ATLAS (default)
