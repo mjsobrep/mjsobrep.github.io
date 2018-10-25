@@ -2,7 +2,8 @@
 layout: post
 title:  "Thoughts and Takeaways from the Oct 2018 RET Conference and On My Experience as an RET Mentor"
 date:   2018-10-25
-categories: 
+categories: blog
+tags: 
 - education
 - math
 - science
@@ -28,7 +29,7 @@ To help drive home some of the learnings taken from RET, the mentors visit the c
 
 The first summer I did the RET, I presented a set of well defined and scoped projects to my teacher, like what might be received in an industrial/professional setting. I then tried to help the teacher through every step of the process, ensuring that she was able to succeed. The process was hard on her, but not as hard as it could have been. I also tried to involve myself in her curriculum development process. The amount that I took on with her led me to spend 15-25 hours a week on the program, which was not sustainable. At the end of the summer, she seemed to have had a great experience, she has remained engaged with our lab, but I’m not sure that she took away as much as she could have. 
 
-The second year, I took on two teachers. I was much more hands off. Instead of constant interaction I tried to deliver just in time critical help in a focused way. For the first five weeks this worked quite well. The final week I found it necessary to be much more involved to help drive the teachers through final implementation and review their writing and presentations. I think at the end they took away more than my first teacher although at the cost of not being as close personally to me. This approach was also a much more sustainable system for me. 
+The second year, I took on two teachers, you can read more about them in [this Penn Engineering profile](https://medium.com/penn-engineering/teachers-become-students-to-become-better-teachers-at-grasp-labs-ret-program-820bf36791c7). I was much more hands off. Instead of constant interaction I tried to deliver just in time critical help in a focused way. For the first five weeks this worked quite well. The final week I found it necessary to be much more involved to help drive the teachers through final implementation and review their writing and presentations. I think at the end they took away more than my first teacher although at the cost of not being as close personally to me. This approach was also a much more sustainable system for me. 
 
 Of course, I have no data to take away from the two years I was involved to say which approach was better and the personalities of the teachers varied widely. On whole, I think that allowing the teachers to struggle is critical to driving classroom change. And allowing them to direct their own research allows a significant amount of learning and provides motivation to make it through the challenging rigor of the program. 
 
