@@ -5,8 +5,8 @@
     <description>A site about stuff that I (Michael Sobrepera) work on, think, enjoy, etc...</description>
     <link>http://www.michaelsobrepera.com/</link>
     <atom:link href="http://www.michaelsobrepera.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 25 Oct 2018 17:41:24 +0000</pubDate>
-    <lastBuildDate>Thu, 25 Oct 2018 17:41:24 +0000</lastBuildDate>
+    <pubDate>Thu, 25 Oct 2018 17:53:04 +0000</pubDate>
+    <lastBuildDate>Thu, 25 Oct 2018 17:53:04 +0000</lastBuildDate>
     <generator>Jekyll v3.8.4</generator>
     
       <item>
@@ -28,7 +28,7 @@
 
 &lt;p&gt;The first summer I did the RET, I presented a set of well defined and scoped projects to my teacher, like what might be received in an industrial/professional setting. I then tried to help the teacher through every step of the process, ensuring that she was able to succeed. The process was hard on her, but not as hard as it could have been. I also tried to involve myself in her curriculum development process. The amount that I took on with her led me to spend 15-25 hours a week on the program, which was not sustainable. At the end of the summer, she seemed to have had a great experience, she has remained engaged with our lab, but I’m not sure that she took away as much as she could have.&lt;/p&gt;
 
-&lt;p&gt;The second year, I took on two teachers. I was much more hands off. Instead of constant interaction I tried to deliver just in time critical help in a focused way. For the first five weeks this worked quite well. The final week I found it necessary to be much more involved to help drive the teachers through final implementation and review their writing and presentations. I think at the end they took away more than my first teacher although at the cost of not being as close personally to me. This approach was also a much more sustainable system for me.&lt;/p&gt;
+&lt;p&gt;The second year, I took on two teachers, you can read more about them in &lt;a href=&quot;https://medium.com/penn-engineering/teachers-become-students-to-become-better-teachers-at-grasp-labs-ret-program-820bf36791c7&quot;&gt;this Penn Engineering profile&lt;/a&gt;. I was much more hands off. Instead of constant interaction I tried to deliver just in time critical help in a focused way. For the first five weeks this worked quite well. The final week I found it necessary to be much more involved to help drive the teachers through final implementation and review their writing and presentations. I think at the end they took away more than my first teacher although at the cost of not being as close personally to me. This approach was also a much more sustainable system for me.&lt;/p&gt;
 
 &lt;p&gt;Of course, I have no data to take away from the two years I was involved to say which approach was better and the personalities of the teachers varied widely. On whole, I think that allowing the teachers to struggle is critical to driving classroom change. And allowing them to direct their own research allows a significant amount of learning and provides motivation to make it through the challenging rigor of the program.&lt;/p&gt;
 
@@ -80,11 +80,8 @@
 &lt;p&gt;In closing, I have enjoyed my experiences with RET and hope that my work has had a real impact. There is a lot of work to be done to improve the education ecosystem/pipeline and I hope that I can be a part of that. To enable that, I think that academia needs to remember to focus on education and I believe that large funding organizations can make that happen. I thank the people at NSF for overseeing these programs, the people in GRASP for running the program I was a part of, NC State for hosting the conference, and the American public for their continued support of science and math education and research.&lt;/p&gt;
 </description>
         <pubDate>Thu, 25 Oct 2018 00:00:00 +0000</pubDate>
-        <link>http://www.michaelsobrepera.com/blog/education/math/science/nsf/ret/academia/RETConference.html</link>
-        <guid isPermaLink="true">http://www.michaelsobrepera.com/blog/education/math/science/nsf/ret/academia/RETConference.html</guid>
-        
-        
-        <category>blog</category>
+        <link>http://www.michaelsobrepera.com/blog/RETConference.html</link>
+        <guid isPermaLink="true">http://www.michaelsobrepera.com/blog/RETConference.html</guid>
         
         <category>education</category>
         
@@ -97,6 +94,9 @@
         <category>RET</category>
         
         <category>academia</category>
+        
+        
+        <category>blog</category>
         
       </item>
     
