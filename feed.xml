@@ -5,8 +5,8 @@
     <description>A site about stuff that I (Michael Sobrepera) work on, think, enjoy, etc...</description>
     <link>http://www.michaelsobrepera.com/</link>
     <atom:link href="http://www.michaelsobrepera.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 16 Jan 2019 03:28:09 +0000</pubDate>
-    <lastBuildDate>Wed, 16 Jan 2019 03:28:09 +0000</lastBuildDate>
+    <pubDate>Thu, 21 Feb 2019 00:12:57 +0000</pubDate>
+    <lastBuildDate>Thu, 21 Feb 2019 00:12:57 +0000</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -152,6 +152,13 @@
 &lt;p&gt;Sometimes you need your latex as plain text to copy and paste into online forms and the like. Doing it this way will bring all of your refs and what not correctly. I would recomend turning off page numbers, headers, footers, etc before doing this.&lt;/p&gt;
 
 &lt;p&gt;You can convert a pdf to plaintext by using pdftotext &lt;code class=&quot;highlighter-rouge&quot;&gt;pdftotext &amp;lt;target&amp;gt;.pdf&lt;/code&gt; which generates &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;target&amp;gt;.txt&lt;/code&gt; using the &lt;code class=&quot;highlighter-rouge&quot;&gt;-raw&lt;/code&gt; option might be useuful for tables and the like&lt;/p&gt;
+
+&lt;h2 id=&quot;compressing-pdfs&quot;&gt;Compressing PDFs&lt;/h2&gt;
+&lt;p&gt;When you compile with latex, the result will have whatever images you included in it. They may be really big. Ther are ways to use the image scale argument in LaTeX, but that is clunky. A better way is to shrink the PDF after it is compiled. Ghostscript can help:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;gs -dPDFSETTINGS=/prepress -dNOPAUSE -dQUIET -dBATCH -dCompatibilityLevel=1.4 -sDEVICE=pdfwrite -sOutputFile=out.pdf in.pdf&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;You can change &lt;code class=&quot;highlighter-rouge&quot;&gt;-dPDFSETTINGS&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;/default&lt;/code&gt; if you want a huge file (almost the same as what LaTeX uses) or to &lt;code class=&quot;highlighter-rouge&quot;&gt;/printer&lt;/code&gt; if you want something a bit smaller. The other options start to get too small&lt;/p&gt;
 </description>
         <pubDate>Wed, 20 Sep 2017 00:00:00 +0000</pubDate>
         <link>http://www.michaelsobrepera.com/guides/latex.html</link>
