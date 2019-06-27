@@ -5,8 +5,8 @@
     <description>A site about stuff that I (Michael Sobrepera) work on, think, enjoy, etc...</description>
     <link>http://www.michaelsobrepera.com/</link>
     <atom:link href="http://www.michaelsobrepera.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 15 Apr 2019 18:41:50 +0000</pubDate>
-    <lastBuildDate>Mon, 15 Apr 2019 18:41:50 +0000</lastBuildDate>
+    <pubDate>Thu, 27 Jun 2019 13:33:32 +0000</pubDate>
+    <lastBuildDate>Thu, 27 Jun 2019 13:33:32 +0000</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -858,82 +858,6 @@ chmod a+x /usr/local/bin/rcode&lt;/code&gt;&lt;/pre&gt;
       </item>
     
       <item>
-        <title>My Rules (warning: mature content)</title>
-        <description>&lt;p&gt;I feel like for the last 6 months I have really stopped following some of the rules I had been living by. Doing that got me into a situation that I am very unhappy about. So I decided to write them down for myself to try to remember them. In the process I re-evaluated some of them and added quite a few new ones.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Answer questions honestly, even if they hurt.&lt;/li&gt;
-  &lt;li&gt;Don’t ask questions to which you do not want the answer.&lt;/li&gt;
-  &lt;li&gt;Always ask “why did I do that” before doing it.&lt;/li&gt;
-  &lt;li&gt;Remember to take the costs of actions into account
-    &lt;ul&gt;
-      &lt;li&gt;If you are 90% sure that an action is correct, but the cost of being wrong on that path is extremely costly. And you are 10% sure that another action is right, but the cost of taking it is small, perhaps it is better to take the less sure option.&lt;/li&gt;
-      &lt;li&gt;Don’t forget about opportunity costs.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Remember there is always a confidence interval.
-    &lt;ul&gt;
-      &lt;li&gt;You can’t see all of the variables, there is error on the inputs to your calculations.
-        &lt;ul&gt;
-          &lt;li&gt;especially remember to include emotional variables.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Your model is wrong, even given perfect inputs, you would be wrong.&lt;/li&gt;
-      &lt;li&gt;For big decisions, lean on others to help you.
-        &lt;ul&gt;
-          &lt;li&gt;you don’t need to do exactly as they say, but they should be inputs to your model.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Fear is the path to the darkside. Fear leads to anger. Anger leads to hate. Hate leads to suffering. -Yoda
-    &lt;ul&gt;
-      &lt;li&gt;Don’t make decisions from a place of fear, but instead from a place of hope. Don’t act out of hate, instead out of love.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Rules for sex:
-    &lt;ul&gt;
-      &lt;li&gt;When inebriated/impaired, you can’t go any farther than you have been prior.&lt;/li&gt;
-      &lt;li&gt;You must discuss what happens if she gets pregnant before having sex.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Learn from your mistakes. They suck, if you don’t learn from them, they will suck again.&lt;/li&gt;
-  &lt;li&gt;Be open with your feelings. Bottling them up will not help you. Share them with people you trust, they will help you.&lt;/li&gt;
-  &lt;li&gt;When you love someone, hang onto the things you love. Don’t worry about the things you don’t love, let the good outweigh the bad.
-    &lt;ul&gt;
-      &lt;li&gt;Love her for exactly who she is, not for who she could be.&lt;/li&gt;
-      &lt;li&gt;Let go of her fitness, that isn’t your job. You think she is beautiful the way she is, be honest with yourself on that.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Walk your dog. Don’t have a dog? Rescue a dog.&lt;/li&gt;
-  &lt;li&gt;No matter how much a relationship hurts, you can’t push the other person away, you can’t ignore it, you can’t bottle it up. You have to talk to them.&lt;/li&gt;
-  &lt;li&gt;Never forget the importance of family and friends.&lt;/li&gt;
-  &lt;li&gt;Let your partner know what you want find out what she wants, then work with her to figure out how you can both get what you need.&lt;/li&gt;
-  &lt;li&gt;Don’t loose sight of your priorities. And remember to consider that the order in which you chase them is a big deal.&lt;/li&gt;
-  &lt;li&gt;Never try to go back, take what you have learned and move forward.&lt;/li&gt;
-  &lt;li&gt;Remember what “success” is to you.&lt;/li&gt;
-  &lt;li&gt;Don’t hold on too tight, it will all slip through your fingers.
-    &lt;ul&gt;
-      &lt;li&gt;Don’t be afraid, be measured.&lt;/li&gt;
-      &lt;li&gt;Stress does not equate to caring and a lack of stress does not mean you don’t care.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;As a child you need to keep your ID in check and as an adult, you need to keep your pride in check. Don’t let them rule you.&lt;/li&gt;
-  &lt;li&gt;If alcohol is so low quality that you wouldn’t pay market price for it, don’t drink it (I’m talking to you grad student events).&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-        <pubDate>Fri, 07 Oct 2016 00:00:00 +0000</pubDate>
-        <link>http://www.michaelsobrepera.com/guides/rules.html</link>
-        <guid isPermaLink="true">http://www.michaelsobrepera.com/guides/rules.html</guid>
-        
-        <category>life</category>
-        
-        
-        <category>guides</category>
-        
-      </item>
-    
-      <item>
         <title>JetBrains IDEs</title>
         <description>&lt;h2 id=&quot;hanging-on-linux&quot;&gt;Hanging on Linux:&lt;/h2&gt;
 &lt;ul&gt;
@@ -975,6 +899,24 @@ chmod a+x /usr/local/bin/rcode&lt;/code&gt;&lt;/pre&gt;
         <category>IDE</category>
         
         <category>Python</category>
+        
+        
+        <category>guides</category>
+        
+      </item>
+    
+      <item>
+        <title>CMake</title>
+        <description>&lt;h2 id=&quot;flags-for-different-stuff&quot;&gt;Flags for different stuff:&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Performance Profiling: &lt;code class=&quot;highlighter-rouge&quot;&gt;cmake -DCMAKE_CXX_FLAGS=-pg ..&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Wed, 13 Jan 2016 00:00:00 +0000</pubDate>
+        <link>http://www.michaelsobrepera.com/guides/cmake.html</link>
+        <guid isPermaLink="true">http://www.michaelsobrepera.com/guides/cmake.html</guid>
+        
+        <category>c++</category>
         
         
         <category>guides</category>
