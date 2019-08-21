@@ -1,7 +1,7 @@
 ---
 layout: guide
 title:  "Javascript"
-updated:   2015-06-22
+updated:   2019-08-21
 categories: guides
 tags:
 - code
@@ -68,7 +68,7 @@ Ale is used for most of this. Best practice for javascript seems to be to keep
 the linters and stuff defined with the project. So go to where your project is
 (I am assuming that dependencies are handled by npm) and run: 
 ```bash
-npm i -D eslint babel-eslint eslint-plugin-react prettier eslint-config-pretterier eslint-plugin-prettier
+npm i -D eslint babel-eslint eslint-plugin-react prettier eslint-config-prettier eslint-plugin-prettier
 eslint --init
 ```
 Then answer the questions. For React, I prefer to use:
@@ -77,7 +77,7 @@ Then answer the questions. For React, I prefer to use:
 - react
 - browser
 - pop style guide
-- the airbnb style
+- the airbnb style works best with react, but is kind of nasty with some of its requirements. The standard doesn't allow semicolons, I like semicolons. 
 - JSON
 
 But all of those are usage specific. I like airbnb because I like semicolons and it
