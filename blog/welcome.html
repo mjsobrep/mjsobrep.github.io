@@ -346,22 +346,22 @@
 <h4 id="git">GIT</h4>
 <p>The first thing to cover is how I use GIT and GitHub. The site is hosted on GitHub pages, which are pretty quick and FREE. However, I use some custom plugins, so I cannot use the GitHub pages builder to build my site. I therefore build my site locally and push it up to GitHub. To do this, I have two branches, a working and master branch. The master branch is required by pages to hold the hosted site, and the working branch is where I do my work. In order to publish, I run a little PowerShell script I wrote.</p>
 
-<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="k">Function </span>publishmichaelsobrepera<span class="o">{</span>
-    <span class="nb">cd</span> /;
-    <span class="nb">cd </span>C:\;
-    <span class="nb">cd </span>C:\GIT\mjsStaticSite;
-    git checkout master;
-    git reset --hard working;
-    jekyll build;
-    <span class="nb">Get-ChildItem </span>C:\GIT\mjsStaticSite -Exclude _site -Recurse | <span class="nb">Where</span> <span class="o">{</span><span class="nv">$_</span> -notlike <span class="s1">'C:\GIT\mjsStaticSite\_site\*'</span><span class="o">}</span> | <span class="nb">select</span> -ExpandProperty FullName | <span class="nb">sort </span>Length -Descending | <span class="nb">Remove-Item</span> -force;
-    xcopy C:\GIT\mjsStaticSite\_site C:\GIT\mjsStaticSite /v /s /e ;
-    <span class="nb">Get-ChildItem </span>C:\GIT\mjsStaticSite\_site -Recurse | <span class="nb">select</span> -ExpandProperty FullName | <span class="nb">sort </span>Length -Descending | <span class="nb">Remove-Item</span> -Force;
-    <span class="nb">Remove-Item </span>C:\GIT\mjsStaticSite\_site -Force;
-    git add <span class="k">*</span>;
-    git commit -a -m <span class="s1">'automated commit to publish'</span>;
-    git push gitHub master --force;
-    git checkout working;
-<span class="o">}</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="kr">Function</span><span class="w"> </span><span class="nf">publishmichaelsobrepera</span><span class="p">{</span><span class="w">
+    </span><span class="nf">cd</span><span class="w"> </span><span class="nx">/</span><span class="p">;</span><span class="w">
+    </span><span class="nf">cd</span><span class="w"> </span><span class="nx">C:\</span><span class="p">;</span><span class="w">
+    </span><span class="nf">cd</span><span class="w"> </span><span class="nx">C:\GIT\mjsStaticSite</span><span class="p">;</span><span class="w">
+    </span><span class="nf">git</span><span class="w"> </span><span class="nx">checkout</span><span class="w"> </span><span class="nx">master</span><span class="p">;</span><span class="w">
+    </span><span class="nf">git</span><span class="w"> </span><span class="nx">reset</span><span class="w"> </span><span class="nt">--hard</span><span class="w"> </span><span class="nx">working</span><span class="p">;</span><span class="w">
+    </span><span class="nf">jekyll</span><span class="w"> </span><span class="nx">build</span><span class="p">;</span><span class="w">
+    </span><span class="nf">Get-ChildItem</span><span class="w"> </span><span class="nx">C:\GIT\mjsStaticSite</span><span class="w"> </span><span class="nt">-Exclude</span><span class="w"> </span><span class="nx">_site</span><span class="w"> </span><span class="nt">-Recurse</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nf">Where</span><span class="w"> </span><span class="p">{</span><span class="bp">$_</span><span class="w"> </span><span class="o">-notlike</span><span class="w"> </span><span class="s1">'C:\GIT\mjsStaticSite\_site\*'</span><span class="p">}</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nf">select</span><span class="w"> </span><span class="nt">-ExpandProperty</span><span class="w"> </span><span class="nx">FullName</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nf">sort</span><span class="w"> </span><span class="nx">Length</span><span class="w"> </span><span class="nt">-Descending</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nf">Remove-Item</span><span class="w"> </span><span class="nt">-force</span><span class="p">;</span><span class="w">
+    </span><span class="nf">xcopy</span><span class="w"> </span><span class="nx">C:\GIT\mjsStaticSite\_site</span><span class="w"> </span><span class="nx">C:\GIT\mjsStaticSite</span><span class="w"> </span><span class="nx">/v</span><span class="w"> </span><span class="nx">/s</span><span class="w"> </span><span class="nx">/e</span><span class="w"> </span><span class="p">;</span><span class="w">
+    </span><span class="nf">Get-ChildItem</span><span class="w"> </span><span class="nx">C:\GIT\mjsStaticSite\_site</span><span class="w"> </span><span class="nt">-Recurse</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nf">select</span><span class="w"> </span><span class="nt">-ExpandProperty</span><span class="w"> </span><span class="nx">FullName</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nf">sort</span><span class="w"> </span><span class="nx">Length</span><span class="w"> </span><span class="nt">-Descending</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nf">Remove-Item</span><span class="w"> </span><span class="nt">-Force</span><span class="p">;</span><span class="w">
+    </span><span class="nf">Remove-Item</span><span class="w"> </span><span class="nx">C:\GIT\mjsStaticSite\_site</span><span class="w"> </span><span class="nt">-Force</span><span class="p">;</span><span class="w">
+    </span><span class="nf">git</span><span class="w"> </span><span class="nx">add</span><span class="w"> </span><span class="o">*</span><span class="p">;</span><span class="w">
+    </span><span class="nf">git</span><span class="w"> </span><span class="nx">commit</span><span class="w"> </span><span class="nt">-a</span><span class="w"> </span><span class="nt">-m</span><span class="w"> </span><span class="s1">'automated commit to publish'</span><span class="p">;</span><span class="w">
+    </span><span class="nf">git</span><span class="w"> </span><span class="nx">push</span><span class="w"> </span><span class="nx">gitHub</span><span class="w"> </span><span class="nx">master</span><span class="w"> </span><span class="nt">--force</span><span class="p">;</span><span class="w">
+    </span><span class="nf">git</span><span class="w"> </span><span class="nx">checkout</span><span class="w"> </span><span class="nx">working</span><span class="p">;</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
 
 <p>This allows me to just commit my work on the working branch, publish, and keep on going. Note, I do always push up my working branch just incase something goes wrong.</p>
 
