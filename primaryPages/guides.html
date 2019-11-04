@@ -8,7 +8,7 @@ permalink: /guides/
 <p><a href = "http://1drv.ms/1sxrICa">I also have aggregated a bunch of material from other sources</a></p>
 
 
-{% assign sortedGuides = (site.categories.guides | sort: 'title') %}
+{% assign sortedGuides = site.categories.guides | sort: 'title' %}
 <h3>My Guides</h3>
 <ul class="post-list" style="list-style-type:disc">
     {% for post in sortedGuides %}
