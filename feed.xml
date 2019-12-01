@@ -5,9 +5,9 @@
     <description>A site about stuff that I (Michael Sobrepera) work on, think, enjoy, etc...</description>
     <link>http://www.michaelsobrepera.com/</link>
     <atom:link href="http://www.michaelsobrepera.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 27 Aug 2019 20:30:39 +0000</pubDate>
-    <lastBuildDate>Tue, 27 Aug 2019 20:30:39 +0000</lastBuildDate>
-    <generator>Jekyll v3.8.6</generator>
+    <pubDate>Sun, 01 Dec 2019 21:41:34 +0000</pubDate>
+    <lastBuildDate>Sun, 01 Dec 2019 21:41:34 +0000</lastBuildDate>
+    <generator>Jekyll v4.0.0</generator>
     
       <item>
         <title>Thoughts and Takeaways from the Oct 2018 RET Conference and On My Experience as an RET Mentor</title>
@@ -22,11 +22,11 @@
 
 &lt;p&gt;The process is brutal for the teachers. When they begin, few can understand much of the language or concepts presented in the literature which they are reading or understand how to use the engineering tools needed to complete their projects. Most teachers break down at some point during the process. As a mentor, it has been my role to guide them in the right direction, encourage them along, and when they are about to give up, catch them and move them forward.&lt;/p&gt;
 
-&lt;p&gt;Through the process they gain significantly more content knowledge than they entered with. However, I would claim that is auxiliary to the main benefit to their students. Because of the rigor, they develop an empathy for their students who struggle with seemingly simple tasks. Many of the teachers haven’t struggled academically in a long time, if ever. This struggle opens their eyes to what it feels like to be totally lost. In a different thread, at the end of the program, when the teachers look back, they find they have learned more than they thought possible and realize that the reason for that is that they struggled through a complete experience. I think that some teachers take that as a pedagogical lesson to suggest that learning through experience can be a powerful tool. And finally, the teachers get to interact with a variety of engineers throughout the program. That allows them to go back to the classroom with a greater appreciation of what engineering is and how engineers approach problems. My hope is that that knowledge is transferred to their students so that their students can have engineering as a potential goal. Everyone knows what a doctor or lawyer is. It seems that only children of engineers know what an engineer is. If this does in fact happen, I would expect a slight nudge to get more under represented minorities (URMs), who may not have as many engineers in their lives, into engineering.&lt;/p&gt;
+&lt;p&gt;Through the process they gain significantly more content knowledge than they entered with. However, I would claim that is auxiliary to the main benefit to their students. Because of the rigor, they develop an empathy for their students who struggle with seemingly simple tasks. Many of the teachers haven’t struggled academically in a long time, if ever. This struggle opens their eyes to what it feels like to be totally lost. In a different thread, at the end of the program, when the teachers look back, they find they have learned more than they thought possible and realize that the reason for that is that they struggled through a complete experience. I think that some teachers take that as a pedagogical lesson to suggest that learning through experience can be a powerful tool. And finally, the teachers get to interact with a variety of engineers throughout the program. That allows them to go back to the classroom with a greater appreciation of what engineering is and how engineers approach problems. My hope is that that knowledge is transferred to their students so that their students can have engineering as a potential goal. Everyone knows what a doctor or lawyer is. It seems that only children of engineers know what an engineer is. If this does in fact happen, I would expect a slight nudge to get more under-represented minorities (URMs), who may not have as many engineers in their lives, into engineering.&lt;/p&gt;
 
 &lt;p&gt;To help drive home some of the learnings taken from RET, the mentors visit the classrooms of the teachers three times over the course of the year following the program. This hopefully provides a chance for students to see some type of engineer and to do some interesting activities. Beyond whatever special value I may bring, I have found that just having a second person in the room can help reach otherwise unreachable students (I could easily write on the absurdity of leaving one teacher in a classroom of 30+ students).&lt;/p&gt;
 
-&lt;p&gt;The first summer I did the RET, I presented a set of well defined and scoped projects to my teacher, like what might be received in an industrial/professional setting. I then tried to help the teacher through every step of the process, ensuring that she was able to succeed. The process was hard on her, but not as hard as it could have been. I also tried to involve myself in her curriculum development process. The amount that I took on with her led me to spend 15-25 hours a week on the program, which was not sustainable. At the end of the summer, she seemed to have had a great experience, she has remained engaged with our lab, but I’m not sure that she took away as much as she could have.&lt;/p&gt;
+&lt;p&gt;The first summer I did the RET, I presented a set of well-defined and scoped projects to my teacher, like what might be received in an industrial/professional setting. I then tried to help the teacher through every step of the process, ensuring that she was able to succeed. The process was hard on her, but not as hard as it could have been. I also tried to involve myself in her curriculum development process. The amount that I took on with her led me to spend 15-25 hours a week on the program, which was not sustainable. At the end of the summer, she seemed to have had a great experience, she has remained engaged with our lab, but I’m not sure that she took away as much as she could have.&lt;/p&gt;
 
 &lt;p&gt;The second year, I took on two teachers, you can read more about them in &lt;a href=&quot;https://medium.com/penn-engineering/teachers-become-students-to-become-better-teachers-at-grasp-labs-ret-program-820bf36791c7&quot;&gt;this Penn Engineering profile&lt;/a&gt;. I was much more hands off. Instead of constant interaction I tried to deliver just in time critical help in a focused way. For the first five weeks this worked quite well. The final week I found it necessary to be much more involved to help drive the teachers through final implementation and review their writing and presentations. I think at the end they took away more than my first teacher although at the cost of not being as close personally to me. This approach was also a much more sustainable system for me.&lt;/p&gt;
 
@@ -38,20 +38,20 @@
 &lt;p&gt;Through my discussions with people of other programs, I found that our program is unique. I think that the people who created the GRASP RET program deserve a lot of credit for coming up with a model that I believe is the best I have seen so far. But there is a lot to improve, and we found that those things that need improvement in our program have been challenges for many others as well.&lt;/p&gt;
 
 &lt;h3 id=&quot;what-are-rets-trying-to-achieve&quot;&gt;What are RETs trying to achieve?&lt;/h3&gt;
-&lt;p&gt;I think the biggest open question around RET is: what are the goals? When asking people what their programs achieve, the responses were all over the place. Some programs focus on teaching concepts directly that can be taken back to the classroom. Others focus on curating experiences that can lead to classroom activities. Few seem to step back as far as us and focus on the way that teachers think about education. At the end of the day we all want to improve student outcomes, but even that is nebulous. No one wants to put the focus on student testing. And I don’t even want to focus on sending students to college. Generally, I don’t think that K-12 is the time to get into hard engineering, although many engineering skills can be applied across the spectrum of subjects, so I don’t think we should measure the number of engineering-based lessons either. The best answer that I can come up with is to say that we should try to 1) increase the number of students who are familiar with the field of engineering 2) improve student perceptions that their teachers understand them when struggling 3) improve student perceptions that their teachers are actual experts and 4) improve students abilities to solve novel open ended problems.&lt;/p&gt;
+&lt;p&gt;I think the biggest open question around RET is: what are the goals? When asking people what their programs achieve, the responses were all over the place. Some programs focus on teaching concepts directly that can be taken back to the classroom. Others focus on curating experiences that can lead to classroom activities. Few seem to step back as far as us and focus on the way that teachers think about education. At the end of the day we all want to improve student outcomes, but even that is nebulous. No one wants to put the focus on student testing. And I don’t even want to focus on sending students to college. Generally, I don’t think that K-12 is the time to get into hard engineering, although many engineering skills can be applied across the spectrum of subjects, so I don’t think we should measure the number of engineering-based lessons either. The best answer that I can come up with is to say that we should try to 1) increase the number of students who are familiar with the field of engineering 2) improve student perceptions that their teachers understand them when struggling 3) improve student perceptions that their teachers are actual experts and 4) improve students abilities to solve novel open-ended problems.&lt;/p&gt;
 
-&lt;p&gt;There were significant discussions on how to assess the outcomes of RET programs. It is sufficient to say that the problem is very hard. I do think that evidence-based teaching is valuable, and this is a space that needs more exploration broadly, beyond RET.&lt;/p&gt;
+&lt;p&gt;There were significant discussions on how to assess the outcomes of RET programs. It is sufficient to say that the problem is  hard. I do think that evidence-based teaching is valuable, and this is a space that needs more exploration broadly, beyond RET.&lt;/p&gt;
 
 &lt;h3 id=&quot;the-education-ecosystem&quot;&gt;The education ecosystem&lt;/h3&gt;
 &lt;p&gt;One of the first activities which we worked on was trying to understand what the education ecosystem looks like. There were a multitude of different takes on the problem that highlighted a few things that carried through the rest of the conference, I think the most important of which was that we need to keep students as the center of our goals. Everything we are doing in this space should be trying to improve their state. I also had a few takeaways beyond that. The RET program is designed to bring teachers into research and engineering, but more is needed pre-service. Schools of education are currently too isolated from the places in the university which focus on the material that teachers teach. It was also clear that we need more industry involvement in these efforts. The RETs as they stand now primarily give exposure to academic engineers with slight industry mentoring. There is a lot of value to that, in my experience the teachers have an easier time seeing their students as grad students. The jump from their kids to the grownup kids that we are isn’t too far. But to fully understand what engineering is, we need to acknowledge that most engineers do not reside in academia. So, we need to expose the teachers to engineers in industry. There were a couple of programs that are using industry cost share to expand on their NSF funding and who are doing site tours at industrial facilities. I think both of those are fantastic and we should all try to follow their lead. I have encouraged our program to look at having an industry day as a part of the program where we bring in people from industry to give quick 10-15 minute talks to the teachers on what they do. I think there is an opportunity to film those talks to give teachers a repository of job descriptions to provide to their students. At the least this would allow teachers to have a broader sense of what engineers do. Finally, I think that we need to understand that often a student’s performance is driven by the community around them, at the national, state, local, neighborhood, friend, and familial levels. When the community around a student promotes the value of learning, students put forth an increased effort and have the resources outside of the classroom to excel. This suggests that we need to work more to engage communities.&lt;/p&gt;
 
 &lt;h3 id=&quot;challenges-in-running-an-ret&quot;&gt;Challenges in running an RET&lt;/h3&gt;
-&lt;p&gt;There are many challenges in running an RET which we seemed to conclude could be partly alleviated by sharing resources between centers. From the very beginning when a team starts to design a program, they are largely on their own for making design decisions. The request for proposal for the program has a significant number of suggestions for how a program should be run and some programs publish a few details of their approach in research papers, but these only scratch the surface of what is needed. To try to help new programs start, I believe that it would be beneficial to have a database with fully detailed goals and methods of RET programs. And as the programs progress, materials and measured outcomes. There was broad agreement that some sort of RET conference should be occurring regularly and that a condition of receiving grant money should be sending a small team to the conference for one of the three funded years.&lt;/p&gt;
+&lt;p&gt;There are many challenges in running an RET which we seemed to conclude could be partly alleviated by sharing resources between centers. From the  beginning when a team starts to design a program, they are largely on their own for making design decisions. The request for proposal for the program has a significant number of suggestions for how a program should be run and some programs publish a few details of their approach in research papers, but these only scratch the surface of what is needed. To try to help new programs start, I believe that it would be beneficial to have a database with fully detailed goals and methods of RET programs. And as the programs progress, materials and measured outcomes. There was broad agreement that some sort of RET conference should be occurring regularly and that a condition of receiving grant money should be sending a small team to the conference for one of the three funded years.&lt;/p&gt;
 
 &lt;h3 id=&quot;broadening-participation&quot;&gt;Broadening participation&lt;/h3&gt;
-&lt;p&gt;A major focus at the conference was on broadening participation which in simpler terms has the goal of brining more under represented minorities (Hispanics, people of color, low income students, first generation students, etc) and women into engineering. I personally think this is critical for several reasons (that will have to be another post at some point). During a panel discussion on promoting diversity, I asked what I should be doing as a white male when I visit K-12 classes to enable students who look differently than me to see themselves in me and so be able to see who I am as a possibility for their futures. The first suggestion was to try and bring people I work with who represent a diversity of backgrounds into the classroom to show the different ways that engineers look. This is something that I have for some reason not considered, but I think is a great idea. I suspect that if a person of color or woman accompanies me to see these classrooms, that is more impactful than if two people of color or two women went in. Showing diversity in a field sends a message that it is accepting of everyone by everyone and I think that is powerful. It was also pointed out that people who are minorities in an area will often “count” when viewing media. So, if I have a presentation where there are many researchers’ hands shown and they are all white, people will notice that. This is just the sort of thing I don’t notice but will have to keep an eye out for. It also makes me think that I should do more in my lab presentations to highlight the people in our lab. My PI has done a great job bringing in a very diverse lab, and we should do more to highlight not just the research, but also the people.&lt;/p&gt;
+&lt;p&gt;A major focus at the conference was on broadening participation which in simpler terms has the goal of brining more under-represented minorities (Hispanics, people of color, low income students, first generation students, etc.) and women into engineering. I  think this is critical for several reasons (that will have to be another post at some point). During a panel discussion on promoting diversity, I asked what I should be doing as a white male when I visit K-12 classes to enable students who look differently than me to see themselves in me and so be able to see who I am as a possibility for their futures. The first suggestion was to try to bring people I work with who represent a diversity of backgrounds into the classroom to show the different ways that engineers look. This is something that I have for some reason not considered, but I think is a great idea. I suspect that if a person of color or woman accompanies me to see these classrooms, that is more impactful than if two people of color or two women went in. Showing diversity in a field sends a message that it is accepting of everyone by everyone and I think that is powerful. It was also pointed out that people who are minorities in an area will often “count” when viewing media. So, if I have a presentation where there are many researchers’ hands shown and they are all white, people will notice that. This is just the sort of thing I don’t notice but will have to keep an eye out for. It also makes me think that I should do more in my lab presentations to highlight the people in our lab. My PI has done a great job bringing in a  diverse lab, and we should do more to highlight not just the research, but also the people.&lt;/p&gt;
 
-&lt;p&gt;There was also a lot of discussion on what needs to be done at the university level to raise, hire, and support under represented groups. I think we need to start by admitting that the pipeline to provide candidates is not good enough yet, we need to have more diverse candidate pools at every level. It is also important that the community around and within the university is welcoming to everyone. It was pointed out that a potential employer that goes out of their way to show how a candidate fits into the community will be more successful. There was also some discussion on how many of the support structures for URMs have turned out to be good for all students. We need to remember that an entire cohort of the best people who think the same way are often not as productive/valuable as a cohort of slightly less experienced people who bring new ways to think. We should be willing to take risks on the people who haven’t yet had a chance to prove themselves but have interesting perspectives.&lt;/p&gt;
+&lt;p&gt;There was also a lot of discussion on what needs to be done at the university level to raise, hire, and support under-represented groups. I think we need to start by admitting that the pipeline to provide candidates is not good enough yet, we need to have more diverse candidate pools at every level. It is also important that the community around and within the university is welcoming to everyone. It was pointed out that a potential employer that goes out of their way to show how a candidate fits into the community will be more successful. There was also some discussion on how many of the support structures for URMs have turned out to be good for all students. We need to remember that an entire cohort of the best people who think the same way are often not as productive/valuable as a cohort of slightly less experienced people who bring new ways to think. We should be willing to take risks on the people who haven’t yet had a chance to prove themselves but have interesting perspectives.&lt;/p&gt;
 
 &lt;p&gt;As I have already said, I think that part of broadening participation in engineering will come from broadening familiarity with engineering. I think the RET system is in a good position to make a lot of marketing material for exposing students and teachers to engineering. It would take minimal additional resources to make videos, flyers, etc. that tell the stories of grad students, professors, industry mentors, and teachers involved in RET programs. A database of 2-minute videos on the different stories of participants would allow students across the country to get more exposure and easily learn about more paths in their education. They could find the people with whom they empathize and see themselves as an engineer.&lt;/p&gt;
 
@@ -59,7 +59,7 @@
 &lt;p&gt;There was a lot of discussion on how to increase the reach of the RET program. Some suggestions were floated to make shorter sessions, online sessions, disseminate curriculum, create training programs from teachers who participate, etc. I think that these ideas generally miss the point of what the RET does. I have mentioned that I believe the rigor of research, progression through real novel research, and exposure to grad students and lab personnel is what makes the program. Without that, we are just doing another professional development session. One of the limits to scaling up the RET in the way that it looks today is the availability of quality PhD students to serve as mentors. In 2018, the NSF made 2,000 graduate research fellowship program award offers. I see no reason why the NSF should not directly tap its GRFP pool to provide mentors.&lt;/p&gt;
 
 &lt;h4 id=&quot;what-is-our-role-in-academia&quot;&gt;What is our role in academia?&lt;/h4&gt;
-&lt;p&gt;This goes more generally into a question of what our role is in academia. I heard time and time again that we sit on three pillars: research, teaching, and service. And many made clear that working in K-12 education is a critical part of the teaching. I even heard a dean of an engineering program say that she does not promote faculty who don’t prioritize teaching down the educational pipeline. But I look around the place where I work at Penn, and that is not what I hear or see. I see grad students who are pushed to do research. I would guess that about a third of us are passionate about working to educate those at lower educational stages, but we don’t get rewarded for that. I constantly hear PhD students who say that their PI expects too much research work to allow them to focus at all on teaching or service. Of course, there is still significant outreach in the form of science fairs, tours, summer camps, etc. sponsored by the university. We even run multiple RET and research experience for undergrad programs. But at the personal grad student level, it seems like only a portion of the students carrying the load and an outsized focus on activities that fall on the outreach side instead of the education side of a very narrow line.&lt;/p&gt;
+&lt;p&gt;This goes more generally into a question of what our role is in academia. I heard time and time again that we sit on three pillars: research, teaching, and service. And many made clear that working in K-12 education is a critical part of the teaching. I even heard a dean of an engineering program say that she does not promote faculty who don’t prioritize teaching down the educational pipeline. But I look around the place where I work at Penn, and that is not what I hear or see. I see grad students who are pushed to do research. I would guess that about a third of us are passionate about working to educate those at lower educational stages, but we don’t get rewarded for that. I constantly hear PhD students who say that their PI expects too much research work to allow them to focus at all on teaching or service. Of course, there is still significant outreach in the form of science fairs, tours, summer camps, etc. sponsored by the university. We even run multiple RET and research experience for undergrad programs. But at the personal grad student level, it seems like only a portion of the students carrying the load and an outsize focus on activities that fall on the outreach side instead of the education side of a  narrow line.&lt;/p&gt;
 
 &lt;p&gt;I am lucky enough to have a PI who prioritizes both teaching and service. I don’t see her being rewarded for that. When time and resources go into bringing in students from community colleges and high schools to increase exposure, instead of focusing on perfecting a funding application; there is no reward, there is no grant. When I take on seven students over a summer and focus on teaching them, helping them to see what research is, I don’t get publications out, I don’t make progress towards my thesis. At the beginning of this semester, I had begun to lose faith in the importance of those things. If the system tells you to focus on research to the exclusion of all else, it is easy to give in. Hearing so many academics at the conference who see importance in K-12 education, has helped me to reflect further on their importance.&lt;/p&gt;
 
@@ -272,235 +272,6 @@ Just follow this &lt;a href=&quot;http://docs.aws.amazon.com/AWSEC2/latest/UserG
         <category>ML</category>
         
         <category>Docker</category>
-        
-        
-        <category>guides</category>
-        
-      </item>
-    
-      <item>
-        <title>Building Caffe with Matlab, Opencv3, and python2/3 with virtualenvs</title>
-        <description>&lt;p&gt;I am leaving this up for the sake of posterity. It should absolutely not be followed. I think it is probably best to just not use matcaffe for anything…&lt;/p&gt;
-
-&lt;p&gt;Installing Caffe is a huge pain. Here is how I am doing it. I don’t have a GPU, I want to be able to run in python2 and python3 as well as Matlab. I haven’t tested this enough to know if it works how I want it to, I am in the process of learning caffe. This is mostly just for my notes.&lt;/p&gt;
-
-&lt;p&gt;There is a really good &lt;a href=&quot;https://github.com/BVLC/caffe/wiki/Ubuntu-16.04-or-15.10-Installation-Guide&quot;&gt;reference&lt;/a&gt; and the official (not so good) &lt;a href=&quot;caffe.berkeleyvision.org/installation.html&quot;&gt;Install Instructions&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;some-dependencies&quot;&gt;Some dependencies:&lt;/h2&gt;
-&lt;h3 id=&quot;matlab&quot;&gt;Matlab&lt;/h3&gt;
-&lt;p&gt;Matlab installation kind of varies based on where you get it from, butmake sure it is installed&lt;/p&gt;
-
-&lt;h4 id=&quot;setting-up-mex-compilation&quot;&gt;Setting up MEX compilation&lt;/h4&gt;
-&lt;p&gt;Matlab needs an older compiler, 4.9&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;gcc-4.9 g++-4.9
-&lt;span class=&quot;c&quot;&gt;# you may need to update alternatives&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;update-alternatives &lt;span class=&quot;nt&quot;&gt;--install&lt;/span&gt; /usr/bin/gcc gcc /usr/bin/gcc-4.9 20
-&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;update-alternatives &lt;span class=&quot;nt&quot;&gt;--install&lt;/span&gt; /usr/bin/g++ g++ /usr/bin/g++-4.9 20
-&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;update-alternatives &lt;span class=&quot;nt&quot;&gt;--config&lt;/span&gt; gcc
-&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;update-alternatives &lt;span class=&quot;nt&quot;&gt;--config&lt;/span&gt; g++&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;This may or may not be necessary:
-&lt;code class=&quot;highlighter-rouge&quot;&gt;sudo gedit /usr/local/MATLAB/R2017a/bin/mexopts.sh&lt;/code&gt;
-edit line 54 from &lt;code class=&quot;highlighter-rouge&quot;&gt;CC='gcc'&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;CC='gcc-4.9'&lt;/code&gt; and edit line 69 from &lt;code class=&quot;highlighter-rouge&quot;&gt;CXX='g++'&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;CXX='g++-4.9'&lt;/code&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;general-stuff&quot;&gt;General stuff&lt;/h3&gt;
-&lt;p&gt;First get all the easy stuff out of the way (copied from the &lt;a href=&quot;https://github.com/BVLC/caffe/wiki/Ubuntu-16.04-or-15.10-Installation-Guide&quot;&gt;guide&lt;/a&gt;)&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get update
-&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get upgrade
-&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt; build-essential cmake git pkg-config
-&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt; libprotobuf-dev libleveldb-dev libsnappy-dev libhdf5-serial-dev protobuf-compiler
-&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt; libatlas-base-dev 
-&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--no-install-recommends&lt;/span&gt; libboost-all-dev
-&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt; libgflags-dev libgoogle-glog-dev liblmdb-dev
-
-&lt;span class=&quot;c&quot;&gt;# (Python general)&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt; python-pip
-
-&lt;span class=&quot;c&quot;&gt;# (Python 2.7 development files)&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt; python-dev
-&lt;span class=&quot;c&quot;&gt;# sudo apt-get install -y python-numpy python-scipy # honestly not sure that this is needed&lt;/span&gt;
-
-&lt;span class=&quot;c&quot;&gt;# (or, Python 3.5 development files)&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt; python3-dev
-&lt;span class=&quot;c&quot;&gt;# sudo apt-get install -y python3-numpy python3-scipy &lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# sudo apt-get install -y python-numpy python-scipy &lt;/span&gt;
- 
-&lt;span class=&quot;c&quot;&gt;# (OpenCV 2.4)&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# sudo apt-get install -y libopencv-dev # I prefer to use 3.2&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h3 id=&quot;opencv&quot;&gt;OpenCV&lt;/h3&gt;
-&lt;p&gt;I follow this &lt;a href=&quot;http://www.pyimagesearch.com/2016/10/24/ubuntu-16-04-how-to-install-opencv/&quot;&gt;guide&lt;/a&gt; except that I use OpenCV 3.2.&lt;/p&gt;
-
-&lt;h3 id=&quot;python&quot;&gt;Python&lt;/h3&gt;
-&lt;p&gt;I chose to try to install for both python 2 and 3 in virtual environments. So:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;mkvirtualenv caffe2 &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; python2
-mkvirtualenv caffe3 &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; python3&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Then I went into the python folder in the caffe repo and executed: &lt;code class=&quot;highlighter-rouge&quot;&gt;for req in $(cat requirements.txt); do pip install $req; done&lt;/code&gt; for each of the virtual env (&lt;code class=&quot;highlighter-rouge&quot;&gt;workon caffe2&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;workon caffe3&lt;/code&gt;)&lt;/p&gt;
-
-&lt;h3 id=&quot;weird-naming&quot;&gt;Weird naming&lt;/h3&gt;
-&lt;p&gt;I then followed the instructions from the guide and did some sym linking:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /usr/lib/x86_64-linux-gnu
-&lt;span class=&quot;nb&quot;&gt;sudo ln&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; libhdf5_serial.so.10.1.0 libhdf5.so
-&lt;span class=&quot;nb&quot;&gt;sudo ln&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-s&lt;/span&gt; libhdf5_serial_hl.so.10.0.2 libhdf5_hl.so &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h2 id=&quot;make-file&quot;&gt;Make File&lt;/h2&gt;
-&lt;p&gt;I then edited the makefile (first copy the example to make your working copy):&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-make&quot; data-lang=&quot;make&quot;&gt;&lt;span class=&quot;c&quot;&gt;## Refer to http://caffe.berkeleyvision.org/installation.html
-# Contributions simplifying and improving our build system are welcome!
-&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# cuDNN acceleration switch (uncomment to build with cuDNN).
-# USE_CUDNN := 1
-&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# CPU-only switch (uncomment to build without GPU support).
-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;CPU_ONLY&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; 1
-
-&lt;span class=&quot;c&quot;&gt;# uncomment to disable IO dependencies and corresponding data layers
-# USE_OPENCV := 0
-# USE_LEVELDB := 0
-# USE_LMDB := 0
-&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# uncomment to allow MDB_NOLOCK when reading LMDB files (only if necessary)
-#	You should not set this flag if you will be reading LMDBs with any
-#	possibility of simultaneous read and write
-# ALLOW_LMDB_NOLOCK := 1
-&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# Uncomment if you're using OpenCV 3
-&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;OPENCV_VERSION&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; 3
-
-&lt;span class=&quot;c&quot;&gt;# To customize your choice of compiler, uncomment and set the following.
-# N.B. the default for Linux is g++ and the default for OSX is clang++
-# CUSTOM_CXX := g++
-&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# CUDA directory contains bin/ and lib/ directories that we need.
-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;CUDA_DIR&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; /usr/local/cuda
-&lt;span class=&quot;c&quot;&gt;# On Ubuntu 14.04, if cuda tools are installed via
-# &quot;sudo apt-get install nvidia-cuda-toolkit&quot; then use this instead:
-# CUDA_DIR := /usr
-&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# CUDA architecture setting: going with all of them.
-# For CUDA &amp;lt; 6.0, comment the *_50 through *_61 lines for compatibility.
-# For CUDA &amp;lt; 8.0, comment the *_60 and *_61 lines for compatibility.
-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;CUDA_ARCH&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-gencode&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;arch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;compute_20,code&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;sm_20 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-		&lt;span class=&quot;nt&quot;&gt;-gencode&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;arch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;compute_20,code&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;sm_21 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-		&lt;span class=&quot;nt&quot;&gt;-gencode&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;arch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;compute_30,code&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;sm_30 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-		&lt;span class=&quot;nt&quot;&gt;-gencode&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;arch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;compute_35,code&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;sm_35 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-		&lt;span class=&quot;nt&quot;&gt;-gencode&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;arch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;compute_50,code&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;sm_50 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-		&lt;span class=&quot;nt&quot;&gt;-gencode&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;arch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;compute_52,code&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;sm_52 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-		&lt;span class=&quot;nt&quot;&gt;-gencode&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;arch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;compute_60,code&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;sm_60 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-		&lt;span class=&quot;nt&quot;&gt;-gencode&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;arch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;compute_61,code&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;sm_61 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-		&lt;span class=&quot;nt&quot;&gt;-gencode&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;arch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;compute_61,code&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;compute_61
-
-&lt;span class=&quot;c&quot;&gt;# BLAS choice:
-# atlas for ATLAS (default)
-# mkl for MKL
-# open for OpenBlas
-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;BLAS&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; atlas
-&lt;span class=&quot;c&quot;&gt;# Custom (MKL/ATLAS/OpenBLAS) include and lib directories.
-# Leave commented to accept the defaults for your choice of BLAS
-# (which should work)!
-# BLAS_INCLUDE := /path/to/your/blas
-# BLAS_LIB := /path/to/your/blas
-&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# Homebrew puts openblas in a directory that is not on the standard search path
-# BLAS_INCLUDE := $(shell brew --prefix openblas)/include
-# BLAS_LIB := $(shell brew --prefix openblas)/lib
-&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# This is required only if you will compile the matlab interface.
-# MATLAB directory should contain the mex binary in /bin.
-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;MATLAB_DIR&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; /usr/local/MATLAB/R2017a
-&lt;span class=&quot;c&quot;&gt;# MATLAB_DIR := /Applications/MATLAB_R2012b.app
-&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# NOTE: this is required only if you will compile the python interface.
-# We need to be able to find Python.h and numpy/arrayobject.h.
-&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;PYTHON_INCLUDE&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; ~/.virtualenvs/caffe2/include/python2.7 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-		~/.virtualenvs/caffe2/lib/python2.7/site-packages/numpy/core/include/
-&lt;span class=&quot;c&quot;&gt;# Anaconda Python distribution is quite popular. Include path:
-# Verify anaconda location, sometimes it's in root.
-# ANACONDA_HOME := $(HOME)/anaconda
-# PYTHON_INCLUDE := $(ANACONDA_HOME)/include \
-&lt;/span&gt;		&lt;span class=&quot;c&quot;&gt;# $(ANACONDA_HOME)/include/python2.7 \
-&lt;/span&gt;		&lt;span class=&quot;c&quot;&gt;# $(ANACONDA_HOME)/lib/python2.7/site-packages/numpy/core/include
-&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# Uncomment to use Python 3 (default is Python 2)
-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PYTHON_LIBRARIES&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; boost_python3 python3.5m
-&lt;span class=&quot;nv&quot;&gt;PYTHON_INCLUDE&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; ~/.virtualenvs/caffe3/include/python3.5m &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-                ~/.virtualenvs/caffe3/lib/python3.5/site-packages/numpy/core/include/
-
-&lt;span class=&quot;c&quot;&gt;# We need to be able to find libpythonX.X.so or .dylib.
-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PYTHON_LIB&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; /usr/lib
-&lt;span class=&quot;c&quot;&gt;# PYTHON_LIB := $(ANACONDA_HOME)/lib
-&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# Homebrew installs numpy in a non standard path (keg only)
-# PYTHON_INCLUDE += $(dir $(shell python -c 'import numpy.core; print(numpy.core.__file__)'))/include
-# PYTHON_LIB += $(shell brew --prefix numpy)/lib
-&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# Uncomment to support layers written in Python (will link against Python libs)
-# WITH_PYTHON_LAYER := 1
-&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# Whatever else you find you need goes here.
-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;INCLUDE_DIRS&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$(PYTHON_INCLUDE)&lt;/span&gt; /usr/local/include &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-		/usr/include/hdf5/serial/
-&lt;span class=&quot;nv&quot;&gt;LIBRARY_DIRS&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$(PYTHON_LIB)&lt;/span&gt; /usr/local/lib /usr/lib /usr/lib/x86_64-linux-gnu/hdf5/serial &lt;span class=&quot;c&quot;&gt;#/usr/local/share/OpenCV/3rdparty/lib/&lt;/span&gt;
-
- &lt;span class=&quot;nv&quot;&gt;LIBRARIES&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; glog gflags protobuf leveldb snappy &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-  lmdb boost_system boost_filesystem hdf5_hl hdf5 m &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-  opencv_core opencv_highgui opencv_imgproc opencv_imgcodecs opencv_videoio
-
-&lt;span class=&quot;c&quot;&gt;# If Homebrew is installed at a non standard location (for example your home directory) and you use it for general dependencies
-# INCLUDE_DIRS += $(shell brew --prefix)/include
-# LIBRARY_DIRS += $(shell brew --prefix)/lib
-&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# NCCL acceleration switch (uncomment to build with NCCL)
-# https://github.com/NVIDIA/nccl (last tested version: v1.2.3-1+cuda8.0)
-# USE_NCCL := 1
-&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# Uncomment to use `pkg-config` to specify OpenCV library paths.
-# (Usually not necessary -- OpenCV libraries are normally installed in one of the above $LIBRARY_DIRS.)
-# USE_PKG_CONFIG := 1
-&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# N.B. both build and distribute dirs are cleared on `make clean`
-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;BUILD_DIR&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; build
-&lt;span class=&quot;nv&quot;&gt;DISTRIBUTE_DIR&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; distribute
-
-&lt;span class=&quot;c&quot;&gt;# Uncomment for debugging. Does not work on OSX due to https://github.com/BVLC/caffe/issues/171
-# DEBUG := 1
-&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# The ID of the GPU that 'make runtest' will use to run unit tests.
-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;TEST_GPUID&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; 0
-
-&lt;span class=&quot;c&quot;&gt;# enable pretty build (comment to see full commands)
-&lt;/span&gt;	&lt;span class=&quot;nv&quot;&gt;Q&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;?=&lt;/span&gt; @
-  
-  &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h2 id=&quot;build&quot;&gt;build&lt;/h2&gt;
-&lt;p&gt;Finally, I build and test:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;make all
-make &lt;span class=&quot;nb&quot;&gt;test
-&lt;/span&gt;make runtest
-make pycaffe 
-make matcaffe
-make mattest
-make distribute&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h2 id=&quot;final-touch-up-to-help-python-find-caffe&quot;&gt;Final touch up to help python find caffe&lt;/h2&gt;
-</description>
-        <pubDate>Wed, 03 May 2017 00:00:00 +0000</pubDate>
-        <link>http://www.michaelsobrepera.com/guides/buildCaffe.html</link>
-        <guid isPermaLink="true">http://www.michaelsobrepera.com/guides/buildCaffe.html</guid>
-        
-        <category>learning</category>
-        
-        <category>code</category>
-        
-        <category>programming</category>
         
         
         <category>guides</category>
@@ -920,6 +691,19 @@ chmod a+x /usr/local/bin/rcode&lt;/code&gt;&lt;/pre&gt;
         
         
         <category>guides</category>
+        
+      </item>
+    
+      <item>
+        <title>NSF GRFP Proposal</title>
+        <description>&lt;p&gt;This is the proposal which I submitted this year for the National Science Foundation Graduate Research Fellowship Program. The only change from the actual submission is the addition of the header and footer. I actually think the idea is pretty interesting.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 27 Oct 2015 00:00:00 +0000</pubDate>
+        <link>http://www.michaelsobrepera.com/writings/NSFProposal.html</link>
+        <guid isPermaLink="true">http://www.michaelsobrepera.com/writings/NSFProposal.html</guid>
+        
+        
+        <category>writings</category>
         
       </item>
     
