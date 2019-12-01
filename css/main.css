@@ -154,9 +154,15 @@ hr { border: 0; height: 3px; background-image: linear-gradient(to right, rgba(0,
 .calListItem { font-size: 16pt; }
 
 /** Specials for home page */
+.big-home { width: 60%; flex-grow: 1; margin: 5px; }
+
 .big-home p { font-size: 22px; }
 
 @media screen and (max-width: 800px) { .big-home p { font-size: 18px; } }
+
+.home-container { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+
+.headshot-image { width: 35%; height: auto; min-width: 200px; flex-grow: 1; margin: 5px; }
 
 /** Site header */
 .site-header { border-top: 5px solid #424242; border-bottom: 1px solid #e8e8e8; min-height: 56px; background-color: #f0f0f0; position: relative; }
