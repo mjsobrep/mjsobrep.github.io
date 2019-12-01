@@ -7,6 +7,7 @@ tags:
 - learning
 - code
 - programming
+published: false
 ---
 
 I am leaving this up for the sake of posterity. It should absolutely not be followed. I think it is probably best to just not use matcaffe for anything...
@@ -16,7 +17,7 @@ I am leaving this up for the sake of posterity. It should absolutely not be foll
 
 
 
-Installing Caffe is a huge pain. Here is how I am doing it. I don't have a GPU, I want to be able to run in python2 and python3 as well as Matlab. I haven't tested this enough to know if it works how I want it to, I am in the process of learning caffe. This is mostly just for my notes. 
+Installing Caffe is a huge pain. Here is how I am doing it. I don't have a GPU, I want to be able to run in python2 and python3 as well as Matlab. I haven't tested this enough to know if it works how I want it to, I am in the process of learning caffe. This is mostly just for my notes.
 
 There is a really good [reference](https://github.com/BVLC/caffe/wiki/Ubuntu-16.04-or-15.10-Installation-Guide) and the official (not so good) [Install Instructions](caffe.berkeleyvision.org/installation.html)
 
@@ -47,7 +48,7 @@ sudo apt-get update
 sudo apt-get upgrade
 sudo apt-get install -y build-essential cmake git pkg-config
 sudo apt-get install -y libprotobuf-dev libleveldb-dev libsnappy-dev libhdf5-serial-dev protobuf-compiler
-sudo apt-get install -y libatlas-base-dev 
+sudo apt-get install -y libatlas-base-dev
 sudo apt-get install -y --no-install-recommends libboost-all-dev
 sudo apt-get install -y libgflags-dev libgoogle-glog-dev liblmdb-dev
 
@@ -60,15 +61,15 @@ sudo apt-get install -y python-dev
 
 # (or, Python 3.5 development files)
 sudo apt-get install -y python3-dev
-# sudo apt-get install -y python3-numpy python3-scipy 
-# sudo apt-get install -y python-numpy python-scipy 
- 
+# sudo apt-get install -y python3-numpy python3-scipy
+# sudo apt-get install -y python-numpy python-scipy
+
 # (OpenCV 2.4)
 # sudo apt-get install -y libopencv-dev # I prefer to use 3.2
 {% endhighlight %}
 
 ### OpenCV
-I follow this [guide](http://www.pyimagesearch.com/2016/10/24/ubuntu-16-04-how-to-install-opencv/) except that I use OpenCV 3.2. 
+I follow this [guide](http://www.pyimagesearch.com/2016/10/24/ubuntu-16-04-how-to-install-opencv/) except that I use OpenCV 3.2.
 
 ### Python
 I chose to try to install for both python 2 and 3 in virtual environments. So:
@@ -86,7 +87,7 @@ I then followed the instructions from the guide and did some sym linking:
 {% highlight bash %}
 cd /usr/lib/x86_64-linux-gnu
 sudo ln -s libhdf5_serial.so.10.1.0 libhdf5.so
-sudo ln -s libhdf5_serial_hl.so.10.0.2 libhdf5_hl.so 
+sudo ln -s libhdf5_serial_hl.so.10.0.2 libhdf5_hl.so
 {% endhighlight %}
 
 
@@ -219,7 +220,7 @@ TEST_GPUID := 0
 
 # enable pretty build (comment to see full commands)
 	Q ?= @
-  
+
   {% endhighlight %}
 
 ## build
@@ -229,7 +230,7 @@ Finally, I build and test:
 make all
 make test
 make runtest
-make pycaffe 
+make pycaffe
 make matcaffe
 make mattest
 make distribute
