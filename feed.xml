@@ -5,9 +5,50 @@
     <description>A site about stuff that I (Michael Sobrepera) work on, think, enjoy, etc...</description>
     <link>http://www.michaelsobrepera.com/</link>
     <atom:link href="http://www.michaelsobrepera.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 01 Dec 2019 23:17:19 +0000</pubDate>
-    <lastBuildDate>Sun, 01 Dec 2019 23:17:19 +0000</lastBuildDate>
+    <pubDate>Mon, 17 Feb 2020 16:09:13 +0000</pubDate>
+    <lastBuildDate>Mon, 17 Feb 2020 16:09:13 +0000</lastBuildDate>
     <generator>Jekyll v4.0.0</generator>
+    
+      <item>
+        <title>Designing Arms for Lil’Flo, a Socially Assistive Rehabilitation Robot</title>
+        <description>&lt;p&gt;This is a short conference paper that I presented as a poster at the 2019 BMES Conference  and is in the &lt;a href=&quot;https://submissions2.mirasmart.com/Verify/BMES2019/submission/temp/rad89843.pdf&quot;&gt;BMES Meeting Archive&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 20 Oct 2019 00:00:00 +0000</pubDate>
+        <link>http://www.michaelsobrepera.com/writings/bmes-flo-arms.html</link>
+        <guid isPermaLink="true">http://www.michaelsobrepera.com/writings/bmes-flo-arms.html</guid>
+        
+        
+        <category>writings</category>
+        
+      </item>
+    
+      <item>
+        <title>Designing and Evaluating the Face of Lil’Flo: An Affordable Social Rehabilitation Robot</title>
+        <description>&lt;p&gt;This is a pre-print of the conference paper that I presented as a poster at the 2019 International Conference on Rehabilitation Robotics (ICORR).
+The final published version is available in &lt;a href=&quot;https://ieeexplore.ieee.org/document/8779416&quot;&gt;IEEE Xplore&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 28 Jun 2019 00:00:00 +0000</pubDate>
+        <link>http://www.michaelsobrepera.com/writings/icorr-flo-face.html</link>
+        <guid isPermaLink="true">http://www.michaelsobrepera.com/writings/icorr-flo-face.html</guid>
+        
+        
+        <category>writings</category>
+        
+      </item>
+    
+      <item>
+        <title>Design of an Affordable Socially Assistive Robot for Remote Health and Function Monitoring and Prognostication</title>
+        <description>&lt;p&gt;This is a paper that we published in the International Journal of Prognostics and Health Management. 
+The final published version is available from &lt;a href=&quot;https://www.phmsociety.org/node/2548&quot;&gt;the PHM Society&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 06 May 2019 00:00:00 +0000</pubDate>
+        <link>http://www.michaelsobrepera.com/writings/jrate-flo.html</link>
+        <guid isPermaLink="true">http://www.michaelsobrepera.com/writings/jrate-flo.html</guid>
+        
+        
+        <category>writings</category>
+        
+      </item>
     
       <item>
         <title>Thoughts and Takeaways from the Oct 2018 RET Conference and On My Experience as an RET Mentor</title>
@@ -97,6 +138,34 @@
         
         
         <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>The Design of Lil’Flo, an Affordable Socially Assistive Robot for Telepresence Rehabilitation</title>
+        <description>&lt;p&gt;This is a short conference paper that we submitted to the 2018 RESNA Annual Meeting.
+The work was presented as a poster and is in the &lt;a href=&quot;https://www.resna.org/sites/default/files/conference/2018/emerging_technology/Sobrepera.html&quot;&gt;RESNA Meeting Archive&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 15 Jul 2018 00:00:00 +0000</pubDate>
+        <link>http://www.michaelsobrepera.com/writings/resna-flo-system.html</link>
+        <guid isPermaLink="true">http://www.michaelsobrepera.com/writings/resna-flo-system.html</guid>
+        
+        
+        <category>writings</category>
+        
+      </item>
+    
+      <item>
+        <title>Creating an emotive robotic face to inspire trust in telepresence and autonomous rehabilitation activities</title>
+        <description>&lt;p&gt;This is a short conference paper that we submitted to the 2018 RESNA Annual Meeting.
+The work was presented as a poster and is in the &lt;a href=&quot;https://www.resna.org/sites/default/files/conference/2018/emerging_technology/Kina.html&quot;&gt;RESNA Meeting Archive&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 15 Jul 2018 00:00:00 +0000</pubDate>
+        <link>http://www.michaelsobrepera.com/writings/resna-flo-face.html</link>
+        <guid isPermaLink="true">http://www.michaelsobrepera.com/writings/resna-flo-face.html</guid>
+        
+        
+        <category>writings</category>
         
       </item>
     
@@ -430,280 +499,6 @@ Just follow this &lt;a href=&quot;http://docs.aws.amazon.com/AWSEC2/latest/UserG
         
         
         <category>blog</category>
-        
-      </item>
-    
-      <item>
-        <title>VS Code tips</title>
-        <description>&lt;p&gt;VS code can do some cool stuff, but it is hard to remember how to set it up to do some of those things. Unless specified, this assumes you are running on a windows machine.&lt;/p&gt;
-
-&lt;h2 id=&quot;remote-editing-a-single-file-via-ssh&quot;&gt;Remote editing a single file via SSH&lt;/h2&gt;
-&lt;p&gt;Here is a nice &lt;a href=&quot;https://codepen.io/ginfuru/post/remote-editing-files-with-ssh&quot;&gt;guide&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;First, install &lt;a href=&quot;https://marketplace.visualstudio.com/items?itemName=rafaelmaiolla.remote-vscode&quot;&gt;Remote VSCode&lt;/a&gt; on your development machine (client). Then set up its settings:
-Add to user settings:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;{
-//-------- Remote VSCode configuration --------
-
-// Port number to use for connection.
-&quot;remote.port&quot;: 52698,
-
-// Launch the server on start up.
-&quot;remote.onstartup&quot;: true
-}&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Then install rmate on the target machine (host):&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;sudo wget -O /usr/local/bin/rcode \
-https://raw.github.com/aurora/rmate/master/rmate
-chmod a+x /usr/local/bin/rcode&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;SSH into the host from PS on the client (You can do this directly in VSCode with &lt;code class=&quot;highlighter-rouge&quot;&gt;ctrl+`&lt;/code&gt;):&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;plink -R 52698:localhost:52698 &amp;lt;user&amp;gt;@&amp;lt;host ip&amp;gt;&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Now execute the rmate command on the file you want: &lt;code class=&quot;highlighter-rouge&quot;&gt;rcode &amp;lt;target file&amp;gt;&lt;/code&gt;&lt;/p&gt;
-</description>
-        <pubDate>Sun, 05 Mar 2017 00:00:00 +0000</pubDate>
-        <link>http://www.michaelsobrepera.com/guides/vscode.html</link>
-        <guid isPermaLink="true">http://www.michaelsobrepera.com/guides/vscode.html</guid>
-        
-        <category>code</category>
-        
-        
-        <category>guides</category>
-        
-      </item>
-    
-      <item>
-        <title>Christmas List 2016</title>
-        <description>&lt;p&gt;I hadn’t posted a list yet, and that came up. So here it is, enjoy. I don’t really expect to get anything off of here, but who knows. It gives me a place to look in 8 years when I get a real paycheck.&lt;/p&gt;
-
-&lt;h2 id=&quot;stuff-for-my-apt&quot;&gt;stuff for my apt&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Router (mine just died on 11/28, family will not be happy when they come for christmas with no internet)&lt;/li&gt;
-  &lt;li&gt;Outdoor table and chairs&lt;/li&gt;
-  &lt;li&gt;washer and dryer&lt;/li&gt;
-  &lt;li&gt;outdoor led globe lights&lt;/li&gt;
-  &lt;li&gt;grill&lt;/li&gt;
-  &lt;li&gt;amazon dot (if not, then a bluetooth receiver)&lt;/li&gt;
-  &lt;li&gt;HEPA Air filter&lt;/li&gt;
-  &lt;li&gt;bluetooth bathroom speaker&lt;/li&gt;
-  &lt;li&gt;IP camera&lt;/li&gt;
-  &lt;li&gt;some home automation stuff
-    &lt;ul&gt;
-      &lt;li&gt;lights&lt;/li&gt;
-      &lt;li&gt;thermostat&lt;/li&gt;
-      &lt;li&gt;on/off outlet stuff&lt;/li&gt;
-      &lt;li&gt;tv/stereo IR beamer&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;New computer speakers (maybe an alexa instead of the dot listed above?)&lt;/li&gt;
-  &lt;li&gt;maid service&lt;/li&gt;
-  &lt;li&gt;smoker&lt;/li&gt;
-  &lt;li&gt;rosemary plant (with more grow lights)&lt;/li&gt;
-  &lt;li&gt;a small christmas tree branch&lt;/li&gt;
-  &lt;li&gt;sheets&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;tools&quot;&gt;Tools&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;smart watch/fitness tracker
-    &lt;ul&gt;
-      &lt;li&gt;tough, I am a klutz&lt;/li&gt;
-      &lt;li&gt;capable of doing cycling&lt;/li&gt;
-      &lt;li&gt;HR&lt;/li&gt;
-      &lt;li&gt;GPS&lt;/li&gt;
-      &lt;li&gt;Good phone stuff&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;ratcheting screw driver&lt;/li&gt;
-  &lt;li&gt;oscilloscope or fluke scopemeter&lt;/li&gt;
-  &lt;li&gt;batteries for my drill&lt;/li&gt;
-  &lt;li&gt;jigsaw&lt;/li&gt;
-  &lt;li&gt;shovel&lt;/li&gt;
-  &lt;li&gt;switching power supply&lt;/li&gt;
-  &lt;li&gt;dust buster&lt;/li&gt;
-  &lt;li&gt;good bluetooth mouse&lt;/li&gt;
-  &lt;li&gt;robotic vacuum&lt;/li&gt;
-  &lt;li&gt;twiddler&lt;/li&gt;
-  &lt;li&gt;new phone…&lt;/li&gt;
-  &lt;li&gt;desktop computer&lt;/li&gt;
-  &lt;li&gt;Battery powered car jumper&lt;/li&gt;
-  &lt;li&gt;sewing machine&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;project-stuff&quot;&gt;Project stuff&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;R/Pi 3&lt;/li&gt;
-  &lt;li&gt;power supply for LED lights&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;clothing&quot;&gt;Clothing&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;hiking boots&lt;/li&gt;
-  &lt;li&gt;ski pants&lt;/li&gt;
-  &lt;li&gt;cycling cold weather gear&lt;/li&gt;
-  &lt;li&gt;long sleeve shirts (synthetic, good for daily use and hiking)&lt;/li&gt;
-  &lt;li&gt;hiking pants (synthetic)&lt;/li&gt;
-  &lt;li&gt;100% transmission cycling glasses&lt;/li&gt;
-  &lt;li&gt;wool hiking socks&lt;/li&gt;
-  &lt;li&gt;hats&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;stuff-for-abita&quot;&gt;Stuff for Abita&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;A bike trailer
-    &lt;ul&gt;
-      &lt;li&gt;https://www.walmart.com/ip/2-IN-1-Pet-Dog-Bike-Trailer-Bicycle-Trailer-Stroller-Jogging-w-Suspension-Red/39752210&lt;/li&gt;
-      &lt;li&gt;https://www.amazon.com/dp/B005DDG69S&lt;/li&gt;
-      &lt;li&gt;https://www.amazon.com/dp/B00N11PEPQ/&lt;/li&gt;
-      &lt;li&gt;https://www.amazon.com/gp/product/B00CYLHD94/&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;kitchen-supplies&quot;&gt;Kitchen supplies&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;A juicer&lt;/li&gt;
-  &lt;li&gt;A water filter&lt;/li&gt;
-  &lt;li&gt;oven thermometer&lt;/li&gt;
-  &lt;li&gt;a fast instant read thermometer&lt;/li&gt;
-  &lt;li&gt;good garlic press&lt;/li&gt;
-  &lt;li&gt;mortar and pestle&lt;/li&gt;
-  &lt;li&gt;muddler&lt;/li&gt;
-  &lt;li&gt;bar/drink book&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;books&quot;&gt;books&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Tomorrow’s Professor: Preparing for Careers in Science and Engineering&lt;/li&gt;
-  &lt;li&gt;Sapiens: A Brief History of Humankind&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;camping&quot;&gt;camping&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;tent&lt;/li&gt;
-  &lt;li&gt;hammock cover&lt;/li&gt;
-  &lt;li&gt;good framed backpack (need to be sized)&lt;/li&gt;
-  &lt;li&gt;camp stove&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;fun&quot;&gt;Fun&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;sail boat (something that can fit through my door or a rental)&lt;/li&gt;
-  &lt;li&gt;Mardi Gras&lt;/li&gt;
-  &lt;li&gt;sunsail vacation&lt;/li&gt;
-  &lt;li&gt;volleyball&lt;/li&gt;
-  &lt;li&gt;gun
-    &lt;ul&gt;
-      &lt;li&gt;gun safe&lt;/li&gt;
-      &lt;li&gt;ammunition&lt;/li&gt;
-      &lt;li&gt;a lawyer (living in philly…)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;pilot training&lt;/li&gt;
-  &lt;li&gt;jump training&lt;/li&gt;
-  &lt;li&gt;scuba training&lt;/li&gt;
-  &lt;li&gt;plane tickets somewhere&lt;/li&gt;
-  &lt;li&gt;alcohol, my liquor cabinet is looking a bit sad
-    &lt;ul&gt;
-      &lt;li&gt;mixing ingredients (bitters?)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Standing bucket of tennis balls (gotta work on that serve)&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Mon, 28 Nov 2016 00:00:00 +0000</pubDate>
-        <link>http://www.michaelsobrepera.com/blog/ChristmasList2016.html</link>
-        <guid isPermaLink="true">http://www.michaelsobrepera.com/blog/ChristmasList2016.html</guid>
-        
-        <category>Presents</category>
-        
-        <category>Christmas</category>
-        
-        <category>Fun</category>
-        
-        
-        <category>blog</category>
-        
-      </item>
-    
-      <item>
-        <title>JetBrains IDEs</title>
-        <description>&lt;h2 id=&quot;hanging-on-linux&quot;&gt;Hanging on Linux:&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Bind process to a small number of cores: &lt;code class=&quot;highlighter-rouge&quot;&gt;taskset -c 4-5 ./clion.sh&lt;/code&gt;
-    &lt;ul&gt;
-      &lt;li&gt;you can substitute 4-5 for whatever you like&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;powershell-in-terminal&quot;&gt;PowerShell in Terminal&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;It will run PowerShell 32bit if you have a 32 bit IDE:
-    &lt;ul&gt;
-      &lt;li&gt;Set execution policy to remote signed in 32bit&lt;/li&gt;
-      &lt;li&gt;Install needed programs in 32 bit&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Window length is cut off:
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;powershell.exe -NoProfile -Command &quot;mode con:cols=800; powershell.exe&quot;&lt;/code&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Colors are off:
-    &lt;ul&gt;
-      &lt;li&gt;Regedit&lt;/li&gt;
-      &lt;li&gt;Go to: &lt;code class=&quot;highlighter-rouge&quot;&gt;HKEY_CURRENT_USER\Console&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;Delete: &lt;code class=&quot;highlighter-rouge&quot;&gt;ScreenColors&lt;/code&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Mon, 01 Feb 2016 00:00:00 +0000</pubDate>
-        <link>http://www.michaelsobrepera.com/guides/jetbrains.html</link>
-        <guid isPermaLink="true">http://www.michaelsobrepera.com/guides/jetbrains.html</guid>
-        
-        <category>c++</category>
-        
-        <category>IDE</category>
-        
-        <category>Python</category>
-        
-        
-        <category>guides</category>
-        
-      </item>
-    
-      <item>
-        <title>CMake</title>
-        <description>&lt;h2 id=&quot;flags-for-different-stuff&quot;&gt;Flags for different stuff:&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Performance Profiling: &lt;code class=&quot;highlighter-rouge&quot;&gt;cmake -DCMAKE_CXX_FLAGS=-pg ..&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Wed, 13 Jan 2016 00:00:00 +0000</pubDate>
-        <link>http://www.michaelsobrepera.com/guides/cmake.html</link>
-        <guid isPermaLink="true">http://www.michaelsobrepera.com/guides/cmake.html</guid>
-        
-        <category>c++</category>
-        
-        
-        <category>guides</category>
-        
-      </item>
-    
-      <item>
-        <title>NSF GRFP Proposal</title>
-        <description>&lt;p&gt;This is the proposal which I submitted this year for the National Science Foundation Graduate Research Fellowship Program. The only change from the actual submission is the addition of the header and footer. I actually think the idea is pretty interesting.&lt;/p&gt;
-</description>
-        <pubDate>Tue, 27 Oct 2015 00:00:00 +0000</pubDate>
-        <link>http://www.michaelsobrepera.com/writings/NSFProposal.html</link>
-        <guid isPermaLink="true">http://www.michaelsobrepera.com/writings/NSFProposal.html</guid>
-        
-        
-        <category>writings</category>
         
       </item>
     
