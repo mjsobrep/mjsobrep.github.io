@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Creating an emotive robotic face to inspire trust in telepresence and autonomous rehabilitation activities"
-date:   2018-10-20
+date:   2018-07-15
 categories: writings
 pdf: "otherFiles/papers/resna-2018-flo-face.pdf"
 ---

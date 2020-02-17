@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "The Design of Lil’Flo, an Affordable Socially Assistive Robot for Telepresence Rehabilitation"
-date:   2018-10-20
+date:   2018-07-15
 categories: writings
 pdf: "otherFiles/papers/resna-2018-flo-system.pdf"
 ---
