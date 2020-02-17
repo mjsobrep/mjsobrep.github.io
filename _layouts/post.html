@@ -18,6 +18,10 @@ layout: default
   {{page.pdf | insertPDF}}
   {%endif%}
 
+  {% if page.pdf2 %}
+  {{page.pdf2 | insertPDF}}
+  {%endif%}
+
   {% if page.imageDir %}
   {{ page.imageDir | insertPicFolder:'medPic','html'}}
   {%endif%}
