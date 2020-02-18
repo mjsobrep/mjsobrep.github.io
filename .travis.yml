@@ -1,11 +1,12 @@
 language: ruby
+cache: bundler
 rvm:
-- 2.6.0
+  - 2.6.0
 git:
   depth: 3
 branches:
   except:
-  - master
+    - master
 script: bash build.sh
 deploy:
   skip_cleanup: true
