@@ -14,4 +14,4 @@ pdf2: "otherFiles/posters/2018-resna-flo_face.pdf"
 ---
 
 This is a short conference paper that we submitted to the 2018 RESNA Annual Meeting.
-The work was presented as a poster and is in the [RESNA Meeting Archive](https://www.resna.org/sites/default/files/conference/2018/emerging_technology/Kina.html).
+The work was presented as a poster by Enri and is in the [RESNA Meeting Archive](https://www.resna.org/sites/default/files/conference/2018/emerging_technology/Kina.html).
