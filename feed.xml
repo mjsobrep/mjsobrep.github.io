@@ -5,9 +5,9 @@
     <description>A site about stuff that I (Michael Sobrepera) work on, think, enjoy, etc...</description>
     <link>http://www.michaelsobrepera.com/</link>
     <atom:link href="http://www.michaelsobrepera.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 15 Apr 2020 17:05:42 +0000</pubDate>
-    <lastBuildDate>Wed, 15 Apr 2020 17:05:42 +0000</lastBuildDate>
-    <generator>Jekyll v4.0.0</generator>
+    <pubDate>Wed, 09 Sep 2020 23:29:39 +0000</pubDate>
+    <lastBuildDate>Wed, 09 Sep 2020 23:29:39 +0000</lastBuildDate>
+    <generator>Jekyll v4.1.1</generator>
     
       <item>
         <title>Designing a Game for Upper Extremity Motor Function Assessment Using Anki Cozmo, a Desktop Social Robot</title>
@@ -291,14 +291,14 @@ The work was presented as a poster by Enri and is in the &lt;a href=&quot;https:
         <description>&lt;h2 id=&quot;exporting-latex-as-plain-text&quot;&gt;Exporting LaTeX as plain text&lt;/h2&gt;
 &lt;p&gt;Sometimes you need your latex as plain text to copy and paste into online forms and the like. Doing it this way will bring all of your refs and what not correctly. I would recomend turning off page numbers, headers, footers, etc before doing this.&lt;/p&gt;
 
-&lt;p&gt;You can convert a pdf to plaintext by using pdftotext &lt;code class=&quot;highlighter-rouge&quot;&gt;pdftotext &amp;lt;target&amp;gt;.pdf&lt;/code&gt; which generates &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;target&amp;gt;.txt&lt;/code&gt; using the &lt;code class=&quot;highlighter-rouge&quot;&gt;-raw&lt;/code&gt; option might be useuful for tables and the like&lt;/p&gt;
+&lt;p&gt;You can convert a pdf to plaintext by using pdftotext &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pdftotext &amp;lt;target&amp;gt;.pdf&lt;/code&gt; which generates &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;target&amp;gt;.txt&lt;/code&gt; using the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-raw&lt;/code&gt; option might be useuful for tables and the like&lt;/p&gt;
 
 &lt;h2 id=&quot;compressing-pdfs&quot;&gt;Compressing PDFs&lt;/h2&gt;
 &lt;p&gt;When you compile with latex, the result will have whatever images you included in it. They may be really big. Ther are ways to use the image scale argument in LaTeX, but that is clunky. A better way is to shrink the PDF after it is compiled. Ghostscript can help:&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;gs -dPDFSETTINGS=/prepress -dNOPAUSE -dQUIET -dBATCH -dCompatibilityLevel=1.4 -sDEVICE=pdfwrite -sOutputFile=out.pdf in.pdf&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gs -dPDFSETTINGS=/prepress -dNOPAUSE -dQUIET -dBATCH -dCompatibilityLevel=1.4 -sDEVICE=pdfwrite -sOutputFile=out.pdf in.pdf&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;You can change &lt;code class=&quot;highlighter-rouge&quot;&gt;-dPDFSETTINGS&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;/default&lt;/code&gt; if you want a huge file (almost the same as what LaTeX uses) or to &lt;code class=&quot;highlighter-rouge&quot;&gt;/printer&lt;/code&gt; if you want something a bit smaller. The other options start to get too small&lt;/p&gt;
+&lt;p&gt;You can change &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-dPDFSETTINGS&lt;/code&gt; to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/default&lt;/code&gt; if you want a huge file (almost the same as what LaTeX uses) or to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/printer&lt;/code&gt; if you want something a bit smaller. The other options start to get too small&lt;/p&gt;
 </description>
         <pubDate>Wed, 20 Sep 2017 00:00:00 +0000</pubDate>
         <link>http://www.michaelsobrepera.com/guides/latex.html</link>
@@ -328,33 +328,33 @@ The work was presented as a poster by Enri and is in the &lt;a href=&quot;https:
   &lt;li&gt;&lt;a href=&quot;https://docs.docker.com/engine/installation/linux/ubuntu/&quot;&gt;Install docker&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/NVIDIA/nvidia-docker&quot;&gt;Install NVidia Drivers&lt;/a&gt;
     &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;wget -P /tmp https://github.com/NVIDIA/nvidia-docker/releases/download/v1.0.1/nvidia-docker_1.0.1-1_amd64.deb&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;sudo dpkg -i /tmp/nvidia-docker*.deb &amp;amp;&amp;amp; rm /tmp/nvidia-docker*.deb&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;nvidia-docker run --rm nvidia/cuda nvidia-smi&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;wget -P /tmp https://github.com/NVIDIA/nvidia-docker/releases/download/v1.0.1/nvidia-docker_1.0.1-1_amd64.deb&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo dpkg -i /tmp/nvidia-docker*.deb &amp;amp;&amp;amp; rm /tmp/nvidia-docker*.deb&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nvidia-docker run --rm nvidia/cuda nvidia-smi&lt;/code&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;Make a place to store our data: &lt;code class=&quot;highlighter-rouge&quot;&gt;mkdir data&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Make a place to store our data: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mkdir data&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;run&quot;&gt;Run&lt;/h2&gt;
 
 &lt;h3 id=&quot;docker&quot;&gt;Docker&lt;/h3&gt;
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;sudo nvidia-docker run -v /home/ubuntu/data:/data -it mjsobrep/openpose:latest bash&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo nvidia-docker run -v /home/ubuntu/data:/data -it mjsobrep/openpose:latest bash&lt;/code&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;some-helpful-hints-while-you-are-running-in-docker&quot;&gt;Some helpful hints while you are running in Docker&lt;/h4&gt;
 &lt;p&gt;To leave the docker:&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Ctrl+p&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;Ctrl+q&lt;/code&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ctrl+p&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ctrl+q&lt;/code&gt;
     &lt;ul&gt;
       &lt;li&gt;Now we have detached from the docker, but it is still running&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;Let’s see where the docker is running by running: &lt;code class=&quot;highlighter-rouge&quot;&gt;sudo docker ps&lt;/code&gt;
+  &lt;li&gt;Let’s see where the docker is running by running: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo docker ps&lt;/code&gt;
     &lt;ul&gt;
       &lt;li&gt;Now we have the container ID&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;Let’s stop it by running: &lt;code class=&quot;highlighter-rouge&quot;&gt;sudo docker stop &amp;lt;container id&amp;gt;&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Let’s stop it by running: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo docker stop &amp;lt;container id&amp;gt;&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;openpose&quot;&gt;OpenPose&lt;/h3&gt;
@@ -362,18 +362,18 @@ The work was presented as a poster by Enri and is in the &lt;a href=&quot;https:
 &lt;ul&gt;
   &lt;li&gt;Check out what options we have:
     &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;./build/examples/openpose/openpose.bin --help&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;./build/examples/openpose/openpose.bin --help&lt;/code&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;Lets make a place for us to put the output:
     &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;mkdir ../data/output&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;mkdir ../data/output/poses&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mkdir ../data/output&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mkdir ../data/output/poses&lt;/code&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;./build/examples/openpose/openpose.bin --video examples/media/video.avi --write_video ../data/output/result.avi --write_keypoint_json ../data/output/poses --no_display&lt;/code&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;./build/examples/openpose/openpose.bin --video examples/media/video.avi --write_video ../data/output/result.avi --write_keypoint_json ../data/output/poses --no_display&lt;/code&gt;
     &lt;ul&gt;
-      &lt;li&gt;You could pass the &lt;code class=&quot;highlighter-rouge&quot;&gt;--num_gpu &amp;lt;#&amp;gt;&lt;/code&gt; flag to use more than 1 gpu&lt;/li&gt;
+      &lt;li&gt;You could pass the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--num_gpu &amp;lt;#&amp;gt;&lt;/code&gt; flag to use more than 1 gpu&lt;/li&gt;
       &lt;li&gt;This will take a while to run (maybe around 1.5 minutes on a p2.xlarge)&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
@@ -385,7 +385,7 @@ The work was presented as a poster by Enri and is in the &lt;a href=&quot;https:
 &lt;/blockquote&gt;
 
 &lt;h4 id=&quot;using-your-own-video&quot;&gt;Using your own video&lt;/h4&gt;
-&lt;p&gt;To use your own video, simply put the video in the data folder (&lt;code class=&quot;highlighter-rouge&quot;&gt;/home/ubuntu/data&lt;/code&gt;) on the EC2 machine and change the &lt;code class=&quot;highlighter-rouge&quot;&gt;--video&lt;/code&gt; argument to OpenPose&lt;/p&gt;
+&lt;p&gt;To use your own video, simply put the video in the data folder (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/home/ubuntu/data&lt;/code&gt;) on the EC2 machine and change the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--video&lt;/code&gt; argument to OpenPose&lt;/p&gt;
 
 &lt;h2 id=&quot;getting-data-off-aws&quot;&gt;Getting data off AWS&lt;/h2&gt;
 &lt;p&gt;All of your output will be in the data folder… Now we need to get it back so we can take a look:

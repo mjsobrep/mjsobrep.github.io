@@ -377,12 +377,12 @@ make writing KRL code a bit easier.</p>
 
 <h2 id="kr-c2">KR C2</h2>
 <ul>
-  <li>Accessing windows: <code class="highlighter-rouge">CTRL+ESC</code></li>
+  <li>Accessing windows: <code class="language-plaintext highlighter-rouge">CTRL+ESC</code></li>
   <li>Turning it off: If the batteries are good, pull the switch down. Can change options for whether it will hibernate, cold shutdown, or warm shutdown</li>
   <li>Backing up:
     <ul>
       <li>Put in a USB DRIVE</li>
-      <li>Go into Windows (<code class="highlighter-rouge">CTRL+ESC</code>)</li>
+      <li>Go into Windows (<code class="language-plaintext highlighter-rouge">CTRL+ESC</code>)</li>
       <li>run and configure via: C:\KRC\UTIL\KRCCONFIGURATOR\KrcConfigurator.exe</li>
       <li>As an expert, file-&gt;archive-&gt;all</li>
     </ul>
@@ -394,18 +394,18 @@ make writing KRL code a bit easier.</p>
 <h4 id="setup-incomplete">Setup (incomplete)</h4>
 <p>This will help you setup and run the KUKA provided RSI example for Ethernet
 control. You will need a PC running Windows (preferably 7. You can find the KUKA RSI
-examples as well as RSI visual in: <code class="highlighter-rouge">D:\KUKA_OPT\RSI</code> on your KRC2 controller
+examples as well as RSI visual in: <code class="language-plaintext highlighter-rouge">D:\KUKA_OPT\RSI</code> on your KRC2 controller
 (after you have installed RSI). Specifically, we will be
-working with the example at <code class="highlighter-rouge">D:\KUKA_OPT\RSI\DOC\Examples\Ethernet</code></p>
+working with the example at <code class="language-plaintext highlighter-rouge">D:\KUKA_OPT\RSI\DOC\Examples\Ethernet</code></p>
 
 <ol>
   <li>Logon as an expert user</li>
-  <li>Press <code class="highlighter-rouge">ctrl</code>+<code class="highlighter-rouge">esc</code> to access windows</li>
-  <li>Press <code class="highlighter-rouge">My Computer</code></li>
-  <li>Copy <code class="highlighter-rouge">D:\KUKA_OPT\RSI\DOC\Example\RealtimeEthernet\Server_app\ServerApplication.exe</code> to the
+  <li>Press <code class="language-plaintext highlighter-rouge">ctrl</code>+<code class="language-plaintext highlighter-rouge">esc</code> to access windows</li>
+  <li>Press <code class="language-plaintext highlighter-rouge">My Computer</code></li>
+  <li>Copy <code class="language-plaintext highlighter-rouge">D:\KUKA_OPT\RSI\DOC\Example\RealtimeEthernet\Server_app\ServerApplication.exe</code> to the
 external windows machine via USB</li>
-  <li>Copy <code class="highlighter-rouge">RSIEthernet.dat</code> and <code class="highlighter-rouge">RSIEthernet.src</code> from 
-<code class="highlighter-rouge">D:\KUKA_OPT\RSI\DOC\Example\RealtimeEthernet\SRC_KRL\PROGRAM</code> to
+  <li>Copy <code class="language-plaintext highlighter-rouge">RSIEthernet.dat</code> and <code class="language-plaintext highlighter-rouge">RSIEthernet.src</code> from 
+<code class="language-plaintext highlighter-rouge">D:\KUKA_OPT\RSI\DOC\Example\RealtimeEthernet\SRC_KRL\PROGRAM</code> to
 the main programs folder</li>
   <li>Copy ?.xml</li>
   <li>Modify vx win to say:
@@ -428,54 +428,54 @@ Bootline=elPci(0,1)pc:vxworks h=192.0.1.2 b=192.0.1.1 e=172.0.1.1 u=target pw=vx
 <h4 id="setup">Setup</h4>
 <p>This will help you setup and run the KUKA provided RSI example for Ethernet
 control. You will need a PC running modern Windows. You can find the KUKA RSI
-examples as well as RSI visual in: <code class="highlighter-rouge">D:\KUKA_OPT\RSI</code> on your KRC4 controller
+examples as well as RSI visual in: <code class="language-plaintext highlighter-rouge">D:\KUKA_OPT\RSI</code> on your KRC4 controller
 (after you have installed RSI). Specifically, we will be
-working with the example at <code class="highlighter-rouge">D:\KUKA_OPT\RSI\DOC\Examples\Ethernet</code></p>
+working with the example at <code class="language-plaintext highlighter-rouge">D:\KUKA_OPT\RSI\DOC\Examples\Ethernet</code></p>
 
 <ol>
   <li>Connect NIC on PC to KLI port in controller via CAT 5 cable</li>
-  <li>Copy files from <code class="highlighter-rouge">D:\KUKA_OPT\RSI\DOC\Examples\Ethernet\Config</code> to
-<code class="highlighter-rouge">C:\KRC\Roboter\Config\user\common\SensorInterface</code></li>
-  <li>Modify the <code class="highlighter-rouge">RSI_EthernetConfig.xml</code> file to have the <code class="highlighter-rouge">IP_NUMBER</code> set to 10.100.1.2</li>
-  <li>Enter <code class="highlighter-rouge">Expert Mode</code></li>
+  <li>Copy files from <code class="language-plaintext highlighter-rouge">D:\KUKA_OPT\RSI\DOC\Examples\Ethernet\Config</code> to
+<code class="language-plaintext highlighter-rouge">C:\KRC\Roboter\Config\user\common\SensorInterface</code></li>
+  <li>Modify the <code class="language-plaintext highlighter-rouge">RSI_EthernetConfig.xml</code> file to have the <code class="language-plaintext highlighter-rouge">IP_NUMBER</code> set to 10.100.1.2</li>
+  <li>Enter <code class="language-plaintext highlighter-rouge">Expert Mode</code></li>
   <li>Add a new virtual adapter for windows if one does not already exist (This
  will be the KLI adapter) This can be done manually:
     <ol>
       <li>RobotButton -&gt; Startup -&gt; Network Configuration</li>
-      <li>The first page should say: <code class="highlighter-rouge">Fixed IP Address</code>, <code class="highlighter-rouge">172.31.1.147</code>, <code class="highlighter-rouge">255.255.255.0</code>,
-<code class="highlighter-rouge">172.31.1.47</code></li>
-      <li>Click <code class="highlighter-rouge">Advanced</code></li>
-      <li>Select the adapter for the 172.31.1.147 adapter and click <code class="highlighter-rouge">windows interface</code></li>
-      <li>Click <code class="highlighter-rouge">Add interface</code></li>
-      <li>Change the new interface to be named <code class="highlighter-rouge">RSI</code></li>
-      <li>Set the address type to <code class="highlighter-rouge">real-time IP address</code></li>
-      <li>Set the IP address to <code class="highlighter-rouge">10.100.1.1</code></li>
-      <li>Set the subnet mask to <code class="highlighter-rouge">255.255.255.0</code></li>
-      <li>Click <code class="highlighter-rouge">User-defined filters</code></li>
-      <li>Add a filter set to type <code class="highlighter-rouge">IP protocol</code>, address: <code class="highlighter-rouge">10.100.1.1</code>, subnet:
-<code class="highlighter-rouge">255.255.255.0</code>, parameters: <code class="highlighter-rouge">17</code></li>
+      <li>The first page should say: <code class="language-plaintext highlighter-rouge">Fixed IP Address</code>, <code class="language-plaintext highlighter-rouge">172.31.1.147</code>, <code class="language-plaintext highlighter-rouge">255.255.255.0</code>,
+<code class="language-plaintext highlighter-rouge">172.31.1.47</code></li>
+      <li>Click <code class="language-plaintext highlighter-rouge">Advanced</code></li>
+      <li>Select the adapter for the 172.31.1.147 adapter and click <code class="language-plaintext highlighter-rouge">windows interface</code></li>
+      <li>Click <code class="language-plaintext highlighter-rouge">Add interface</code></li>
+      <li>Change the new interface to be named <code class="language-plaintext highlighter-rouge">RSI</code></li>
+      <li>Set the address type to <code class="language-plaintext highlighter-rouge">real-time IP address</code></li>
+      <li>Set the IP address to <code class="language-plaintext highlighter-rouge">10.100.1.1</code></li>
+      <li>Set the subnet mask to <code class="language-plaintext highlighter-rouge">255.255.255.0</code></li>
+      <li>Click <code class="language-plaintext highlighter-rouge">User-defined filters</code></li>
+      <li>Add a filter set to type <code class="language-plaintext highlighter-rouge">IP protocol</code>, address: <code class="language-plaintext highlighter-rouge">10.100.1.1</code>, subnet:
+<code class="language-plaintext highlighter-rouge">255.255.255.0</code>, parameters: <code class="language-plaintext highlighter-rouge">17</code></li>
     </ol>
   </li>
   <li>This can also be done automatically:
     <ol>
       <li>Minimize the HMI (startup-&gt;service-&gt;minimize HMI)</li>
       <li>Click the windows button -&gt; all programs -&gt; RSI-Network</li>
-      <li>Under RSI Ethernet, select <code class="highlighter-rouge">New</code> then click <code class="highlighter-rouge">Edit</code></li>
-      <li>Type in <code class="highlighter-rouge">10.100.1.1</code></li>
+      <li>Under RSI Ethernet, select <code class="language-plaintext highlighter-rouge">New</code> then click <code class="language-plaintext highlighter-rouge">Edit</code></li>
+      <li>Type in <code class="language-plaintext highlighter-rouge">10.100.1.1</code></li>
       <li>Check to see that everything got setup properly per the manual instructions</li>
     </ol>
   </li>
-  <li>On the PC, set the IP address to <code class="highlighter-rouge">10.100.1.2</code>, subnet to <code class="highlighter-rouge">255.255.255.0</code>,
-Default gateway to <code class="highlighter-rouge">10.100.1.1</code>, turn of DHCP</li>
-  <li>Copy the <code class="highlighter-rouge">RSI_Ethernet.src</code> file from
-<code class="highlighter-rouge">D:\KUKA_OPT\RSI\DOC\Examples\Ethernet\</code> to the KRC4 programs folder.</li>
-  <li>Alter the home points in the <code class="highlighter-rouge">RSI_Ethernet.src</code> file to be appropriate for
+  <li>On the PC, set the IP address to <code class="language-plaintext highlighter-rouge">10.100.1.2</code>, subnet to <code class="language-plaintext highlighter-rouge">255.255.255.0</code>,
+Default gateway to <code class="language-plaintext highlighter-rouge">10.100.1.1</code>, turn of DHCP</li>
+  <li>Copy the <code class="language-plaintext highlighter-rouge">RSI_Ethernet.src</code> file from
+<code class="language-plaintext highlighter-rouge">D:\KUKA_OPT\RSI\DOC\Examples\Ethernet\</code> to the KRC4 programs folder.</li>
+  <li>Alter the home points in the <code class="language-plaintext highlighter-rouge">RSI_Ethernet.src</code> file to be appropriate for
 your setup.</li>
-  <li>Copy the <code class="highlighter-rouge">D:\KUKA_OPT\RSI\DOC\Examples\Ethernet\Server.exe</code> file to your
+  <li>Copy the <code class="language-plaintext highlighter-rouge">D:\KUKA_OPT\RSI\DOC\Examples\Ethernet\Server.exe</code> file to your
 computer.</li>
-  <li>Run the <code class="highlighter-rouge">Server.exe</code> file, and press the play button</li>
+  <li>Run the <code class="language-plaintext highlighter-rouge">Server.exe</code> file, and press the play button</li>
   <li>Place the robot into automatic mode</li>
-  <li>Run the <code class="highlighter-rouge">RSI_Ethernet.src</code> file on the KRC4</li>
+  <li>Run the <code class="language-plaintext highlighter-rouge">RSI_Ethernet.src</code> file on the KRC4</li>
 </ol>
 
 <p>If you have problems, there is some debugging you can do:</p>
@@ -483,15 +483,15 @@ computer.</li>
 <ul>
   <li>Try pinging in both directions
     <ul>
-      <li>From your PC: <code class="highlighter-rouge">windowskey</code>+<code class="highlighter-rouge">R</code>, <code class="highlighter-rouge">cmd.exe</code>-&gt;<code class="highlighter-rouge">enter</code>, <code class="highlighter-rouge">ping 10.100.1.1</code>-&gt;enter</li>
+      <li>From your PC: <code class="language-plaintext highlighter-rouge">windowskey</code>+<code class="language-plaintext highlighter-rouge">R</code>, <code class="language-plaintext highlighter-rouge">cmd.exe</code>-&gt;<code class="language-plaintext highlighter-rouge">enter</code>, <code class="language-plaintext highlighter-rouge">ping 10.100.1.1</code>-&gt;enter</li>
       <li>From KRC4:
         <ol>
           <li>Minimize HMI</li>
           <li>Press windows button</li>
-          <li>Select <code class="highlighter-rouge">All Programs</code></li>
-          <li>Select <code class="highlighter-rouge">Accessories</code></li>
-          <li>Select <code class="highlighter-rouge">cmd</code></li>
-          <li>Type <code class="highlighter-rouge">ping 10.100.1.2</code>-&gt;enter</li>
+          <li>Select <code class="language-plaintext highlighter-rouge">All Programs</code></li>
+          <li>Select <code class="language-plaintext highlighter-rouge">Accessories</code></li>
+          <li>Select <code class="language-plaintext highlighter-rouge">cmd</code></li>
+          <li>Type <code class="language-plaintext highlighter-rouge">ping 10.100.1.2</code>-&gt;enter</li>
         </ol>
       </li>
     </ul>
@@ -624,9 +624,9 @@ depending on whether using slow or fast mode.</li>
   </li>
   <li>Logging
     <ul>
-      <li><code class="highlighter-rouge">C:\KRC\Roboter\config\user\common\Logging-RSI.xml</code>
+      <li><code class="language-plaintext highlighter-rouge">C:\KRC\Roboter\config\user\common\Logging-RSI.xml</code>
         <ul>
-          <li><code class="highlighter-rouge">&lt;class Name = "RSILogger | LogLevel=[&lt;error&gt;|&lt;info&gt;]"</code></li>
+          <li><code class="language-plaintext highlighter-rouge">&lt;class Name = "RSILogger | LogLevel=[&lt;error&gt;|&lt;info&gt;]"</code></li>
         </ul>
       </li>
     </ul>

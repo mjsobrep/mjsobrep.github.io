@@ -384,11 +384,11 @@
 
 <h3 id="monitor-mode">MONITOR MODE:</h3>
 <ul>
-  <li><code class="highlighter-rouge">ENABLE POWER</code></li>
-  <li><code class="highlighter-rouge">DISABLE POWER</code></li>
-  <li><code class="highlighter-rouge">DO @0 JMOVE 10</code>
+  <li><code class="language-plaintext highlighter-rouge">ENABLE POWER</code></li>
+  <li><code class="language-plaintext highlighter-rouge">DISABLE POWER</code></li>
+  <li><code class="language-plaintext highlighter-rouge">DO @0 JMOVE 10</code>
     <ul>
-      <li><code class="highlighter-rouge">DO(REQUIRED) @0(TASK NUMBER) JMOVE(MOVE COMMAND) 10(BY HOW MUCH)</code></li>
+      <li><code class="language-plaintext highlighter-rouge">DO(REQUIRED) @0(TASK NUMBER) JMOVE(MOVE COMMAND) 10(BY HOW MUCH)</code></li>
     </ul>
   </li>
 </ul>
@@ -396,43 +396,43 @@
 <table>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">ESTOP</code></td>
+      <td><code class="language-plaintext highlighter-rouge">ESTOP</code></td>
       <td>(activates e-stop)</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">EXECUTE taskNum program</code></td>
+      <td><code class="language-plaintext highlighter-rouge">EXECUTE taskNum program</code></td>
       <td>(executes the program on the directed task number)</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">LIST expression</code></td>
+      <td><code class="language-plaintext highlighter-rouge">LIST expression</code></td>
       <td>(lists the value of the expression)</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">PANIC</code></td>
+      <td><code class="language-plaintext highlighter-rouge">PANIC</code></td>
       <td>(stops all robots without turning off power)</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">PARAMETER parameter[i]=val</code></td>
+      <td><code class="language-plaintext highlighter-rouge">PARAMETER parameter[i]=val</code></td>
       <td>(sets the parameter to val)</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">PARAMETER parameter[i]</code></td>
+      <td><code class="language-plaintext highlighter-rouge">PARAMETER parameter[i]</code></td>
       <td>(displays parameter val)</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">PARAMETER</code></td>
+      <td><code class="language-plaintext highlighter-rouge">PARAMETER</code></td>
       <td>(displays all paramter values)</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">STORE</code></td>
+      <td><code class="language-plaintext highlighter-rouge">STORE</code></td>
       <td>(stores RAM into NVRAM)</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">SWITCH switch[i]</code></td>
+      <td><code class="language-plaintext highlighter-rouge">SWITCH switch[i]</code></td>
       <td>(display setting of switch)</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">WHERE</code></td>
+      <td><code class="language-plaintext highlighter-rouge">WHERE</code></td>
       <td>(displays robot position and configuration)</td>
     </tr>
   </tbody>
@@ -444,64 +444,64 @@
 
 <h3 id="useful-commands">USEFUL COMMANDS</h3>
 <ul>
-  <li><code class="highlighter-rouge">JMOVE j1,..,jn</code>              (joint interpreted move to joint values. ommited values “,,” are not moved)</li>
-  <li><code class="highlighter-rouge">MOVE    loc</code>                     (joint interpolated move to ‘loc’)</li>
-  <li><code class="highlighter-rouge">MOVES loc</code>                     (straight line move to ‘loc’)</li>
-  <li><code class="highlighter-rouge">SIG</code></li>
-  <li><code class="highlighter-rouge">ACCEL acceleration(0-100), deceleration(0-100)</code></li>
-  <li><code class="highlighter-rouge">APPRO location, distance</code>      (joint interpolated movement to z above location by distance)</li>
-  <li><code class="highlighter-rouge">APPROS location, distance</code>     (staight-line movement to z above location by distance)</li>
-  <li><code class="highlighter-rouge">AUTO var, var, var..</code>          (local non-pervasive variable)</li>
-  <li><code class="highlighter-rouge">LOVAL var, var, var..</code>      (local pervasive variable)</li>
-  <li><code class="highlighter-rouge">GLOBAL var, var, var..</code>        (globale variable)
+  <li><code class="language-plaintext highlighter-rouge">JMOVE j1,..,jn</code>              (joint interpreted move to joint values. ommited values “,,” are not moved)</li>
+  <li><code class="language-plaintext highlighter-rouge">MOVE    loc</code>                     (joint interpolated move to ‘loc’)</li>
+  <li><code class="language-plaintext highlighter-rouge">MOVES loc</code>                     (straight line move to ‘loc’)</li>
+  <li><code class="language-plaintext highlighter-rouge">SIG</code></li>
+  <li><code class="language-plaintext highlighter-rouge">ACCEL acceleration(0-100), deceleration(0-100)</code></li>
+  <li><code class="language-plaintext highlighter-rouge">APPRO location, distance</code>      (joint interpolated movement to z above location by distance)</li>
+  <li><code class="language-plaintext highlighter-rouge">APPROS location, distance</code>     (staight-line movement to z above location by distance)</li>
+  <li><code class="language-plaintext highlighter-rouge">AUTO var, var, var..</code>          (local non-pervasive variable)</li>
+  <li><code class="language-plaintext highlighter-rouge">LOVAL var, var, var..</code>      (local pervasive variable)</li>
+  <li><code class="language-plaintext highlighter-rouge">GLOBAL var, var, var..</code>        (globale variable)
 <strong>NOTE ON VARIABLES: MUST BE DECLARED AFTER PROGRAM STATEMENT, BEFORE EXECUTABLES</strong></li>
-  <li><code class="highlighter-rouge">BITS firstRegisterIndex, numRegisters=value</code>    (changes output parsing ‘value’ in binary over outputs begining at ‘firstRegisterIndex’ and indexing for numRegisters)</li>
-  <li><code class="highlighter-rouge">BRAKE</code>                         (stops robot motion imediately at decel rate. program then proceeds)</li>
-  <li><code class="highlighter-rouge">BREAK</code>                         (pauses program until current motion is complete. program then proceeds)</li>
-  <li><code class="highlighter-rouge">CALL program</code>                  (JSR)</li>
-  <li><code class="highlighter-rouge">COARSE tolerance</code>              (makes movement less precisse but faster, the larger the tolerance, as a percent, the less accurate the move)</li>
-  <li><code class="highlighter-rouge">DECOMPOSE array[i]=loc</code>        (takes the 6 position variables of ‘loc; and places them into the array begining at index=’i’. in the event of a multidimension array, [i_1,i_2,i_n], only ‘i_n’ will be incremented</li>
-  <li><code class="highlighter-rouge">DELAY time</code>                    (delays all motion for time, in seconds, all other aspects of program will run up until next motion)</li>
-  <li><code class="highlighter-rouge">DEPART distance</code>                (moves tool upwards by distance)</li>
-  <li><code class="highlighter-rouge">DRIVE joint, change, speed</code>    (moves the joint at speed as %*monitor speed to incremental change)</li>
-  <li><code class="highlighter-rouge">FINE tol</code>                        (adjust motion tolerance to ‘tol’ which is a percent of standard, so smaller is tighter)</li>
-  <li><code class="highlighter-rouge">HALT</code>                               (hard program exit, blows   through all stacks)</li>
-  <li><code class="highlighter-rouge">HERE loc</code>                        (sets the location or location offset as the current robot position)</li>
-  <li><code class="highlighter-rouge">JHERE var1,...,varn</code>              (sets current joint values to variables in sequence)</li>
-  <li><code class="highlighter-rouge">LEFTY</code>                              (makes robot move as left handed arm)</li>
-  <li><code class="highlighter-rouge">RESET</code>                              (turns off all external output signals)</li>
-  <li><code class="highlighter-rouge">RETURN</code></li>
-  <li><code class="highlighter-rouge">RIGHTY</code>                        (sets robot in right handed mode)</li>
-  <li><code class="highlighter-rouge">SET loc1=loc2</code>                 (sets ‘loc1’ equal to ‘loc2’)</li>
-  <li><code class="highlighter-rouge">SET loc1=loc2:tran</code>            (sets ‘loc1’ equal to the result of ‘loc2’ post transformation</li>
-  <li><code class="highlighter-rouge">SIGNAL reg1,..,regn</code>           (turns register on or off. positive value is on negativ value is off)</li>
-  <li><code class="highlighter-rouge">MULTIPLE</code>                      (allows complete wrist movement)</li>
-  <li><code class="highlighter-rouge">SINGLE</code>                        (limits wrist movement to +/* 180 of center)</li>
-  <li><code class="highlighter-rouge">SPEED var</code>                     (sets speed to var, 100 is standard % speed, MMPS gives mm/s)</li>
-  <li><code class="highlighter-rouge">STOP</code>                          (equivalent to RETURN in the primary frame)</li>
-  <li><code class="highlighter-rouge">SWITCH switch=var</code>             (sets the switch value to ‘var’)</li>
-  <li><code class="highlighter-rouge">TIMER timer=time</code>              (sets the timer, 1-15, to the time, in seconds precise to milliseconds, time will count to zero)</li>
-  <li><code class="highlighter-rouge">TOOL val</code>                      (sets the tool offset to val)</li>
-  <li><code class="highlighter-rouge">WAIT bool</code>                     (waits until the boolean is true)</li>
+  <li><code class="language-plaintext highlighter-rouge">BITS firstRegisterIndex, numRegisters=value</code>    (changes output parsing ‘value’ in binary over outputs begining at ‘firstRegisterIndex’ and indexing for numRegisters)</li>
+  <li><code class="language-plaintext highlighter-rouge">BRAKE</code>                         (stops robot motion imediately at decel rate. program then proceeds)</li>
+  <li><code class="language-plaintext highlighter-rouge">BREAK</code>                         (pauses program until current motion is complete. program then proceeds)</li>
+  <li><code class="language-plaintext highlighter-rouge">CALL program</code>                  (JSR)</li>
+  <li><code class="language-plaintext highlighter-rouge">COARSE tolerance</code>              (makes movement less precisse but faster, the larger the tolerance, as a percent, the less accurate the move)</li>
+  <li><code class="language-plaintext highlighter-rouge">DECOMPOSE array[i]=loc</code>        (takes the 6 position variables of ‘loc; and places them into the array begining at index=’i’. in the event of a multidimension array, [i_1,i_2,i_n], only ‘i_n’ will be incremented</li>
+  <li><code class="language-plaintext highlighter-rouge">DELAY time</code>                    (delays all motion for time, in seconds, all other aspects of program will run up until next motion)</li>
+  <li><code class="language-plaintext highlighter-rouge">DEPART distance</code>                (moves tool upwards by distance)</li>
+  <li><code class="language-plaintext highlighter-rouge">DRIVE joint, change, speed</code>    (moves the joint at speed as %*monitor speed to incremental change)</li>
+  <li><code class="language-plaintext highlighter-rouge">FINE tol</code>                        (adjust motion tolerance to ‘tol’ which is a percent of standard, so smaller is tighter)</li>
+  <li><code class="language-plaintext highlighter-rouge">HALT</code>                               (hard program exit, blows   through all stacks)</li>
+  <li><code class="language-plaintext highlighter-rouge">HERE loc</code>                        (sets the location or location offset as the current robot position)</li>
+  <li><code class="language-plaintext highlighter-rouge">JHERE var1,...,varn</code>              (sets current joint values to variables in sequence)</li>
+  <li><code class="language-plaintext highlighter-rouge">LEFTY</code>                              (makes robot move as left handed arm)</li>
+  <li><code class="language-plaintext highlighter-rouge">RESET</code>                              (turns off all external output signals)</li>
+  <li><code class="language-plaintext highlighter-rouge">RETURN</code></li>
+  <li><code class="language-plaintext highlighter-rouge">RIGHTY</code>                        (sets robot in right handed mode)</li>
+  <li><code class="language-plaintext highlighter-rouge">SET loc1=loc2</code>                 (sets ‘loc1’ equal to ‘loc2’)</li>
+  <li><code class="language-plaintext highlighter-rouge">SET loc1=loc2:tran</code>            (sets ‘loc1’ equal to the result of ‘loc2’ post transformation</li>
+  <li><code class="language-plaintext highlighter-rouge">SIGNAL reg1,..,regn</code>           (turns register on or off. positive value is on negativ value is off)</li>
+  <li><code class="language-plaintext highlighter-rouge">MULTIPLE</code>                      (allows complete wrist movement)</li>
+  <li><code class="language-plaintext highlighter-rouge">SINGLE</code>                        (limits wrist movement to +/* 180 of center)</li>
+  <li><code class="language-plaintext highlighter-rouge">SPEED var</code>                     (sets speed to var, 100 is standard % speed, MMPS gives mm/s)</li>
+  <li><code class="language-plaintext highlighter-rouge">STOP</code>                          (equivalent to RETURN in the primary frame)</li>
+  <li><code class="language-plaintext highlighter-rouge">SWITCH switch=var</code>             (sets the switch value to ‘var’)</li>
+  <li><code class="language-plaintext highlighter-rouge">TIMER timer=time</code>              (sets the timer, 1-15, to the time, in seconds precise to milliseconds, time will count to zero)</li>
+  <li><code class="language-plaintext highlighter-rouge">TOOL val</code>                      (sets the tool offset to val)</li>
+  <li><code class="language-plaintext highlighter-rouge">WAIT bool</code>                     (waits until the boolean is true)</li>
 </ul>
 
 <hr />
 
 <h3 id="reference-frames">REFERENCE FRAMES</h3>
 <ul>
-  <li><code class="highlighter-rouge">HERE frame:loc</code>                (defines loc at the current location as a transformation from frame)</li>
-  <li><code class="highlighter-rouge">MOVE loc:loc</code>                  (moves to the vector of loc+loc)</li>
-  <li><code class="highlighter-rouge">TRANS(x,y,z,r,p,q)</code>            (returns the transformation)</li>
+  <li><code class="language-plaintext highlighter-rouge">HERE frame:loc</code>                (defines loc at the current location as a transformation from frame)</li>
+  <li><code class="language-plaintext highlighter-rouge">MOVE loc:loc</code>                  (moves to the vector of loc+loc)</li>
+  <li><code class="language-plaintext highlighter-rouge">TRANS(x,y,z,r,p,q)</code>            (returns the transformation)</li>
 </ul>
 
 <hr />
 
 <h3 id="control-structures">CONTROL STRUCTURES</h3>
 <ul>
-  <li><code class="highlighter-rouge">END</code>                           (needed after everything</li>
-  <li><code class="highlighter-rouge">EXIT</code>                (blows out all control structures)</li>
-  <li><code class="highlighter-rouge">FOR var = i_0 TO i_f inc</code></li>
-  <li><code class="highlighter-rouge">GOTO label</code>            (labels are done as integers at line start)</li>
+  <li><code class="language-plaintext highlighter-rouge">END</code>                           (needed after everything</li>
+  <li><code class="language-plaintext highlighter-rouge">EXIT</code>                (blows out all control structures)</li>
+  <li><code class="language-plaintext highlighter-rouge">FOR var = i_0 TO i_f inc</code></li>
+  <li><code class="language-plaintext highlighter-rouge">GOTO label</code>            (labels are done as integers at line start)</li>
 </ul>
 
 <hr />
@@ -525,53 +525,53 @@
 
 <h3 id="system-switches">SYSTEM SWITCHES</h3>
 <ul>
-  <li><code class="highlighter-rouge">AUTO.POWER.OFF</code>        (if on then power will shut off for motion errors</li>
-  <li><code class="highlighter-rouge">DRY.RUN</code>            (will run without any robot motion)</li>
-  <li><code class="highlighter-rouge">ESTOP.SIGNAL</code>            (determines whether estop status is output to DO 1)</li>
-  <li><code class="highlighter-rouge">POWER</code>                (changes high power state)</li>
-  <li><code class="highlighter-rouge">UPPER</code>                (for all boolean operations with strings, all characters are interpreted as uppercase)</li>
+  <li><code class="language-plaintext highlighter-rouge">AUTO.POWER.OFF</code>        (if on then power will shut off for motion errors</li>
+  <li><code class="language-plaintext highlighter-rouge">DRY.RUN</code>            (will run without any robot motion)</li>
+  <li><code class="language-plaintext highlighter-rouge">ESTOP.SIGNAL</code>            (determines whether estop status is output to DO 1)</li>
+  <li><code class="language-plaintext highlighter-rouge">POWER</code>                (changes high power state)</li>
+  <li><code class="language-plaintext highlighter-rouge">UPPER</code>                (for all boolean operations with strings, all characters are interpreted as uppercase)</li>
 </ul>
 
 <hr />
 
 <h3 id="transformation-stuff">TRANSFORMATION STUFF</h3>
 <ul>
-  <li><code class="highlighter-rouge">FRAME(loc1, loc2, loc3, loc4)</code>        (sets up a really accurate axis system)</li>
-  <li><code class="highlighter-rouge">INVERSE(transformation)</code></li>
-  <li><code class="highlighter-rouge">RX(ang)</code>                (rotates about the X-axis)</li>
-  <li><code class="highlighter-rouge">RY(ang)</code>                (rotates about the Y-axis)</li>
-  <li><code class="highlighter-rouge">RZ(ang)</code>                (rotates about the Z-axis)</li>
-  <li><code class="highlighter-rouge">SCALE(trans, scale)</code>            (returns the transformation by scale)</li>
-  <li><code class="highlighter-rouge">SHIFT(trans BY x,y,z)</code>           (returns trans shifted by x,y,z)</li>
-  <li><code class="highlighter-rouge">TOOL</code>                    (returns the tool offset)</li>
-  <li><code class="highlighter-rouge">TRANS(x,y,z,y,p,r)</code>            (returns trans defined by values)</li>
+  <li><code class="language-plaintext highlighter-rouge">FRAME(loc1, loc2, loc3, loc4)</code>        (sets up a really accurate axis system)</li>
+  <li><code class="language-plaintext highlighter-rouge">INVERSE(transformation)</code></li>
+  <li><code class="language-plaintext highlighter-rouge">RX(ang)</code>                (rotates about the X-axis)</li>
+  <li><code class="language-plaintext highlighter-rouge">RY(ang)</code>                (rotates about the Y-axis)</li>
+  <li><code class="language-plaintext highlighter-rouge">RZ(ang)</code>                (rotates about the Z-axis)</li>
+  <li><code class="language-plaintext highlighter-rouge">SCALE(trans, scale)</code>            (returns the transformation by scale)</li>
+  <li><code class="language-plaintext highlighter-rouge">SHIFT(trans BY x,y,z)</code>           (returns trans shifted by x,y,z)</li>
+  <li><code class="language-plaintext highlighter-rouge">TOOL</code>                    (returns the tool offset)</li>
+  <li><code class="language-plaintext highlighter-rouge">TRANS(x,y,z,y,p,r)</code>            (returns trans defined by values)</li>
 </ul>
 
 <hr />
 
 <h3 id="functions">FUNCTIONS</h3>
 <ul>
-  <li><code class="highlighter-rouge">SIG(sig1,..,sign)</code>            (returns logical and of input signals)</li>
-  <li><code class="highlighter-rouge">INRANGE(loc)</code>                (returns values indicating whether loc is inrange. If 0, loc is in range. If bit 14 is active (8192), loc is too close. If bit 15 is active (16384), loc is too far.)</li>
-  <li><code class="highlighter-rouge">var BAND var</code>                (binary and)</li>
-  <li><code class="highlighter-rouge">STATE(select)</code>                (returns a value indicating various factors defining the <a href="http://www1.adept.com/main/KE/DATA/V%20Plus/MicroV/MicrovTOC.htm">state of the robot</a>)</li>
+  <li><code class="language-plaintext highlighter-rouge">SIG(sig1,..,sign)</code>            (returns logical and of input signals)</li>
+  <li><code class="language-plaintext highlighter-rouge">INRANGE(loc)</code>                (returns values indicating whether loc is inrange. If 0, loc is in range. If bit 14 is active (8192), loc is too close. If bit 15 is active (16384), loc is too far.)</li>
+  <li><code class="language-plaintext highlighter-rouge">var BAND var</code>                (binary and)</li>
+  <li><code class="language-plaintext highlighter-rouge">STATE(select)</code>                (returns a value indicating various factors defining the <a href="http://www1.adept.com/main/KE/DATA/V%20Plus/MicroV/MicrovTOC.htm">state of the robot</a>)</li>
 </ul>
 
 <hr />
 
 <h3 id="passing-args">PASSING ARGS</h3>
 <ul>
-  <li>for undefined args use <code class="highlighter-rouge">DEFINED</code> to test arg list</li>
+  <li>for undefined args use <code class="language-plaintext highlighter-rouge">DEFINED</code> to test arg list</li>
 </ul>
 
 <hr />
 
 <h3 id="interupts">INTERUPTS</h3>
 <ul>
-  <li><code class="highlighter-rouge">REACT</code></li>
-  <li><code class="highlighter-rouge">REACTE</code></li>
+  <li><code class="language-plaintext highlighter-rouge">REACT</code></li>
+  <li><code class="language-plaintext highlighter-rouge">REACTE</code></li>
   <li>
-    <h2 id="reacti"><code class="highlighter-rouge">REACTI</code></h2>
+    <h2 id="reacti"><code class="language-plaintext highlighter-rouge">REACTI</code></h2>
   </li>
 </ul>
 
@@ -579,18 +579,18 @@
 <ul>
   <li>this can be done as a seperate program which is called from elsewhere</li>
   <li>initialize global variables</li>
-  <li>set I/O ports as logically named global vars. Ex.: <code class="highlighter-rouge">cycle.start = 1001</code></li>
+  <li>set I/O ports as logically named global vars. Ex.: <code class="language-plaintext highlighter-rouge">cycle.start = 1001</code></li>
   <li>set signals to startup preffered state</li>
-  <li>set up transformations ex:    <code class="highlighter-rouge">SET pallet = TRANS(62.4,-215.978,293.898,0,180,-46.208)</code></li>
+  <li>set up transformations ex:    <code class="language-plaintext highlighter-rouge">SET pallet = TRANS(62.4,-215.978,293.898,0,180,-46.208)</code></li>
 </ul>
 
 <hr />
 
 <h3 id="console-output">CONSOLE OUTPUT:</h3>
 <ul>
-  <li><code class="highlighter-rouge">TYPE output1,..,output n</code>        (outputs with modified text, limited to 512 char)</li>
-  <li><code class="highlighter-rouge">/S</code>                     (acting as a modifier will prevent Carriage Return)</li>
-  <li>Ex:    <code class="highlighter-rouge">TYPE /S, "This "</code></li>
+  <li><code class="language-plaintext highlighter-rouge">TYPE output1,..,output n</code>        (outputs with modified text, limited to 512 char)</li>
+  <li><code class="language-plaintext highlighter-rouge">/S</code>                     (acting as a modifier will prevent Carriage Return)</li>
+  <li>Ex:    <code class="language-plaintext highlighter-rouge">TYPE /S, "This "</code></li>
 </ul>
 
 <hr />
@@ -599,8 +599,8 @@
 <ol>
   <li>Create a program named AUTO, as well as any other programs required for the application. The AUTO program should initialize the application and possibly start other user programs in tasks 0, 1, and 2.</li>
   <li>Create and initialize any global variables to be used by the application, for example, arm positions.</li>
-  <li>Use the <code class="highlighter-rouge">STORE</code> monitor command to store all programs and variables on NVRAM.</li>
-  <li><code class="highlighter-rouge">ENABLE AUTOSTART</code> in the monitor</li>
+  <li>Use the <code class="language-plaintext highlighter-rouge">STORE</code> monitor command to store all programs and variables on NVRAM.</li>
+  <li><code class="language-plaintext highlighter-rouge">ENABLE AUTOSTART</code> in the monitor</li>
 </ol>
 
 <hr />
@@ -616,12 +616,12 @@
 
 <h3 id="things-to-look-into">THINGS TO LOOK INTO</h3>
 <ul>
-  <li><code class="highlighter-rouge">CALIBRATE</code>             (command that calibrates encoders?)</li>
-  <li><code class="highlighter-rouge">EVENT</code></li>
-  <li><code class="highlighter-rouge">TOOL</code></li>
-  <li><code class="highlighter-rouge">KILL</code></li>
-  <li><code class="highlighter-rouge">EXECUTE</code></li>
-  <li><code class="highlighter-rouge">&lt;&gt;</code>                (appears to be !=)</li>
+  <li><code class="language-plaintext highlighter-rouge">CALIBRATE</code>             (command that calibrates encoders?)</li>
+  <li><code class="language-plaintext highlighter-rouge">EVENT</code></li>
+  <li><code class="language-plaintext highlighter-rouge">TOOL</code></li>
+  <li><code class="language-plaintext highlighter-rouge">KILL</code></li>
+  <li><code class="language-plaintext highlighter-rouge">EXECUTE</code></li>
+  <li><code class="language-plaintext highlighter-rouge">&lt;&gt;</code>                (appears to be !=)</li>
   <li>do you need to declare global variables which have already been initialized?</li>
   <li>modifiying monitor speed using MONITOR modifier</li>
 </ul>

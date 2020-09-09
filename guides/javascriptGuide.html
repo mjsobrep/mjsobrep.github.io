@@ -370,66 +370,66 @@
 
   <article class="post-content">
     <ul>
-  <li>logging output: <code class="highlighter-rouge">console.log();</code></li>
+  <li>logging output: <code class="language-plaintext highlighter-rouge">console.log();</code></li>
 </ul>
 
 <h2 id="jsdoc-cheat-sheet">JSDoc cheat sheet</h2>
 <ul>
-  <li><code class="highlighter-rouge">@author - author</code></li>
-  <li><code class="highlighter-rouge">@method - put on the constructor</code></li>
-  <li><code class="highlighter-rouge">@param - the arguments</code></li>
-  <li><code class="highlighter-rouge">@returns - the returns</code></li>
-  <li><code class="highlighter-rouge">@throws - what does this throw</code></li>
-  <li><code class="highlighter-rouge">@version - the version</code></li>
-  <li><code class="highlighter-rouge">@todo - things todo</code></li>
+  <li><code class="language-plaintext highlighter-rouge">@author - author</code></li>
+  <li><code class="language-plaintext highlighter-rouge">@method - put on the constructor</code></li>
+  <li><code class="language-plaintext highlighter-rouge">@param - the arguments</code></li>
+  <li><code class="language-plaintext highlighter-rouge">@returns - the returns</code></li>
+  <li><code class="language-plaintext highlighter-rouge">@throws - what does this throw</code></li>
+  <li><code class="language-plaintext highlighter-rouge">@version - the version</code></li>
+  <li><code class="language-plaintext highlighter-rouge">@todo - things todo</code></li>
 </ul>
 
 <p>http://fabricjs.com/hovering/</p>
 
-<p><code class="highlighter-rouge">const ME = 0</code> //defines a constant variable</p>
+<p><code class="language-plaintext highlighter-rouge">const ME = 0</code> //defines a constant variable</p>
 
 <h4 id="literals">Literals:</h4>
 <ul>
-  <li>Array: <code class="highlighter-rouge">var coffees = ["French Roast", "Colombian", "Kona"];</code> // can have empty spots (best to do this with {undefined})</li>
-  <li>Boolean: <code class="highlighter-rouge">var bob = true; var sue = false;</code></li>
-  <li>Int: (decimal: <code class="highlighter-rouge">105</code> -&gt; no leading zero) (octal: <code class="highlighter-rouge">017</code> -&gt; leading zero) (hex: <code class="highlighter-rouge">0x1DA7</code> -&gt; leading 0x)</li>
-  <li>Floating Point: must have <code class="highlighter-rouge">(num)(decimal)(num)</code> or <code class="highlighter-rouge">(num)(E(+/-)(num))</code></li>
-  <li>Object: <code class="highlighter-rouge">var car = { myCar: "Saturn", getCar: CarTypes("Honda"), special: Sales };</code></li>
-  <li>String: <code class="highlighter-rouge">autoboxing. use either "" or ''</code></li>
+  <li>Array: <code class="language-plaintext highlighter-rouge">var coffees = ["French Roast", "Colombian", "Kona"];</code> // can have empty spots (best to do this with {undefined})</li>
+  <li>Boolean: <code class="language-plaintext highlighter-rouge">var bob = true; var sue = false;</code></li>
+  <li>Int: (decimal: <code class="language-plaintext highlighter-rouge">105</code> -&gt; no leading zero) (octal: <code class="language-plaintext highlighter-rouge">017</code> -&gt; leading zero) (hex: <code class="language-plaintext highlighter-rouge">0x1DA7</code> -&gt; leading 0x)</li>
+  <li>Floating Point: must have <code class="language-plaintext highlighter-rouge">(num)(decimal)(num)</code> or <code class="language-plaintext highlighter-rouge">(num)(E(+/-)(num))</code></li>
+  <li>Object: <code class="language-plaintext highlighter-rouge">var car = { myCar: "Saturn", getCar: CarTypes("Honda"), special: Sales };</code></li>
+  <li>String: <code class="language-plaintext highlighter-rouge">autoboxing. use either "" or ''</code></li>
 </ul>
 
 <h4 id="function-pointers">function pointers:</h4>
 <ul>
-  <li><code class="highlighter-rouge">var square = function(number) {return number * number};</code></li>
-  <li><code class="highlighter-rouge">var x = square(4)</code> //x gets the value 16</li>
+  <li><code class="language-plaintext highlighter-rouge">var square = function(number) {return number * number};</code></li>
+  <li><code class="language-plaintext highlighter-rouge">var x = square(4)</code> //x gets the value 16</li>
   <li>could pass square as an argument</li>
 </ul>
 
 <h4 id="iterating">iterating:</h4>
 <ul>
-  <li><code class="highlighter-rouge">array.forEach(function(args))</code>   //will call function for all args</li>
-  <li><code class="highlighter-rouge">array.forEach(function(args){function body})</code></li>
-  <li>classic <code class="highlighter-rouge">for(int i = 0;i&lt;array.length;i++)</code></li>
+  <li><code class="language-plaintext highlighter-rouge">array.forEach(function(args))</code>   //will call function for all args</li>
+  <li><code class="language-plaintext highlighter-rouge">array.forEach(function(args){function body})</code></li>
+  <li>classic <code class="language-plaintext highlighter-rouge">for(int i = 0;i&lt;array.length;i++)</code></li>
 </ul>
 
 <h4 id="arrays">Arrays:</h4>
 <ul>
-  <li><code class="highlighter-rouge">pop()</code> //removes and returns last element</li>
-  <li><code class="highlighter-rouge">push()</code> //adds element to end and returns length</li>
-  <li><code class="highlighter-rouge">shift()</code> //removes and returns first element</li>
-  <li><code class="highlighter-rouge">unshift()</code> //adds element to the front and returns length</li>
+  <li><code class="language-plaintext highlighter-rouge">pop()</code> //removes and returns last element</li>
+  <li><code class="language-plaintext highlighter-rouge">push()</code> //adds element to end and returns length</li>
+  <li><code class="language-plaintext highlighter-rouge">shift()</code> //removes and returns first element</li>
+  <li><code class="language-plaintext highlighter-rouge">unshift()</code> //adds element to the front and returns length</li>
 </ul>
 
 <h4 id="comparator">Comparator:</h4>
 <ul>
-  <li><code class="highlighter-rouge">var sortFn = function(a, b){body}</code>
+  <li><code class="language-plaintext highlighter-rouge">var sortFn = function(a, b){body}</code>
     <ul>
       <li>if a is less than b by the sorting system, return -1 (or any negative number)</li>
       <li>if a is greater than b by the sorting system, return 1 (or any positive number)</li>
       <li>if a and b are considered equivalent, return 0.</li>
     </ul>
   </li>
-  <li><code class="highlighter-rouge">array.sort(sortFn);</code></li>
+  <li><code class="language-plaintext highlighter-rouge">array.sort(sortFn);</code></li>
 </ul>
 
 <h4 id="inheritance">Inheritance:</h4>

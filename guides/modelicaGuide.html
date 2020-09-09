@@ -382,17 +382,17 @@
   <li>output</li>
 </ul>
 
-<h4 id="assignment-done-via-">Assignment: done via <code class="highlighter-rouge">:=</code></h4>
+<h4 id="assignment-done-via-">Assignment: done via <code class="language-plaintext highlighter-rouge">:=</code></h4>
 
-<h4 id="equation-done-via-">Equation: done via <code class="highlighter-rouge">=</code></h4>
+<h4 id="equation-done-via-">Equation: done via <code class="language-plaintext highlighter-rouge">=</code></h4>
 
 <h3 id="variables">Variables:</h3>
 <ul>
   <li>Base Types:
     <ul>
-      <li><code class="highlighter-rouge">Integer</code></li>
-      <li><code class="highlighter-rouge">Real(unit = "&lt;unit&gt;" ~ opt, min = &lt;min&gt; ~ opt, max = &lt;max&gt; ~ opt)</code></li>
-      <li><code class="highlighter-rouge">Boolean</code></li>
+      <li><code class="language-plaintext highlighter-rouge">Integer</code></li>
+      <li><code class="language-plaintext highlighter-rouge">Real(unit = "&lt;unit&gt;" ~ opt, min = &lt;min&gt; ~ opt, max = &lt;max&gt; ~ opt)</code></li>
+      <li><code class="language-plaintext highlighter-rouge">Boolean</code></li>
     </ul>
   </li>
   <li>Variability:
@@ -404,14 +404,14 @@
   </li>
   <li>Starting Value:
     <ul>
-      <li><code class="highlighter-rouge">&lt;type&gt; &lt;var&gt;(start = &lt;val&gt;);</code></li>
+      <li><code class="language-plaintext highlighter-rouge">&lt;type&gt; &lt;var&gt;(start = &lt;val&gt;);</code></li>
     </ul>
   </li>
   <li>Visibility:
     <ul>
-      <li><code class="highlighter-rouge">public</code></li>
+      <li><code class="language-plaintext highlighter-rouge">public</code></li>
       <li>
-        <p><code class="highlighter-rouge">protected</code></p>
+        <p><code class="language-plaintext highlighter-rouge">protected</code></p>
       </li>
       <li>treated as headers, all variables after a visibility statement and before another control statement will have that visibility</li>
     </ul>
@@ -430,61 +430,61 @@
 <ul>
   <li>Special words to replace “class”:
     <ul>
-      <li><code class="highlighter-rouge">model</code>: intended for models; cannot be used for connections</li>
-      <li><code class="highlighter-rouge">record</code>: intended for data structures; cannot have equations, cannot be used for connections</li>
-      <li><code class="highlighter-rouge">type</code>: intended to introduce new types; must extend another type, record, or be an array</li>
-      <li><code class="highlighter-rouge">connector</code>: defines connections; no equations</li>
-      <li><code class="highlighter-rouge">block</code>: data flow of variables is known; all variables must be declared with “input” or “output” * followed by a type or class; no connections</li>
-      <li><code class="highlighter-rouge">function</code>: defines inputs and outputs, no equation, exactly one algorithm(<code class="highlighter-rouge">&lt;output var&gt;:=&lt;computation&gt;</code>)
+      <li><code class="language-plaintext highlighter-rouge">model</code>: intended for models; cannot be used for connections</li>
+      <li><code class="language-plaintext highlighter-rouge">record</code>: intended for data structures; cannot have equations, cannot be used for connections</li>
+      <li><code class="language-plaintext highlighter-rouge">type</code>: intended to introduce new types; must extend another type, record, or be an array</li>
+      <li><code class="language-plaintext highlighter-rouge">connector</code>: defines connections; no equations</li>
+      <li><code class="language-plaintext highlighter-rouge">block</code>: data flow of variables is known; all variables must be declared with “input” or “output” * followed by a type or class; no connections</li>
+      <li><code class="language-plaintext highlighter-rouge">function</code>: defines inputs and outputs, no equation, exactly one algorithm(<code class="language-plaintext highlighter-rouge">&lt;output var&gt;:=&lt;computation&gt;</code>)
         <ul>
-          <li><code class="highlighter-rouge">calling</code>: <function name="">(<input1>,...)</input1></function></li>
+          <li><code class="language-plaintext highlighter-rouge">calling</code>: <function name="">(<input1>,...)</input1></function></li>
         </ul>
       </li>
     </ul>
   </li>
   <li>Define:
     <ul>
-      <li><code class="highlighter-rouge">class &lt;classname&gt;</code>
+      <li><code class="language-plaintext highlighter-rouge">class &lt;classname&gt;</code>
         <ul>
           <li>public
             <ul>
-              <li><code class="highlighter-rouge">parameter &lt;type&gt; &lt;var&gt; = &lt;val ~ opt&gt;;</code></li>
+              <li><code class="language-plaintext highlighter-rouge">parameter &lt;type&gt; &lt;var&gt; = &lt;val ~ opt&gt;;</code></li>
             </ul>
           </li>
         </ul>
       </li>
       <li>
-        <p>end <code class="highlighter-rouge">&lt;classname - to instantiate&gt;</code>;</p>
+        <p>end <code class="language-plaintext highlighter-rouge">&lt;classname - to instantiate&gt;</code>;</p>
       </li>
-      <li><code class="highlighter-rouge">type &lt;classname&gt; = &lt;sourceClass to instantiate&gt;</code></li>
+      <li><code class="language-plaintext highlighter-rouge">type &lt;classname&gt; = &lt;sourceClass to instantiate&gt;</code></li>
     </ul>
   </li>
   <li>Container Classes:
     <ul>
-      <li><code class="highlighter-rouge">class &lt;container classname&gt;</code>
+      <li><code class="language-plaintext highlighter-rouge">class &lt;container classname&gt;</code>
         <ul>
-          <li><code class="highlighter-rouge">&lt;contained classname&gt; &lt;thisname&gt;(&lt;paramater ~ opt&gt;=&lt;val&gt;,...);</code></li>
+          <li><code class="language-plaintext highlighter-rouge">&lt;contained classname&gt; &lt;thisname&gt;(&lt;paramater ~ opt&gt;=&lt;val&gt;,...);</code></li>
         </ul>
       </li>
-      <li>end <code class="highlighter-rouge">&lt;container classname&gt;</code></li>
+      <li>end <code class="language-plaintext highlighter-rouge">&lt;container classname&gt;</code></li>
     </ul>
   </li>
   <li>Drilling Down:
     <ul>
-      <li><code class="highlighter-rouge">&lt;classname&gt;.&lt;classname...&gt;.&lt;parameter&gt;</code></li>
-      <li><code class="highlighter-rouge">&lt;classname&gt;(&lt;paramater1&gt;,&lt;paramater2&gt;,...)</code></li>
+      <li><code class="language-plaintext highlighter-rouge">&lt;classname&gt;.&lt;classname...&gt;.&lt;parameter&gt;</code></li>
+      <li><code class="language-plaintext highlighter-rouge">&lt;classname&gt;(&lt;paramater1&gt;,&lt;paramater2&gt;,...)</code></li>
     </ul>
   </li>
   <li>View flattened class:
     <ul>
-      <li><code class="highlighter-rouge">instantiateModel(&lt;class&gt;)</code></li>
+      <li><code class="language-plaintext highlighter-rouge">instantiateModel(&lt;class&gt;)</code></li>
     </ul>
   </li>
   <li>Inheritance:
     <ul>
-      <li><code class="highlighter-rouge">class &lt;name&gt;</code>
+      <li><code class="language-plaintext highlighter-rouge">class &lt;name&gt;</code>
         <ul>
-          <li><code class="highlighter-rouge">extends &lt;super&gt;;</code>
+          <li><code class="language-plaintext highlighter-rouge">extends &lt;super&gt;;</code>
   …Standard class stuff</li>
         </ul>
       </li>
@@ -492,10 +492,10 @@
   </li>
   <li>Generics:
     <ul>
-      <li>prefix type with keyword : “replaceable” :: <code class="highlighter-rouge">replaceable &lt;type&gt; &lt;name&gt;;</code></li>
+      <li>prefix type with keyword : “replaceable” :: <code class="language-plaintext highlighter-rouge">replaceable &lt;type&gt; &lt;name&gt;;</code></li>
       <li>Declaring:
         <ul>
-          <li><code class="highlighter-rouge">class &lt;name&gt; = &lt;c lass type&gt;(redeclare &lt;type&gt; &lt;name&gt;,...)</code></li>
+          <li><code class="language-plaintext highlighter-rouge">class &lt;name&gt; = &lt;c lass type&gt;(redeclare &lt;type&gt; &lt;name&gt;,...)</code></li>
         </ul>
       </li>
     </ul>
@@ -503,7 +503,7 @@
   <li>Partial Classes:
     <ul>
       <li>may be extended, but not instantiated</li>
-      <li><code class="highlighter-rouge">partial class &lt;classname&gt;</code></li>
+      <li><code class="language-plaintext highlighter-rouge">partial class &lt;classname&gt;</code></li>
     </ul>
   </li>
   <li>Package:
@@ -526,21 +526,21 @@
         ...
     end &lt;PackageName&gt;;</code></pre></figure>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* `import &lt;packageName&gt;;`
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* `import &lt;packageName&gt;;`
 * `import &lt;alias&gt;=&lt;packageName&gt;;`
 </code></pre></div></div>
 
 <ul>
   <li>Simulation:
     <ul>
-      <li><code class="highlighter-rouge">simulate(&lt;class&gt;)</code></li>
+      <li><code class="language-plaintext highlighter-rouge">simulate(&lt;class&gt;)</code></li>
     </ul>
   </li>
   <li>Visualization:
     <ul>
       <li>Plot:
         <ul>
-          <li><code class="highlighter-rouge">plot(&lt;args&gt;)</code></li>
+          <li><code class="language-plaintext highlighter-rouge">plot(&lt;args&gt;)</code></li>
         </ul>
       </li>
     </ul>
@@ -549,23 +549,23 @@
     <ul>
       <li>Declaration:
         <ul>
-          <li><code class="highlighter-rouge">&lt;type&gt;[&lt;dim1,...&gt;] &lt;name&gt;;</code></li>
+          <li><code class="language-plaintext highlighter-rouge">&lt;type&gt;[&lt;dim1,...&gt;] &lt;name&gt;;</code></li>
           <li>OR</li>
           <li>
-            <p><code class="highlighter-rouge">&lt;type&gt; &lt;name&gt;[&lt;dim1,...&gt;];</code></p>
+            <p><code class="language-plaintext highlighter-rouge">&lt;type&gt; &lt;name&gt;[&lt;dim1,...&gt;];</code></p>
           </li>
           <li>Can initialize with declaration:
             <ul>
-              <li><code class="highlighter-rouge">&lt;type&gt;[&lt;dim1,...&gt;] &lt;name&gt; = {x,y,z};</code></li>
+              <li><code class="language-plaintext highlighter-rouge">&lt;type&gt;[&lt;dim1,...&gt;] &lt;name&gt; = {x,y,z};</code></li>
               <li>OR</li>
-              <li><code class="highlighter-rouge">&lt;type&gt; &lt;name&gt;[&lt;dim1,...&gt;] = \{\{x,y\},\{f,g\}\};</code></li>
+              <li><code class="language-plaintext highlighter-rouge">&lt;type&gt; &lt;name&gt;[&lt;dim1,...&gt;] = \{\{x,y\},\{f,g\}\};</code></li>
             </ul>
           </li>
         </ul>
       </li>
       <li>Multiplication:
         <ul>
-          <li><code class="highlighter-rouge">*</code></li>
+          <li><code class="language-plaintext highlighter-rouge">*</code></li>
           <li>is element wise</li>
         </ul>
       </li>
@@ -575,13 +575,13 @@
     <ul>
       <li>Declaration:
         <ul>
-          <li><code class="highlighter-rouge">&lt;type&gt; &lt;name&gt;[&lt;dim1,...&gt;] = [&lt;v&gt;,&lt;v&gt;;...];</code></li>
+          <li><code class="language-plaintext highlighter-rouge">&lt;type&gt; &lt;name&gt;[&lt;dim1,...&gt;] = [&lt;v&gt;,&lt;v&gt;;...];</code></li>
         </ul>
       </li>
       <li>Multiplication:
         <ul>
-          <li><code class="highlighter-rouge">*</code></li>
-          <li><code class="highlighter-rouge">is matrix multiplication</code></li>
+          <li><code class="language-plaintext highlighter-rouge">*</code></li>
+          <li><code class="language-plaintext highlighter-rouge">is matrix multiplication</code></li>
         </ul>
       </li>
     </ul>
@@ -607,7 +607,7 @@
         end if;</code></pre></figure>
 
 <ul>
-  <li><code class="highlighter-rouge">reinit(&lt;var&gt;,&lt;new val&gt;)</code> : reinitializes variable, useful in while loop</li>
+  <li><code class="language-plaintext highlighter-rouge">reinit(&lt;var&gt;,&lt;new val&gt;)</code> : reinitializes variable, useful in while loop</li>
 </ul>
 
   </article>

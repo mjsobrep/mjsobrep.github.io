@@ -375,33 +375,33 @@
   <article class="post-content">
     <h3 id="startup">STARTUP:</h3>
 <ul>
-  <li><code class="highlighter-rouge">from Tkinter import *</code></li>
-  <li><code class="highlighter-rouge">import ttk</code></li>
-  <li><code class="highlighter-rouge">root = Tk()</code></li>
+  <li><code class="language-plaintext highlighter-rouge">from Tkinter import *</code></li>
+  <li><code class="language-plaintext highlighter-rouge">import ttk</code></li>
+  <li><code class="language-plaintext highlighter-rouge">root = Tk()</code></li>
 </ul>
 
 <h3 id="widgets">WIDGETS:</h3>
 <ul>
   <li>instantiation:
     <ul>
-      <li><code class="highlighter-rouge">button = ttk.Button(&lt;parent&gt;, text = '&lt;some text&gt;')</code></li>
-      <li><code class="highlighter-rouge">label = ttk.label(&lt;parent&gt;, text = '&lt;some text&gt;')</code></li>
+      <li><code class="language-plaintext highlighter-rouge">button = ttk.Button(&lt;parent&gt;, text = '&lt;some text&gt;')</code></li>
+      <li><code class="language-plaintext highlighter-rouge">label = ttk.label(&lt;parent&gt;, text = '&lt;some text&gt;')</code></li>
     </ul>
   </li>
   <li>adding:
     <ul>
-      <li><code class="highlighter-rouge">button.pack()</code></li>
+      <li><code class="language-plaintext highlighter-rouge">button.pack()</code></li>
     </ul>
   </li>
   <li>changing values:
     <ul>
-      <li><code class="highlighter-rouge">button['text'] = '&lt;some text&gt;'</code></li>
-      <li><code class="highlighter-rouge">button.config(text = '&lt;some text&gt;')</code></li>
+      <li><code class="language-plaintext highlighter-rouge">button['text'] = '&lt;some text&gt;'</code></li>
+      <li><code class="language-plaintext highlighter-rouge">button.config(text = '&lt;some text&gt;')</code></li>
     </ul>
   </li>
   <li>viewing configuration options:
     <ul>
-      <li><code class="highlighter-rouge">button.config()</code></li>
+      <li><code class="language-plaintext highlighter-rouge">button.config()</code></li>
     </ul>
   </li>
   <li>Geometry Mgmnt:
@@ -413,7 +413,7 @@
   </li>
   <li>Deleting:
     <ul>
-      <li><code class="highlighter-rouge">&lt;widget&gt;.destroy()</code></li>
+      <li><code class="language-plaintext highlighter-rouge">&lt;widget&gt;.destroy()</code></li>
     </ul>
   </li>
   <li>EVENT HANDLERS:
@@ -428,12 +428,12 @@
 <ul>
   <li>zoom to max:
     <ul>
-      <li><code class="highlighter-rouge">window.state('zoomed')</code></li>
+      <li><code class="language-plaintext highlighter-rouge">window.state('zoomed')</code></li>
     </ul>
   </li>
   <li>configuration:
     <ul>
-      <li><code class="highlighter-rouge">root.config(background = 'black')</code></li>
+      <li><code class="language-plaintext highlighter-rouge">root.config(background = 'black')</code></li>
     </ul>
   </li>
   <li>Text Display:
@@ -445,63 +445,63 @@
 
 <h3 id="canvas">CANVAS:</h3>
 <ul>
-  <li><code class="highlighter-rouge">canvas = Canvas(&lt;parent&gt;)</code></li>
-  <li><code class="highlighter-rouge">canvas.config(width = &lt;&gt;, height = &lt;&gt;)</code></li>
-  <li><code class="highlighter-rouge">line = canvas.create_line(&lt;x1&gt;,&lt;y1&gt;,&lt;x2&gt;,&lt;y2&gt;,fill = '&lt;color&gt;',width = &lt;width&gt;)</code></li>
-  <li><code class="highlighter-rouge">canvas.itemconfigure(line, fill='&lt;color&gt;')</code></li>
-  <li><code class="highlighter-rouge">canvas.coords(line)</code></li>
+  <li><code class="language-plaintext highlighter-rouge">canvas = Canvas(&lt;parent&gt;)</code></li>
+  <li><code class="language-plaintext highlighter-rouge">canvas.config(width = &lt;&gt;, height = &lt;&gt;)</code></li>
+  <li><code class="language-plaintext highlighter-rouge">line = canvas.create_line(&lt;x1&gt;,&lt;y1&gt;,&lt;x2&gt;,&lt;y2&gt;,fill = '&lt;color&gt;',width = &lt;width&gt;)</code></li>
+  <li><code class="language-plaintext highlighter-rouge">canvas.itemconfigure(line, fill='&lt;color&gt;')</code></li>
+  <li><code class="language-plaintext highlighter-rouge">canvas.coords(line)</code></li>
   <li>CAN BE POLYLINE::
     <ul>
-      <li><code class="highlighter-rouge">canvas.coords(line,&lt;x1&gt;,&lt;y1&gt;,&lt;x2&gt;,&lt;y2&gt;,&lt;x3&gt;,&lt;y3&gt;,&lt;x4&gt;,&lt;y4&gt;)</code></li>
+      <li><code class="language-plaintext highlighter-rouge">canvas.coords(line,&lt;x1&gt;,&lt;y1&gt;,&lt;x2&gt;,&lt;y2&gt;,&lt;x3&gt;,&lt;y3&gt;,&lt;x4&gt;,&lt;y4&gt;)</code></li>
       <li>smmoth:
         <ul>
-          <li><code class="highlighter-rouge">canvas.itemconfigure(line, smooth = True)</code></li>
-          <li><code class="highlighter-rouge">canvas.itemconfigure(line,splinesteps = &lt;numsteps&gt;)</code></li>
+          <li><code class="language-plaintext highlighter-rouge">canvas.itemconfigure(line, smooth = True)</code></li>
+          <li><code class="language-plaintext highlighter-rouge">canvas.itemconfigure(line,splinesteps = &lt;numsteps&gt;)</code></li>
         </ul>
       </li>
     </ul>
   </li>
   <li>Delete items:
     <ul>
-      <li><code class="highlighter-rouge">canvas.delete(&lt;item&gt;)</code></li>
-      <li><code class="highlighter-rouge">canvas.delete(all)</code></li>
+      <li><code class="language-plaintext highlighter-rouge">canvas.delete(&lt;item&gt;)</code></li>
+      <li><code class="language-plaintext highlighter-rouge">canvas.delete(all)</code></li>
     </ul>
   </li>
-  <li><code class="highlighter-rouge">rect = canvas.create_rectangle(&lt;x1&gt;,&lt;y1&gt;,&lt;x2&gt;,&lt;y2&gt;)</code></li>
-  <li><code class="highlighter-rouge">oval = canvas.create_oval(&lt;x1&gt;,&lt;y1&gt;,&lt;x2&gt;,&lt;y2&gt;)</code></li>
-  <li><code class="highlighter-rouge">arc = canvas.create_arc(&lt;x1&gt;,&lt;y1&gt;,&lt;x2&gt;,&lt;y2&gt;)</code></li>
-  <li><code class="highlighter-rouge">text = canvs.create_text(&lt;x1&gt;,&lt;y1&gt;, text = '&lt;text&gt;',font = (&lt;name&gt;,&lt;fontsize&gt;,&lt;bold&gt;))</code></li>
+  <li><code class="language-plaintext highlighter-rouge">rect = canvas.create_rectangle(&lt;x1&gt;,&lt;y1&gt;,&lt;x2&gt;,&lt;y2&gt;)</code></li>
+  <li><code class="language-plaintext highlighter-rouge">oval = canvas.create_oval(&lt;x1&gt;,&lt;y1&gt;,&lt;x2&gt;,&lt;y2&gt;)</code></li>
+  <li><code class="language-plaintext highlighter-rouge">arc = canvas.create_arc(&lt;x1&gt;,&lt;y1&gt;,&lt;x2&gt;,&lt;y2&gt;)</code></li>
+  <li><code class="language-plaintext highlighter-rouge">text = canvs.create_text(&lt;x1&gt;,&lt;y1&gt;, text = '&lt;text&gt;',font = (&lt;name&gt;,&lt;fontsize&gt;,&lt;bold&gt;))</code></li>
   <li>changing order:
     <ul>
-      <li><code class="highlighter-rouge">canvas.lift(&lt;item&gt;)</code></li>
-      <li><code class="highlighter-rouge">canvas.lower(&lt;item&gt;)</code></li>
+      <li><code class="language-plaintext highlighter-rouge">canvas.lift(&lt;item&gt;)</code></li>
+      <li><code class="language-plaintext highlighter-rouge">canvas.lower(&lt;item&gt;)</code></li>
     </ul>
   </li>
   <li>adding a widget:
     <ul>
-      <li><code class="highlighter-rouge">canvas.create_window(&lt;x1&gt;,&lt;y1&gt;,window = &lt;widget&gt;)</code></li>
+      <li><code class="language-plaintext highlighter-rouge">canvas.create_window(&lt;x1&gt;,&lt;y1&gt;,window = &lt;widget&gt;)</code></li>
     </ul>
   </li>
   <li>TAGS:
     <ul>
-      <li><code class="highlighter-rouge">canvas.itemconfigure(&lt;item&gt;,tag=(&lt;tag1&gt;,&lt;o: other tags&gt;))</code></li>
-      <li><code class="highlighter-rouge">canvas.gettags(&lt;item&gt;)</code></li>
+      <li><code class="language-plaintext highlighter-rouge">canvas.itemconfigure(&lt;item&gt;,tag=(&lt;tag1&gt;,&lt;o: other tags&gt;))</code></li>
+      <li><code class="language-plaintext highlighter-rouge">canvas.gettags(&lt;item&gt;)</code></li>
     </ul>
   </li>
 </ul>
 
 <h3 id="styles">STYLES:</h3>
 <ul>
-  <li><code class="highlighter-rouge">&lt;item&gt;.winfo_class() &lt;-returns style</code></li>
-  <li><code class="highlighter-rouge">style.configure('&lt;stylename&gt;',&lt;paramater&gt;=&lt;val&gt;)</code></li>
+  <li><code class="language-plaintext highlighter-rouge">&lt;item&gt;.winfo_class() &lt;-returns style</code></li>
+  <li><code class="language-plaintext highlighter-rouge">style.configure('&lt;stylename&gt;',&lt;paramater&gt;=&lt;val&gt;)</code></li>
   <li>new style: `
     <ul>
-      <li><code class="highlighter-rouge">style.configure('&lt;newname&gt;.&lt;inherit&gt;',&lt;paramater&gt;=&lt;val&gt; )</code></li>
+      <li><code class="language-plaintext highlighter-rouge">style.configure('&lt;newname&gt;.&lt;inherit&gt;',&lt;paramater&gt;=&lt;val&gt; )</code></li>
     </ul>
   </li>
-  <li><code class="highlighter-rouge">&lt;item&gt;.config(style = '&lt;style&gt;')</code></li>
-  <li><code class="highlighter-rouge">style.layout('&lt;style&gt;')</code></li>
-  <li><code class="highlighter-rouge">style.lookup('&lt;style&gt;','&lt;property&gt;')</code></li>
+  <li><code class="language-plaintext highlighter-rouge">&lt;item&gt;.config(style = '&lt;style&gt;')</code></li>
+  <li><code class="language-plaintext highlighter-rouge">style.layout('&lt;style&gt;')</code></li>
+  <li><code class="language-plaintext highlighter-rouge">style.lookup('&lt;style&gt;','&lt;property&gt;')</code></li>
 </ul>
 
 <p><a href="http://effbot.org/tkinterbook/widget.htm">a nice resource</a></p>

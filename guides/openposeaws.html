@@ -384,33 +384,33 @@
   <li><a href="https://docs.docker.com/engine/installation/linux/ubuntu/">Install docker</a></li>
   <li><a href="https://github.com/NVIDIA/nvidia-docker">Install NVidia Drivers</a>
     <ul>
-      <li><code class="highlighter-rouge">wget -P /tmp https://github.com/NVIDIA/nvidia-docker/releases/download/v1.0.1/nvidia-docker_1.0.1-1_amd64.deb</code></li>
-      <li><code class="highlighter-rouge">sudo dpkg -i /tmp/nvidia-docker*.deb &amp;&amp; rm /tmp/nvidia-docker*.deb</code></li>
-      <li><code class="highlighter-rouge">nvidia-docker run --rm nvidia/cuda nvidia-smi</code></li>
+      <li><code class="language-plaintext highlighter-rouge">wget -P /tmp https://github.com/NVIDIA/nvidia-docker/releases/download/v1.0.1/nvidia-docker_1.0.1-1_amd64.deb</code></li>
+      <li><code class="language-plaintext highlighter-rouge">sudo dpkg -i /tmp/nvidia-docker*.deb &amp;&amp; rm /tmp/nvidia-docker*.deb</code></li>
+      <li><code class="language-plaintext highlighter-rouge">nvidia-docker run --rm nvidia/cuda nvidia-smi</code></li>
     </ul>
   </li>
-  <li>Make a place to store our data: <code class="highlighter-rouge">mkdir data</code></li>
+  <li>Make a place to store our data: <code class="language-plaintext highlighter-rouge">mkdir data</code></li>
 </ul>
 
 <h2 id="run">Run</h2>
 
 <h3 id="docker">Docker</h3>
-<p><code class="highlighter-rouge">sudo nvidia-docker run -v /home/ubuntu/data:/data -it mjsobrep/openpose:latest bash</code></p>
+<p><code class="language-plaintext highlighter-rouge">sudo nvidia-docker run -v /home/ubuntu/data:/data -it mjsobrep/openpose:latest bash</code></p>
 
 <h4 id="some-helpful-hints-while-you-are-running-in-docker">Some helpful hints while you are running in Docker</h4>
 <p>To leave the docker:</p>
 <ul>
-  <li><code class="highlighter-rouge">Ctrl+p</code>, <code class="highlighter-rouge">Ctrl+q</code>
+  <li><code class="language-plaintext highlighter-rouge">Ctrl+p</code>, <code class="language-plaintext highlighter-rouge">Ctrl+q</code>
     <ul>
       <li>Now we have detached from the docker, but it is still running</li>
     </ul>
   </li>
-  <li>Let’s see where the docker is running by running: <code class="highlighter-rouge">sudo docker ps</code>
+  <li>Let’s see where the docker is running by running: <code class="language-plaintext highlighter-rouge">sudo docker ps</code>
     <ul>
       <li>Now we have the container ID</li>
     </ul>
   </li>
-  <li>Let’s stop it by running: <code class="highlighter-rouge">sudo docker stop &lt;container id&gt;</code></li>
+  <li>Let’s stop it by running: <code class="language-plaintext highlighter-rouge">sudo docker stop &lt;container id&gt;</code></li>
 </ul>
 
 <h3 id="openpose">OpenPose</h3>
@@ -418,18 +418,18 @@
 <ul>
   <li>Check out what options we have:
     <ul>
-      <li><code class="highlighter-rouge">./build/examples/openpose/openpose.bin --help</code></li>
+      <li><code class="language-plaintext highlighter-rouge">./build/examples/openpose/openpose.bin --help</code></li>
     </ul>
   </li>
   <li>Lets make a place for us to put the output:
     <ul>
-      <li><code class="highlighter-rouge">mkdir ../data/output</code></li>
-      <li><code class="highlighter-rouge">mkdir ../data/output/poses</code></li>
+      <li><code class="language-plaintext highlighter-rouge">mkdir ../data/output</code></li>
+      <li><code class="language-plaintext highlighter-rouge">mkdir ../data/output/poses</code></li>
     </ul>
   </li>
-  <li><code class="highlighter-rouge">./build/examples/openpose/openpose.bin --video examples/media/video.avi --write_video ../data/output/result.avi --write_keypoint_json ../data/output/poses --no_display</code>
+  <li><code class="language-plaintext highlighter-rouge">./build/examples/openpose/openpose.bin --video examples/media/video.avi --write_video ../data/output/result.avi --write_keypoint_json ../data/output/poses --no_display</code>
     <ul>
-      <li>You could pass the <code class="highlighter-rouge">--num_gpu &lt;#&gt;</code> flag to use more than 1 gpu</li>
+      <li>You could pass the <code class="language-plaintext highlighter-rouge">--num_gpu &lt;#&gt;</code> flag to use more than 1 gpu</li>
       <li>This will take a while to run (maybe around 1.5 minutes on a p2.xlarge)</li>
     </ul>
   </li>
@@ -441,7 +441,7 @@
 </blockquote>
 
 <h4 id="using-your-own-video">Using your own video</h4>
-<p>To use your own video, simply put the video in the data folder (<code class="highlighter-rouge">/home/ubuntu/data</code>) on the EC2 machine and change the <code class="highlighter-rouge">--video</code> argument to OpenPose</p>
+<p>To use your own video, simply put the video in the data folder (<code class="language-plaintext highlighter-rouge">/home/ubuntu/data</code>) on the EC2 machine and change the <code class="language-plaintext highlighter-rouge">--video</code> argument to OpenPose</p>
 
 <h2 id="getting-data-off-aws">Getting data off AWS</h2>
 <p>All of your output will be in the data folder… Now we need to get it back so we can take a look:
