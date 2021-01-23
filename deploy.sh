@@ -16,6 +16,7 @@ git config user.email "mjsobrep@live.com"
 
 git remote add upstream "https://$GH_TOKEN@github.com/mjsobrep/mjsobrep.github.io.git"
 git fetch upstream
+git checkout upstream/master -- otherFiles/MichaelSobrepera.pdf
 git reset upstream/master # Make all of our changes off of the master branch
 touch . # make all of the files look fresh
 
