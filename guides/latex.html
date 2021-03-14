@@ -346,7 +346,7 @@
 
   <header class="post-header">
     <h1 class="post-title">Tips for LaTeX</h1>
-    <p class="post-meta">Sep 20, 2017 • updated: Feb 20, 2019</p>
+    <p class="post-meta">Sep 20, 2017 • updated: Mar 13, 2021</p>
     <!-- borrowed from http://www.realcombiz.com/2014/01/how-to-expand-collapse-toggle-div-layer.html -->
 
 <input class="toggle-box" id="header1" type="checkbox" >
@@ -374,6 +374,9 @@
 <p><code class="language-plaintext highlighter-rouge">gs -dPDFSETTINGS=/prepress -dNOPAUSE -dQUIET -dBATCH -dCompatibilityLevel=1.4 -sDEVICE=pdfwrite -sOutputFile=out.pdf in.pdf</code></p>
 
 <p>You can change <code class="language-plaintext highlighter-rouge">-dPDFSETTINGS</code> to <code class="language-plaintext highlighter-rouge">/default</code> if you want a huge file (almost the same as what LaTeX uses) or to <code class="language-plaintext highlighter-rouge">/printer</code> if you want something a bit smaller. The other options start to get too small</p>
+
+<h2 id="bringing-pdfs-to-to-other-image-types">Bringing PDFs to to other image types:</h2>
+<p><code class="language-plaintext highlighter-rouge">for f in *.pdf; do pdftocairo -png -r '600' -transp "$f" "$f.png"; done</code></p>
 
   </article>
   <!-- START: Livefyre Embed -->

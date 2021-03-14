@@ -5,8 +5,8 @@
     <description>A site about stuff that I (Michael Sobrepera) work on, think, enjoy, etc...</description>
     <link>http://www.michaelsobrepera.com/</link>
     <atom:link href="http://www.michaelsobrepera.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 24 Jan 2021 00:43:33 +0000</pubDate>
-    <lastBuildDate>Sun, 24 Jan 2021 00:43:33 +0000</lastBuildDate>
+    <pubDate>Sun, 14 Mar 2021 02:14:22 +0000</pubDate>
+    <lastBuildDate>Sun, 14 Mar 2021 02:14:22 +0000</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
     
       <item>
@@ -299,6 +299,9 @@ The work was presented as a poster by Enri and is in the &lt;a href=&quot;https:
 &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gs -dPDFSETTINGS=/prepress -dNOPAUSE -dQUIET -dBATCH -dCompatibilityLevel=1.4 -sDEVICE=pdfwrite -sOutputFile=out.pdf in.pdf&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;You can change &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-dPDFSETTINGS&lt;/code&gt; to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/default&lt;/code&gt; if you want a huge file (almost the same as what LaTeX uses) or to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/printer&lt;/code&gt; if you want something a bit smaller. The other options start to get too small&lt;/p&gt;
+
+&lt;h2 id=&quot;bringing-pdfs-to-to-other-image-types&quot;&gt;Bringing PDFs to to other image types:&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;for f in *.pdf; do pdftocairo -png -r '600' -transp &quot;$f&quot; &quot;$f.png&quot;; done&lt;/code&gt;&lt;/p&gt;
 </description>
         <pubDate>Wed, 20 Sep 2017 00:00:00 +0000</pubDate>
         <link>http://www.michaelsobrepera.com/guides/latex.html</link>
