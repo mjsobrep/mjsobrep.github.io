@@ -5,9 +5,33 @@
     <description>A site about stuff that I (Michael Sobrepera) work on, think, enjoy, etc...</description>
     <link>http://www.michaelsobrepera.com/</link>
     <atom:link href="http://www.michaelsobrepera.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 14 Mar 2021 02:14:22 +0000</pubDate>
-    <lastBuildDate>Sun, 14 Mar 2021 02:14:22 +0000</lastBuildDate>
+    <pubDate>Thu, 18 Mar 2021 20:54:51 +0000</pubDate>
+    <lastBuildDate>Thu, 18 Mar 2021 20:54:51 +0000</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
+    
+      <item>
+        <title>Perceived Usefulness of a Social Robot Augmented Telehealth Platform by Therapists in the United States</title>
+        <description>&lt;p&gt;This is the author accepted version of a paper we published in Robotics and Automation Letters and presented at ICRA 2021.
+The final published version is available in &lt;a href=&quot;https://ieeexplore.ieee.org/document/9363561&quot;&gt;IEEE Xplore&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 18 Mar 2021 00:00:00 +0000</pubDate>
+        <link>http://www.michaelsobrepera.com/writings/ral-usefulness-srt.html</link>
+        <guid isPermaLink="true">http://www.michaelsobrepera.com/writings/ral-usefulness-srt.html</guid>
+        
+        <category>flo</category>
+        
+        <category>SAR</category>
+        
+        <category>academic papers</category>
+        
+        <category>doctoral work</category>
+        
+        <category>journal papers</category>
+        
+        
+        <category>writings</category>
+        
+      </item>
     
       <item>
         <title>Designing a Game for Upper Extremity Motor Function Assessment Using Anki Cozmo, a Desktop Social Robot</title>
@@ -308,113 +332,6 @@ The work was presented as a poster by Enri and is in the &lt;a href=&quot;https:
         <guid isPermaLink="true">http://www.michaelsobrepera.com/guides/latex.html</guid>
         
         <category>LaTeX</category>
-        
-        
-        <category>guides</category>
-        
-      </item>
-    
-      <item>
-        <title>Running OpenPose on AWS</title>
-        <description>&lt;p&gt;I am doing some work that requires Pose Tracking for my thesis work (as a tool, not a goal). The pose tracking algorithim that I am currently most excited about is the &lt;a href=&quot;https://arxiv.org/pdf/1611.08050.pdf&quot;&gt;Part Affinity Field based method&lt;/a&gt;. I’m looking forward to playing with the new Facbook method too.&lt;/p&gt;
-
-&lt;p&gt;The kind folks at the CMU Perceptual Computing Lab have been kind enough to package their code into a clean library with nice wrappers called &lt;a href=&quot;https://github.com/CMU-Perceptual-Computing-Lab/openpose&quot;&gt;OpenPose&lt;/a&gt;. For now, I wanted to get the demo running in AWS. So I &lt;a href=&quot;https://github.com/mjsobrep/DockerFiles-public/blob/master/openpose/Dockerfile&quot;&gt;dockerized it&lt;/a&gt; and put it up on &lt;a href=&quot;https://hub.docker.com/r/mjsobrep/openpose/&quot;&gt;docker hub&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;This was my first time using Docker or AWS, so it was a learning experience. Lets go through how you can run their code on AWS using docker to make it easier:&lt;/p&gt;
-
-&lt;h2 id=&quot;setup-ec2-instance&quot;&gt;Setup EC2 Instance&lt;/h2&gt;
-&lt;p&gt;Start of by provisioning an AWS ubuntu deep learning on a p2 instance&lt;/p&gt;
-
-&lt;p&gt;Then &lt;a href=&quot;http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html&quot;&gt;SSH&lt;/a&gt; into that machine when it is ready and do this:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://docs.docker.com/engine/installation/linux/ubuntu/&quot;&gt;Install docker&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/NVIDIA/nvidia-docker&quot;&gt;Install NVidia Drivers&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;wget -P /tmp https://github.com/NVIDIA/nvidia-docker/releases/download/v1.0.1/nvidia-docker_1.0.1-1_amd64.deb&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo dpkg -i /tmp/nvidia-docker*.deb &amp;amp;&amp;amp; rm /tmp/nvidia-docker*.deb&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nvidia-docker run --rm nvidia/cuda nvidia-smi&lt;/code&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Make a place to store our data: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mkdir data&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;run&quot;&gt;Run&lt;/h2&gt;
-
-&lt;h3 id=&quot;docker&quot;&gt;Docker&lt;/h3&gt;
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo nvidia-docker run -v /home/ubuntu/data:/data -it mjsobrep/openpose:latest bash&lt;/code&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;some-helpful-hints-while-you-are-running-in-docker&quot;&gt;Some helpful hints while you are running in Docker&lt;/h4&gt;
-&lt;p&gt;To leave the docker:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ctrl+p&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ctrl+q&lt;/code&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Now we have detached from the docker, but it is still running&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Let’s see where the docker is running by running: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo docker ps&lt;/code&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Now we have the container ID&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Let’s stop it by running: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo docker stop &amp;lt;container id&amp;gt;&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;openpose&quot;&gt;OpenPose&lt;/h3&gt;
-&lt;p&gt;You should now be in bash inside of the docker container. Lets run some examples:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Check out what options we have:
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;./build/examples/openpose/openpose.bin --help&lt;/code&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Lets make a place for us to put the output:
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mkdir ../data/output&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mkdir ../data/output/poses&lt;/code&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;./build/examples/openpose/openpose.bin --video examples/media/video.avi --write_video ../data/output/result.avi --write_keypoint_json ../data/output/poses --no_display&lt;/code&gt;
-    &lt;ul&gt;
-      &lt;li&gt;You could pass the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--num_gpu &amp;lt;#&amp;gt;&lt;/code&gt; flag to use more than 1 gpu&lt;/li&gt;
-      &lt;li&gt;This will take a while to run (maybe around 1.5 minutes on a p2.xlarge)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Hopefully, you will get a printout along the lines of:&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;Real-time pose estimation demo successfully finished. Total time: 81.456782 seconds.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h4 id=&quot;using-your-own-video&quot;&gt;Using your own video&lt;/h4&gt;
-&lt;p&gt;To use your own video, simply put the video in the data folder (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/home/ubuntu/data&lt;/code&gt;) on the EC2 machine and change the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--video&lt;/code&gt; argument to OpenPose&lt;/p&gt;
-
-&lt;h2 id=&quot;getting-data-off-aws&quot;&gt;Getting data off AWS&lt;/h2&gt;
-&lt;p&gt;All of your output will be in the data folder… Now we need to get it back so we can take a look:
-Just follow this &lt;a href=&quot;http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html&quot;&gt;guide&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;stop-your-ec2&quot;&gt;Stop your EC2&lt;/h2&gt;
-&lt;p&gt;Don’t forget to stop the EC2 instance when you are done. Don’t want to spend too much money…&lt;/p&gt;
-
-&lt;h2 id=&quot;future-things-to-try&quot;&gt;Future Things to Try:&lt;/h2&gt;
-&lt;p&gt;I’m curious to try deployment using some nvidia tools, per this &lt;a href=&quot;https://github.com/NVIDIA/nvidia-docker/wiki/Deploy-on-Amazon-EC2&quot;&gt;guide&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;I could come from a basic ubuntu AMI instead of the learning one and do all of &lt;a href=&quot;http://www.cs.stevens.edu/~kbatsos/awscudasetup.html&quot;&gt;this&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;I’m also curious whether I could use the EC2 container service with an elastic gpu&lt;/p&gt;
-</description>
-        <pubDate>Wed, 17 May 2017 00:00:00 +0000</pubDate>
-        <link>http://www.michaelsobrepera.com/guides/openposeaws.html</link>
-        <guid isPermaLink="true">http://www.michaelsobrepera.com/guides/openposeaws.html</guid>
-        
-        <category>code</category>
-        
-        <category>AWS</category>
-        
-        <category>ML</category>
-        
-        <category>Docker</category>
         
         
         <category>guides</category>
