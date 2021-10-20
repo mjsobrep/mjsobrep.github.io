@@ -5,9 +5,100 @@
     <description>A site about stuff that I (Michael Sobrepera) work on, think, enjoy, etc...</description>
     <link>http://www.michaelsobrepera.com/</link>
     <atom:link href="http://www.michaelsobrepera.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 18 Mar 2021 20:54:51 +0000</pubDate>
-    <lastBuildDate>Thu, 18 Mar 2021 20:54:51 +0000</lastBuildDate>
-    <generator>Jekyll v4.2.0</generator>
+    <pubDate>Wed, 20 Oct 2021 22:47:55 +0000</pubDate>
+    <lastBuildDate>Wed, 20 Oct 2021 22:47:55 +0000</lastBuildDate>
+    <generator>Jekyll v4.2.1</generator>
+    
+      <item>
+        <title>Transferring bucket from AWS S3 to OCI OS</title>
+        <description>&lt;h1 id=&quot;how-to-move-data-from-aws-s3-to-oci-os&quot;&gt;How to Move Data from AWS S3 to OCI OS&lt;/h1&gt;
+
+&lt;p&gt;Goal: Transfer 10+ TB of data from an Amazon Web Services Simple Storage Service bucket to an Oracle Cloud Infrastructure Object Storage bucket&lt;/p&gt;
+
+&lt;p&gt;General approach: use rclone to move directly from one endpoint to the other&lt;/p&gt;
+
+&lt;h1 id=&quot;setup&quot;&gt;Setup&lt;/h1&gt;
+
+&lt;h2 id=&quot;setup-on-oci&quot;&gt;Setup on OCI&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Create the bucket&lt;/li&gt;
+  &lt;li&gt;Generate a secret key (user (top right head looking icon) &amp;gt; user settings &amp;gt; customer secret keys &amp;gt; generate secret key). Save the secret key (will be called &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;secret_access_key&lt;/code&gt; later), click on the access key name after created and copy the access key name (will be called &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;access_key_id&lt;/code&gt; later)&lt;/li&gt;
+  &lt;li&gt;Get the namespace: open the cli (top cli icon in web console interface), run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;oci os ns get&lt;/code&gt;, copy the result shown with key “data”&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;setup-on-aws&quot;&gt;Setup on AWS&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Create an instance with FAST data transfer and lots of compute power (I used c5n.18xlarge).&lt;/li&gt;
+  &lt;li&gt;Give that instance an IAM role that has read access to the bucket with the target data.&lt;/li&gt;
+  &lt;li&gt;I used the aws Linux type.&lt;/li&gt;
+  &lt;li&gt;SSH into that instance: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ssh -i &amp;lt;key location&amp;gt; ec2-user@&amp;lt;ip addr&amp;gt;&lt;/code&gt; (note: if you are setting up permissions properly, you will need to be on your corporate network or vpn (if offsite) to access your ec2 instances)&lt;/li&gt;
+  &lt;li&gt;install tmux: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yum install tmux&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;install rclone: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yum install rclone&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;start tmux (you want things to keep running even if you disconnect)&lt;/li&gt;
+  &lt;li&gt;setup rclone config at &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~/.config/rclone/rclone.conf&lt;/code&gt;:&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;!----&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[aws]
+type = s3
+provider = AWS
+env_auth = true
+region = &amp;lt;aws-region&amp;gt;
+endpoint = 
+acl = private
+server_side_encryption = aws:kms
+sse_kms_key_id = arn:aws:kms:us-east-1:*
+storage_class = INTELLIGENT_TIERING
+
+[oci]
+type = s3
+provider = Other
+env_auth = false
+access_key_id = &amp;lt;from above&amp;gt;
+secret_access_key = &amp;lt;from above&amp;gt;
+region = &amp;lt;oci region&amp;gt;
+endpoint = https://&amp;lt;oci namespace from above&amp;gt;.compat.objectstorage.&amp;lt;region&amp;gt;.oraclecloud.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;AWS region for me is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;us-east-1&lt;/code&gt; OCI region for me is: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;us-ashburn-1&lt;/code&gt; you can see what region you are in on the OCI web console top bar and in the AWS web console url.
+I don’t think that, for aws, acl, server side encryption, kms id, storage class are actually necessary, but whatever.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Test whether it all works: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rclone lsd oci:&amp;lt;bucket name&amp;gt;&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rclone lsd aws:&amp;lt;bucket name&amp;gt;&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;You can test putting things into the oci bucket: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;touch test.txt &amp;amp;&amp;amp; rclone copy test.txt oci:&amp;lt;bucket name&amp;gt;/test/text.txt&lt;/code&gt; and go take a look at the bucket in the web console&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;upload-data&quot;&gt;Upload data&lt;/h1&gt;
+
+&lt;p&gt;On the aws ec2 vm that you have set up, run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rclone sync aws:&amp;lt;bucket name&amp;gt; oci:&amp;lt;bucket name&amp;gt; --progress --transfers 1000&lt;/code&gt; and now you wait… You could change the number of transfers based on how well things are going. You are in tmux, so you can split: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ctrl-b&lt;/code&gt;+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;%&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ctrl-b&lt;/code&gt;+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;&lt;/code&gt; and then run top or htop in that, look at your cpu usage.&lt;/p&gt;
+
+&lt;h1 id=&quot;clean-up&quot;&gt;Clean up&lt;/h1&gt;
+
+&lt;p&gt;We NEED to clean up a security hole we just made (although not a big one, we already trusted AWS to have our data): go back into the OCI online console and delete the secret key you created.&lt;/p&gt;
+
+&lt;p&gt;Also, make sure to shut down the EC2 instance&lt;/p&gt;
+
+&lt;h1 id=&quot;post-mortem---do-better-next-time&quot;&gt;Post Mortem - do better next time:&lt;/h1&gt;
+
+&lt;p&gt;Running on the ec2 shape specified, I am using 100% of the available compute and not saturating the networking (hitting like 250-300 MB/s each way), using about half of the RAM. That could be because I don’t have enough cpu power to handle the processing or could be because AWS S3 or OCI OS can’t move faster. This can and should be tuned better for more intense transfers as should the number of transfers to do in parallel. Good enough for me though, for 9TB this took 52 minutes…&lt;/p&gt;
+</description>
+        <pubDate>Wed, 20 Oct 2021 00:00:00 +0000</pubDate>
+        <link>http://www.michaelsobrepera.com/guides/aws_s3-to-oci_os.html</link>
+        <guid isPermaLink="true">http://www.michaelsobrepera.com/guides/aws_s3-to-oci_os.html</guid>
+        
+        <category>OCI</category>
+        
+        <category>AWS</category>
+        
+        <category>cloud</category>
+        
+        
+        <category>guides</category>
+        
+      </item>
     
       <item>
         <title>Perceived Usefulness of a Social Robot Augmented Telehealth Platform by Therapists in the United States</title>
@@ -304,34 +395,6 @@ The work was presented as a poster by Enri and is in the &lt;a href=&quot;https:
         <guid isPermaLink="true">http://www.michaelsobrepera.com/guides/PhillyTakeOut.html</guid>
         
         <category>food</category>
-        
-        
-        <category>guides</category>
-        
-      </item>
-    
-      <item>
-        <title>Tips for LaTeX</title>
-        <description>&lt;h2 id=&quot;exporting-latex-as-plain-text&quot;&gt;Exporting LaTeX as plain text&lt;/h2&gt;
-&lt;p&gt;Sometimes you need your latex as plain text to copy and paste into online forms and the like. Doing it this way will bring all of your refs and what not correctly. I would recomend turning off page numbers, headers, footers, etc before doing this.&lt;/p&gt;
-
-&lt;p&gt;You can convert a pdf to plaintext by using pdftotext &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pdftotext &amp;lt;target&amp;gt;.pdf&lt;/code&gt; which generates &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;target&amp;gt;.txt&lt;/code&gt; using the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-raw&lt;/code&gt; option might be useuful for tables and the like&lt;/p&gt;
-
-&lt;h2 id=&quot;compressing-pdfs&quot;&gt;Compressing PDFs&lt;/h2&gt;
-&lt;p&gt;When you compile with latex, the result will have whatever images you included in it. They may be really big. Ther are ways to use the image scale argument in LaTeX, but that is clunky. A better way is to shrink the PDF after it is compiled. Ghostscript can help:&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gs -dPDFSETTINGS=/prepress -dNOPAUSE -dQUIET -dBATCH -dCompatibilityLevel=1.4 -sDEVICE=pdfwrite -sOutputFile=out.pdf in.pdf&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;You can change &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-dPDFSETTINGS&lt;/code&gt; to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/default&lt;/code&gt; if you want a huge file (almost the same as what LaTeX uses) or to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/printer&lt;/code&gt; if you want something a bit smaller. The other options start to get too small&lt;/p&gt;
-
-&lt;h2 id=&quot;bringing-pdfs-to-to-other-image-types&quot;&gt;Bringing PDFs to to other image types:&lt;/h2&gt;
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;for f in *.pdf; do pdftocairo -png -r '600' -transp &quot;$f&quot; &quot;$f.png&quot;; done&lt;/code&gt;&lt;/p&gt;
-</description>
-        <pubDate>Wed, 20 Sep 2017 00:00:00 +0000</pubDate>
-        <link>http://www.michaelsobrepera.com/guides/latex.html</link>
-        <guid isPermaLink="true">http://www.michaelsobrepera.com/guides/latex.html</guid>
-        
-        <category>LaTeX</category>
         
         
         <category>guides</category>

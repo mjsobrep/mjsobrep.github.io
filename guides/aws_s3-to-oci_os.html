@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <base target="_parent" />
-  <title>Wire Bending Jig</title>
-  <meta name="description" content="One of the BioID students needed a jig to bend wire for some research he was doing. Unfortunately, time was short as it was the end of the semester; so I end...">
+  <title>Transferring bucket from AWS S3 to OCI OS</title>
+  <meta name="description" content="How to Move Data from AWS S3 to OCI OS">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://www.michaelsobrepera.com/projects/wirePattern.html">
+  <link rel="canonical" href="http://www.michaelsobrepera.com/guides/aws_s3-to-oci_os.html">
   <link rel="alternate" type="application/rss+xml" title="Michael Sobrepera" href="http://www.michaelsobrepera.com/feed.xml" />
 
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
@@ -346,11 +346,11 @@
 
     <div class="page-content">
       <div class="bodyWrapper">
-        <div class="post">
+        <div class="guide">
 
   <header class="post-header">
-    <h1 class="post-title">Wire Bending Jig</h1>
-    <p class="post-meta">Apr 27, 2015</p>
+    <h1 class="post-title">Transferring bucket from AWS S3 to OCI OS</h1>
+    <p class="post-meta">Oct 20, 2021 • updated: Oct 20, 2021</p>
     <!-- borrowed from http://www.realcombiz.com/2014/01/how-to-expand-collapse-toggle-div-layer.html -->
 
 <input class="toggle-box" id="header1" type="checkbox" >
@@ -358,25 +358,11 @@
 <div>
 <ul class="tag">
 
-  <li class="tag"><a href="/tags/mill.html" class = "tag">mill</a></li>
+  <li class="tag"><a href="/tags/OCI.html" class = "tag">OCI</a></li>
 
-  <li class="tag"><a href="/tags/milling.html" class = "tag">milling</a></li>
+  <li class="tag"><a href="/tags/AWS.html" class = "tag">AWS</a></li>
 
-  <li class="tag"><a href="/tags/fixtures.html" class = "tag">fixtures</a></li>
-
-  <li class="tag"><a href="/tags/CAM.html" class = "tag">CAM</a></li>
-
-  <li class="tag"><a href="/tags/HSMWorks.html" class = "tag">HSMWorks</a></li>
-
-  <li class="tag"><a href="/tags/machining.html" class = "tag">machining</a></li>
-
-  <li class="tag"><a href="/tags/design.html" class = "tag">design</a></li>
-
-  <li class="tag"><a href="/tags/mechanics.html" class = "tag">mechanics</a></li>
-
-  <li class="tag"><a href="/tags/CAD.html" class = "tag">CAD</a></li>
-
-  <li class="tag"><a href="/tags/solidworks.html" class = "tag">solidworks</a></li>
+  <li class="tag"><a href="/tags/cloud.html" class = "tag">cloud</a></li>
 
 </ul>
 </div>
@@ -384,47 +370,85 @@
 
   </header>
 
-
   <article class="post-content">
-    <p>One of the BioID students needed a jig to bend wire for some research he was doing. Unfortunately, time was short as it was the end of the semester; so I ended up fabricating the part for him instead of teaching him how to do it. We worked together on the design, then I machined it, trying to explain what I was doing as I went.</p>
+    <h1 id="how-to-move-data-from-aws-s3-to-oci-os">How to Move Data from AWS S3 to OCI OS</h1>
 
+<p>Goal: Transfer 10+ TB of data from an Amazon Web Services Simple Storage Service bucket to an Oracle Cloud Infrastructure Object Storage bucket</p>
 
+<p>General approach: use rclone to move directly from one endpoint to the other</p>
 
-<style media="screen" type="text/css">
+<h1 id="setup">Setup</h1>
 
-.flBox361640{
-    position: relative;
-    max-width: 640px;     /* desired width */
-    margin: auto;
-}
-.flBox361640:before{
-    content: "";
-    display: block;
-    padding-top: 56% /* account for the little button bar */
-}
+<h2 id="setup-on-oci">Setup on OCI</h2>
 
-</style>
+<ol>
+  <li>Create the bucket</li>
+  <li>Generate a secret key (user (top right head looking icon) &gt; user settings &gt; customer secret keys &gt; generate secret key). Save the secret key (will be called <code class="language-plaintext highlighter-rouge">secret_access_key</code> later), click on the access key name after created and copy the access key name (will be called <code class="language-plaintext highlighter-rouge">access_key_id</code> later)</li>
+  <li>Get the namespace: open the cli (top cli icon in web console interface), run <code class="language-plaintext highlighter-rouge">oci os ns get</code>, copy the result shown with key “data”</li>
+</ol>
 
-<div class='flBox361640'> 
-    <div class='mediaContent'>  
-        <a data-flickr-embed="true"  href="https://www.flickr.com/photos/138686863@N06/albums/72157671744301935" title="wire pattern">
-            <img src="https://c1.staticflickr.com/8/7780/28537973352_c2c4594c4a_z.jpg" width=100% height=100% alt="wire pattern" />
-        </a>
-        <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>  
-    </div> 
-</div>
-<br> 
+<h2 id="setup-on-aws">Setup on AWS</h2>
+
+<ol>
+  <li>Create an instance with FAST data transfer and lots of compute power (I used c5n.18xlarge).</li>
+  <li>Give that instance an IAM role that has read access to the bucket with the target data.</li>
+  <li>I used the aws Linux type.</li>
+  <li>SSH into that instance: <code class="language-plaintext highlighter-rouge">ssh -i &lt;key location&gt; ec2-user@&lt;ip addr&gt;</code> (note: if you are setting up permissions properly, you will need to be on your corporate network or vpn (if offsite) to access your ec2 instances)</li>
+  <li>install tmux: <code class="language-plaintext highlighter-rouge">yum install tmux</code></li>
+  <li>install rclone: <code class="language-plaintext highlighter-rouge">yum install rclone</code></li>
+  <li>start tmux (you want things to keep running even if you disconnect)</li>
+  <li>setup rclone config at <code class="language-plaintext highlighter-rouge">~/.config/rclone/rclone.conf</code>:</li>
+</ol>
+
+<!---->
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[aws]
+type = s3
+provider = AWS
+env_auth = true
+region = &lt;aws-region&gt;
+endpoint = 
+acl = private
+server_side_encryption = aws:kms
+sse_kms_key_id = arn:aws:kms:us-east-1:*
+storage_class = INTELLIGENT_TIERING
+
+[oci]
+type = s3
+provider = Other
+env_auth = false
+access_key_id = &lt;from above&gt;
+secret_access_key = &lt;from above&gt;
+region = &lt;oci region&gt;
+endpoint = https://&lt;oci namespace from above&gt;.compat.objectstorage.&lt;region&gt;.oraclecloud.com
+</code></pre></div></div>
+
+<p>AWS region for me is <code class="language-plaintext highlighter-rouge">us-east-1</code> OCI region for me is: <code class="language-plaintext highlighter-rouge">us-ashburn-1</code> you can see what region you are in on the OCI web console top bar and in the AWS web console url.
+I don’t think that, for aws, acl, server side encryption, kms id, storage class are actually necessary, but whatever.</p>
+
+<ol>
+  <li>Test whether it all works: <code class="language-plaintext highlighter-rouge">rclone lsd oci:&lt;bucket name&gt;</code> and <code class="language-plaintext highlighter-rouge">rclone lsd aws:&lt;bucket name&gt;</code></li>
+  <li>You can test putting things into the oci bucket: <code class="language-plaintext highlighter-rouge">touch test.txt &amp;&amp; rclone copy test.txt oci:&lt;bucket name&gt;/test/text.txt</code> and go take a look at the bucket in the web console</li>
+</ol>
+
+<h1 id="upload-data">Upload data</h1>
+
+<p>On the aws ec2 vm that you have set up, run <code class="language-plaintext highlighter-rouge">rclone sync aws:&lt;bucket name&gt; oci:&lt;bucket name&gt; --progress --transfers 1000</code> and now you wait… You could change the number of transfers based on how well things are going. You are in tmux, so you can split: <code class="language-plaintext highlighter-rouge">ctrl-b</code>+<code class="language-plaintext highlighter-rouge">%</code> or <code class="language-plaintext highlighter-rouge">ctrl-b</code>+<code class="language-plaintext highlighter-rouge">"</code> and then run top or htop in that, look at your cpu usage.</p>
+
+<h1 id="clean-up">Clean up</h1>
+
+<p>We NEED to clean up a security hole we just made (although not a big one, we already trusted AWS to have our data): go back into the OCI online console and delete the secret key you created.</p>
+
+<p>Also, make sure to shut down the EC2 instance</p>
+
+<h1 id="post-mortem---do-better-next-time">Post Mortem - do better next time:</h1>
+
+<p>Running on the ec2 shape specified, I am using 100% of the available compute and not saturating the networking (hitting like 250-300 MB/s each way), using about half of the RAM. That could be because I don’t have enough cpu power to handle the processing or could be because AWS S3 or OCI OS can’t move faster. This can and should be tuned better for more intense transfers as should the number of transfers to do in parallel. Good enough for me though, for 9TB this took 52 minutes…</p>
 
   </article>
+  <!-- START: Livefyre Embed -->
 
-  
-
-  
-
-  
-
-
-  <div id="disqus_thread"></div>
+<div id="disqus_thread"></div>
 <script>
 
 /**
@@ -432,8 +456,8 @@
 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
 
 var disqus_config = function () {
-this.page.url = "http://michaelsobrepera.com/projects/wirePattern.html";  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = "/projects/wirePattern"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+this.page.url = "http://michaelsobrepera.com/guides/aws_s3-to-oci_os.html";  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = "/guides/aws_s3-to-oci_os"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
 };
   
 (function() { // DON'T EDIT BELOW THIS LINE
