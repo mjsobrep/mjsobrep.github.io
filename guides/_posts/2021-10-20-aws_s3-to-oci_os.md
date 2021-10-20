@@ -56,8 +56,8 @@ General approach: use rclone to move directly from one endpoint to the other
         region = <oci region>
         endpoint = https://<oci namespace from above>.compat.objectstorage.<region>.oraclecloud.com
 
-AWS region for me is `us-east-1` OCI region for me is: `us-ashburn-1` you can see what region you are in on the OCI web console top bar and in the AWS web console url.
-I don't think that, for aws, acl, server side encryption, kms id, storage class are actually necessary, but whatever.
+    AWS region for me is `us-east-1` OCI region for me is: `us-ashburn-1` you can see what region you are in on the OCI web console top bar and in the AWS web console url.
+    I don't think that, for aws, acl, server side encryption, kms id, storage class are actually necessary, but whatever.
 
 7.  Test whether it all works: `rclone lsd oci:<bucket name>` and `rclone lsd aws:<bucket name>`
 8.  You can test putting things into the oci bucket: `touch test.txt && rclone copy test.txt oci:<bucket name>/test/text.txt` and go take a look at the bucket in the web console
