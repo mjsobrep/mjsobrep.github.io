@@ -422,13 +422,10 @@ secret_access_key = &lt;from above&gt;
 region = &lt;oci region&gt;
 endpoint = https://&lt;oci namespace from above&gt;.compat.objectstorage.&lt;region&gt;.oraclecloud.com
 </code></pre></div>    </div>
-  </li>
-</ol>
 
-<p>AWS region for me is <code class="language-plaintext highlighter-rouge">us-east-1</code> OCI region for me is: <code class="language-plaintext highlighter-rouge">us-ashburn-1</code> you can see what region you are in on the OCI web console top bar and in the AWS web console url.
+    <p>AWS region for me is <code class="language-plaintext highlighter-rouge">us-east-1</code> OCI region for me is: <code class="language-plaintext highlighter-rouge">us-ashburn-1</code> you can see what region you are in on the OCI web console top bar and in the AWS web console url.
 I don’t think that, for aws, acl, server side encryption, kms id, storage class are actually necessary, but whatever.</p>
-
-<ol>
+  </li>
   <li>Test whether it all works: <code class="language-plaintext highlighter-rouge">rclone lsd oci:&lt;bucket name&gt;</code> and <code class="language-plaintext highlighter-rouge">rclone lsd aws:&lt;bucket name&gt;</code></li>
   <li>You can test putting things into the oci bucket: <code class="language-plaintext highlighter-rouge">touch test.txt &amp;&amp; rclone copy test.txt oci:&lt;bucket name&gt;/test/text.txt</code> and go take a look at the bucket in the web console</li>
 </ol>

@@ -5,8 +5,8 @@
     <description>A site about stuff that I (Michael Sobrepera) work on, think, enjoy, etc...</description>
     <link>http://www.michaelsobrepera.com/</link>
     <atom:link href="http://www.michaelsobrepera.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 20 Oct 2021 22:56:24 +0000</pubDate>
-    <lastBuildDate>Wed, 20 Oct 2021 22:56:24 +0000</lastBuildDate>
+    <pubDate>Wed, 20 Oct 2021 23:18:42 +0000</pubDate>
+    <lastBuildDate>Wed, 20 Oct 2021 23:18:42 +0000</lastBuildDate>
     <generator>Jekyll v4.2.1</generator>
     
       <item>
@@ -62,13 +62,10 @@ secret_access_key = &amp;lt;from above&amp;gt;
 region = &amp;lt;oci region&amp;gt;
 endpoint = https://&amp;lt;oci namespace from above&amp;gt;.compat.objectstorage.&amp;lt;region&amp;gt;.oraclecloud.com
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
 
-&lt;p&gt;AWS region for me is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;us-east-1&lt;/code&gt; OCI region for me is: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;us-ashburn-1&lt;/code&gt; you can see what region you are in on the OCI web console top bar and in the AWS web console url.
+    &lt;p&gt;AWS region for me is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;us-east-1&lt;/code&gt; OCI region for me is: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;us-ashburn-1&lt;/code&gt; you can see what region you are in on the OCI web console top bar and in the AWS web console url.
 I don’t think that, for aws, acl, server side encryption, kms id, storage class are actually necessary, but whatever.&lt;/p&gt;
-
-&lt;ol&gt;
+  &lt;/li&gt;
   &lt;li&gt;Test whether it all works: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rclone lsd oci:&amp;lt;bucket name&amp;gt;&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rclone lsd aws:&amp;lt;bucket name&amp;gt;&lt;/code&gt;&lt;/li&gt;
   &lt;li&gt;You can test putting things into the oci bucket: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;touch test.txt &amp;amp;&amp;amp; rclone copy test.txt oci:&amp;lt;bucket name&amp;gt;/test/text.txt&lt;/code&gt; and go take a look at the bucket in the web console&lt;/li&gt;
 &lt;/ol&gt;
