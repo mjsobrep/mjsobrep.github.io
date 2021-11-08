@@ -5,8 +5,8 @@
     <description>A site about stuff that I (Michael Sobrepera) work on, think, enjoy, etc...</description>
     <link>http://www.michaelsobrepera.com/</link>
     <atom:link href="http://www.michaelsobrepera.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 20 Oct 2021 23:18:42 +0000</pubDate>
-    <lastBuildDate>Wed, 20 Oct 2021 23:18:42 +0000</lastBuildDate>
+    <pubDate>Mon, 08 Nov 2021 19:10:06 +0000</pubDate>
+    <lastBuildDate>Mon, 08 Nov 2021 19:10:06 +0000</lastBuildDate>
     <generator>Jekyll v4.2.1</generator>
     
       <item>
@@ -96,6 +96,30 @@ I don’t think that, for aws, acl, server side encryption, kms id, storage clas
         
         
         <category>guides</category>
+        
+      </item>
+    
+      <item>
+        <title>The design of Lil’Flo, a socially assistive robot for upper extremity motor assessment and rehabilitation in the community via telepresence</title>
+        <description>&lt;p&gt;This is the published version of the journal paper describing the design and development of Lil’Flo, a Socially Assistive Robot + Telepresence Robot system for delivering upper extremity rehab care. 
+The final published version is available from &lt;a href=&quot;https://journals.sagepub.com/doi/full/10.1177/20556683211001805&quot;&gt;Sage Journals&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 19 Apr 2021 00:00:00 +0000</pubDate>
+        <link>http://www.michaelsobrepera.com/writings/jrate-lilflo.html</link>
+        <guid isPermaLink="true">http://www.michaelsobrepera.com/writings/jrate-lilflo.html</guid>
+        
+        <category>flo</category>
+        
+        <category>SAR</category>
+        
+        <category>academic papers</category>
+        
+        <category>doctoral work</category>
+        
+        <category>journal papers</category>
+        
+        
+        <category>writings</category>
         
       </item>
     
@@ -351,52 +375,6 @@ The work was presented as a poster by Enri and is in the &lt;a href=&quot;https:
         
         
         <category>writings</category>
-        
-      </item>
-    
-      <item>
-        <title>Philly Take Out</title>
-        <description>&lt;p&gt;This is a guide for me on where to get take out next and where I have gotten stuff in the past&lt;/p&gt;
-
-&lt;h2 id=&quot;next&quot;&gt;Next&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Tampoco&lt;/li&gt;
-  &lt;li&gt;Vietnam Express&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;tried&quot;&gt;Tried&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Gusto’s Pizza (8/10)
-    &lt;ul&gt;
-      &lt;li&gt;Pretty good pizza&lt;/li&gt;
-      &lt;li&gt;A bit price: meat lovers is like $18&lt;/li&gt;
-      &lt;li&gt;Pesto Chicken (9/10)&lt;/li&gt;
-      &lt;li&gt;Meat Lovers (8/10)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Fuzhou House (8/10)
-    &lt;ul&gt;
-      &lt;li&gt;Affordable good takeout&lt;/li&gt;
-      &lt;li&gt;Never spicy enough. When it asks, select spicy&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Phoebe’s BBQ
-    &lt;ul&gt;
-      &lt;li&gt;Mac n cheese - good&lt;/li&gt;
-      &lt;li&gt;Mashed potatoes - good&lt;/li&gt;
-      &lt;li&gt;Wings - horrible&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Mon, 09 Oct 2017 00:00:00 +0000</pubDate>
-        <link>http://www.michaelsobrepera.com/guides/PhillyTakeOut.html</link>
-        <guid isPermaLink="true">http://www.michaelsobrepera.com/guides/PhillyTakeOut.html</guid>
-        
-        <category>food</category>
-        
-        
-        <category>guides</category>
         
       </item>
     
