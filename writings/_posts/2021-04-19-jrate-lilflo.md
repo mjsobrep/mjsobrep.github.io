@@ -9,7 +9,7 @@ tags:
   - academic papers
   - doctoral work
   - journal papers
-pdf: "2021-jrate-flo.pdf"
+pdf: "otherFiles/papers/2021-jrate-flo.pdf"
 ---
 
 This is the published version of the journal paper describing the design and development of Lil'Flo, a Socially Assistive Robot + Telepresence Robot system for delivering upper extremity rehab care. 
