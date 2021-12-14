@@ -5,8 +5,8 @@
     <description>A site about stuff that I (Michael Sobrepera) work on, think, enjoy, etc...</description>
     <link>http://www.michaelsobrepera.com/</link>
     <atom:link href="http://www.michaelsobrepera.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 30 Nov 2021 05:53:47 +0000</pubDate>
-    <lastBuildDate>Tue, 30 Nov 2021 05:53:47 +0000</lastBuildDate>
+    <pubDate>Tue, 14 Dec 2021 22:44:00 +0000</pubDate>
+    <lastBuildDate>Tue, 14 Dec 2021 22:44:00 +0000</lastBuildDate>
     <generator>Jekyll v4.2.1</generator>
     
       <item>
@@ -218,7 +218,7 @@ The final published version is available in &lt;a href=&quot;https://ieeexplore.
       <item>
         <title>Design of an Affordable Socially Assistive Robot for Remote Health and Function Monitoring and Prognostication</title>
         <description>&lt;p&gt;This is a paper that we published in the International Journal of Prognostics and Health Management.
-The final published version is available from &lt;a href=&quot;https://www.phmsociety.org/node/2548&quot;&gt;the PHM Society&lt;/a&gt;.&lt;/p&gt;
+The final published version is available from &lt;a href=&quot;https://papers.phmsociety.org/index.php/ijphm/article/view/2706&quot;&gt;the PHM Society&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Mon, 06 May 2019 00:00:00 +0000</pubDate>
         <link>http://www.michaelsobrepera.com/writings/ijphm-flo.html</link>
