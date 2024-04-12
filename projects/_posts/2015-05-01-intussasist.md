@@ -49,9 +49,6 @@ improved solution for reduction of intussusception in children.
 {{"otherFiles/projects/intussassist/TD3_FinalPoster_4602_Spring 2015.pdf"|insertPDF}}
 <br/>
 
-### For a much more detailed delve into the project, take a look at the [final report for the project]({% post_url writings/2015-05-01-intussassistPaper %}).
-<br/>
-
 ## My Role in the Project
 This project was tackled by a four person team over about 4 months. For that sort of timeline and that small of a group, everyone has to wear many hats. I was in charge of managing communications between our sponsors and advisors. In addition I did all of the electrical design and fabrication, all of the backend coding, all of the pneumatic design and assembly, and all of the prototype machining. The prototyping which did not require machining was done as a shared effort by the team, with the team being instructed in the relevant techniques by me. We all shared the responsibility of generating documentation, interviewing customers/users, and developing the vision for the project.
 

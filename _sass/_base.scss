@@ -1,16 +1,30 @@
 @import 'colors';
 
-@mixin border-radius($radius){
-    -moz-border-radius:   $radius;
-    -webkit-border-radius:$radius;
-    border-radius:        $radius;
+@mixin border-radius($radius) {
+    -moz-border-radius: $radius;
+    -webkit-border-radius: $radius;
+    border-radius: $radius;
 }
+
 /**
  * Reset some basic elements
  */
-body, h1, h2, h3, h4, h5, h6,
-p, blockquote, pre, hr,
-dl, dd, ol, ul, figure {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+hr,
+dl,
+dd,
+ol,
+ul,
+figure {
     margin: 0;
     padding: 0;
 }
@@ -35,11 +49,21 @@ body {
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
-h1, h2, h3, h4, h5, h6,
-p, blockquote, pre,
-ul, ol, dl, figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+ul,
+ol,
+dl,
+figure,
 %vertical-rhythm {
-    margin-bottom: $spacing-unit / 2;
+    margin-bottom: calc(spacing-unit / 2);
 }
 
 
@@ -57,7 +81,7 @@ img {
 /**
  * Figures
  */
-figure > img {
+figure>img {
     display: block;
 }
 
@@ -70,14 +94,16 @@ figcaption {
 /**
  * Lists
  */
-ul, ol {
+ul,
+ol {
     margin-left: $spacing-unit;
 }
 
 li {
-    > ul,
-    > ol {
-         margin-bottom: 0;
+
+    >ul,
+    >ol {
+        margin-bottom: 0;
     }
 }
 
@@ -86,7 +112,12 @@ li {
 /**
  * Headings
  */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: 300;
 }
 
@@ -117,7 +148,7 @@ a {
 blockquote {
     color: $grey-color;
     border-left: 4px solid $grey-color-light;
-    padding-left: $spacing-unit / 2;
+    padding-left: calc($spacing-unit / 2);
     font-size: 18px;
     letter-spacing: -1px;
     font-style: italic;
@@ -148,7 +179,7 @@ pre {
     padding: 8px 12px;
     overflow-x: scroll;
 
-    > code {
+    >code {
         border: 0;
         padding-right: 0;
         padding-left: 0;
@@ -162,7 +193,7 @@ pre {
  */
 .wrapper {
     max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-    max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+    max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
     margin-right: auto;
     margin-left: auto;
     padding-right: $spacing-unit;
@@ -172,21 +203,22 @@ pre {
 
     @include media-query($on-laptop) {
         max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
-        max-width:         calc(#{$content-width} - (#{$spacing-unit}));
-        padding-right: $spacing-unit / 2;
-        padding-left: $spacing-unit / 2;
+        max-width: calc(#{$content-width} - (#{$spacing-unit}));
+        padding-right: calc($spacing-unit / 2);
+        padding-left: calc($spacing-unit / 2);
     }
 }
 
-.bodyWrapper{
+.bodyWrapper {
     @extend .wrapper;
-    padding-top:  $spacing-unit;
+    padding-top: $spacing-unit;
 }
 
-.hfWrapper{
+.hfWrapper {
     @extend .wrapper;
     background-color: $hfColor
 }
+
 /**
  * Clearfix
  */
@@ -206,7 +238,7 @@ pre {
  */
 .icon {
 
-    > svg {
+    >svg {
         display: inline-block;
         width: 16px;
         height: 16px;
@@ -218,122 +250,140 @@ pre {
     }
 }
 
-.pdfBox{
+.pdfBox {
     position: relative;
-    width: 100%;     /* desired width */
-}
-.pdfBox:before{
-    content: "";
-    display: block;
-    padding-top: 129.4%;  /* initial ratio of 1:1*/
+    width: 100%;
+    /* desired width */
 }
 
-.pdfContent{
-    position:  absolute;
+.pdfBox:before {
+    content: "";
+    display: block;
+    padding-top: 129.4%;
+    /* initial ratio of 1:1*/
+}
+
+.pdfContent {
+    position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
 }
 
-.wideMediaBox{
+.wideMediaBox {
     position: relative;
-    width: 100%;     /* desired width */
-}
-.wideMediaBox:before{
-    content: "";
-    display: block;
-    padding-top: 56.25%;  /* initial ratio of 1:1*/
+    width: 100%;
+    /* desired width */
 }
 
-.widePP{
-    position: relative;
-    width: 100%;     /* desired width */
-}
-.widePP:before{
+.wideMediaBox:before {
     content: "";
     display: block;
-    padding-top: 60%;  /* if no calc block support*/
-    padding-top: calc(56.26% + 23px); /* account for the little button bar */
+    padding-top: 56.25%;
+    /* initial ratio of 1:1*/
 }
 
-.fourThreeBox{
+.widePP {
     position: relative;
-    width: 100%;     /* desired width */
+    width: 100%;
+    /* desired width */
 }
-.fourThreeBox:before{
+
+.widePP:before {
     content: "";
     display: block;
-    padding-top: 75%/* account for the little button bar */
+    padding-top: 60%;
+    /* if no calc block support*/
+    padding-top: calc(56.26% + 23px);
+    /* account for the little button bar */
 }
 
-.nineSixBox{
+.fourThreeBox {
     position: relative;
-    width: 50%;     /* desired width */
+    width: 100%;
+    /* desired width */
+}
+
+.fourThreeBox:before {
+    content: "";
+    display: block;
+    padding-top: 75%
+        /* account for the little button bar */
+}
+
+.nineSixBox {
+    position: relative;
+    width: 50%;
+    /* desired width */
     text-align: center;
-    display:block;
-}
-.nineSixBox:before{
-    content: "";
     display: block;
-    padding-top: 177.7777777777778%/* account for the little button bar */
 }
 
-.mediaContent{
-    position:  absolute;
+.nineSixBox:before {
+    content: "";
+    display: block;
+    padding-top: 177.7777777777778%
+        /* account for the little button bar */
+}
+
+.mediaContent {
+    position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
 }
 
-.medPic{
-  max-height: 200px;
-  width: auto;
-  width: auto\9; /* for ie8*/
-  @include border-radius(25px);
-  padding:5px;
-  text-align: center;
+.medPic {
+    max-height: 200px;
+    width: auto;
+    width: auto\9;
+    /* for ie8*/
+    @include border-radius(25px);
+    padding: 5px;
+    text-align: center;
 }
 
-.largePic{
+.largePic {
     @extend .medPic;
     max-height: 400px;
 }
 
 .center {
-  text-align: center;
+    text-align: center;
 }
 
-.postTableRow{
+.postTableRow {
     vertical-align: middle;
     padding-right: 20px;
-    border-bottom: 3px solid rgb(220,220,220);
-}
-.postTableDate{
-    @extend .postTableRow;
-    white-space:nowrap;
+    border-bottom: 3px solid rgb(220, 220, 220);
 }
 
-table{
+.postTableDate {
+    @extend .postTableRow;
+    white-space: nowrap;
+}
+
+table {
     border-collapse: collapse;
     border-spacing: 3;
     // border:4px solid #000000;
 }
 
-td, th{
+td,
+th {
     // border:2px solid #000000;
-    padding:2px;
+    padding: 2px;
     padding-left: 5px;
     padding-right: 5px;
 }
 
-th{
+th {
     text-align: center;
 }
 
-.filter-type {
-}
+.filter-type {}
 
 .sidebarlistscroll {
     width: 100%;
@@ -343,114 +393,125 @@ th{
     border: none;
     visibility: hidden;
 }
-#filter{display:none}
-#filter:checked + .sidebarlistscroll{
+
+#filter {
+    display: none
+}
+
+#filter:checked+.sidebarlistscroll {
     visibility: visible;
 }
 
 .wrap {
-  width: 500px;
-  padding: 10px 20px;
+    width: 500px;
+    padding: 10px 20px;
 
 }
 
 li.tag {
-  display: inline-block;
-  width:auto;
-  height: auto;
-  background: $blockColor;
-  list-style: none;
-  @include border-radius(7px);
+    display: inline-block;
+    width: auto;
+    height: auto;
+    background: $blockColor;
+    list-style: none;
+    @include border-radius(7px);
 
-  font-size: 14pt;
-  color: $blockFontColor;
-  padding-left: 5px;
-  padding-right: 5px;
-  padding-bottom: 2px;
-  padding-top: 2px;
-  margin: 1px;
+    font-size: 14pt;
+    color: $blockFontColor;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    margin: 1px;
 }
-li.tag:hover{
+
+li.tag:hover {
     background: $blockActiverColor
 }
 
 ul.tag {
-  background: $containerColor;
-  margin: 4px; padding: 10px;
-  @include border-radius(30px);
+    background: $containerColor;
+    margin: 4px;
+    padding: 10px;
+    @include border-radius(30px);
 
 }
 
-a.tag{
+a.tag {
     color: $blockFontColor
 }
 
-a.tag:hover{text-decoration: none}
+a.tag:hover {
+    text-decoration: none
+}
 
 // Borrowed From http://www.realcombiz.com/2014/01/how-to-expand-collapse-toggle-div-layer.html
 .toggle-box {
-  display: none;
+    display: none;
 }
 
-.toggle-box + label {
-  cursor: pointer;
-  display: block;
-  font-weight: bold;
-  line-height: 21px;
-  margin-bottom: 5px;
+.toggle-box+label {
+    cursor: pointer;
+    display: block;
+    font-weight: bold;
+    line-height: 21px;
+    margin-bottom: 5px;
 }
 
-.toggle-box + label + div {
-  display: none;
-  margin-bottom: 10px;
+.toggle-box+label+div {
+    display: none;
+    margin-bottom: 10px;
 }
 
-.toggle-box:checked + label + div {
-  display: block;
+.toggle-box:checked+label+div {
+    display: block;
 }
 
-.toggle-box + label:before {
-  background-color: #4F5150;
-  @include border-radius(10px);
-  color: #FFFFFF;
-  content: "+";
-  display: block;
-  float: left;
-  font-weight: bold;
-  height: 20px;
-  line-height: 20px;
-  margin-right: 5px;
-  text-align: center;
-  width: 20px;
+.toggle-box+label:before {
+    background-color: #4F5150;
+    @include border-radius(10px);
+    color: #FFFFFF;
+    content: "+";
+    display: block;
+    float: left;
+    font-weight: bold;
+    height: 20px;
+    line-height: 20px;
+    margin-right: 5px;
+    text-align: center;
+    width: 20px;
 }
 
-.toggle-box:checked + label:before {
-  content: "\2212";
+.toggle-box:checked+label:before {
+    content: "\2212";
 }
+
 // end borrowed section
-.postContainer{
+.postContainer {
     vertical-align: middle;
     text-align: center;
 }
 
-.postBox:hover{
+.postBox:hover {
     text-decoration: none;
 }
-div.postBox{
+
+div.postBox {
     width: 90%;
     display: inline-table;
     background: $blockColor;
     @include border-radius(10px);
-    padding:10px;
-    margin:3px;
+    padding: 10px;
+    margin: 3px;
     color: $blockFontColor;
     vertical-align: middle
 }
-div.postBox:hover{
+
+div.postBox:hover {
     background: $blockActiverColor;
 }
 
-img.postBox{
+img.postBox {
     @include border-radius(5px);
     width: auto;
     max-width: 275px;
@@ -462,33 +523,37 @@ img.postBox{
     text-align: left;
 }
 
-.dateSumBox{
+.dateSumBox {
     min-width: 175px;
-max-width: 300px;
-display: inline-block;
-margin: 10px;
-vertical-align: top;
+    max-width: 300px;
+    display: inline-block;
+    margin: 10px;
+    vertical-align: top;
 }
-.postBoxDate{
+
+.postBoxDate {
     text-align: center;
     font-size: 10pt;
     margin-bottom: 4px;
     margin-top: 4px;
 }
-.postBoxTitle{
+
+.postBoxTitle {
     text-align: center;
     font-size: 16pt;
 }
 
-.lameLink:hover{text-decoration: none}
-
-hr{
-    border: 0;
-height: 3px;
-background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.75), rgba(0, 0, 0, 0));
+.lameLink:hover {
+    text-decoration: none
 }
 
-.calListItem{
+hr {
+    border: 0;
+    height: 3px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.75), rgba(0, 0, 0, 0));
+}
+
+.calListItem {
     font-size: 16pt;
 }
 
@@ -496,10 +561,11 @@ background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(255, 255, 255
  * Specials for home page
  */
 .big-home {
-    width:60%;
-    flex-grow:1;
+    width: 60%;
+    flex-grow: 1;
     margin: 5px;
-    p{
+
+    p {
         font-size: 22px;
 
         @include media-query($on-laptop) {
@@ -509,13 +575,13 @@ background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(255, 255, 255
 }
 
 .home-container {
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
-.headshot-image{
+.headshot-image {
     width: 35%;
     height: auto;
     min-width: 200px;
