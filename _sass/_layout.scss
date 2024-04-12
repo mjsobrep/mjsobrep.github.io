@@ -61,7 +61,7 @@
             padding-top: 10px;
             text-align: center;
 
-            > svg {
+            >svg {
                 width: 18px;
                 height: 15px;
 
@@ -101,7 +101,7 @@
 
 .footer-heading {
     font-size: 18px;
-    margin-bottom: $spacing-unit / 2;
+    margin-bottom: calc($spacing-unit / 2);
 }
 
 .contact-list,
@@ -113,41 +113,42 @@
 .footer-col-wrapper {
     font-size: 15px;
     color: $grey-color;
-    margin-left: -$spacing-unit / 2;
+    margin-left: - calc($spacing-unit / 2);
     @extend %clearfix;
 }
 
 .footer-col {
     float: left;
-    margin-bottom: $spacing-unit / 2;
-    padding-left: $spacing-unit / 2;
+    margin-bottom: calc($spacing-unit / 2);
+    padding-left: calc(spacing-unit / 2);
 }
 
 .footer-col-1 {
     width: -webkit-calc(30% - (#{$spacing-unit} / 2));
-    width:         calc(30% - (#{$spacing-unit} / 2));
+    width: calc(30% - (#{$spacing-unit} / 2));
 }
 
 .footer-col-2 {
     width: -webkit-calc(25% - (#{$spacing-unit} / 2));
-    width:         calc(25% - (#{$spacing-unit} / 2));
+    width: calc(25% - (#{$spacing-unit} / 2));
 }
 
 .footer-col-3 {
     width: -webkit-calc(45% - (#{$spacing-unit} / 2));
-    width:         calc(45% - (#{$spacing-unit} / 2));
+    width: calc(45% - (#{$spacing-unit} / 2));
 }
 
 @include media-query($on-laptop) {
+
     .footer-col-1,
     .footer-col-2 {
         width: -webkit-calc(50% - (#{$spacing-unit} / 2));
-        width:         calc(50% - (#{$spacing-unit} / 2));
+        width: calc(50% - (#{$spacing-unit} / 2));
     }
 
     .footer-col-3 {
         width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-        width:         calc(100% - (#{$spacing-unit} / 2));
+        width: calc(100% - (#{$spacing-unit} / 2));
     }
 }
 
@@ -155,7 +156,7 @@
     .footer-col {
         float: none;
         width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-        width:         calc(100% - (#{$spacing-unit} / 2));
+        width: calc(100% - (#{$spacing-unit} / 2));
     }
 }
 
@@ -179,7 +180,7 @@
     margin-left: 0;
     list-style: none;
 
-    > li {
+    >li {
         margin-bottom: 0;
     }
 }
@@ -215,6 +216,7 @@
 
 .post-content {
     margin-bottom: $spacing-unit;
+
     h1 {
         text-decoration: line-through;
         color: red;
@@ -245,6 +247,6 @@
     }
 }
 
-html{
+html {
     background-color: $hfColor;
 }
