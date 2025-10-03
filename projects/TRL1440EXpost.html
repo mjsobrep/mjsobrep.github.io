@@ -314,20 +314,6 @@
         
           
         
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
         <a class="page-link" href="https://photos.michaelsobrepera.com/">Photography</a>
       </div>
     </nav>
@@ -394,132 +380,132 @@ Date: 3-Nov-2014
 <span class="nx">legal</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">use it as you like, share original and modifications with everyone free of charge or burden; You assume complete responsibility for any damages caused by use of this file</span><span class="dl">"</span><span class="p">;</span>
 <span class="nx">certificationLevel</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
 <span class="nx">extension</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">.cam</span><span class="dl">"</span><span class="p">;</span>
-<span class="nx">setCodePage</span><span class="p">(</span><span class="dl">"</span><span class="s2">ansi</span><span class="dl">"</span><span class="p">);</span>
+<span class="nf">setCodePage</span><span class="p">(</span><span class="dl">"</span><span class="s2">ansi</span><span class="dl">"</span><span class="p">);</span>
 <span class="nx">programNameIsInteger</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
 <span class="nx">capabilites</span> <span class="o">=</span> <span class="nx">CAPABILITY_TURNING</span><span class="p">;</span>
 
 <span class="nx">allowedCircularPlanes</span> <span class="o">=</span> <span class="kc">undefined</span><span class="p">;</span> <span class="c1">// allow any circular motion</span>
 
-<span class="kd">var</span> <span class="nx">xyzFormat</span> <span class="o">=</span> <span class="nx">createFormat</span><span class="p">({</span><span class="na">decimals</span><span class="p">:(</span><span class="nx">unit</span> <span class="o">==</span> <span class="nx">MM</span> <span class="p">?</span> <span class="mi">3</span> <span class="p">:</span> <span class="mi">4</span><span class="p">),</span> <span class="na">forceSign</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span> <span class="na">forceDecimal</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="na">trimLeadZero</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="na">trim</span><span class="p">:</span><span class="kc">true</span><span class="p">});</span>
-<span class="kd">var</span> <span class="nx">xFormat</span> <span class="o">=</span> <span class="nx">createFormat</span><span class="p">({</span> <span class="na">decimals</span><span class="p">:(</span><span class="nx">unit</span> <span class="o">==</span> <span class="nx">MM</span> <span class="p">?</span> <span class="mi">3</span> <span class="p">:</span> <span class="mi">4</span><span class="p">),</span> <span class="na">forceSign</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span> <span class="na">forceDecimal</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="na">trimLeadZero</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="na">trim</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="na">scale</span><span class="p">:</span><span class="mi">2</span><span class="p">});</span> <span class="c1">//TRAK Runs on diameter, not radius, HSM outputs radius.</span>
+<span class="kd">var</span> <span class="nx">xyzFormat</span> <span class="o">=</span> <span class="nf">createFormat</span><span class="p">({</span><span class="na">decimals</span><span class="p">:(</span><span class="nx">unit</span> <span class="o">==</span> <span class="nx">MM</span> <span class="p">?</span> <span class="mi">3</span> <span class="p">:</span> <span class="mi">4</span><span class="p">),</span> <span class="na">forceSign</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span> <span class="na">forceDecimal</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="na">trimLeadZero</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="na">trim</span><span class="p">:</span><span class="kc">true</span><span class="p">});</span>
+<span class="kd">var</span> <span class="nx">xFormat</span> <span class="o">=</span> <span class="nf">createFormat</span><span class="p">({</span> <span class="na">decimals</span><span class="p">:(</span><span class="nx">unit</span> <span class="o">==</span> <span class="nx">MM</span> <span class="p">?</span> <span class="mi">3</span> <span class="p">:</span> <span class="mi">4</span><span class="p">),</span> <span class="na">forceSign</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span> <span class="na">forceDecimal</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="na">trimLeadZero</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="na">trim</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="na">scale</span><span class="p">:</span><span class="mi">2</span><span class="p">});</span> <span class="c1">//TRAK Runs on diameter, not radius, HSM outputs radius.</span>
 
-<span class="kd">var</span> <span class="nx">xModal</span> <span class="o">=</span> <span class="nx">createModal</span><span class="p">({</span><span class="na">prefix</span><span class="p">:</span> <span class="dl">"</span><span class="s2"> X</span><span class="dl">"</span><span class="p">},</span> <span class="nx">xFormat</span><span class="p">);</span>
-<span class="kd">var</span> <span class="nx">zModal</span> <span class="o">=</span> <span class="nx">createModal</span><span class="p">({</span><span class="na">prefix</span><span class="p">:</span> <span class="dl">"</span><span class="s2"> Z</span><span class="dl">"</span><span class="p">},</span> <span class="nx">xyzFormat</span><span class="p">);</span>
-<span class="kd">var</span> <span class="nx">iOutput</span> <span class="o">=</span> <span class="nx">createVariable</span><span class="p">({</span><span class="na">prefix</span><span class="p">:</span> <span class="dl">"</span><span class="s2"> I</span><span class="dl">"</span><span class="p">,</span><span class="na">force</span><span class="p">:</span><span class="kc">true</span><span class="p">},</span><span class="nx">xyzFormat</span><span class="p">);</span>
-<span class="kd">var</span> <span class="nx">kOutput</span> <span class="o">=</span> <span class="nx">createVariable</span><span class="p">({</span><span class="na">prefix</span><span class="p">:</span> <span class="dl">"</span><span class="s2"> K</span><span class="dl">"</span><span class="p">,</span><span class="na">force</span><span class="p">:</span><span class="kc">true</span><span class="p">},</span><span class="nx">xyzFormat</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">xModal</span> <span class="o">=</span> <span class="nf">createModal</span><span class="p">({</span><span class="na">prefix</span><span class="p">:</span> <span class="dl">"</span><span class="s2"> X</span><span class="dl">"</span><span class="p">},</span> <span class="nx">xFormat</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">zModal</span> <span class="o">=</span> <span class="nf">createModal</span><span class="p">({</span><span class="na">prefix</span><span class="p">:</span> <span class="dl">"</span><span class="s2"> Z</span><span class="dl">"</span><span class="p">},</span> <span class="nx">xyzFormat</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">iOutput</span> <span class="o">=</span> <span class="nf">createVariable</span><span class="p">({</span><span class="na">prefix</span><span class="p">:</span> <span class="dl">"</span><span class="s2"> I</span><span class="dl">"</span><span class="p">,</span><span class="na">force</span><span class="p">:</span><span class="kc">true</span><span class="p">},</span><span class="nx">xyzFormat</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">kOutput</span> <span class="o">=</span> <span class="nf">createVariable</span><span class="p">({</span><span class="na">prefix</span><span class="p">:</span> <span class="dl">"</span><span class="s2"> K</span><span class="dl">"</span><span class="p">,</span><span class="na">force</span><span class="p">:</span><span class="kc">true</span><span class="p">},</span><span class="nx">xyzFormat</span><span class="p">);</span>
 
-<span class="kd">var</span> <span class="nx">feedFormat</span> <span class="o">=</span> <span class="nx">createFormat</span><span class="p">({</span><span class="na">decimals</span><span class="p">:</span><span class="mi">2</span><span class="p">});</span>
-<span class="kd">var</span> <span class="nx">mFormat</span> <span class="o">=</span> <span class="nx">createFormat</span><span class="p">({</span><span class="na">decimals</span><span class="p">:</span><span class="mi">0</span><span class="p">});</span>
-<span class="kd">var</span> <span class="nx">gFormat</span> <span class="o">=</span> <span class="nx">createFormat</span><span class="p">({</span><span class="na">decimals</span><span class="p">:</span><span class="mi">0</span><span class="p">});</span>
+<span class="kd">var</span> <span class="nx">feedFormat</span> <span class="o">=</span> <span class="nf">createFormat</span><span class="p">({</span><span class="na">decimals</span><span class="p">:</span><span class="mi">2</span><span class="p">});</span>
+<span class="kd">var</span> <span class="nx">mFormat</span> <span class="o">=</span> <span class="nf">createFormat</span><span class="p">({</span><span class="na">decimals</span><span class="p">:</span><span class="mi">0</span><span class="p">});</span>
+<span class="kd">var</span> <span class="nx">gFormat</span> <span class="o">=</span> <span class="nf">createFormat</span><span class="p">({</span><span class="na">decimals</span><span class="p">:</span><span class="mi">0</span><span class="p">});</span>
 
-<span class="kd">var</span> <span class="nx">feedModal</span> <span class="o">=</span> <span class="nx">createVariable</span><span class="p">({</span><span class="na">prefix</span><span class="p">:</span><span class="dl">"</span><span class="s2"> F</span><span class="dl">"</span><span class="p">},</span> <span class="nx">feedFormat</span><span class="p">);</span>
-<span class="kd">var</span> <span class="nx">mOutput</span> <span class="o">=</span> <span class="nx">createFormat</span><span class="p">({</span><span class="na">prefix</span><span class="p">:</span><span class="dl">"</span><span class="s2">M</span><span class="dl">"</span><span class="p">,</span> <span class="na">decimals</span><span class="p">:</span><span class="mi">0</span><span class="p">},</span> <span class="nx">mFormat</span><span class="p">);</span>
-<span class="kd">var</span> <span class="nx">gOutput</span> <span class="o">=</span> <span class="nx">createFormat</span><span class="p">({</span><span class="na">prefix</span><span class="p">:</span> <span class="dl">"</span><span class="s2">G</span><span class="dl">"</span><span class="p">,</span> <span class="na">decimals</span><span class="p">:</span><span class="mi">0</span><span class="p">},</span> <span class="nx">gFormat</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">feedModal</span> <span class="o">=</span> <span class="nf">createVariable</span><span class="p">({</span><span class="na">prefix</span><span class="p">:</span><span class="dl">"</span><span class="s2"> F</span><span class="dl">"</span><span class="p">},</span> <span class="nx">feedFormat</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">mOutput</span> <span class="o">=</span> <span class="nf">createFormat</span><span class="p">({</span><span class="na">prefix</span><span class="p">:</span><span class="dl">"</span><span class="s2">M</span><span class="dl">"</span><span class="p">,</span> <span class="na">decimals</span><span class="p">:</span><span class="mi">0</span><span class="p">},</span> <span class="nx">mFormat</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">gOutput</span> <span class="o">=</span> <span class="nf">createFormat</span><span class="p">({</span><span class="na">prefix</span><span class="p">:</span> <span class="dl">"</span><span class="s2">G</span><span class="dl">"</span><span class="p">,</span> <span class="na">decimals</span><span class="p">:</span><span class="mi">0</span><span class="p">},</span> <span class="nx">gFormat</span><span class="p">);</span>
 <span class="c1">//might need to make tool number modal</span>
 
-<span class="kd">var</span> <span class="nx">toolFormat</span> <span class="o">=</span> <span class="nx">createFormat</span><span class="p">({</span><span class="na">width</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="na">zeropad</span><span class="p">:</span> <span class="kc">true</span><span class="p">});</span>
-<span class="kd">var</span> <span class="nx">toolModal</span> <span class="o">=</span> <span class="nx">createModal</span><span class="p">({</span><span class="na">prefix</span><span class="p">:</span> <span class="dl">"</span><span class="s2"> T</span><span class="dl">"</span><span class="p">},</span><span class="nx">toolFormat</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">toolFormat</span> <span class="o">=</span> <span class="nf">createFormat</span><span class="p">({</span><span class="na">width</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="na">zeropad</span><span class="p">:</span> <span class="kc">true</span><span class="p">});</span>
+<span class="kd">var</span> <span class="nx">toolModal</span> <span class="o">=</span> <span class="nf">createModal</span><span class="p">({</span><span class="na">prefix</span><span class="p">:</span> <span class="dl">"</span><span class="s2"> T</span><span class="dl">"</span><span class="p">},</span><span class="nx">toolFormat</span><span class="p">);</span>
 
-<span class="kd">var</span> <span class="nx">speedFormat</span> <span class="o">=</span> <span class="nx">createFormat</span><span class="p">({});</span>
-<span class="kd">var</span> <span class="nx">speedModal</span> <span class="o">=</span> <span class="nx">createModal</span><span class="p">({</span><span class="na">prefix</span><span class="p">:</span> <span class="dl">"</span><span class="s2">(RPM: </span><span class="dl">"</span><span class="p">,</span><span class="na">suffix</span><span class="p">:</span><span class="dl">"</span><span class="s2">)</span><span class="dl">"</span><span class="p">},</span><span class="nx">speedFormat</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">speedFormat</span> <span class="o">=</span> <span class="nf">createFormat</span><span class="p">({});</span>
+<span class="kd">var</span> <span class="nx">speedModal</span> <span class="o">=</span> <span class="nf">createModal</span><span class="p">({</span><span class="na">prefix</span><span class="p">:</span> <span class="dl">"</span><span class="s2">(RPM: </span><span class="dl">"</span><span class="p">,</span><span class="na">suffix</span><span class="p">:</span><span class="dl">"</span><span class="s2">)</span><span class="dl">"</span><span class="p">},</span><span class="nx">speedFormat</span><span class="p">);</span>
 
 <span class="kd">var</span> <span class="nx">blockNumber</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 <span class="cm">/**  Writes the specified block.*/</span>
-<span class="kd">function</span> <span class="nx">writeBlock</span><span class="p">(</span><span class="nx">block</span><span class="p">)</span> <span class="p">{</span>  
-    <span class="nx">writeln</span><span class="p">(</span><span class="nx">blockNumber</span> <span class="o">+</span> <span class="nx">SP</span> <span class="o">+</span> <span class="nx">block</span><span class="p">);</span>  
+<span class="kd">function</span> <span class="nf">writeBlock</span><span class="p">(</span><span class="nx">block</span><span class="p">)</span> <span class="p">{</span>  
+    <span class="nf">writeln</span><span class="p">(</span><span class="nx">blockNumber</span> <span class="o">+</span> <span class="nx">SP</span> <span class="o">+</span> <span class="nx">block</span><span class="p">);</span>  
     <span class="o">++</span><span class="nx">blockNumber</span><span class="p">;</span>
 <span class="p">}</span>
 
 
-<span class="kd">function</span> <span class="nx">writeBlockComment</span><span class="p">(</span><span class="nx">block</span><span class="p">)</span> <span class="p">{</span>  
-    <span class="nx">writeln</span><span class="p">(</span><span class="dl">"</span><span class="s2">( </span><span class="dl">"</span><span class="o">+</span><span class="nx">block</span><span class="o">+</span><span class="dl">"</span><span class="s2"> )</span><span class="dl">"</span><span class="p">);</span>  
+<span class="kd">function</span> <span class="nf">writeBlockComment</span><span class="p">(</span><span class="nx">block</span><span class="p">)</span> <span class="p">{</span>  
+    <span class="nf">writeln</span><span class="p">(</span><span class="dl">"</span><span class="s2">( </span><span class="dl">"</span><span class="o">+</span><span class="nx">block</span><span class="o">+</span><span class="dl">"</span><span class="s2"> )</span><span class="dl">"</span><span class="p">);</span>  
 <span class="p">}</span>
 
-<span class="kd">function</span> <span class="nx">resetModals</span><span class="p">(){</span>
-    <span class="nx">xModal</span><span class="p">.</span><span class="nx">reset</span><span class="p">();</span>
-    <span class="nx">zModal</span><span class="p">.</span><span class="nx">reset</span><span class="p">();</span>
-    <span class="nx">speedModal</span><span class="p">.</span><span class="nx">reset</span><span class="p">();</span>
-    <span class="nx">toolModal</span><span class="p">.</span><span class="nx">reset</span><span class="p">();</span>
+<span class="kd">function</span> <span class="nf">resetModals</span><span class="p">(){</span>
+    <span class="nx">xModal</span><span class="p">.</span><span class="nf">reset</span><span class="p">();</span>
+    <span class="nx">zModal</span><span class="p">.</span><span class="nf">reset</span><span class="p">();</span>
+    <span class="nx">speedModal</span><span class="p">.</span><span class="nf">reset</span><span class="p">();</span>
+    <span class="nx">toolModal</span><span class="p">.</span><span class="nf">reset</span><span class="p">();</span>
 <span class="p">}</span>
 
-<span class="kd">function</span> <span class="nx">resetXZ</span><span class="p">(){</span>
-    <span class="nx">xModal</span><span class="p">.</span><span class="nx">reset</span><span class="p">();</span>
-    <span class="nx">zModal</span><span class="p">.</span><span class="nx">reset</span><span class="p">();</span>
+<span class="kd">function</span> <span class="nf">resetXZ</span><span class="p">(){</span>
+    <span class="nx">xModal</span><span class="p">.</span><span class="nf">reset</span><span class="p">();</span>
+    <span class="nx">zModal</span><span class="p">.</span><span class="nf">reset</span><span class="p">();</span>
 <span class="p">}</span>
 
-<span class="kd">function</span> <span class="nx">onOpen</span><span class="p">(){</span>
-    <span class="nx">resetModals</span><span class="p">();</span>
-    <span class="nx">writeBlock</span><span class="p">(</span><span class="nx">gOutput</span><span class="p">.</span><span class="nx">format</span><span class="p">(</span><span class="mi">40</span><span class="p">))</span> <span class="c1">//Sets the cutter to center (keeps trak control from calculating radius compensation)</span>
+<span class="kd">function</span> <span class="nf">onOpen</span><span class="p">(){</span>
+    <span class="nf">resetModals</span><span class="p">();</span>
+    <span class="nf">writeBlock</span><span class="p">(</span><span class="nx">gOutput</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="mi">40</span><span class="p">))</span> <span class="c1">//Sets the cutter to center (keeps trak control from calculating radius compensation)</span>
     <span class="c1">//set working units</span>
     <span class="k">if</span><span class="p">(</span><span class="nx">unit</span><span class="o">==</span><span class="nx">MM</span><span class="p">){</span>
-        <span class="nx">writeBlock</span><span class="p">(</span><span class="nx">gOutput</span><span class="p">.</span><span class="nx">format</span><span class="p">(</span><span class="mi">21</span><span class="p">));</span>
+        <span class="nf">writeBlock</span><span class="p">(</span><span class="nx">gOutput</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="mi">21</span><span class="p">));</span>
     <span class="p">}</span>
     <span class="k">else</span><span class="p">{</span>
-        <span class="nx">writeBlock</span><span class="p">(</span><span class="nx">gOutput</span><span class="p">.</span><span class="nx">format</span><span class="p">(</span><span class="mi">20</span><span class="p">));</span>
+        <span class="nf">writeBlock</span><span class="p">(</span><span class="nx">gOutput</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="mi">20</span><span class="p">));</span>
     <span class="p">}</span>
 <span class="p">}</span>
-<span class="kd">function</span> <span class="nx">onComment</span><span class="p">(</span><span class="nx">comment</span><span class="p">){</span>
-    <span class="nx">writeBlockComment</span><span class="p">(</span><span class="nx">comment</span><span class="p">);</span>
+<span class="kd">function</span> <span class="nf">onComment</span><span class="p">(</span><span class="nx">comment</span><span class="p">){</span>
+    <span class="nf">writeBlockComment</span><span class="p">(</span><span class="nx">comment</span><span class="p">);</span>
 <span class="p">}</span>
 
-<span class="kd">function</span> <span class="nx">onSection</span><span class="p">(){</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nx">currentSection</span><span class="p">.</span><span class="nx">feedMode</span> <span class="o">==</span> <span class="nx">FEED_PER_REVOLUTION</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">feedFormat</span><span class="p">.</span><span class="nx">setScale</span><span class="p">(</span><span class="nx">tool</span><span class="p">.</span><span class="nx">spindleRPM</span><span class="p">);</span>
-        <span class="nx">feedModal</span> <span class="o">=</span> <span class="nx">createModal</span><span class="p">({</span><span class="na">prefix</span><span class="p">:</span><span class="dl">"</span><span class="s2"> F</span><span class="dl">"</span><span class="p">},</span> <span class="nx">feedFormat</span><span class="p">)</span>
+<span class="kd">function</span> <span class="nf">onSection</span><span class="p">(){</span>
+    <span class="k">if </span><span class="p">(</span><span class="nx">currentSection</span><span class="p">.</span><span class="nx">feedMode</span> <span class="o">==</span> <span class="nx">FEED_PER_REVOLUTION</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">feedFormat</span><span class="p">.</span><span class="nf">setScale</span><span class="p">(</span><span class="nx">tool</span><span class="p">.</span><span class="nx">spindleRPM</span><span class="p">);</span>
+        <span class="nx">feedModal</span> <span class="o">=</span> <span class="nf">createModal</span><span class="p">({</span><span class="na">prefix</span><span class="p">:</span><span class="dl">"</span><span class="s2"> F</span><span class="dl">"</span><span class="p">},</span> <span class="nx">feedFormat</span><span class="p">)</span>
     <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-        <span class="nx">feedFormat</span><span class="p">.</span><span class="nx">setScale</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
-        <span class="nx">feedModal</span> <span class="o">=</span> <span class="nx">createModal</span><span class="p">({</span><span class="na">prefix</span><span class="p">:</span><span class="dl">"</span><span class="s2"> F</span><span class="dl">"</span><span class="p">},</span> <span class="nx">feedFormat</span><span class="p">)</span>
+        <span class="nx">feedFormat</span><span class="p">.</span><span class="nf">setScale</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+        <span class="nx">feedModal</span> <span class="o">=</span> <span class="nf">createModal</span><span class="p">({</span><span class="na">prefix</span><span class="p">:</span><span class="dl">"</span><span class="s2"> F</span><span class="dl">"</span><span class="p">},</span> <span class="nx">feedFormat</span><span class="p">)</span>
     <span class="p">}</span>
 
-    <span class="k">if</span> <span class="p">(</span><span class="nx">hasParameter</span><span class="p">(</span><span class="dl">"</span><span class="s2">operation-comment</span><span class="dl">"</span><span class="p">))</span> <span class="p">{</span>
-        <span class="kd">var</span> <span class="nx">comment</span> <span class="o">=</span> <span class="nx">getParameter</span><span class="p">(</span><span class="dl">"</span><span class="s2">operation-comment</span><span class="dl">"</span><span class="p">);</span>
-        <span class="k">if</span> <span class="p">(</span><span class="nx">comment</span><span class="p">)</span> <span class="p">{</span>
-            <span class="nx">writeBlockComment</span><span class="p">(</span><span class="nx">comment</span><span class="p">);</span>
+    <span class="k">if </span><span class="p">(</span><span class="nf">hasParameter</span><span class="p">(</span><span class="dl">"</span><span class="s2">operation-comment</span><span class="dl">"</span><span class="p">))</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">comment</span> <span class="o">=</span> <span class="nf">getParameter</span><span class="p">(</span><span class="dl">"</span><span class="s2">operation-comment</span><span class="dl">"</span><span class="p">);</span>
+        <span class="k">if </span><span class="p">(</span><span class="nx">comment</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nf">writeBlockComment</span><span class="p">(</span><span class="nx">comment</span><span class="p">);</span>
         <span class="p">}</span>
     <span class="p">}</span>
-    <span class="kd">var</span> <span class="nx">newTool</span> <span class="o">=</span> <span class="nx">toolModal</span><span class="p">.</span><span class="nx">format</span><span class="p">(</span><span class="nx">tool</span><span class="p">.</span><span class="nx">number</span><span class="p">);</span>
-    <span class="kd">var</span> <span class="nx">newSpeed</span> <span class="o">=</span> <span class="nx">speedModal</span><span class="p">.</span><span class="nx">format</span><span class="p">(</span><span class="nx">tool</span><span class="p">.</span><span class="nx">spindleRPM</span><span class="p">);</span>
+    <span class="kd">var</span> <span class="nx">newTool</span> <span class="o">=</span> <span class="nx">toolModal</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="nx">tool</span><span class="p">.</span><span class="nx">number</span><span class="p">);</span>
+    <span class="kd">var</span> <span class="nx">newSpeed</span> <span class="o">=</span> <span class="nx">speedModal</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="nx">tool</span><span class="p">.</span><span class="nx">spindleRPM</span><span class="p">);</span>
     <span class="k">if</span><span class="p">(</span><span class="nx">newTool</span><span class="o">||</span><span class="nx">newSpeed</span><span class="p">){</span>
-        <span class="nx">writeBlock</span><span class="p">(</span><span class="nx">newTool</span><span class="o">+</span><span class="nx">SP</span><span class="o">+</span><span class="nx">mOutput</span><span class="p">.</span><span class="nx">format</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span><span class="o">+</span><span class="nx">newSpeed</span><span class="p">);</span> <span class="c1">//goes home, kills spindle, change tool request</span>
+        <span class="nf">writeBlock</span><span class="p">(</span><span class="nx">newTool</span><span class="o">+</span><span class="nx">SP</span><span class="o">+</span><span class="nx">mOutput</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span><span class="o">+</span><span class="nx">newSpeed</span><span class="p">);</span> <span class="c1">//goes home, kills spindle, change tool request</span>
     <span class="p">}</span>
-    <span class="nx">resetXZ</span><span class="p">();</span>
+    <span class="nf">resetXZ</span><span class="p">();</span>
 <span class="p">}</span>
 
 
-<span class="kd">function</span> <span class="nx">onRapid</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="nx">y</span><span class="p">,</span><span class="nx">z</span><span class="p">){</span>
-    <span class="kd">var</span> <span class="nx">out</span> <span class="o">=</span> <span class="nx">xModal</span><span class="p">.</span><span class="nx">format</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="o">+</span> <span class="nx">zModal</span><span class="p">.</span><span class="nx">format</span><span class="p">(</span><span class="nx">z</span><span class="p">);</span>
+<span class="kd">function</span> <span class="nf">onRapid</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="nx">y</span><span class="p">,</span><span class="nx">z</span><span class="p">){</span>
+    <span class="kd">var</span> <span class="nx">out</span> <span class="o">=</span> <span class="nx">xModal</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="o">+</span> <span class="nx">zModal</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="nx">z</span><span class="p">);</span>
     <span class="k">if</span><span class="p">(</span><span class="nx">out</span><span class="p">){</span>
-        <span class="nx">writeBlock</span><span class="p">(</span><span class="nx">gOutput</span><span class="p">.</span><span class="nx">format</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">+</span><span class="nx">out</span><span class="p">);</span>
+        <span class="nf">writeBlock</span><span class="p">(</span><span class="nx">gOutput</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">+</span><span class="nx">out</span><span class="p">);</span>
     <span class="p">}</span>
 <span class="p">}</span>
 
-<span class="kd">function</span> <span class="nx">onLinear</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="nx">y</span><span class="p">,</span><span class="nx">z</span><span class="p">,</span><span class="nx">feed</span><span class="p">){</span>
-    <span class="kd">var</span> <span class="nx">out</span> <span class="o">=</span> <span class="nx">xModal</span><span class="p">.</span><span class="nx">format</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="o">+</span> <span class="nx">zModal</span><span class="p">.</span><span class="nx">format</span><span class="p">(</span><span class="nx">z</span><span class="p">);</span>
+<span class="kd">function</span> <span class="nf">onLinear</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="nx">y</span><span class="p">,</span><span class="nx">z</span><span class="p">,</span><span class="nx">feed</span><span class="p">){</span>
+    <span class="kd">var</span> <span class="nx">out</span> <span class="o">=</span> <span class="nx">xModal</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="o">+</span> <span class="nx">zModal</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="nx">z</span><span class="p">);</span>
     <span class="k">if</span><span class="p">(</span><span class="nx">out</span><span class="p">){</span>
-        <span class="nx">writeBlock</span><span class="p">(</span><span class="nx">gOutput</span><span class="p">.</span><span class="nx">format</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="nx">out</span><span class="o">+</span><span class="nx">feedModal</span><span class="p">.</span><span class="nx">format</span><span class="p">(</span><span class="nx">feed</span><span class="p">));</span>
+        <span class="nf">writeBlock</span><span class="p">(</span><span class="nx">gOutput</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="nx">out</span><span class="o">+</span><span class="nx">feedModal</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="nx">feed</span><span class="p">));</span>
     <span class="p">}</span>
 <span class="p">}</span>
 
-<span class="kd">function</span> <span class="nx">onCircular</span><span class="p">(</span><span class="nx">clockwise</span><span class="p">,</span> <span class="nx">cx</span><span class="p">,</span> <span class="nx">cy</span><span class="p">,</span> <span class="nx">cz</span><span class="p">,</span> <span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">,</span> <span class="nx">z</span><span class="p">,</span> <span class="nx">feedrate</span><span class="p">){</span>
+<span class="kd">function</span> <span class="nf">onCircular</span><span class="p">(</span><span class="nx">clockwise</span><span class="p">,</span> <span class="nx">cx</span><span class="p">,</span> <span class="nx">cy</span><span class="p">,</span> <span class="nx">cz</span><span class="p">,</span> <span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">,</span> <span class="nx">z</span><span class="p">,</span> <span class="nx">feedrate</span><span class="p">){</span>
     <span class="c1">//I and K are incremental from center</span>
     <span class="c1">// clockwise is opposite of normal</span>
-    <span class="kd">var</span> <span class="nx">ends</span> <span class="o">=</span> <span class="nx">xModal</span><span class="p">.</span><span class="nx">format</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span><span class="o">+</span><span class="nx">zModal</span><span class="p">.</span><span class="nx">format</span><span class="p">(</span><span class="nx">z</span><span class="p">);</span>
-    <span class="kd">var</span> <span class="nx">current</span> <span class="o">=</span> <span class="nx">getCurrentPosition</span><span class="p">();</span>
-    <span class="kd">var</span> <span class="nx">centers</span> <span class="o">=</span> <span class="nx">iOutput</span><span class="p">.</span><span class="nx">format</span><span class="p">(</span><span class="nx">cx</span><span class="o">-</span><span class="nx">current</span><span class="p">.</span><span class="nx">getX</span><span class="p">())</span><span class="o">+</span><span class="nx">kOutput</span><span class="p">.</span><span class="nx">format</span><span class="p">(</span><span class="nx">cz</span><span class="o">-</span><span class="nx">current</span><span class="p">.</span><span class="nx">getZ</span><span class="p">());</span>
+    <span class="kd">var</span> <span class="nx">ends</span> <span class="o">=</span> <span class="nx">xModal</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span><span class="o">+</span><span class="nx">zModal</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="nx">z</span><span class="p">);</span>
+    <span class="kd">var</span> <span class="nx">current</span> <span class="o">=</span> <span class="nf">getCurrentPosition</span><span class="p">();</span>
+    <span class="kd">var</span> <span class="nx">centers</span> <span class="o">=</span> <span class="nx">iOutput</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="nx">cx</span><span class="o">-</span><span class="nx">current</span><span class="p">.</span><span class="nf">getX</span><span class="p">())</span><span class="o">+</span><span class="nx">kOutput</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="nx">cz</span><span class="o">-</span><span class="nx">current</span><span class="p">.</span><span class="nf">getZ</span><span class="p">());</span>
     <span class="k">if</span><span class="p">(</span><span class="nx">ends</span><span class="o">&amp;&amp;</span><span class="nx">clockwise</span><span class="p">){</span>
-        <span class="nx">writeBlock</span><span class="p">(</span><span class="nx">gOutput</span><span class="p">.</span><span class="nx">format</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">+</span><span class="nx">ends</span><span class="o">+</span><span class="nx">centers</span><span class="p">);</span>
+        <span class="nf">writeBlock</span><span class="p">(</span><span class="nx">gOutput</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">+</span><span class="nx">ends</span><span class="o">+</span><span class="nx">centers</span><span class="p">);</span>
     <span class="p">}</span>
     <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="nx">ends</span><span class="o">&amp;&amp;!</span><span class="nx">clockwise</span><span class="p">){</span>
-        <span class="nx">writeBlock</span><span class="p">(</span><span class="nx">gOutput</span><span class="p">.</span><span class="nx">format</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">+</span><span class="nx">ends</span><span class="o">+</span><span class="nx">centers</span><span class="p">);</span>
+        <span class="nf">writeBlock</span><span class="p">(</span><span class="nx">gOutput</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">+</span><span class="nx">ends</span><span class="o">+</span><span class="nx">centers</span><span class="p">);</span>
     <span class="p">}</span>
 <span class="p">}</span>
 
-<span class="kd">function</span> <span class="nx">onSpindleSpeed</span><span class="p">(</span><span class="nx">spindleSpeed</span><span class="p">){</span>
-    <span class="nx">onSection</span><span class="p">();</span>
+<span class="kd">function</span> <span class="nf">onSpindleSpeed</span><span class="p">(</span><span class="nx">spindleSpeed</span><span class="p">){</span>
+    <span class="nf">onSection</span><span class="p">();</span>
 <span class="p">}</span>
-<span class="kd">function</span> <span class="nx">onClose</span><span class="p">(){</span>
-    <span class="nx">writeBlock</span><span class="p">(</span><span class="nx">mOutput</span><span class="p">.</span><span class="nx">format</span><span class="p">(</span><span class="mi">6</span><span class="p">));</span> <span class="c1">//kill spindle, go home</span>
-    <span class="nx">writeBlock</span><span class="p">(</span><span class="dl">"</span><span class="s2">%</span><span class="dl">"</span><span class="p">);</span> <span class="c1">//end of file marker</span>
+<span class="kd">function</span> <span class="nf">onClose</span><span class="p">(){</span>
+    <span class="nf">writeBlock</span><span class="p">(</span><span class="nx">mOutput</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="mi">6</span><span class="p">));</span> <span class="c1">//kill spindle, go home</span>
+    <span class="nf">writeBlock</span><span class="p">(</span><span class="dl">"</span><span class="s2">%</span><span class="dl">"</span><span class="p">);</span> <span class="c1">//end of file marker</span>
 <span class="p">}</span></code></pre></figure>
 
 

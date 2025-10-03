@@ -1,7 +1,8 @@
 #!/bin/bash
 
-# Taken from https://github.com/felixrieseberg/travis-jekyll-git/blob/master/scripts/deploy.sh
+# Adapted from https://github.com/felixrieseberg/travis-jekyll-git/blob/master/scripts/deploy.sh
 # and https://github.com/steveklabnik/automatically_update_github_pages_with_travis_example
+# Modified to work with GitHub Actions
 
 # set to error if fail. Set to error if any unset variables
 set -o errexit -o nounset
@@ -11,8 +12,8 @@ echo "deploying to master branch from deploy branch"
 cd _site
 
 git init
-git config user.name "Travis CI"
-git config user.email "mjsobrep@live.com"
+git config user.name "GitHub Actions"
+git config user.email "github-actions[bot]@users.noreply.github.com"
 
 git remote add upstream "https://$GH_TOKEN@github.com/mjsobrep/mjsobrep.github.io.git"
 git fetch upstream
@@ -22,7 +23,7 @@ touch . # make all of the files look fresh
 
 
 git add -A :/
-git commit -m 'automated commit to publish from travis';
+git commit -m 'automated commit to publish from github actions';
 git push -q upstream HEAD:master
 
 exit 0
