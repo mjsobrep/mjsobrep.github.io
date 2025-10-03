@@ -1,0 +1,37 @@
+name: Build Jekyll Site
+
+on:
+  workflow_call:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2.2'
+          bundler-cache: true
+
+      - name: Build Jekyll site
+        run: bundle exec jekyll build
+
+      - name: Fetch PDF from master
+        run: |
+          git fetch origin master
+          git checkout origin/master -- otherFiles/MichaelSobrepera.pdf || true
+          if [ -f otherFiles/MichaelSobrepera.pdf ]; then
+            cp otherFiles/MichaelSobrepera.pdf _site/otherFiles/
+          fi
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: site
+          path: _site/
