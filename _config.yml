@@ -14,6 +14,7 @@ grabcad_site: michael.sobrepera-1
 flickr_alias: mjsobrep 
 # Build settings
 markdown: kramdown
+timezone: UTC
 
 permalink: none
 ignore: /subl
