@@ -1,0 +1,10 @@
+name: Test Jekyll Build
+
+on:
+  pull_request:
+    branches:
+      - deploy
+
+jobs:
+  test:
+    uses: ./.github/workflows/build.yml
