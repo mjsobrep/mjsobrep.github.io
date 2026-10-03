@@ -1,9 +1,13 @@
-name: Test Jekyll Build
+name: Check Jekyll Site
 
 on:
   pull_request:
     branches:
       - deploy
+      - 'codex/**'
+
+permissions:
+  contents: read
 
 jobs:
   test:

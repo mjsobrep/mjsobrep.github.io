@@ -1,0 +1,15 @@
+{
+  "name": "mjs-static-site",
+  "private": true,
+  "engines": { "node": ">=24 <25" },
+  "scripts": {
+    "lint": "npm run lint:markdown && npm run lint:styles",
+    "lint:markdown": "markdownlint-cli2",
+    "lint:styles": "node scripts/lint-styles.mjs"
+  },
+  "devDependencies": {
+    "markdownlint-cli2": "0.23.3",
+    "postcss-scss": "4.0.9",
+    "stylelint": "17.16.0"
+  }
+}
