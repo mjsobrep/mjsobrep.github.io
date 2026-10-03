@@ -1,3 +1,4 @@
+# Runtime and development gems for building and checking the Jekyll site.
 source 'https://rubygems.org'
 gem 'jekyll', '~> 4.4'
 gem 'jekyll-sass-converter', '~> 2.0'

@@ -1,3 +1,4 @@
+// Exercise the generated 404 redirect script with bookmarked and invalid tag URLs.
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { runInNewContext } from "node:vm";

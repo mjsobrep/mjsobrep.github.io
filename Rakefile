@@ -1,3 +1,5 @@
+# Local and CI tasks for linting, filter tests, and generated site validation.
+# Run bin/check for the full suite or bundle exec rake <task> for an individual task.
 require 'rake/testtask'
 require 'open3'
 

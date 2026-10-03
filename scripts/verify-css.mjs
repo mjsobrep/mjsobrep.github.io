@@ -1,3 +1,4 @@
+// Check compiled CSS values for defects that a successful Sass build can miss.
 import stylelint from "stylelint";
 
 const result = await stylelint.lint({

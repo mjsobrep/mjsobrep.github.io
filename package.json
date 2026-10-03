@@ -1,5 +1,6 @@
 {
   "name": "mjs-static-site",
+  "description": "Development dependencies and lint configuration for the Jekyll site.",
   "private": true,
   "engines": { "node": ">=24 <25" },
   "scripts": {

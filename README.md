@@ -28,7 +28,7 @@ Open <http://localhost:4000>. Extra Jekyll flags can be passed through, for exam
 bin/check
 ```
 
-This runs Ruby linting, Markdown and SCSS linting, Minitest tests, a strict Jekyll build, offline checks of generated internal links and assets, Jekyll diagnostics, and validation of generated CSS values. GitHub Actions runs the same command before uploading a build for deployment.
+This runs Ruby linting, Markdown and SCSS linting, Minitest tests, a strict Jekyll build, offline checks of generated internal links and assets, Jekyll diagnostics, and validation of generated CSS values. GitHub Actions runs the same command on every pull request, including stacked PRs, and before uploading a build for deployment.
 
 Individual commands are `bundle exec rake lint`, `bundle exec rake test`, and `bundle exec rake verify`. Linters use a small correctness-focused ruleset. Markdown linting covers this README and new documentation under `docs/`; historical posts retain their existing formatting. Missing image alt text and external URLs are outside the initial link-checking baseline.
 
