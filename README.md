@@ -17,10 +17,10 @@ Both dependency lockfiles are committed. Use `bundle install` and `npm ci` to re
 ## Preview
 
 ```sh
-bundle exec jekyll serve --port 4000 --livereload
+./serve.sh
 ```
 
-Open <http://localhost:4000>. `bash build.sh` builds without starting a server.
+Open <http://localhost:4000>. Extra Jekyll flags can be passed through, for example `./serve.sh --drafts`. `bash build.sh` builds without starting a server.
 
 ## Check changes
 
@@ -32,6 +32,8 @@ This runs Ruby linting, Markdown and SCSS linting, Minitest tests, a strict Jeky
 
 Individual commands are `bundle exec rake lint`, `bundle exec rake test`, and `bundle exec rake verify`. Linters use a small correctness-focused ruleset. Markdown linting covers this README and new documentation under `docs/`; historical posts retain their existing formatting. Missing image alt text and external URLs are outside the initial link-checking baseline.
 
-The initial baseline has two Ruby lint exceptions in the legacy plugin and three exact URL exceptions in `Rakefile` (two Windows-style PDF paths and Flickr's protocol-relative script URL). These are tracked for the following defect-fix change. HTTPS enforcement is deferred for historical external URLs.
+The initial baseline has two Ruby lint exceptions in the legacy plugin, three exact URL exceptions in `Rakefile` (two Windows-style PDF paths and Flickr's protocol-relative script URL), and one excluded guide page whose Git command placeholder is parsed as HTML. These are tracked for the following defect-fix change. HTTPS enforcement is deferred for historical external URLs.
+
+Lint configuration lives in `.rubocop.yml` and `package.json`; Rake coordinates the checks. The lockfiles and runtime version files make local installs match CI. `bin/check` and `serve.sh` provide short commands, and `test/filters_test.rb` contains the initial filter tests.
 
 The current Ruby and Sass versions are retained for the initial tooling baseline; their upgrades are a separate change.
