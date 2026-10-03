@@ -1,0 +1,29 @@
+{
+  "name": "mjs-static-site",
+  "description": "Development dependencies and lint configuration for the Jekyll site.",
+  "private": true,
+  "engines": { "node": ">=24 <25" },
+  "scripts": {
+    "lint": "npm run lint:markdown && npm run lint:styles",
+    "lint:markdown": "markdownlint-cli2 --config package.json --configPointer /markdownlint-cli2",
+    "lint:styles": "bundle exec rake lint_styles"
+  },
+  "devDependencies": {
+    "markdownlint-cli2": "0.23.3",
+    "postcss-scss": "4.0.9",
+    "stylelint": "17.16.0"
+  },
+  "markdownlint-cli2": {
+    "globs": ["README.md", "docs/**/*.md"],
+    "config": { "MD013": false }
+  },
+  "stylelint": {
+    "customSyntax": "postcss-scss",
+    "rules": {
+      "color-no-invalid-hex": true,
+      "declaration-block-no-duplicate-properties": [true, { "ignore": ["consecutive-duplicates-with-different-values"] }],
+      "property-no-unknown": true,
+      "string-no-newline": true
+    }
+  }
+}

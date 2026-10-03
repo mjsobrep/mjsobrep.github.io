@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Run the full validation suite from the repository root, matching CI.
+set -euo pipefail
+cd "$(dirname "$0")/.."
+bundle exec rake check
