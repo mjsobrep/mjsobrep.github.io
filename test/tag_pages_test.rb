@@ -1,4 +1,6 @@
-require_relative 'test_helper'
+require 'minitest/autorun'
+require 'jekyll'
+require_relative '../_plugins/myFunctions'
 
 class TagPagesTest < Minitest::Test
   Post = Struct.new(:date, :title)
