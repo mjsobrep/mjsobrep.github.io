@@ -1,10 +1,26 @@
 require 'rake/testtask'
-require 'html-proofer'
 require 'fileutils'
+require 'open3'
 
 Rake::TestTask.new(:test) do |task|
   task.libs << 'test'
   task.pattern = 'test/**/*_test.rb'
+end
+
+desc 'Lint SCSS, stripping Jekyll front matter while preserving line numbers'
+task :lint_styles do
+  ['css/main.scss', *Dir['_sass/*.scss']].each do |file|
+    source = File.read(file).sub(/\A---\r?\n.*?\r?\n---\r?\n/m) do |front_matter|
+      front_matter.gsub(/[^\r\n]/, '')
+    end
+    output, errors, status = Open3.capture3(
+      'node_modules/.bin/stylelint', '--stdin', '--stdin-filename', file,
+      stdin_data: source
+    )
+    print output
+    warn errors unless errors.empty?
+    raise "Stylelint failed for #{file}" unless status.success?
+  end
 end
 
 desc 'Lint Ruby, maintained Markdown, and SCSS'
@@ -23,6 +39,7 @@ end
 
 desc 'Check generated internal links and assets without network access'
 task :verify => :build do
+  require 'html-proofer'
   HTMLProofer.check_directory('_site', {
     disable_external: true,
     check_external_hash: false,

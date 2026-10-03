@@ -5,7 +5,7 @@ import { readFile } from "node:fs/promises";
 const developmentPaths = [
   "vendor", "node_modules", "bin", "scripts", "test", "docs", "helper_scripts",
   "README.md", "LICENSE", "Rakefile", "Gemfile", "Gemfile.lock",
-  "package.json", "package-lock.json", "build.sh", "deploy.sh", ".travis.yml",
+  "package.json", "package-lock.json", "build.sh", "serve.sh", "deploy.sh", ".travis.yml",
 ];
 for (const path of developmentPaths) {
   assert.equal(existsSync(`_site/${path}`), false, `${path} must not be published`);

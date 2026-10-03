@@ -1,9 +1,18 @@
-require_relative 'test_helper'
+require 'minitest/autorun'
+require 'jekyll'
+require_relative '../_plugins/myFunctions'
 require 'tmpdir'
 require 'nokogiri'
 require 'fileutils'
 
-class SiteFiltersTest < FilterTest
+class SiteFiltersTest < Minitest::Test
+  def setup
+    @filters = Object.new
+    [URLEncode, Jekyll::InsertPDF, Jekyll::StripNonNum,
+     Jekyll::StripCat, Jekyll::StripFile, Jekyll::PathMatch,
+     Jekyll::InsertPicFolder].each { |filter| @filters.extend(filter) }
+  end
+
   def test_phone_numbers_are_reduced_to_digits
     assert_equal '7703246196', @filters.stripNonNum('(770) 324-6196')
     assert_equal '123', @filters.stripNonNum(123)

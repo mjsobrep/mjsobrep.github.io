@@ -17,10 +17,10 @@ Both dependency lockfiles are committed. Use `bundle install` and `npm ci` to re
 ## Preview
 
 ```sh
-bundle exec jekyll serve --port 4000 --livereload
+./serve.sh
 ```
 
-Open <http://localhost:4000>. `bash build.sh` builds without starting a server.
+Open <http://localhost:4000>. Extra Jekyll flags can be passed through, for example `./serve.sh --drafts`. `bash build.sh` builds without starting a server.
 
 ## Check changes
 
@@ -33,6 +33,8 @@ This runs Ruby linting, Markdown and SCSS linting, Minitest tests, a strict Jeky
 Individual commands are `bundle exec rake lint`, `bundle exec rake test`, and `bundle exec rake verify`. Linters use a small correctness-focused ruleset. Markdown linting covers this README and new documentation under `docs/`; historical posts retain their existing formatting. Missing image alt text and external URLs are outside the initial link-checking baseline.
 
 Tag URLs use lowercase slugs, and case variants share one page containing all matching posts. GitHub Pages' 404 page redirects legacy tag URLs to their new locations when JavaScript is enabled. HTTPS enforcement is deferred for historical external URLs.
+
+Lint configuration lives in `.rubocop.yml` and `package.json`; Rake coordinates the checks. The lockfiles and runtime version files make local installs match CI. `bin/check` and `serve.sh` provide short commands, and `test/` contains the filter and tag regression tests.
 
 ## Deployment and dependency updates
 
