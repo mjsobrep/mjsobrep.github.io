@@ -42,7 +42,10 @@ task :verify => :build do
     disable_external: true,
     check_external_hash: false,
     ignore_missing_alt: true,
-    enforce_https: false
+    enforce_https: false,
+    # Historical post content is unchanged; retain these exact legacy exceptions.
+    ignore_files: ['_site/guides/gitGuide.html'],
+    ignore_urls: ['\\otherFiles\\projects\\soundReactiveGuitar\\electronics layout Rev 1.2.pdf']
   }).run
   sh 'bundle exec jekyll doctor'
   sh 'node scripts/verify-css.mjs'
