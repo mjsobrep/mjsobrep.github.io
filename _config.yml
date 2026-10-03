@@ -3,7 +3,7 @@ title: Michael Sobrepera
 email: mjsobrep@live.com
 description: A site about stuff that I (Michael Sobrepera) work on, think, enjoy, etc...
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://www.michaelsobrepera.com" # the base hostname & protocol for your site
+url: "https://www.michaelsobrepera.com" # the base hostname & protocol for your site
 twitter_username: mjsobrep
 github_username:  mjsobrep
 linkedin: https://www.linkedin.com/in/michaelsobrepera
@@ -19,5 +19,20 @@ timezone: UTC
 permalink: none
 ignore: /subl
 
-# To work with Travis
-exclude: [vendor]
+# Development tooling must not be published as site content.
+exclude:
+  - vendor
+  - node_modules
+  - bin
+  - scripts
+  - test
+  - docs
+  - helper_scripts
+  - README.md
+  - LICENSE
+  - Rakefile
+  - Gemfile
+  - Gemfile.lock
+  - package.json
+  - package-lock.json
+  - build.sh

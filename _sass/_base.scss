@@ -1,4 +1,6 @@
-@import 'colors';
+@use "sass:color";
+@use "settings" as *;
+@use "colors" as *;
 
 @mixin border-radius($radius) {
     -moz-border-radius: $radius;
@@ -131,7 +133,7 @@ a {
     text-decoration: none;
 
     &:visited {
-        color: darken($brand-color, 15%);
+        color: color.adjust($brand-color, $lightness: -15%);
     }
 
     &:hover {
