@@ -1,11 +1,13 @@
 require 'liquid'
 require 'uri'
+require 'cgi'
 # require 'pry'
 
 module Jekyll
     module StripFile
         def folder(input)
-            input[0,input.rindex("/")]
+            path = File.dirname(input.to_s.tr('\\', '/'))
+            path == '.' ? '' : path
         end
     end
 end
@@ -25,13 +27,8 @@ Liquid::Template.register_filter(Jekyll::StrCmp)
 module Jekyll
     module PathMatch
         def pathMatch(candidate,pattern)
-            rawPath = candidate["path"]
-            trimmedPath = rawPath[0,rawPath.rindex("/")]
-            toReturn = nil
-            if((trimmedPath<=>pattern)==0)
-                toReturn= true
-            end
-            return toReturn
+            path = candidate['path']
+            !path.nil? && File.dirname(path.tr('\\', '/')) == pattern
         end
     end
 end
@@ -44,7 +41,9 @@ Liquid::Template.register_filter(Jekyll::PathMatch)
 # Ref: http://tools.ietf.org/html/rfc3986#page-12
 module URLEncode
     def url_encode(url)
-        return url.gsub(' ','%20')
+        url.to_s.tr('\\', '/').split('/', -1).map do |segment|
+            URI.encode_www_form_component(segment).gsub('+', '%20')
+        end.join('/')
     end
 end
 
@@ -59,7 +58,7 @@ module Jekyll
             @text = text
         end
 
-        def render(context)
+        def render(_context)
             "#{@text} #{Time.now}"
         end
     end
@@ -71,7 +70,9 @@ Liquid::Template.register_tag('render_time', Jekyll::RenderTimeTag)
 module Jekyll
     module InsertPDF
         def insertPDF(file)
-            return "<div class='pdfBox'> <div class='pdfContent'>    <object class='pdfContent' data='"+url_encode('/'+file)+"' type='application/pdf' width='100%' height='100%'>   alternate download: <a href = '"+url_encode('/'+file)+"'>"+file+"</a></object></div> </div>"
+            path = CGI.escapeHTML(url_encode('/' + file.to_s.sub(%r{\A[/\\]+}, '')))
+            label = CGI.escapeHTML(file.to_s)
+            "<div class='pdfBox'><div class='pdfContent'><object class='pdfContent' data='#{path}' type='application/pdf' width='100%' height='100%'>alternate download: <a href = '#{path}'>#{label}</a></object></div></div>"
         end
     end
 end
@@ -92,12 +93,15 @@ module Jekyll
                     if(type.include? 'md')
                         toReturn = toReturn + '[![]('+url_encode('/'+image)+'){: .'+style+'}]('+url_encode('/'+image)+')'
                     else
-                        toReturn = toReturn + '<a href='+url_encode('/'+image)+'><img src='+url_encode('/'+image)+' class='+style+'></a>'
+                        path = CGI.escapeHTML(url_encode('/' + image))
+                        css_class = CGI.escapeHTML(style.to_s)
+                        alt = CGI.escapeHTML(File.basename(image))
+                        toReturn += "<a href='#{path}'><img src='#{path}' class='#{css_class}' alt='#{alt}'></a>"
                     end
                 end
             }
             if(not type.include? 'md')
-                toReturn=toReturn+'</div>"'
+                toReturn=toReturn+'</div>'
             end
             return toReturn
         end
@@ -160,47 +164,44 @@ end
 Liquid::Template.register_filter(Jekyll::StripNonNum)
 
 module Jekyll
-    class TagPageGenerator < Generator
-        class TagPage < Page
-          def initialize(site, base, dir, tag)
-            @site = site
-            @base = base
-            @dir = dir
-            @name = tag+'.html'
-
-            self.process(@name)
-            self.read_yaml(File.join(base, '_layouts'), 'tag.html')
-            self.data['destTitle'] = 'Tag: '+tag
-            self.data['destTag'] = site.tags[tag]
-
-            # category_title_prefix = site.config['category_title_prefix'] || 'Category: '
-            # self.data['title'] = "#{category_title_prefix}#{category}"
-          end
-        end
-
-    def generate(site)
-        site.tags.each_key do |tag|
-          site.pages << TagPage.new(site, site.source, 'tags', tag)
-      end
+  module TagSlug
+    def tag_slug(tag)
+      slug = Jekyll::Utils.slugify(tag.to_s)
+      slug.empty? ? 'tag' : slug
     end
   end
 
+  class TagPageGenerator < Generator
+    include TagSlug
+
+    class TagPage < PageWithoutAFile
+      def initialize(site, slug, tags, posts)
+        super(site, site.source, 'tags', "#{slug}.html")
+        self.data = {
+          'layout' => 'tag',
+          'destTitle' => "Tag: #{tags.first}",
+          'destTag' => posts
+        }
+      end
+    end
+
+    def generate(site)
+      site.data['legacy_tag_urls'] = {}
+      site.tags.keys.group_by { |tag| tag_slug(tag) }.each do |slug, tags|
+        posts = tags.flat_map { |tag| site.tags[tag] }.uniq.sort_by(&:date).reverse
+        site.pages << TagPage.new(site, slug, tags, posts)
+        tags.each { |tag| site.data['legacy_tag_urls']["#{tag}.html"] = "/tags/#{slug}.html" }
+      end
+    end
+  end
 end
+
+Liquid::Template.register_filter(Jekyll::TagSlug)
 
 module Jekyll
     module StripCat
         def stripCat(posts,category)
-            toReturn = [];
-            posts.each{|post|
-                if(not post.categories.include? category)
-                    toReturn<<(post)
-                    puts post.title+' accepted, cat: '+post.categories
-
-            else
-                puts post.title+' rejected, cat: '+post.categories
-            end
-            }
-            return bob
+            posts.reject { |post| post.categories.include?(category) }
         end
     end
 end

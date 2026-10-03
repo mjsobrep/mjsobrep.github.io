@@ -63,7 +63,7 @@ ol,
 dl,
 figure,
 %vertical-rhythm {
-    margin-bottom: calc(spacing-unit / 2);
+    margin-bottom: ($spacing-unit * 0.5);
 }
 
 
@@ -148,7 +148,7 @@ a {
 blockquote {
     color: $grey-color;
     border-left: 4px solid $grey-color-light;
-    padding-left: calc($spacing-unit / 2);
+    padding-left: ($spacing-unit * 0.5);
     font-size: 18px;
     letter-spacing: -1px;
     font-style: italic;
@@ -204,8 +204,8 @@ pre {
     @include media-query($on-laptop) {
         max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
         max-width: calc(#{$content-width} - (#{$spacing-unit}));
-        padding-right: calc($spacing-unit / 2);
-        padding-left: calc($spacing-unit / 2);
+        padding-right: ($spacing-unit * 0.5);
+        padding-left: ($spacing-unit * 0.5);
     }
 }
 
@@ -367,7 +367,7 @@ pre {
 
 table {
     border-collapse: collapse;
-    border-spacing: 3;
+    border-spacing: 3px;
     // border:4px solid #000000;
 }
 
@@ -383,13 +383,12 @@ th {
     text-align: center;
 }
 
-.filter-type {}
 
 .sidebarlistscroll {
     width: 100%;
     height: 100%;
     margin-bottom: 15px;
-    overflow-y: none;
+    overflow-y: visible;
     border: none;
     visibility: hidden;
 }

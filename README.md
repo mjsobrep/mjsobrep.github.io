@@ -28,10 +28,10 @@ Open <http://localhost:4000>. `bash build.sh` builds without starting a server.
 bin/check
 ```
 
-This runs Ruby linting, Markdown and SCSS linting, Minitest tests, a strict Jekyll build, and offline checks of generated internal links and assets. GitHub Actions runs the same command before uploading a build for deployment.
+This runs Ruby linting, Markdown and SCSS linting, Minitest tests, a strict Jekyll build, offline checks of generated internal links and assets, Jekyll diagnostics, and validation of generated CSS values. GitHub Actions runs the same command before uploading a build for deployment.
 
 Individual commands are `bundle exec rake lint`, `bundle exec rake test`, and `bundle exec rake verify`. Linters use a small correctness-focused ruleset. Markdown linting covers this README and new documentation under `docs/`; historical posts retain their existing formatting. Missing image alt text and external URLs are outside the initial link-checking baseline.
 
-The initial baseline has two Ruby lint exceptions in the legacy plugin and three exact URL exceptions in `Rakefile` (two Windows-style PDF paths and Flickr's protocol-relative script URL). These are tracked for the following defect-fix change. HTTPS enforcement is deferred for historical external URLs.
+Tag URLs use lowercase slugs, and case variants share one page containing all matching posts. GitHub Pages' 404 page redirects legacy tag URLs to their new locations when JavaScript is enabled. HTTPS enforcement is deferred for historical external URLs.
 
 The current Ruby and Sass versions are retained for the initial tooling baseline; their upgrades are a separate change.

@@ -4,9 +4,9 @@
 <label for="header1">Tags</label>
 <div>
 <ul class="tag">
-{% for tag in {{include.tags}} %}
+{% for tag in include.tags %}
   {% assign t = tag | first %}
-  <li class="tag"><a href="tags/{{t | uri_escape}}.html" class = "tag">{{t}}</a></li>
+  <li class="tag"><a href="{{ site.baseurl }}/tags/{{t | tag_slug}}.html" class = "tag">{{t}}</a></li>
 {% endfor %}
 </ul>
 </div>

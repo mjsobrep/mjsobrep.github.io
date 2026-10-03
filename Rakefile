@@ -23,14 +23,11 @@ task :verify => :build do
     disable_external: true,
     check_external_hash: false,
     ignore_missing_alt: true,
-    enforce_https: false,
-    # Existing Windows-style PDF paths are fixed in the following PR.
-    ignore_urls: [
-      '/otherFiles\\projects\\ibvswscribbler\\ibvs-report.pdf',
-      '\\otherFiles\\projects\\soundReactiveGuitar\\electronics layout Rev 1.2.pdf',
-      '//embedr.flickr.com/assets/client-code.js'
-    ]
+    enforce_https: false
   }).run
+  sh 'bundle exec jekyll doctor'
+  sh 'node scripts/verify-css.mjs'
+  sh 'node scripts/verify-redirects.mjs'
 end
 
 desc 'Run the same validation locally and in CI'
