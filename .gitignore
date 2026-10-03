@@ -1,8 +1,9 @@
+# Generated builds, installed dependencies, and local editor metadata.
 _site/
 .sass-cache/
 .vscode
 .bundle/
 vendor/
-Gemfile.lock
 tags
 .jekyll-cache/
+node_modules/

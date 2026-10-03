@@ -1,9 +1,11 @@
-name: Test Jekyll Build
+# Validate every PR, including stacked changes, regardless of its target branch.
+name: Check Jekyll Site
 
 on:
   pull_request:
-    branches:
-      - deploy
+
+permissions:
+  contents: read
 
 jobs:
   test:

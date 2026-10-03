@@ -1,0 +1,25 @@
+# Correctness checks for site plugins, tests, and Rake tasks.
+AllCops:
+  NewCops: disable
+  TargetRubyVersion: 3.2
+  Include:
+    - '_plugins/**/*.rb'
+    - 'test/**/*.rb'
+    - 'Rakefile'
+  Exclude:
+    - 'vendor/**/*'
+    - '_site/**/*'
+    - 'node_modules/**/*'
+  DisabledByDefault: true
+  SuggestExtensions: false
+
+Lint:
+  Enabled: true
+
+# Legacy plugin findings are addressed in the following defect-fix PR.
+Lint/UnusedMethodArgument:
+  Exclude:
+    - '_plugins/myFunctions.rb'
+Lint/MissingSuper:
+  Exclude:
+    - '_plugins/myFunctions.rb'
