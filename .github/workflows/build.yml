@@ -9,7 +9,8 @@ permissions:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    # Keep the runner OS stable when GitHub changes ubuntu-latest.
+    runs-on: ubuntu-24.04
     env:
       BUNDLE_FROZEN: 'true'
 

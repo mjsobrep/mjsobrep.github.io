@@ -21,7 +21,8 @@ jobs:
   deploy:
     needs: build
     if: github.ref == 'refs/heads/deploy'
-    runs-on: ubuntu-latest
+    # Use the same tested runner OS as the build job.
+    runs-on: ubuntu-24.04
     permissions:
       contents: write
 
