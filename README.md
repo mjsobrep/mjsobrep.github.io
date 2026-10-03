@@ -34,6 +34,8 @@ Individual commands are `bundle exec rake lint`, `bundle exec rake test`, and `b
 
 Tag URLs use lowercase slugs, and case variants share one page containing all matching posts. GitHub Pages' 404 page redirects legacy tag URLs to their new locations when JavaScript is enabled. HTTPS enforcement is deferred for historical external URLs.
 
+Two historical content defects retain exact HTMLProofer exceptions: the Git guide's unescaped command placeholder excludes its generated page, and the guitar project's Windows-style PDF URL is ignored. Correcting those posts is a separate content change.
+
 Lint configuration lives in `.rubocop.yml` and `package.json`; Rake coordinates the checks. The lockfiles and runtime version files make local installs match CI. `bin/check` and `serve.sh` provide short commands, and `test/` contains the filter and tag regression tests.
 
 ## Deployment and dependency updates
