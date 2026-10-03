@@ -1,4 +1,4 @@
-# Site settings
+# Jekyll site settings and exclusions for the generated deployment artifact.
 title: Michael Sobrepera
 email: mjsobrep@live.com
 description: A site about stuff that I (Michael Sobrepera) work on, think, enjoy, etc...

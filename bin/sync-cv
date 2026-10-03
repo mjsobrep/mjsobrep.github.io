@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Copy the CV from a local Git commit and log its revision for reproducible builds.
 set -euo pipefail
 cd "$(dirname "$0")/.."
 cv_ref="${1:-origin/master}"

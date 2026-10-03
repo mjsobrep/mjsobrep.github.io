@@ -1,3 +1,4 @@
+// Check that published files exclude development tools and match their CV/config sources.
 import assert from "node:assert/strict";
 import { existsSync } from "node:fs";
 import { readFile } from "node:fs/promises";

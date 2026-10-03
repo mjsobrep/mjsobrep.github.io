@@ -1,3 +1,4 @@
+# Verify canonical tag grouping and legacy URL mappings without a full site build.
 require 'minitest/autorun'
 require 'jekyll'
 require_relative '../_plugins/myFunctions'

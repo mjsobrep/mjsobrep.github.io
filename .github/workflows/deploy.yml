@@ -1,3 +1,4 @@
+# Publish the validated artifact after source changes reach deploy.
 name: Build and Deploy Jekyll Site
 
 on:

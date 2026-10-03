@@ -1,3 +1,4 @@
+# Shared validation and artifact build used by PR checks and deployment.
 name: Build Jekyll Site
 
 on:

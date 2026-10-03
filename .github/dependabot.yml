@@ -1,3 +1,4 @@
+# Group weekly dependency update PRs for the source branch, deploy.
 version: 2
 updates:
   - package-ecosystem: bundler

@@ -1,3 +1,4 @@
+# Runtime and development gems for building and checking the Jekyll site.
 source 'https://rubygems.org'
 ruby File.read(File.join(__dir__, '.ruby-version')).strip
 gem 'jekyll', '~> 4.4'
