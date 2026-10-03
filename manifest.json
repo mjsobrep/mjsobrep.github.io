@@ -1,0 +1,912 @@
+{
+  "capturedAt": "2026-10-03T23:29:40.376Z",
+  "versions": {
+    "base110": {
+      "port": 4110,
+      "commit": "71b21c9406f815078df33ab13e558a5d27d2ee9c",
+      "ruby": "3.2.2"
+    },
+    "pr111": {
+      "port": 4111,
+      "commit": "f0e36ac3183358859d2b45a33b9d8dbca464cd60",
+      "ruby": "3.2.2"
+    },
+    "pr112": {
+      "port": 4112,
+      "commit": "b5f33f248c1cd76edb0b0e41a2009f5020e4708b",
+      "ruby": "3.4.11"
+    }
+  },
+  "viewports": {
+    "desktop": {
+      "width": 1200,
+      "height": 800
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844
+    }
+  },
+  "limitations": [
+    "External images, scripts, videos, and presentation embeds are blocked; their availability is not tested.",
+    "Legacy redirects use JavaScript after the server returns the actual custom 404 page.",
+    "The headless embedded PDF viewer is not exercised; the PDF assertion verifies only the real local PDF response and signature."
+  ],
+  "screenshots": [
+    {
+      "filename": "pr111/tag-desktop-before.png",
+      "version": "base110",
+      "commit": "71b21c9406f815078df33ab13e558a5d27d2ee9c",
+      "path": "/tags/gui.html",
+      "viewport": "desktop",
+      "title": "Michael Sobrepera",
+      "heading": "Tag: gui",
+      "posts": [
+        "Tkinter"
+      ],
+      "styles": [
+        {
+          "element": "HEADER.site-header",
+          "box": [
+            0,
+            0,
+            1200,
+            62
+          ],
+          "styles": {
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "paddingLeft": "0px",
+            "paddingRight": "0px",
+            "marginBottom": "0px",
+            "color": "rgb(17, 17, 17)",
+            "backgroundColor": "rgb(240, 240, 240)"
+          }
+        },
+        {
+          "element": "DIV.bodyWrapper",
+          "box": [
+            200,
+            62,
+            800,
+            240.96875
+          ],
+          "styles": {
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "paddingLeft": "30px",
+            "paddingRight": "30px",
+            "marginBottom": "0px",
+            "color": "rgb(17, 17, 17)",
+            "backgroundColor": "rgb(245, 245, 245)"
+          }
+        },
+        {
+          "element": "H1.post-title",
+          "box": [
+            230,
+            92,
+            740,
+            42
+          ],
+          "styles": {
+            "fontSize": "42px",
+            "lineHeight": "42px",
+            "paddingLeft": "0px",
+            "paddingRight": "0px",
+            "marginBottom": "0px",
+            "color": "rgb(17, 17, 17)",
+            "backgroundColor": "rgba(0, 0, 0, 0)"
+          }
+        },
+        {
+          "element": "ARTICLE.post-content",
+          "box": [
+            230,
+            272.96875,
+            740,
+            0
+          ],
+          "styles": {
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "paddingLeft": "0px",
+            "paddingRight": "0px",
+            "marginBottom": "30px",
+            "color": "rgb(17, 17, 17)",
+            "backgroundColor": "rgba(0, 0, 0, 0)"
+          }
+        }
+      ],
+      "sha256": "5c23463d4172eb558695d52a792b7d526271b9b0226d45b53734959048eade59"
+    },
+    {
+      "filename": "pr111/tag-desktop-after.png",
+      "version": "pr111",
+      "commit": "f0e36ac3183358859d2b45a33b9d8dbca464cd60",
+      "path": "/tags/gui.html",
+      "viewport": "desktop",
+      "title": "Michael Sobrepera",
+      "heading": "Tag: GUI",
+      "posts": [
+        "Tkinter",
+        "Cystic Fibrosis Modeling Suite"
+      ],
+      "styles": [
+        {
+          "element": "HEADER.site-header",
+          "box": [
+            0,
+            0,
+            1200,
+            62
+          ],
+          "styles": {
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "paddingLeft": "0px",
+            "paddingRight": "0px",
+            "marginBottom": "0px",
+            "color": "rgb(17, 17, 17)",
+            "backgroundColor": "rgb(240, 240, 240)"
+          }
+        },
+        {
+          "element": "DIV.bodyWrapper",
+          "box": [
+            200,
+            62,
+            800,
+            430.9375
+          ],
+          "styles": {
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "paddingLeft": "30px",
+            "paddingRight": "30px",
+            "marginBottom": "0px",
+            "color": "rgb(17, 17, 17)",
+            "backgroundColor": "rgb(245, 245, 245)"
+          }
+        },
+        {
+          "element": "H1.post-title",
+          "box": [
+            230,
+            92,
+            740,
+            42
+          ],
+          "styles": {
+            "fontSize": "42px",
+            "lineHeight": "42px",
+            "paddingLeft": "0px",
+            "paddingRight": "0px",
+            "marginBottom": "15px",
+            "color": "rgb(17, 17, 17)",
+            "backgroundColor": "rgba(0, 0, 0, 0)"
+          }
+        },
+        {
+          "element": "ARTICLE.post-content",
+          "box": [
+            230,
+            462.9375,
+            740,
+            0
+          ],
+          "styles": {
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "paddingLeft": "0px",
+            "paddingRight": "0px",
+            "marginBottom": "30px",
+            "color": "rgb(17, 17, 17)",
+            "backgroundColor": "rgba(0, 0, 0, 0)"
+          }
+        }
+      ],
+      "sha256": "e333594a273bfe7d6bada3a8a50927b2a58388784b7ffb58a357834c7868c183"
+    },
+    {
+      "filename": "pr111/project-mobile-before.png",
+      "version": "base110",
+      "commit": "71b21c9406f815078df33ab13e558a5d27d2ee9c",
+      "path": "/projects/intussasist.html",
+      "viewport": "mobile",
+      "title": "Redesign of intussusception reduction device",
+      "heading": "Redesign of intussusception reduction device",
+      "posts": [],
+      "styles": [
+        {
+          "element": "HEADER.site-header",
+          "box": [
+            0,
+            0,
+            390,
+            62
+          ],
+          "styles": {
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "paddingLeft": "0px",
+            "paddingRight": "0px",
+            "marginBottom": "0px",
+            "color": "rgb(17, 17, 17)",
+            "backgroundColor": "rgb(240, 240, 240)"
+          }
+        },
+        {
+          "element": "DIV.bodyWrapper",
+          "box": [
+            0,
+            62,
+            390,
+            7055.328125
+          ],
+          "styles": {
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "paddingLeft": "30px",
+            "paddingRight": "30px",
+            "marginBottom": "0px",
+            "color": "rgb(17, 17, 17)",
+            "backgroundColor": "rgb(245, 245, 245)"
+          }
+        },
+        {
+          "element": "H1.post-title",
+          "box": [
+            30,
+            92,
+            330,
+            108
+          ],
+          "styles": {
+            "fontSize": "36px",
+            "lineHeight": "36px",
+            "paddingLeft": "0px",
+            "paddingRight": "0px",
+            "marginBottom": "0px",
+            "color": "rgb(17, 17, 17)",
+            "backgroundColor": "rgba(0, 0, 0, 0)"
+          }
+        },
+        {
+          "element": "ARTICLE.post-content",
+          "box": [
+            30,
+            272,
+            330,
+            6815.328125
+          ],
+          "styles": {
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "paddingLeft": "0px",
+            "paddingRight": "0px",
+            "marginBottom": "30px",
+            "color": "rgb(17, 17, 17)",
+            "backgroundColor": "rgba(0, 0, 0, 0)"
+          }
+        },
+        {
+          "element": "DIV.widePP",
+          "box": [
+            30,
+            1469,
+            330,
+            208.65625
+          ],
+          "styles": {
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "paddingLeft": "0px",
+            "paddingRight": "0px",
+            "marginBottom": "0px",
+            "color": "rgb(17, 17, 17)",
+            "backgroundColor": "rgba(0, 0, 0, 0)"
+          }
+        },
+        {
+          "element": "DIV.pdfBox",
+          "box": [
+            30,
+            1767.65625,
+            330,
+            427.015625
+          ],
+          "styles": {
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "paddingLeft": "0px",
+            "paddingRight": "0px",
+            "marginBottom": "0px",
+            "color": "rgb(17, 17, 17)",
+            "backgroundColor": "rgba(0, 0, 0, 0)"
+          }
+        }
+      ],
+      "sha256": "bf4912d31bcafba649479020ef06e81cff9b621a090925ebdc1e96742646e44c"
+    },
+    {
+      "filename": "pr111/project-mobile-after.png",
+      "version": "pr111",
+      "commit": "f0e36ac3183358859d2b45a33b9d8dbca464cd60",
+      "path": "/projects/intussasist.html",
+      "viewport": "mobile",
+      "title": "Redesign of intussusception reduction device",
+      "heading": "Redesign of intussusception reduction device",
+      "posts": [],
+      "styles": [
+        {
+          "element": "HEADER.site-header",
+          "box": [
+            0,
+            0,
+            390,
+            62
+          ],
+          "styles": {
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "paddingLeft": "0px",
+            "paddingRight": "0px",
+            "marginBottom": "0px",
+            "color": "rgb(17, 17, 17)",
+            "backgroundColor": "rgb(240, 240, 240)"
+          }
+        },
+        {
+          "element": "DIV.bodyWrapper",
+          "box": [
+            0,
+            62,
+            390,
+            7599.703125
+          ],
+          "styles": {
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "paddingLeft": "15px",
+            "paddingRight": "15px",
+            "marginBottom": "0px",
+            "color": "rgb(17, 17, 17)",
+            "backgroundColor": "rgb(245, 245, 245)"
+          }
+        },
+        {
+          "element": "H1.post-title",
+          "box": [
+            15,
+            92,
+            360,
+            108
+          ],
+          "styles": {
+            "fontSize": "36px",
+            "lineHeight": "36px",
+            "paddingLeft": "0px",
+            "paddingRight": "0px",
+            "marginBottom": "15px",
+            "color": "rgb(17, 17, 17)",
+            "backgroundColor": "rgba(0, 0, 0, 0)"
+          }
+        },
+        {
+          "element": "ARTICLE.post-content",
+          "box": [
+            15,
+            302,
+            360,
+            7329.703125
+          ],
+          "styles": {
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "paddingLeft": "0px",
+            "paddingRight": "0px",
+            "marginBottom": "30px",
+            "color": "rgb(17, 17, 17)",
+            "backgroundColor": "rgba(0, 0, 0, 0)"
+          }
+        },
+        {
+          "element": "DIV.widePP",
+          "box": [
+            15,
+            1478,
+            360,
+            225.53125
+          ],
+          "styles": {
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "paddingLeft": "0px",
+            "paddingRight": "0px",
+            "marginBottom": "0px",
+            "color": "rgb(17, 17, 17)",
+            "backgroundColor": "rgba(0, 0, 0, 0)"
+          }
+        },
+        {
+          "element": "DIV.pdfBox",
+          "box": [
+            15,
+            1823.53125,
+            360,
+            465.828125
+          ],
+          "styles": {
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "paddingLeft": "0px",
+            "paddingRight": "0px",
+            "marginBottom": "0px",
+            "color": "rgb(17, 17, 17)",
+            "backgroundColor": "rgba(0, 0, 0, 0)"
+          }
+        }
+      ],
+      "sha256": "376db3534a9657b226871d5d01807f7f84adf83a93563d040205afa4e30cd0ff"
+    },
+    {
+      "filename": "pr112/project-desktop-before.png",
+      "version": "pr111",
+      "commit": "f0e36ac3183358859d2b45a33b9d8dbca464cd60",
+      "path": "/projects/intussasist.html",
+      "viewport": "desktop",
+      "title": "Redesign of intussusception reduction device",
+      "heading": "Redesign of intussusception reduction device",
+      "posts": [],
+      "styles": [
+        {
+          "element": "HEADER.site-header",
+          "box": [
+            0,
+            0,
+            1200,
+            62
+          ],
+          "styles": {
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "paddingLeft": "0px",
+            "paddingRight": "0px",
+            "marginBottom": "0px",
+            "color": "rgb(17, 17, 17)",
+            "backgroundColor": "rgb(240, 240, 240)"
+          }
+        },
+        {
+          "element": "DIV.bodyWrapper",
+          "box": [
+            200,
+            62,
+            800,
+            8101.203125
+          ],
+          "styles": {
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "paddingLeft": "30px",
+            "paddingRight": "30px",
+            "marginBottom": "0px",
+            "color": "rgb(17, 17, 17)",
+            "backgroundColor": "rgb(245, 245, 245)"
+          }
+        },
+        {
+          "element": "H1.post-title",
+          "box": [
+            230,
+            92,
+            740,
+            84
+          ],
+          "styles": {
+            "fontSize": "42px",
+            "lineHeight": "42px",
+            "paddingLeft": "0px",
+            "paddingRight": "0px",
+            "marginBottom": "15px",
+            "color": "rgb(17, 17, 17)",
+            "backgroundColor": "rgba(0, 0, 0, 0)"
+          }
+        },
+        {
+          "element": "ARTICLE.post-content",
+          "box": [
+            230,
+            278,
+            740,
+            7855.203125
+          ],
+          "styles": {
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "paddingLeft": "0px",
+            "paddingRight": "0px",
+            "marginBottom": "30px",
+            "color": "rgb(17, 17, 17)",
+            "backgroundColor": "rgba(0, 0, 0, 0)"
+          }
+        },
+        {
+          "element": "DIV.widePP",
+          "box": [
+            230,
+            950,
+            740,
+            439.3125
+          ],
+          "styles": {
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "paddingLeft": "0px",
+            "paddingRight": "0px",
+            "marginBottom": "0px",
+            "color": "rgb(17, 17, 17)",
+            "backgroundColor": "rgba(0, 0, 0, 0)"
+          }
+        },
+        {
+          "element": "DIV.pdfBox",
+          "box": [
+            230,
+            1521.3125,
+            740,
+            957.546875
+          ],
+          "styles": {
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "paddingLeft": "0px",
+            "paddingRight": "0px",
+            "marginBottom": "0px",
+            "color": "rgb(17, 17, 17)",
+            "backgroundColor": "rgba(0, 0, 0, 0)"
+          }
+        }
+      ],
+      "sha256": "1403b7a0be2cfb2e989d86810ba7d22b30d383083ebb502bc021c2e22ee07af6"
+    },
+    {
+      "filename": "pr112/project-desktop-after.png",
+      "version": "pr112",
+      "commit": "b5f33f248c1cd76edb0b0e41a2009f5020e4708b",
+      "path": "/projects/intussasist.html",
+      "viewport": "desktop",
+      "title": "Redesign of intussusception reduction device",
+      "heading": "Redesign of intussusception reduction device",
+      "posts": [],
+      "styles": [
+        {
+          "element": "HEADER.site-header",
+          "box": [
+            0,
+            0,
+            1200,
+            62
+          ],
+          "styles": {
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "paddingLeft": "0px",
+            "paddingRight": "0px",
+            "marginBottom": "0px",
+            "color": "rgb(17, 17, 17)",
+            "backgroundColor": "rgb(240, 240, 240)"
+          }
+        },
+        {
+          "element": "DIV.bodyWrapper",
+          "box": [
+            200,
+            62,
+            800,
+            8101.203125
+          ],
+          "styles": {
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "paddingLeft": "30px",
+            "paddingRight": "30px",
+            "marginBottom": "0px",
+            "color": "rgb(17, 17, 17)",
+            "backgroundColor": "rgb(245, 245, 245)"
+          }
+        },
+        {
+          "element": "H1.post-title",
+          "box": [
+            230,
+            92,
+            740,
+            84
+          ],
+          "styles": {
+            "fontSize": "42px",
+            "lineHeight": "42px",
+            "paddingLeft": "0px",
+            "paddingRight": "0px",
+            "marginBottom": "15px",
+            "color": "rgb(17, 17, 17)",
+            "backgroundColor": "rgba(0, 0, 0, 0)"
+          }
+        },
+        {
+          "element": "ARTICLE.post-content",
+          "box": [
+            230,
+            278,
+            740,
+            7855.203125
+          ],
+          "styles": {
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "paddingLeft": "0px",
+            "paddingRight": "0px",
+            "marginBottom": "30px",
+            "color": "rgb(17, 17, 17)",
+            "backgroundColor": "rgba(0, 0, 0, 0)"
+          }
+        },
+        {
+          "element": "DIV.widePP",
+          "box": [
+            230,
+            950,
+            740,
+            439.3125
+          ],
+          "styles": {
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "paddingLeft": "0px",
+            "paddingRight": "0px",
+            "marginBottom": "0px",
+            "color": "rgb(17, 17, 17)",
+            "backgroundColor": "rgba(0, 0, 0, 0)"
+          }
+        },
+        {
+          "element": "DIV.pdfBox",
+          "box": [
+            230,
+            1521.3125,
+            740,
+            957.546875
+          ],
+          "styles": {
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "paddingLeft": "0px",
+            "paddingRight": "0px",
+            "marginBottom": "0px",
+            "color": "rgb(17, 17, 17)",
+            "backgroundColor": "rgba(0, 0, 0, 0)"
+          }
+        }
+      ],
+      "sha256": "1403b7a0be2cfb2e989d86810ba7d22b30d383083ebb502bc021c2e22ee07af6"
+    },
+    {
+      "filename": "pr112/home-mobile-before.png",
+      "version": "pr111",
+      "commit": "f0e36ac3183358859d2b45a33b9d8dbca464cd60",
+      "path": "/",
+      "viewport": "mobile",
+      "title": "Michael Sobrepera",
+      "posts": [],
+      "styles": [
+        {
+          "element": "HEADER.site-header",
+          "box": [
+            0,
+            0,
+            390,
+            62
+          ],
+          "styles": {
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "paddingLeft": "0px",
+            "paddingRight": "0px",
+            "marginBottom": "0px",
+            "color": "rgb(17, 17, 17)",
+            "backgroundColor": "rgb(240, 240, 240)"
+          }
+        },
+        {
+          "element": "DIV.bodyWrapper",
+          "box": [
+            0,
+            62,
+            390,
+            2318
+          ],
+          "styles": {
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "paddingLeft": "15px",
+            "paddingRight": "15px",
+            "marginBottom": "0px",
+            "color": "rgb(17, 17, 17)",
+            "backgroundColor": "rgb(245, 245, 245)"
+          }
+        }
+      ],
+      "sha256": "ce6c9897a08c6bcf6bf486e730f6de986a4155e466834bd0a7739ff2c0995bf5"
+    },
+    {
+      "filename": "pr112/home-mobile-after.png",
+      "version": "pr112",
+      "commit": "b5f33f248c1cd76edb0b0e41a2009f5020e4708b",
+      "path": "/",
+      "viewport": "mobile",
+      "title": "Michael Sobrepera",
+      "posts": [],
+      "styles": [
+        {
+          "element": "HEADER.site-header",
+          "box": [
+            0,
+            0,
+            390,
+            62
+          ],
+          "styles": {
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "paddingLeft": "0px",
+            "paddingRight": "0px",
+            "marginBottom": "0px",
+            "color": "rgb(17, 17, 17)",
+            "backgroundColor": "rgb(240, 240, 240)"
+          }
+        },
+        {
+          "element": "DIV.bodyWrapper",
+          "box": [
+            0,
+            62,
+            390,
+            2318
+          ],
+          "styles": {
+            "fontSize": "16px",
+            "lineHeight": "24px",
+            "paddingLeft": "15px",
+            "paddingRight": "15px",
+            "marginBottom": "0px",
+            "color": "rgb(17, 17, 17)",
+            "backgroundColor": "rgb(245, 245, 245)"
+          }
+        }
+      ],
+      "sha256": "ce6c9897a08c6bcf6bf486e730f6de986a4155e466834bd0a7739ff2c0995bf5"
+    }
+  ],
+  "demos": {
+    "pr111": {
+      "version": "pr111",
+      "commit": "f0e36ac3183358859d2b45a33b9d8dbca464cd60",
+      "steps": [
+        {
+          "seconds": 0,
+          "caption": "PR #111: homepage navigation after the site fixes"
+        },
+        {
+          "seconds": 3.01,
+          "caption": "Open Guides, then follow the Python guide link"
+        },
+        {
+          "seconds": 6.582,
+          "caption": "Python guide renders; scroll to the command examples"
+        },
+        {
+          "seconds": 9.044,
+          "caption": "Project navigation works; local PDF response verified (HTTP 200)"
+        },
+        {
+          "seconds": 12.35,
+          "caption": "Legacy /tags/GUI.html redirects to /tags/gui.html, retaining query and fragment"
+        },
+        {
+          "seconds": 15.312,
+          "caption": "At 390px, the merged GUI tag page still contains both posts"
+        }
+      ],
+      "seconds": 17.73,
+      "assertions": [
+        "homepage and guide navigation return HTTP 200",
+        "Python guide title renders",
+        "project local PDF returns HTTP 200 with a %PDF- signature",
+        "legacy tag request returns the real custom 404 and then redirects",
+        "query string and fragment survive redirect",
+        "GUI/gui posts merge into two distinct cards",
+        "both cards remain at mobile width",
+        "no page JavaScript errors"
+      ],
+      "pdf": {
+        "pathname": "/otherFiles/projects/intussassist/TD3_FinalPoster_4602_Spring%202015.pdf",
+        "bytes": 1473851
+      },
+      "media": [
+        {
+          "file": "pr111/demo.mp4",
+          "bytes": 716860,
+          "sha256": "93663e4e4dd1de18ae4e5794b3f16a1de22b85681c306369b478ea36bc529d99"
+        },
+        {
+          "file": "pr111/demo.gif",
+          "bytes": 1280863,
+          "sha256": "dcdde2ed5046a0ee8e42d94467026b76f655a6027a1a7c9abbe865cf1ee014ed"
+        }
+      ]
+    },
+    "pr112": {
+      "version": "pr112",
+      "commit": "b5f33f248c1cd76edb0b0e41a2009f5020e4708b",
+      "steps": [
+        {
+          "seconds": 0,
+          "caption": "PR #112: homepage navigation after upgrading Ruby and Dart Sass"
+        },
+        {
+          "seconds": 2.987,
+          "caption": "Open Guides, then follow the Python guide link"
+        },
+        {
+          "seconds": 6.567,
+          "caption": "Python guide renders; scroll to the command examples"
+        },
+        {
+          "seconds": 9.025,
+          "caption": "Project navigation works; local PDF response verified (HTTP 200)"
+        },
+        {
+          "seconds": 12.285,
+          "caption": "Legacy /tags/GUI.html redirects to /tags/gui.html, retaining query and fragment"
+        },
+        {
+          "seconds": 15.255,
+          "caption": "At 390px, the merged GUI tag page still contains both posts"
+        }
+      ],
+      "seconds": 17.673,
+      "assertions": [
+        "homepage and guide navigation return HTTP 200",
+        "Python guide title renders",
+        "project local PDF returns HTTP 200 with a %PDF- signature",
+        "legacy tag request returns the real custom 404 and then redirects",
+        "query string and fragment survive redirect",
+        "GUI/gui posts merge into two distinct cards",
+        "both cards remain at mobile width",
+        "no page JavaScript errors"
+      ],
+      "pdf": {
+        "pathname": "/otherFiles/projects/intussassist/TD3_FinalPoster_4602_Spring%202015.pdf",
+        "bytes": 1473851
+      },
+      "media": [
+        {
+          "file": "pr112/demo.mp4",
+          "bytes": 720568,
+          "sha256": "963d295f7ef5aed710c86b278a26fb0f5ee063a0fa18e7052ac9fbb0deba8b06"
+        },
+        {
+          "file": "pr112/demo.gif",
+          "bytes": 1297026,
+          "sha256": "5dfc0dee92ff949b1c764e0b52d6a86401a5d73172d03e384f780cb7a7df8509"
+        }
+      ]
+    }
+  },
+  "runtimeComparison": {
+    "projectDesktop": "exact computed geometry and styles match",
+    "homeMobile": "exact computed geometry and styles match"
+  }
+}
