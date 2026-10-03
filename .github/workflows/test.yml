@@ -1,10 +1,8 @@
+# Validate every PR, including stacked changes, regardless of its target branch.
 name: Check Jekyll Site
 
 on:
   pull_request:
-    branches:
-      - deploy
-      - 'codex/**'
 
 permissions:
   contents: read

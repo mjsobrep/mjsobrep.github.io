@@ -1,3 +1,5 @@
+# Regression checks for the site's Liquid filters and their generated markup.
+# Load the plugin directly so these tests do not require a full site build.
 require 'minitest/autorun'
 require 'jekyll'
 require_relative '../_plugins/myFunctions'
