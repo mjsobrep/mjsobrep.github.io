@@ -1,0 +1,58 @@
+#!/usr/bin/env bash
+# Publish a validated artifact only if its CV source commit is still master.
+set -euo pipefail
+
+if [[ $# -ne 2 || ! "$2" =~ ^[0-9a-f]{40}$ ]]; then
+  printf 'Usage: bin/publish-site ARTIFACT_DIRECTORY VALIDATED_MASTER_COMMIT\n' >&2
+  exit 1
+fi
+
+artifact_dir=$(cd "$1" && pwd -P)
+publish_base=$2
+cv_path=otherFiles/MichaelSobrepera.pdf
+
+if [[ -e "$artifact_dir/.git" || -L "$artifact_dir/.git" ]]; then
+  printf 'The artifact must not contain .git.\n' >&2
+  exit 1
+fi
+
+git fetch --no-tags --depth=1 origin master
+if [[ "$(git rev-parse FETCH_HEAD)" != "$publish_base" ]]; then
+  printf 'master changed since validation. Re-run all jobs to validate the current CV.\n' >&2
+  exit 1
+fi
+
+publish_dir=$(mktemp -d)
+cleanup() {
+  git worktree remove --force "$publish_dir" >/dev/null 2>&1 || true
+  rm -rf -- "$publish_dir"
+}
+trap cleanup EXIT
+git worktree add --detach "$publish_dir" "$publish_base"
+
+if ! cmp -s "$artifact_dir/$cv_path" "$publish_dir/$cv_path"; then
+  printf 'The artifact CV differs from the validated master commit.\n' >&2
+  exit 1
+fi
+
+# Replace published files in this disposable worktree, retaining its Git metadata.
+find "$publish_dir" -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf -- {} +
+cp -a "$artifact_dir"/. "$publish_dir"/
+touch "$publish_dir/.nojekyll"
+git -C "$publish_dir" add --all
+source_commit=$(git rev-parse HEAD)
+git -C "$publish_dir" \
+  -c user.name='github-actions[bot]' \
+  -c user.email='github-actions[bot]@users.noreply.github.com' \
+  commit --allow-empty -m "Publish validated site from $source_commit"
+publish_commit=$(git -C "$publish_dir" rev-parse HEAD)
+
+# The new commit descends from publish_base. The explicit lease rejects any
+# intervening master update, including one after the check above. Push from the
+# checkout so actions/checkout's scoped credentials apply.
+if ! git push --force-with-lease="refs/heads/master:$publish_base" \
+  origin "$publish_commit:refs/heads/master"; then
+  printf 'Publication failed. If master changed, re-run all jobs to validate its current CV.\n' >&2
+  exit 1
+fi
+printf 'Published %s with CV from %s\n' "$publish_commit" "$publish_base"

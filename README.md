@@ -36,13 +36,15 @@ Tag URLs use lowercase slugs, and case variants share one page containing all ma
 
 Two historical content defects retain exact HTMLProofer exceptions: the Git guide's unescaped command placeholder excludes its generated page, and the guitar project's Windows-style PDF URL is ignored. Correcting those posts is a separate content change.
 
-Lint configuration lives in `.rubocop.yml` and `package.json`; Rake coordinates the checks. The lockfiles and runtime version files make local installs match CI. `bin/check` and `serve.sh` provide short commands, and `test/` contains the filter and tag regression tests.
+Lint configuration lives in `.rubocop.yml` and `package.json`; Rake coordinates the checks. The lockfiles and runtime version files make local installs match CI. `bin/check` and `serve.sh` provide short commands, and `test/` contains filter, tag, and publication regression tests.
 
 ## Deployment and dependency updates
 
 GitHub Actions validates the source, uploads the checked artifact, and publishes it to `master` when changes reach `deploy`. Deployment jobs run sequentially. Local commands build and validate without publishing.
 
 The CV is also updated independently on `master`. CI fetches that branch and runs `bin/sync-cv FETCH_HEAD` **before** building and validating, logging its source commit. To reproduce the published CV locally, run `git fetch origin master` followed by `bin/sync-cv origin/master`, or pass the logged commit SHA to `bin/sync-cv`. This updates `otherFiles/MichaelSobrepera.pdf` in your working tree. A fetch or missing PDF fails the build rather than silently publishing an older CV.
+
+`bin/publish-site` checks that the artifact contains that exact CV and that `master` still points to its source commit. It creates a descendant of that commit and pushes with an explicit Git lease, so an update during either the build or publication cannot be overwritten. If `master` changes, use **Re-run all jobs** on the failed deployment to sync and validate the current CV; rerunning only the deploy job retains the stale artifact. Deployment starts on pushes to `deploy`. There is no manual dispatch trigger because workflows are excluded from the default branch, `master`.
 
 Ruby 3.4 and Jekyll Sass Converter 3 use supported Ruby and Dart Sass releases. Sass partials share variables and mixins through `_sass/_settings.scss` and use modules rather than deprecated imports. Development files are excluded from the published site.
 

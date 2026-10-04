@@ -3,6 +3,10 @@ name: Build Jekyll Site
 
 on:
   workflow_call:
+    outputs:
+      publish_base:
+        description: Commit on master containing the CV validated in this build
+        value: ${{ jobs.build.outputs.publish_base }}
 
 permissions:
   contents: read
@@ -13,6 +17,8 @@ jobs:
     runs-on: ubuntu-24.04
     env:
       BUNDLE_FROZEN: 'true'
+    outputs:
+      publish_base: ${{ steps.sync_cv.outputs.publish_base }}
 
     steps:
       - name: Checkout
@@ -35,9 +41,12 @@ jobs:
         run: npm ci
 
       - name: Sync independently published CV before validation
+        id: sync_cv
         run: |
           git fetch --no-tags --depth=1 origin master
-          bin/sync-cv FETCH_HEAD
+          publish_base=$(git rev-parse FETCH_HEAD)
+          bin/sync-cv "$publish_base"
+          printf 'publish_base=%s\n' "$publish_base" >> "$GITHUB_OUTPUT"
 
       - name: Validate and build site
         run: bin/check
