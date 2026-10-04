@@ -1,0 +1,28 @@
+---
+layout: default
+title: Page not found
+hide_nav: true
+permalink: /404.html
+---
+<!-- Missing-page fallback with redirects for legacy tag bookmarks. -->
+<h1>Page not found</h1>
+<p><a href="{{ site.baseurl }}/">Return to the home page</a>.</p>
+<script id="legacy-tag-redirects">
+  // GitHub Pages serves this fallback for legacy tag URLs, including case variants.
+  const tagRedirects = {{ site.data.legacy_tag_urls | jsonify }};
+  const baseUrl = {{ site.baseurl | jsonify }};
+  const prefix = baseUrl + "/tags/";
+  if (window.location.pathname.startsWith(prefix)) {
+    try {
+      const legacyName = decodeURIComponent(window.location.pathname.slice(prefix.length));
+      if (Object.hasOwn(tagRedirects, legacyName)) {
+        const destination = baseUrl + tagRedirects[legacyName];
+        if (destination !== window.location.pathname) {
+          window.location.replace(destination + window.location.search + window.location.hash);
+        }
+      }
+    } catch (error) {
+      // Invalid URL escapes keep the ordinary 404 page.
+    }
+  }
+</script>

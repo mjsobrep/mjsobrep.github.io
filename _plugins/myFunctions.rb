@@ -1,11 +1,15 @@
+# Liquid filters and tag-page generation used by the site's templates.
 require 'liquid'
 require 'uri'
+require 'cgi'
 # require 'pry'
 
 module Jekyll
+    # Return the containing folder for a Liquid file path.
     module StripFile
         def folder(input)
-            input[0,input.rindex("/")]
+            path = File.dirname(input.to_s.tr('\\', '/'))
+            path == '.' ? '' : path
         end
     end
 end
@@ -13,6 +17,7 @@ end
 Liquid::Template.register_filter(Jekyll::StripFile)
 
 module Jekyll
+    # Expose Ruby's comparison ordering as a Liquid filter.
     module StrCmp
         def compare(input1,input2)
             input1<=>input2
@@ -23,15 +28,11 @@ end
 Liquid::Template.register_filter(Jekyll::StrCmp)
 
 module Jekyll
+    # Match documents by their containing source directory.
     module PathMatch
         def pathMatch(candidate,pattern)
-            rawPath = candidate["path"]
-            trimmedPath = rawPath[0,rawPath.rindex("/")]
-            toReturn = nil
-            if((trimmedPath<=>pattern)==0)
-                toReturn= true
-            end
-            return toReturn
+            path = candidate['path']
+            !path.nil? && File.dirname(path.tr('\\', '/')) == pattern
         end
     end
 end
@@ -40,11 +41,12 @@ Liquid::Template.register_filter(Jekyll::PathMatch)
 
 
 
-# Percent encoding for URI confrming to RFC 3986.
-# Ref: http://tools.ietf.org/html/rfc3986#page-12
+# Encode file path segments while preserving slashes and normalizing Windows separators.
 module URLEncode
     def url_encode(url)
-        return url.gsub(' ','%20')
+        url.to_s.tr('\\', '/').split('/', -1).map do |segment|
+            URI.encode_www_form_component(segment).gsub('+', '%20')
+        end.join('/')
     end
 end
 
@@ -52,6 +54,7 @@ Liquid::Template.register_filter(URLEncode)
 
 
 module Jekyll
+    # Render an optional label and the current build timestamp.
     class RenderTimeTag < Liquid::Tag
 
         def initialize(tag_name, text, tokens)
@@ -59,7 +62,7 @@ module Jekyll
             @text = text
         end
 
-        def render(context)
+        def render(_context)
             "#{@text} #{Time.now}"
         end
     end
@@ -69,9 +72,12 @@ Liquid::Template.register_tag('render_time', Jekyll::RenderTimeTag)
 
 
 module Jekyll
+    # Embed a local PDF with an escaped download fallback.
     module InsertPDF
         def insertPDF(file)
-            return "<div class='pdfBox'> <div class='pdfContent'>    <object class='pdfContent' data='"+url_encode('/'+file)+"' type='application/pdf' width='100%' height='100%'>   alternate download: <a href = '"+url_encode('/'+file)+"'>"+file+"</a></object></div> </div>"
+            path = CGI.escapeHTML(url_encode('/' + file.to_s.sub(%r{\A[/\\]+}, '')))
+            label = CGI.escapeHTML(file.to_s)
+            "<div class='pdfBox'><div class='pdfContent'><object class='pdfContent' data='#{path}' type='application/pdf' width='100%' height='100%'>alternate download: <a href = '#{path}'>#{label}</a></object></div></div>"
         end
     end
 end
@@ -80,6 +86,7 @@ Liquid::Template.register_filter(Jekyll::InsertPDF)
 
 
 module Jekyll
+    # Render a local image directory as HTML or Markdown.
     module InsertPicFolder
         def insertPicFolder(directory,style,type)
             if(type.include? 'md')
@@ -92,12 +99,15 @@ module Jekyll
                     if(type.include? 'md')
                         toReturn = toReturn + '[![]('+url_encode('/'+image)+'){: .'+style+'}]('+url_encode('/'+image)+')'
                     else
-                        toReturn = toReturn + '<a href='+url_encode('/'+image)+'><img src='+url_encode('/'+image)+' class='+style+'></a>'
+                        path = CGI.escapeHTML(url_encode('/' + image))
+                        css_class = CGI.escapeHTML(style.to_s)
+                        alt = CGI.escapeHTML(File.basename(image))
+                        toReturn += "<a href='#{path}'><img src='#{path}' class='#{css_class}' alt='#{alt}'></a>"
                     end
                 end
             }
             if(not type.include? 'md')
-                toReturn=toReturn+'</div>"'
+                toReturn=toReturn+'</div>'
             end
             return toReturn
         end
@@ -107,6 +117,7 @@ end
 Liquid::Template.register_filter( Jekyll::InsertPicFolder)
 
 module Jekyll
+    # Embed a video player in the site's responsive widescreen wrapper.
     module InsertYouTube
         def insertYouTube(source)
             return "<div class='wideMediaBox'> <div class='mediaContent'>    <iframe class='mediaContent' width='100%' height='100%' src='"+source+"' frameborder='0' allowfullscreen></iframe></div> </div>"
@@ -117,6 +128,7 @@ end
 Liquid::Template.register_filter(Jekyll::InsertYouTube)
 
 module Jekyll
+    # Embed a presentation in the site's responsive media wrapper.
     module InsertPowerPoint
         def insertPowerPoint(source)
             return "<div class='widePP'> <div class='mediaContent'>    <iframe class = 'mediaContent' src='"+source+"' width='100%' height = '100%' frameborder='0' scrolling='no'></iframe></div> </div>"
@@ -127,6 +139,7 @@ end
 Liquid::Template.register_filter(Jekyll::InsertPowerPoint)
 
 module Jekyll
+    # Embed an iframe using the site's 4:3 media wrapper.
     module FourThreeIframe
         def fourThreeIframe(source)
             return "<div class='fourThreeBox'> <div class='mediaContent'>    <iframe class='mediaContent' width='100%' height='100%' src='"+source+"' frameborder='0' allowfullscreen></iframe></div> </div>"
@@ -137,6 +150,7 @@ end
 Liquid::Template.register_filter(Jekyll::FourThreeIframe)
 
 module Jekyll
+    # Embed an iframe using the site's portrait 9:16 media wrapper.
     module NineSixIframe
         def nineSixIframe(source)
             return "<div class = 'center'><div class='nineSixBox'> <div class='mediaContent'>    <iframe class='mediaContent' width='100%' height='100%' src='"+source+"' frameborder='0' allowfullscreen></iframe></div> </div></div>"
@@ -147,6 +161,7 @@ end
 Liquid::Template.register_filter(Jekyll::NineSixIframe)
 
 module Jekyll
+    # Extract digits from phone numbers and media dimensions.
     module StripNonNum
         def stripNonNum(num)
             if(not num.is_a? String)
@@ -160,47 +175,48 @@ end
 Liquid::Template.register_filter(Jekyll::StripNonNum)
 
 module Jekyll
-    class TagPageGenerator < Generator
-        class TagPage < Page
-          def initialize(site, base, dir, tag)
-            @site = site
-            @base = base
-            @dir = dir
-            @name = tag+'.html'
-
-            self.process(@name)
-            self.read_yaml(File.join(base, '_layouts'), 'tag.html')
-            self.data['destTitle'] = 'Tag: '+tag
-            self.data['destTag'] = site.tags[tag]
-
-            # category_title_prefix = site.config['category_title_prefix'] || 'Category: '
-            # self.data['title'] = "#{category_title_prefix}#{category}"
-          end
-        end
-
-    def generate(site)
-        site.tags.each_key do |tag|
-          site.pages << TagPage.new(site, site.source, 'tags', tag)
-      end
+  # Normalize tag names to the canonical slugs used by generated pages and links.
+  module TagSlug
+    def tag_slug(tag)
+      slug = Jekyll::Utils.slugify(tag.to_s)
+      slug.empty? ? 'tag' : slug
     end
   end
 
+  # Merge posts by tag slug and record redirects from legacy tag URLs.
+  class TagPageGenerator < Generator
+    include TagSlug
+
+    # Render a generated tag listing through the shared tag layout.
+    class TagPage < PageWithoutAFile
+      def initialize(site, slug, tags, posts)
+        super(site, site.source, 'tags', "#{slug}.html")
+        self.data = {
+          'layout' => 'tag',
+          'destTitle' => "Tag: #{tags.first}",
+          'destTag' => posts
+        }
+      end
+    end
+
+    def generate(site)
+      site.data['legacy_tag_urls'] = {}
+      site.tags.keys.group_by { |tag| tag_slug(tag) }.each do |slug, tags|
+        posts = tags.flat_map { |tag| site.tags[tag] }.uniq.sort_by(&:date).reverse
+        site.pages << TagPage.new(site, slug, tags, posts)
+        tags.each { |tag| site.data['legacy_tag_urls']["#{tag}.html"] = "/tags/#{slug}.html" }
+      end
+    end
+  end
 end
 
+Liquid::Template.register_filter(Jekyll::TagSlug)
+
 module Jekyll
+    # Exclude posts belonging to the requested category.
     module StripCat
         def stripCat(posts,category)
-            toReturn = [];
-            posts.each{|post|
-                if(not post.categories.include? category)
-                    toReturn<<(post)
-                    puts post.title+' accepted, cat: '+post.categories
-
-            else
-                puts post.title+' rejected, cat: '+post.categories
-            end
-            }
-            return bob
+            posts.reject { |post| post.categories.include?(category) }
         end
     end
 end

@@ -15,11 +15,3 @@ AllCops:
 
 Lint:
   Enabled: true
-
-# Legacy plugin findings are addressed in the following defect-fix PR.
-Lint/UnusedMethodArgument:
-  Exclude:
-    - '_plugins/myFunctions.rb'
-Lint/MissingSuper:
-  Exclude:
-    - '_plugins/myFunctions.rb'

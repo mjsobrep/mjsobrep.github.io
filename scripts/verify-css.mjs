@@ -1,0 +1,12 @@
+// Check compiled CSS values for defects that a successful Sass build can miss.
+import stylelint from "stylelint";
+
+const result = await stylelint.lint({
+  files: "_site/css/main.css",
+  config: {
+    rules: { "declaration-property-value-no-unknown": true },
+  },
+  formatter: "string",
+});
+if (result.report) process.stdout.write(result.report);
+if (result.errored) process.exitCode = 1;
