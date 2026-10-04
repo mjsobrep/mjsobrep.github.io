@@ -15,5 +15,10 @@ PRs do not need screenshots of text; explain the change and use the diff.
   should look for.
 - Upload visual evidence as GitHub attachments and embed it in the PR description.
   Never commit PR screenshots or videos to the repository.
+- Use GitHub's browser attachment control or a current authenticated GitHub CLI:
+  `gh pr create --attach` or `gh pr edit --attach`. Verify that the installed CLI
+  supports the flag and that the account has write access to the repository.
+  Use `--body-file` with local image references to place each attachment beside
+  its caption; the CLI replaces those paths with uploaded attachment URLs.
 - Keep capture files outside the repository. If attachment upload is unavailable,
   report that limitation and provide the files for attachment.
