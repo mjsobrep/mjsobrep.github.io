@@ -1,4 +1,6 @@
 # Shared validation and artifact build used by PR checks and deployment.
+# Action hashes pin exact code; release comments keep versions readable.
+# Dependabot proposes pin updates instead of action tags changing between runs.
 name: Build Jekyll Site
 
 on:
@@ -40,6 +42,8 @@ jobs:
       - name: Install lint dependencies
         run: npm ci
 
+      # Validate the master CV as a build input instead of replacing it afterwards.
+      # Export its commit so publication can reject an intervening master update.
       - name: Sync independently published CV before validation
         id: sync_cv
         run: |

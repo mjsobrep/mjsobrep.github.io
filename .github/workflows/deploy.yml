@@ -1,4 +1,5 @@
 # Publish the validated artifact after source changes reach deploy.
+# Action hashes pin exact code; release comments identify the selected versions.
 name: Build and Deploy Jekyll Site
 
 on:

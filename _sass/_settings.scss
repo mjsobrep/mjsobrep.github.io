@@ -1,4 +1,5 @@
 // Shared design variables and responsive mixins for the site's Sass modules.
+// Moved from css/main.scss: @use modules load shared settings explicitly.
 @use "sass:color";
 
 $base-font-family: Helvetica, Arial, sans-serif;
