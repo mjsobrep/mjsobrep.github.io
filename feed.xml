@@ -3,10 +3,10 @@
   <channel>
     <title>Michael Sobrepera</title>
     <description>A site about stuff that I (Michael Sobrepera) work on, think, enjoy, etc...</description>
-    <link>http://www.michaelsobrepera.com/</link>
-    <atom:link href="http://www.michaelsobrepera.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 04 Oct 2026 05:24:45 +0000</pubDate>
-    <lastBuildDate>Sun, 04 Oct 2026 05:24:45 +0000</lastBuildDate>
+    <link>https://www.michaelsobrepera.com/</link>
+    <atom:link href="https://www.michaelsobrepera.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 05 Oct 2026 16:23:37 +0000</pubDate>
+    <lastBuildDate>Mon, 05 Oct 2026 16:23:37 +0000</lastBuildDate>
     <generator>Jekyll v4.4.1</generator>
     
       <item>
@@ -85,8 +85,8 @@ I don’t think that, for aws, acl, server side encryption, kms id, storage clas
 &lt;p&gt;Running on the ec2 shape specified, I am using 100% of the available compute and not saturating the networking (hitting like 250-300 MB/s each way), using about half of the RAM. That could be because I don’t have enough cpu power to handle the processing or could be because AWS S3 or OCI OS can’t move faster. This can and should be tuned better for more intense transfers as should the number of transfers to do in parallel. Good enough for me though, for 9TB this took 52 minutes…&lt;/p&gt;
 </description>
         <pubDate>Wed, 20 Oct 2021 00:00:00 +0000</pubDate>
-        <link>http://www.michaelsobrepera.com/guides/aws_s3-to-oci_os.html</link>
-        <guid isPermaLink="true">http://www.michaelsobrepera.com/guides/aws_s3-to-oci_os.html</guid>
+        <link>https://www.michaelsobrepera.com/guides/aws_s3-to-oci_os.html</link>
+        <guid isPermaLink="true">https://www.michaelsobrepera.com/guides/aws_s3-to-oci_os.html</guid>
         
         <category>OCI</category>
         
@@ -105,8 +105,8 @@ I don’t think that, for aws, acl, server side encryption, kms id, storage clas
 The final published version is available from &lt;a href=&quot;https://journals.sagepub.com/doi/full/10.1177/20556683211001805&quot;&gt;Sage Journals&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Mon, 19 Apr 2021 00:00:00 +0000</pubDate>
-        <link>http://www.michaelsobrepera.com/writings/jrate-lilflo.html</link>
-        <guid isPermaLink="true">http://www.michaelsobrepera.com/writings/jrate-lilflo.html</guid>
+        <link>https://www.michaelsobrepera.com/writings/jrate-lilflo.html</link>
+        <guid isPermaLink="true">https://www.michaelsobrepera.com/writings/jrate-lilflo.html</guid>
         
         <category>flo</category>
         
@@ -129,8 +129,8 @@ The final published version is available from &lt;a href=&quot;https://journals.
 The final published version is available in &lt;a href=&quot;https://ieeexplore.ieee.org/document/9363561&quot;&gt;IEEE Xplore&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Thu, 18 Mar 2021 00:00:00 +0000</pubDate>
-        <link>http://www.michaelsobrepera.com/writings/ral-usefulness-srt.html</link>
-        <guid isPermaLink="true">http://www.michaelsobrepera.com/writings/ral-usefulness-srt.html</guid>
+        <link>https://www.michaelsobrepera.com/writings/ral-usefulness-srt.html</link>
+        <guid isPermaLink="true">https://www.michaelsobrepera.com/writings/ral-usefulness-srt.html</guid>
         
         <category>flo</category>
         
@@ -152,8 +152,8 @@ The final published version is available in &lt;a href=&quot;https://ieeexplore.
         <description>&lt;p&gt;This is a short conference paper that one of my students, Ralph, presented as a poster at the 2019 BMES Conference  and is in the &lt;a href=&quot;http://submissions.mirasmart.com/SecureView/BMESArchive/radr21wkxaa.pdf&quot;&gt;BMES Meeting Archive&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Sun, 20 Oct 2019 00:00:00 +0000</pubDate>
-        <link>http://www.michaelsobrepera.com/writings/bmes-ttr.html</link>
-        <guid isPermaLink="true">http://www.michaelsobrepera.com/writings/bmes-ttr.html</guid>
+        <link>https://www.michaelsobrepera.com/writings/bmes-ttr.html</link>
+        <guid isPermaLink="true">https://www.michaelsobrepera.com/writings/bmes-ttr.html</guid>
         
         <category>table top robotics</category>
         
@@ -173,8 +173,8 @@ The final published version is available in &lt;a href=&quot;https://ieeexplore.
         <description>&lt;p&gt;This is a short conference paper that I presented as a poster at the 2019 BMES Conference and is in the &lt;a href=&quot;https://submissions2.mirasmart.com/Verify/BMES2019/submission/temp/rad89843.pdf&quot;&gt;BMES Meeting Archive&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Sun, 20 Oct 2019 00:00:00 +0000</pubDate>
-        <link>http://www.michaelsobrepera.com/writings/bmes-flo-arms.html</link>
-        <guid isPermaLink="true">http://www.michaelsobrepera.com/writings/bmes-flo-arms.html</guid>
+        <link>https://www.michaelsobrepera.com/writings/bmes-flo-arms.html</link>
+        <guid isPermaLink="true">https://www.michaelsobrepera.com/writings/bmes-flo-arms.html</guid>
         
         <category>flo</category>
         
@@ -197,8 +197,8 @@ The final published version is available in &lt;a href=&quot;https://ieeexplore.
 The final published version is available in &lt;a href=&quot;https://ieeexplore.ieee.org/document/8779416&quot;&gt;IEEE Xplore&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Fri, 28 Jun 2019 00:00:00 +0000</pubDate>
-        <link>http://www.michaelsobrepera.com/writings/icorr-flo-face.html</link>
-        <guid isPermaLink="true">http://www.michaelsobrepera.com/writings/icorr-flo-face.html</guid>
+        <link>https://www.michaelsobrepera.com/writings/icorr-flo-face.html</link>
+        <guid isPermaLink="true">https://www.michaelsobrepera.com/writings/icorr-flo-face.html</guid>
         
         <category>flo</category>
         
@@ -221,8 +221,8 @@ The final published version is available in &lt;a href=&quot;https://ieeexplore.
 The final published version is available from &lt;a href=&quot;https://papers.phmsociety.org/index.php/ijphm/article/view/2706&quot;&gt;the PHM Society&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Mon, 06 May 2019 00:00:00 +0000</pubDate>
-        <link>http://www.michaelsobrepera.com/writings/ijphm-flo.html</link>
-        <guid isPermaLink="true">http://www.michaelsobrepera.com/writings/ijphm-flo.html</guid>
+        <link>https://www.michaelsobrepera.com/writings/ijphm-flo.html</link>
+        <guid isPermaLink="true">https://www.michaelsobrepera.com/writings/ijphm-flo.html</guid>
         
         <category>flo</category>
         
@@ -310,8 +310,8 @@ The final published version is available from &lt;a href=&quot;https://papers.ph
 &lt;p&gt;In closing, I have enjoyed my experiences with RET and hope that my work has had a real impact. There is a lot of work to be done to improve the education ecosystem/pipeline and I hope that I can be a part of that. To enable that, I think that academia needs to remember to focus on education and I believe that large funding organizations can make that happen. I thank the people at NSF for overseeing these programs, the people in GRASP for running the program I was a part of, NC State for hosting the conference, and the American public for their continued support of science and math education and research.&lt;/p&gt;
 </description>
         <pubDate>Thu, 25 Oct 2018 00:00:00 +0000</pubDate>
-        <link>http://www.michaelsobrepera.com/blog/RETConference.html</link>
-        <guid isPermaLink="true">http://www.michaelsobrepera.com/blog/RETConference.html</guid>
+        <link>https://www.michaelsobrepera.com/blog/RETConference.html</link>
+        <guid isPermaLink="true">https://www.michaelsobrepera.com/blog/RETConference.html</guid>
         
         <category>education</category>
         
@@ -336,8 +336,8 @@ The final published version is available from &lt;a href=&quot;https://papers.ph
 The work was presented as a poster and is in the &lt;a href=&quot;https://www.resna.org/sites/default/files/conference/2018/emerging_technology/Sobrepera.html&quot;&gt;RESNA Meeting Archive&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Sun, 15 Jul 2018 00:00:00 +0000</pubDate>
-        <link>http://www.michaelsobrepera.com/writings/resna-flo-system.html</link>
-        <guid isPermaLink="true">http://www.michaelsobrepera.com/writings/resna-flo-system.html</guid>
+        <link>https://www.michaelsobrepera.com/writings/resna-flo-system.html</link>
+        <guid isPermaLink="true">https://www.michaelsobrepera.com/writings/resna-flo-system.html</guid>
         
         <category>flo</category>
         
@@ -360,8 +360,8 @@ The work was presented as a poster and is in the &lt;a href=&quot;https://www.re
 The work was presented as a poster by Enri and is in the &lt;a href=&quot;https://www.resna.org/sites/default/files/conference/2018/emerging_technology/Kina.html&quot;&gt;RESNA Meeting Archive&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Sun, 15 Jul 2018 00:00:00 +0000</pubDate>
-        <link>http://www.michaelsobrepera.com/writings/resna-flo-face.html</link>
-        <guid isPermaLink="true">http://www.michaelsobrepera.com/writings/resna-flo-face.html</guid>
+        <link>https://www.michaelsobrepera.com/writings/resna-flo-face.html</link>
+        <guid isPermaLink="true">https://www.michaelsobrepera.com/writings/resna-flo-face.html</guid>
         
         <category>flo</category>
         
