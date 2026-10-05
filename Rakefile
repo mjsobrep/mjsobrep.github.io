@@ -1,6 +1,7 @@
 # Local and CI tasks for linting, filter tests, and generated site validation.
 # Run bin/check for the full suite or bundle exec rake <task> for an individual task.
 require 'rake/testtask'
+require 'fileutils'
 require 'open3'
 
 Rake::TestTask.new(:test) do |task|
@@ -33,6 +34,9 @@ end
 desc 'Build the site with strict front matter validation'
 task :build do
   sh 'bundle exec jekyll build --strict_front_matter'
+  # GitHub reads Dependabot configuration from the default (published) branch.
+  FileUtils.mkdir_p('_site/.github')
+  FileUtils.cp('.github/dependabot.yml', '_site/.github/dependabot.yml')
 end
 
 desc 'Check generated internal links and assets without network access'
@@ -50,6 +54,7 @@ task :verify => :build do
   sh 'bundle exec jekyll doctor'
   sh 'node scripts/verify-css.mjs'
   sh 'node scripts/verify-redirects.mjs'
+  sh 'node scripts/verify-artifacts.mjs'
 end
 
 desc 'Run the same validation locally and in CI'
