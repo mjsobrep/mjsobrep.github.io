@@ -1,13 +1,18 @@
+# Publish the validated artifact after source changes reach deploy.
+# Action hashes pin exact code; release comments identify the selected versions.
 name: Build and Deploy Jekyll Site
 
 on:
   push:
     branches:
       - deploy
-  workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
+
+concurrency:
+  group: pages-deployment
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -15,21 +20,25 @@ jobs:
 
   deploy:
     needs: build
-    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/deploy'
+    # Use the same tested runner OS as the build job.
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
 
     steps:
+      - name: Checkout publishing script and configure Git credentials
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 1
+
       - name: Download build artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
         with:
           name: site
           path: _site
 
       - name: Deploy to master branch
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site
-          publish_branch: master
-          user_name: 'github-actions[bot]'
-          user_email: 'github-actions[bot]@users.noreply.github.com'
-          commit_message: 'automated commit to publish from github actions'
+        env:
+          PUBLISH_BASE: ${{ needs.build.outputs.publish_base }}
+        run: bin/publish-site _site "$PUBLISH_BASE"

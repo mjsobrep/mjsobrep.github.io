@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Copy the CV from a local Git commit and log its revision for reproducible builds.
+set -euo pipefail
+cd "$(dirname "$0")/.."
+cv_ref="${1:-origin/master}"
+cv_commit=$(git rev-parse --verify "$cv_ref^{commit}")
+cv_temp=$(mktemp)
+trap 'rm -f "$cv_temp"' EXIT
+git show "$cv_commit:otherFiles/MichaelSobrepera.pdf" > "$cv_temp"
+cp "$cv_temp" otherFiles/MichaelSobrepera.pdf
+printf 'CV source commit: %s\n' "$cv_commit"
