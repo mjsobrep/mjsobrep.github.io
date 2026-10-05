@@ -1,31 +1,40 @@
 # Shared validation and artifact build used by PR checks and deployment.
+# Action hashes pin exact code; release comments keep versions readable.
+# Dependabot proposes pin updates instead of action tags changing between runs.
 name: Build Jekyll Site
 
 on:
   workflow_call:
+    outputs:
+      publish_base:
+        description: Commit on master containing the CV validated in this build
+        value: ${{ jobs.build.outputs.publish_base }}
 
 permissions:
   contents: read
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    # Keep the runner OS stable when GitHub changes ubuntu-latest.
+    runs-on: ubuntu-24.04
     env:
       BUNDLE_FROZEN: 'true'
+    outputs:
+      publish_base: ${{ steps.sync_cv.outputs.publish_base }}
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          fetch-depth: 0
+          fetch-depth: 1
 
       - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
+        uses: ruby/setup-ruby@14594264cd68ce8a2345dd349bc3d138a4ef85c8 # v1
         with:
           bundler-cache: true
 
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version-file: .node-version
           cache: npm
@@ -33,19 +42,23 @@ jobs:
       - name: Install lint dependencies
         run: npm ci
 
+      # Validate the master CV as a build input instead of replacing it afterwards.
+      # Export its commit so publication can reject an intervening master update.
+      - name: Sync independently published CV before validation
+        id: sync_cv
+        run: |
+          git fetch --no-tags --depth=1 origin master
+          publish_base=$(git rev-parse FETCH_HEAD)
+          bin/sync-cv "$publish_base"
+          printf 'publish_base=%s\n' "$publish_base" >> "$GITHUB_OUTPUT"
+
       - name: Validate and build site
         run: bin/check
 
-      - name: Fetch PDF from master
-        run: |
-          git fetch origin master
-          git checkout origin/master -- otherFiles/MichaelSobrepera.pdf || true
-          if [ -f otherFiles/MichaelSobrepera.pdf ]; then
-            cp otherFiles/MichaelSobrepera.pdf _site/otherFiles/
-          fi
-
       - name: Upload build artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: site
           path: _site/
+          # Publish the explicit Dependabot config to the default branch.
+          include-hidden-files: true

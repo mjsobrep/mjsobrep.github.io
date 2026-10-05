@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
-set -e # halt script on error
+# Build the static site and package its deployment artifact.
+set -euo pipefail
+cd "$(dirname "$0")"
 
-bundle exec jekyll build
+bundle exec rake build

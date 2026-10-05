@@ -1,7 +1,7 @@
 # Correctness checks for site plugins, tests, and Rake tasks.
 AllCops:
   NewCops: disable
-  TargetRubyVersion: 3.2
+  TargetRubyVersion: 3.4
   Include:
     - '_plugins/**/*.rb'
     - 'test/**/*.rb'
