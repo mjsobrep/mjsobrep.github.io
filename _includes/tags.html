@@ -4,7 +4,8 @@
 <label for="header1">Tags</label>
 <div>
 <ul class="tag">
-{% for tag in include.tags %}
+{% assign sorted_tags = include.tags | sort_tags_by_frequency %}
+{% for tag in sorted_tags %}
   {% assign t = tag | first %}
   <li class="tag"><a href="{{ site.baseurl }}/tags/{{t | tag_slug}}.html" class = "tag">{{t}}</a></li>
 {% endfor %}
