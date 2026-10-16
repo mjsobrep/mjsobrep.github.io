@@ -8,5 +8,5 @@ group :development, :test do
   gem 'html-proofer', '~> 5.2'
   gem 'minitest', '~> 6.0'
   gem 'rake', '~> 13.4'
-  gem 'rubocop', '~> 1.91', require: false
+  gem 'rubocop', '~> 1.92', require: false
 end
