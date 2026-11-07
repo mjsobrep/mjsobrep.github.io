@@ -28,6 +28,17 @@ end
 Liquid::Template.register_filter(Jekyll::StrCmp)
 
 module Jekyll
+    # List tags by descending post frequency, using tag names to break ties.
+    module TagFrequency
+        def sort_tags_by_frequency(tags)
+            tags.sort_by { |tag, posts| [-posts.size, tag] }
+        end
+    end
+end
+
+Liquid::Template.register_filter(Jekyll::TagFrequency)
+
+module Jekyll
     # Match documents by their containing source directory.
     module PathMatch
         def pathMatch(candidate,pattern)
